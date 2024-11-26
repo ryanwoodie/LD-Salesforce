@@ -3,7 +3,7 @@
     <actionCalls>
         <name>myRule_1_A1</name>
         <label>Email Alert</label>
-        <locationX>314</locationX>
+        <locationX>50</locationX>
         <locationY>431</locationY>
         <actionName>IATSPayment__Transaction__c.Transaction_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -19,43 +19,61 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>62.0</apiVersion>
-    <assignments>
-        <name>Assignment_1</name>
-        <label>Assignment 1</label>
-        <locationX>50</locationX>
-        <locationY>431</locationY>
-        <assignmentItems>
-            <assignToReference>test</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>formula_8_myRule_11_A1_8961744501</elementReference>
-            </value>
-        </assignmentItems>
-    </assignments>
     <decisions>
-        <name>myRule_1</name>
-        <label>Blank Opp or Contact</label>
-        <locationX>445</locationX>
-        <locationY>323</locationY>
+        <name>IATS_Opp_has_address</name>
+        <label>IATS Opp has address</label>
+        <locationX>586</locationX>
+        <locationY>431</locationY>
         <defaultConnector>
             <targetReference>myRule_3</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>FALSE_Blank Opp or Contact</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>testtest</name>
-            <conditionLogic>and</conditionLogic>
+            <name>Brickworks_address_not_blank</name>
+            <conditionLogic>1 AND 2 AND 3 AND 4</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.IATSPayment__Opportunity__r.Name</leftValueReference>
-                <operator>NotEqualTo</operator>
+                <leftValueReference>$Record.IATSPayment__Opportunity__r.IATSPayment__State__c</leftValueReference>
+                <operator>IsBlank</operator>
                 <rightValue>
-                    <stringValue>asdfasdf</stringValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Address__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>contactcreateddateplus2mins</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Record.CreatedDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IATSPayment__Opportunity__r.IATSPayment__City__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Assignment_1</targetReference>
+                <targetReference>Add_old_address_to_contact_description</targetReference>
             </connector>
-            <label>test</label>
+            <label>Brickworks address not blank</label>
         </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1</name>
+        <label>Blank Opp or Contact</label>
+        <locationX>318</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>IATS_Opp_has_address</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Blank Opp or Contact</defaultConnectorLabel>
         <rules>
             <name>TRUE_myRule_1</name>
             <conditionLogic>or</conditionLogic>
@@ -82,8 +100,8 @@
     <decisions>
         <name>myRule_11</name>
         <label>New Reg Payment</label>
-        <locationX>841</locationX>
-        <locationY>1439</locationY>
+        <locationX>586</locationX>
+        <locationY>1847</locationY>
         <defaultConnector>
             <targetReference>myRule_22</targetReference>
         </defaultConnector>
@@ -114,8 +132,8 @@
     <decisions>
         <name>myRule_22</name>
         <label>New Project Payment</label>
-        <locationX>1105</locationX>
-        <locationY>1547</locationY>
+        <locationX>858</locationX>
+        <locationY>1955</locationY>
         <defaultConnector>
             <targetReference>myRule_33</targetReference>
         </defaultConnector>
@@ -146,8 +164,8 @@
     <decisions>
         <name>myRule_3</name>
         <label>New Account if blank</label>
-        <locationX>841</locationX>
-        <locationY>431</locationY>
+        <locationX>586</locationX>
+        <locationY>839</locationY>
         <defaultConnector>
             <targetReference>myRule_6</targetReference>
         </defaultConnector>
@@ -171,8 +189,8 @@
     <decisions>
         <name>myRule_33</name>
         <label>New Event Donation</label>
-        <locationX>1369</locationX>
-        <locationY>1655</locationY>
+        <locationX>1138</locationX>
+        <locationY>2063</locationY>
         <defaultConnector>
             <targetReference>myRule_44</targetReference>
         </defaultConnector>
@@ -196,8 +214,8 @@
     <decisions>
         <name>myRule_44</name>
         <label>Gala General Donation</label>
-        <locationX>1633</locationX>
-        <locationY>1763</locationY>
+        <locationX>1435</locationX>
+        <locationY>2171</locationY>
         <defaultConnector>
             <targetReference>myRule_49</targetReference>
         </defaultConnector>
@@ -228,12 +246,41 @@
     <decisions>
         <name>myRule_49</name>
         <label>WLGala</label>
-        <locationX>1896</locationX>
-        <locationY>1871</locationY>
+        <locationX>1764</locationX>
+        <locationY>2279</locationY>
         <defaultConnector>
             <targetReference>myRule_55</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>FALSE_WLGala</defaultConnectorLabel>
+        <rules>
+            <name>YYC_Gala</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Item5__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>yyc</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IATSPayment__Opportunity__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Item5__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>WLGala</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Opportunity_Update</targetReference>
+            </connector>
+            <label>TRUE_YYC_Gala</label>
+        </rules>
         <rules>
             <name>TRUE_myRule_49</name>
             <conditionLogic>and</conditionLogic>
@@ -261,7 +308,7 @@
         <name>myRule_55</name>
         <label>Ice Road Campaign 2019</label>
         <locationX>2159</locationX>
-        <locationY>1979</locationY>
+        <locationY>2387</locationY>
         <defaultConnector>
             <targetReference>myRule_60</targetReference>
         </defaultConnector>
@@ -285,8 +332,8 @@
     <decisions>
         <name>myRule_6</name>
         <label>Update Owner</label>
-        <locationX>841</locationX>
-        <locationY>731</locationY>
+        <locationX>586</locationX>
+        <locationY>1139</locationY>
         <defaultConnector>
             <targetReference>myRule_8</targetReference>
         </defaultConnector>
@@ -318,7 +365,7 @@
         <name>myRule_60</name>
         <label>CDF Processing</label>
         <locationX>2421</locationX>
-        <locationY>2087</locationY>
+        <locationY>2495</locationY>
         <defaultConnector>
             <targetReference>myRule_65</targetReference>
         </defaultConnector>
@@ -364,7 +411,7 @@
         <name>myRule_65</name>
         <label>TAX RECEIPT - NO DESIGNATION</label>
         <locationX>2681</locationX>
-        <locationY>2195</locationY>
+        <locationY>2603</locationY>
         <defaultConnector>
             <targetReference>myRule_70</targetReference>
         </defaultConnector>
@@ -396,7 +443,7 @@
         <name>myRule_70</name>
         <label>Private Room Payment Processing</label>
         <locationX>2937</locationX>
-        <locationY>2303</locationY>
+        <locationY>2711</locationY>
         <defaultConnector>
             <targetReference>myRule_77</targetReference>
         </defaultConnector>
@@ -421,7 +468,7 @@
         <name>myRule_77</name>
         <label>Other Funds Processing</label>
         <locationX>3185</locationX>
-        <locationY>2411</locationY>
+        <locationY>2819</locationY>
         <defaultConnector>
             <targetReference>myRule_83</targetReference>
         </defaultConnector>
@@ -445,8 +492,8 @@
     <decisions>
         <name>myRule_8</name>
         <label>Check Blank Account address - Business donation</label>
-        <locationX>841</locationX>
-        <locationY>1139</locationY>
+        <locationX>586</locationX>
+        <locationY>1547</locationY>
         <defaultConnector>
             <targetReference>myRule_11</targetReference>
         </defaultConnector>
@@ -471,7 +518,7 @@
         <name>myRule_83</name>
         <label>Item15 has campaign ID</label>
         <locationX>3416</locationX>
-        <locationY>2519</locationY>
+        <locationY>2927</locationY>
         <defaultConnector>
             <targetReference>myRule_89</targetReference>
         </defaultConnector>
@@ -496,7 +543,7 @@
         <name>myRule_89</name>
         <label>LoveLegacy</label>
         <locationX>3614</locationX>
-        <locationY>2627</locationY>
+        <locationY>3035</locationY>
         <defaultConnectorLabel>FALSE_LoveLegacy</defaultConnectorLabel>
         <rules>
             <name>TRUE_myRule_89</name>
@@ -514,9 +561,18 @@
             <label>TRUE_LoveLegacy</label>
         </rules>
     </decisions>
-    <description>Migrated from the Donation Processing - iATS process using multiple criteria.
-company name field to new account</description>
+    <description>added YYC gala sponsorship branch</description>
     <environments>Default</environments>
+    <formulas>
+        <name>contactcreateddateplus2mins</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.IATSPayment__Contact__r.CreatedDate} + (2 / 1440)</expression>
+    </formulas>
+    <formulas>
+        <name>ContactDescriptionplusoldaddress</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.IATSPayment__Contact__r.Description} &amp; BR() &amp; &quot;Address before brickworks update:&quot; &amp; BR() &amp; {!$Record.IATSPayment__Contact__r.MailingAddress}</expression>
+    </formulas>
     <formulas>
         <name>formula_10_myRule_11_A1_0607492598</name>
         <dataType>String</dataType>
@@ -667,7 +723,7 @@ company name field to new account</description>
         <name>formula_35_myRule_49_A1_5735044833</name>
         <dataType>String</dataType>
         <expression>{!$Record.IATSPayment__Contact__r.FirstName} + &quot; &quot; +{!$Record.IATSPayment__Contact__r.LastName}  + &quot;  - IATS &quot; +
- IF({!$Record.IATSPayment__Method_of_Payment__c} == &quot;Credit Card&quot;,&quot;CC&quot;,&quot;ACH&quot;) + &quot; Donation - &quot;+ IF(CONTAINS({!$Record.IATSPayment__Opportunity__r.IATSPayment__Item5__c}, &quot;wpg&quot;), &quot;Winnipeg Gala &quot;,&quot;Hamilton Gala &quot;)  +TEXT(DATEVALUE({!$Record.IATSPayment__Date__c}))</expression>
+ IF({!$Record.IATSPayment__Method_of_Payment__c} == &quot;Credit Card&quot;,&quot;CC&quot;,&quot;ACH&quot;) + &quot; Donation - &quot;+ IF(CONTAINS({!$Record.IATSPayment__Opportunity__r.IATSPayment__Item5__c}, &quot;wpg&quot;), &quot;Winnipeg Gala &quot;,&quot;Calgary Gala &quot;)  +TEXT(DATEVALUE({!$Record.IATSPayment__Date__c}))</expression>
     </formulas>
     <formulas>
         <name>formula_36_myRule_49_A1_2470036640</name>
@@ -845,6 +901,12 @@ company name field to new account</description>
         <dataType>String</dataType>
         <expression>IF({!$Record.IATSPayment__Credit_Card__c} == null,&quot;Direct Debit&quot;,&quot;Credit Card&quot;)</expression>
     </formulas>
+    <formulas>
+        <name>item_7_text_to_date</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE({!$Record.IATSPayment__Opportunity__r.IATSPayment__IATS_Item_7__c})</expression>
+    </formulas>
+    <interviewLabel>Donation Processing - iATS {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Donation Processing - iATS</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -862,8 +924,8 @@ company name field to new account</description>
     <recordCreates>
         <name>myRule_11_A1</name>
         <label>New Payemtn_Reg</label>
-        <locationX>578</locationX>
-        <locationY>1547</locationY>
+        <locationX>314</locationX>
+        <locationY>1955</locationY>
         <connector>
             <targetReference>myRule_11_A2</targetReference>
         </connector>
@@ -927,8 +989,8 @@ company name field to new account</description>
     <recordCreates>
         <name>myRule_22_A1</name>
         <label>Payment_project</label>
-        <locationX>842</locationX>
-        <locationY>1655</locationY>
+        <locationX>578</locationX>
+        <locationY>2063</locationY>
         <connector>
             <targetReference>myRule_22_A2</targetReference>
         </connector>
@@ -992,8 +1054,8 @@ company name field to new account</description>
     <recordCreates>
         <name>myRule_22_A4</name>
         <label>Add Product</label>
-        <locationX>842</locationX>
-        <locationY>1979</locationY>
+        <locationX>578</locationX>
+        <locationY>2387</locationY>
         <inputAssignments>
             <field>OpportunityId</field>
             <value>
@@ -1024,8 +1086,8 @@ company name field to new account</description>
     <recordCreates>
         <name>myRule_33_A1</name>
         <label>Payment_Event</label>
-        <locationX>1106</locationX>
-        <locationY>1763</locationY>
+        <locationX>842</locationX>
+        <locationY>2171</locationY>
         <connector>
             <targetReference>myRule_33_A2</targetReference>
         </connector>
@@ -1090,7 +1152,7 @@ company name field to new account</description>
         <name>myRule_65_A2</name>
         <label>Add Product</label>
         <locationX>2426</locationX>
-        <locationY>2411</locationY>
+        <locationY>2819</locationY>
         <inputAssignments>
             <field>OpportunityId</field>
             <value>
@@ -1122,7 +1184,7 @@ company name field to new account</description>
         <name>myRule_70_A4</name>
         <label>Create Payment Record</label>
         <locationX>2690</locationX>
-        <locationY>2735</locationY>
+        <locationY>3143</locationY>
         <inputAssignments>
             <field>Amount__c</field>
             <value>
@@ -1166,7 +1228,7 @@ company name field to new account</description>
         <name>myRule_77_A3</name>
         <label>Payment Record Creation</label>
         <locationX>2954</locationX>
-        <locationY>2735</locationY>
+        <locationY>3143</locationY>
         <inputAssignments>
             <field>Amount__c</field>
             <value>
@@ -1210,7 +1272,7 @@ company name field to new account</description>
         <name>myRule_89_A2</name>
         <label>Add Product</label>
         <locationX>3482</locationX>
-        <locationY>2843</locationY>
+        <locationY>3251</locationY>
         <inputAssignments>
             <field>OpportunityId</field>
             <value>
@@ -1239,10 +1301,164 @@ company name field to new account</description>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordUpdates>
+        <name>Add_old_address_to_contact_description</name>
+        <label>Add old address to contact description</label>
+        <locationX>454</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Add_old_address_to_contact_description</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.IATSPayment__Contact__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MailingStreet</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Address__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MailingStreet</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MailingCity</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>ContactDescriptionplusoldaddress</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Add_old_address_to_contact_description</name>
+        <label>Copy 1 of Add old address to contact description</label>
+        <locationX>454</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>myRule_3</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.IATSPayment__Contact__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MailingCity</field>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MailingCountry</field>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MailingPostalCode</field>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Zip_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MailingState</field>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__State__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MailingStreet</field>
+            <value>
+                <elementReference>$Record.IATSPayment__Opportunity__r.IATSPayment__Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Opportunity_Update</name>
+        <label>Copy 1 of Opportunity Update</label>
+        <locationX>1370</locationX>
+        <locationY>2387</locationY>
+        <inputAssignments>
+            <field>Class__c</field>
+            <value>
+                <elementReference>formula_33_myRule_49_A1_4304732118</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>item_7_text_to_date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Designation__c</field>
+            <value>
+                <elementReference>formula_34_myRule_49_A1_2606548696</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Invoice_Date__c</field>
+            <value>
+                <elementReference>item_7_text_to_date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>formula_35_myRule_49_A1_5735044833</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payment_Method__c</field>
+            <value>
+                <elementReference>formula_36_myRule_49_A1_2470036640</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0123000000091zq</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Tax_reciept_sent_to__c</field>
+            <value>
+                <stringValue>No tax receipt</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type_of_Funds__c</field>
+            <value>
+                <stringValue>Donation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.IATSPayment__Opportunity__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>myRule_11_A2</name>
         <label>Update Opp</label>
-        <locationX>578</locationX>
-        <locationY>1655</locationY>
+        <locationX>314</locationX>
+        <locationY>2063</locationY>
         <connector>
             <targetReference>myRule_11_A3</targetReference>
         </connector>
@@ -1299,8 +1515,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_22_A2</name>
         <label>Update Opp</label>
-        <locationX>842</locationX>
-        <locationY>1763</locationY>
+        <locationX>578</locationX>
+        <locationY>2171</locationY>
         <connector>
             <targetReference>myRule_22_A3</targetReference>
         </connector>
@@ -1363,8 +1579,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_33_A2</name>
         <label>Update Opp</label>
-        <locationX>1106</locationX>
-        <locationY>1871</locationY>
+        <locationX>842</locationX>
+        <locationY>2279</locationY>
         <connector>
             <targetReference>myRule_33_A3</targetReference>
         </connector>
@@ -1421,8 +1637,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_44_A1</name>
         <label>Opportunity Update</label>
-        <locationX>1370</locationX>
-        <locationY>1871</locationY>
+        <locationX>1106</locationX>
+        <locationY>2279</locationY>
         <inputAssignments>
             <field>Class__c</field>
             <value>
@@ -1477,7 +1693,7 @@ company name field to new account</description>
         <name>myRule_49_A1</name>
         <label>Opportunity Update</label>
         <locationX>1634</locationX>
-        <locationY>1979</locationY>
+        <locationY>2387</locationY>
         <inputAssignments>
             <field>Class__c</field>
             <value>
@@ -1487,7 +1703,7 @@ company name field to new account</description>
         <inputAssignments>
             <field>CloseDate</field>
             <value>
-                <dateValue>2024-10-03</dateValue>
+                <elementReference>item_7_text_to_date</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1499,7 +1715,7 @@ company name field to new account</description>
         <inputAssignments>
             <field>Invoice_Date__c</field>
             <value>
-                <dateValue>2024-10-03</dateValue>
+                <elementReference>item_7_text_to_date</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1538,7 +1754,7 @@ company name field to new account</description>
         <name>myRule_55_A1</name>
         <label>Update Opportunity</label>
         <locationX>1898</locationX>
-        <locationY>2087</locationY>
+        <locationY>2495</locationY>
         <inputAssignments>
             <field>Class__c</field>
             <value>
@@ -1599,7 +1815,7 @@ company name field to new account</description>
         <name>myRule_60_A1</name>
         <label>Update Opp</label>
         <locationX>2162</locationX>
-        <locationY>2195</locationY>
+        <locationY>2603</locationY>
         <inputAssignments>
             <field>AccountId</field>
             <value>
@@ -1666,7 +1882,7 @@ company name field to new account</description>
         <name>myRule_65_A1</name>
         <label>Update TAX RECEIPT info</label>
         <locationX>2426</locationX>
-        <locationY>2303</locationY>
+        <locationY>2711</locationY>
         <connector>
             <targetReference>myRule_65_A2</targetReference>
         </connector>
@@ -1735,8 +1951,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_6_A1</name>
         <label>Update Contact Owner ID</label>
-        <locationX>709</locationX>
-        <locationY>839</locationY>
+        <locationX>454</locationX>
+        <locationY>1247</locationY>
         <connector>
             <targetReference>myRule_6_A2</targetReference>
         </connector>
@@ -1751,8 +1967,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_6_A2</name>
         <label>Update Account Owner ID</label>
-        <locationX>709</locationX>
-        <locationY>947</locationY>
+        <locationX>454</locationX>
+        <locationY>1355</locationY>
         <connector>
             <targetReference>myRule_8</targetReference>
         </connector>
@@ -1768,7 +1984,7 @@ company name field to new account</description>
         <name>myRule_70_A1</name>
         <label>Update Opportunity</label>
         <locationX>2690</locationX>
-        <locationY>2411</locationY>
+        <locationY>2819</locationY>
         <connector>
             <targetReference>myRule_70_A2</targetReference>
         </connector>
@@ -1814,7 +2030,7 @@ company name field to new account</description>
         <name>myRule_77_A1</name>
         <label>Opportunity Update</label>
         <locationX>2954</locationX>
-        <locationY>2519</locationY>
+        <locationY>2927</locationY>
         <connector>
             <targetReference>myRule_77_A2</targetReference>
         </connector>
@@ -1866,7 +2082,7 @@ company name field to new account</description>
         <name>myRule_83_A1</name>
         <label>Update Opportunity</label>
         <locationX>3218</locationX>
-        <locationY>2627</locationY>
+        <locationY>3035</locationY>
         <inputAssignments>
             <field>AccountId</field>
             <value>
@@ -1939,7 +2155,7 @@ company name field to new account</description>
         <name>myRule_89_A1</name>
         <label>Update Opportunity</label>
         <locationX>3482</locationX>
-        <locationY>2735</locationY>
+        <locationY>3143</locationY>
         <connector>
             <targetReference>myRule_89_A2</targetReference>
         </connector>
@@ -2014,8 +2230,8 @@ company name field to new account</description>
     <recordUpdates>
         <name>myRule_8_A1</name>
         <label>Update Account Address</label>
-        <locationX>709</locationX>
-        <locationY>1247</locationY>
+        <locationX>454</locationX>
+        <locationY>1655</locationY>
         <connector>
             <targetReference>myRule_11</targetReference>
         </connector>
@@ -2052,7 +2268,7 @@ company name field to new account</description>
         <inputReference>$Record.IATSPayment__Contact__r.Account</inputReference>
     </recordUpdates>
     <start>
-        <locationX>319</locationX>
+        <locationX>192</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>myRule_1</targetReference>
@@ -2061,12 +2277,12 @@ company name field to new account</description>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>myRule_11_A3</name>
         <label>Update Donation Class</label>
-        <locationX>578</locationX>
-        <locationY>1763</locationY>
+        <locationX>314</locationX>
+        <locationY>2171</locationY>
         <flowName>Update_Class_Donation</flowName>
         <inputAssignments>
             <name>OppID</name>
@@ -2084,8 +2300,8 @@ company name field to new account</description>
     <subflows>
         <name>myRule_22_A3</name>
         <label>Proj Designation</label>
-        <locationX>842</locationX>
-        <locationY>1871</locationY>
+        <locationX>578</locationX>
+        <locationY>2279</locationY>
         <connector>
             <targetReference>myRule_22_A4</targetReference>
         </connector>
@@ -2112,8 +2328,8 @@ company name field to new account</description>
     <subflows>
         <name>myRule_33_A3</name>
         <label>EventDesignation</label>
-        <locationX>1106</locationX>
-        <locationY>1979</locationY>
+        <locationX>842</locationX>
+        <locationY>2387</locationY>
         <flowName>DesignationPREV</flowName>
         <inputAssignments>
             <name>DonationType</name>
@@ -2137,8 +2353,8 @@ company name field to new account</description>
     <subflows>
         <name>myRule_3_A1</name>
         <label>New Account</label>
-        <locationX>709</locationX>
-        <locationY>539</locationY>
+        <locationX>454</locationX>
+        <locationY>947</locationY>
         <connector>
             <targetReference>myRule_6</targetReference>
         </connector>
@@ -2160,7 +2376,7 @@ company name field to new account</description>
         <name>myRule_70_A2</name>
         <label>Private Registration Confirm</label>
         <locationX>2690</locationX>
-        <locationY>2519</locationY>
+        <locationY>2927</locationY>
         <connector>
             <targetReference>myRule_70_A3</targetReference>
         </connector>
@@ -2176,7 +2392,7 @@ company name field to new account</description>
         <name>myRule_70_A3</name>
         <label>Update Payment Class</label>
         <locationX>2690</locationX>
-        <locationY>2627</locationY>
+        <locationY>3035</locationY>
         <connector>
             <targetReference>myRule_70_A4</targetReference>
         </connector>
@@ -2198,7 +2414,7 @@ company name field to new account</description>
         <name>myRule_77_A2</name>
         <label>Update Class Donation</label>
         <locationX>2954</locationX>
-        <locationY>2627</locationY>
+        <locationY>3035</locationY>
         <connector>
             <targetReference>myRule_77_A3</targetReference>
         </connector>

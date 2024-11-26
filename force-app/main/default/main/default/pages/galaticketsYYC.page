@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
   <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <style>
+  <style>
   .IATS_Div {
       margin:0px auto !important;
   }
@@ -161,6 +161,10 @@ div#___plusone_0 {
       font-family:effra, Arial, Helvetica, sans-serif !important;
 } 
 
+    .IATS_QtyLabel {
+  font-family:effra, Arial, Helvetica, sans-serif !important;
+  }
+
   </style>
 </head>          
 
@@ -180,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
                 <div class='slds-text-heading--large text-white slds-text-align--center' style='font-weight:bold'>
                   <div style="max-width: 50%; margin-left:auto !important; margin-right:auto !important; padding-left:12px; padding-right:12px;">
-            <img src="https://livedifferent.com/wp-content/uploads/2023/10/WithLove_Logo_Black.png" style="
+            <img src="https://livedifferent.com/wp-content/uploads/2022/05/WL-Mark-Online2022-Flags.jpg" style="
     padding-bottom: 20px;"></img>
  <div class="slds-text-body--small"><p style="color:black;">Join us at the WestJet Campus on April 15, 2025 at 6pm for our With Love Gala in Calgary.</p></div>
 </div>       
@@ -194,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class='slds-grid slds-wrap'>
     <div class='slds-col slds-size--1-of-1'>
     
-  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA289514661058C7DC&caid=701ON00000LGz8MYAT&Item5=WLGalasponsoryyc&Item2=SPLIT%20TAX%20RECEIPT&Item7=2025-04-15"></script>
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA3A60DC1F0A799BC6&caid=701ON00000LGz8MYAT&Item5=WLGalaticketsyyc&Item2=SPLIT%20TAX%20RECEIPT"></script>
   <div class='slds-m-top--large slds-container--small slds-container--center'>
   <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
   </div>
@@ -202,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- End Default Content REMOVE THIS -->
   </div>
-  
+
   <!--Modals -->
 
 <!-- End Modals -->
@@ -232,8 +236,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       'checkout': {
         'actionField': {'step': 1},
         'products': [{
-        'name': 'LoveLegacy Gala Sponsorship',       // Name or ID is required.
-        'id': 'LLGala-001',
+        'name': 'LoveLegacy Gala Tickets',       // Name or ID is required.
+        'id': 'LLGala-tickets',
         'brand': 'Live Different',
         'category': 'Gala/Sponsorship'
        }]
@@ -253,8 +257,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         'revenue': e.data.amount
       },
       'products': [{                            // List of productFieldObjects.
-        'name': 'LoveLegacy Gala Sponsorship',       // Name or ID is required.
-        'id': 'LLGala-001',
+        'name': 'LoveLegacy Gala Tickets',       // Name or ID is required.
+        'id': 'LLGala-tickets',
         'price': e.data.amount,
         'brand': 'Live Different',
         'quantity': 1,

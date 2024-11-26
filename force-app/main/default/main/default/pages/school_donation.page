@@ -1,0 +1,199 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Project__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#FFF !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+   
+   span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
+     color:#009bf2;
+   }
+  </style>
+</head>          
+
+<body>  
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert>   
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/Ht.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                <div class='slds-text-heading--large text-white slds-text-align--center' style='font-weight:bold'>
+                      Thank You For Your Support
+ 
+                </div>
+                <div class='slds-text-heading--medium slds-text-align--center text-white'>
+                    Each $40 Commitment provides an education, regular school meals, and other community support.
+                </div>
+          </div>
+          
+        </div>
+     </div>
+</div>
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    <div class="slds-text-body--small">Tax receipts will be issued in the first part of the following calendar year.</div>
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PAE8298384B71E7A33&caid=70150000000yd6M&oprtid=0123000000091zq&HideRecurringEndDate=true&IATS2=TAX%20RECEIPT"></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+  <!--Modals -->
+
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ */
+
+/**
+ * dataLayer.push({
+ *   'event': 'checkout',
+ *   'ecommerce': {
+ *     'checkout': {
+ *       'actionField': {'step': 1},
+ *       'products': [{
+ *       'name': '{!Project__c.Name}',       // Name or ID is required.
+ *       'id': '{!Project__c.Id}',
+ *       'brand': 'Live Different',
+ *       'category': 'Project Donation/{!Project__c.country__c}/{!Project__c.Name}'
+ *      }]
+ *    }
+ *  }
+ * });
+ */
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': '{!Project__c.Name}',       // Name or ID is required.
+        'id': '{!Project__c.Id}',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'category': 'Project Donation/{!Project__c.country__c}/{!Project__c.Name}'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    
+    
+});
+  </script>
+  </html>
+</apex:page>

@@ -1,0 +1,435 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="CustomerUserID">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- A few more details</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    .datePicker{
+                    visibility:hidden;
+          },
+  span.dateFormat{
+    display:none;
+    }
+  </style>
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+<apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+    <!-- MASTHEAD -->
+      <!-- / MASTHEAD -->    
+
+    <!-- PAGE HEADER -->
+
+    <!-- / PAGE HEADER -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form id="moreinfo">
+  <div class="slds-container--small slds-container--center">
+  <div class='slds-m-bottom--large'>
+  <p>You're off to a great start! We just need a bit more info from you.</p>
+  <p>Also, you can always change what you enter here by going to your my.livedifferent.com dashboard at any time</p>
+  </div>
+  <div id='summary'></div>
+<fieldset class="slds-form--compound">
+<legend class="slds-form-element__label  slds-text-heading--medium">Basic Info</legend>
+<div class="form-element__group">
+
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Volunteer First Name</label><apex:inputfield value="{!Contact.FirstName}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+
+<div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Volunteer Last Name</label><apex:inputfield value="{!Contact.LastName}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>
+
+<div class="slds-form-element__row slds-grid slds-wrap">
+
+  <div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Gender</label><apex:inputfield value="{!Contact.Male_Female__c}" html-data-rule-required="true" styleClass="slds-select"/></div>
+
+    
+  <div class="slds-form-element slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper" for="date"><abbr class="slds-required" title="required">*</abbr>Birthdate (YYYY-MM-DD)</label><div class="slds-form-element__control">
+
+    <div class="slds-input-has-icon slds-input-has-icon--right"><svg aria-hidden="true" class="slds-input__icon slds-icon-text-default" style="cursor:pointer;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use></svg><apex:inputfield value="{!Contact.Birthdate}" html-data-rule-required="true" id="birthdate" type="date" showdatepicker="false" styleClass="slds-input" /></div></div>
+  </div>
+
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Home Phone</label><apex:inputfield value="{!Contact.HomePhone}" id="Cphone" type="tel" html-placeholder="(xxx) xxx-xxxx" styleClass="slds-input phone-C" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Mobile Phone</label><apex:inputfield value="{!Contact.MobilePhone}" id="Cmphone" type="tel" html-placeholder="(xxx) xxx-xxxx" styleClass="slds-input phone-C"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-1"><label class="slds-form-element__helper">Text Updates</label><apex:inputcheckbox value="{!Contact.sms_notifications__c}" id="smsupdate" styleClass="slds-input" /><p class='slds-text-body--small'>Yes please, I’d like to receive important text updates—like when someone donates towards my Build.</p></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputfield value="{!Contact.email}" html-data-rule-required="true" type="email" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Alternate Email</label><apex:inputfield value="{!Contact.Email_Alternate__c}" html-placeholder="my@alternate.emal" type="email" styleClass="slds-input"/></div>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--medium">Address</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Street</label><apex:inputfield value="{!Contact.MailingStreet}" html-placeholder="115 Here street" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--6-of-12"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>City</label><apex:inputfield value="{!Contact.MailingCity}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--2-of-12" html-data-rule-required="true"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Province</label><apex:inputfield value="{!Contact.MailingState}" html-data-rule-required="true" html-placeholder="(Province" html-data-rule-minlength="2" html-data-rule-maxlength="2" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--4-of-12"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Postal Code</label><apex:inputfield value="{!Contact.MailingPostalCode}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>  </div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+<legend class="slds-form-element__label  slds-text-heading--medium">Travel Documents</legend>
+<div class='slds-m-bottom--medium slds-text-body--small'>(You can enter these at a later date through your my.livedifferent.com dashboard)</div>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Passport Name</label><apex:inputfield value="{!Contact.Passport_Name__c}" html-placeholder="Full Name" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Passport Number</label><apex:inputfield value="{!Contact.Passport_Number__c}" html-placeholder="GBxxxxx" type="text" styleClass="slds-input"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Passport Expiry (YYYY-MM-DD)</label><div class="slds-form-element__control"><div class="slds-input-has-icon slds-input-has-icon--right"><div class="slds-input-has-icon slds-input-has-icon--right"><svg aria-hidden="true" class="slds-input__icon slds-icon-text-default" style="cursor:pointer;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use></svg><apex:inputfield value="{!Contact.Passport_Expiry__c}" id="passport" showdatepicker="false" type="date" styleClass="slds-input"/></div></div></div></div>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+<legend class="slds-form-element__label slds-text-heading--medium">Medical Info</legend>
+<div class="slds-text-body--small slds-m-bottom--medium">Enter 'none' for any medical fields that don't apply</div>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Health Card #</label><apex:inputField value="{!Contact.Health_Card__c}" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Allergies</label><apex:inputField value="{!Contact.Allergies__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Medical Conditions</label><apex:inputField value="{!Contact.Medical_Conditions__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Medications</label><apex:inputField value="{!Contact.Medications__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Medical Comments</label><apex:inputField value="{!Contact.Medical_Condition_Comments__c}" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Dietary Restrictions</label><apex:inputField value="{!Contact.Dietary_Restrictions__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large" id="parent-guardian">
+<legend class="slds-form-element__label  slds-text-heading--medium">Parent / Legal Guardian</legend>
+<div class='slds-m-bottom--medium slds-text-body--small'>(If you are under 18)</div>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Full Name</label><apex:inputField value="{!Contact.Parent_Name__c}" id="parent_name" html-placeholder="Guardian" html-mi-parent="guardian_name" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputField value="{!Contact.Email_parents__c}" html-placeholder="email" html-mi-parent="guardian_email" id="parent_email" styleClass="slds-input" /></div>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--medium">Emergency Contact</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Full Name</label><apex:inputField value="{!Contact.Emergency_Contact__c}" html-placeholder="Name" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Relationship</label><apex:inputField value="{!Contact.E_C_Relationship__c}" html-placeholder="Relationship" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputField value="{!Contact.E_C_Email_Address__c}" id="ecemail" html-placeholder="contact@email.com" html-data-rule-required="true" html-data-rule-email="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Home Phone</label><apex:inputField value="{!Contact.E_C_Home_Phone__c}" id="ECphone" html-placeholder="(xxx) xxx-xxxx" styleClass="slds-input phone-EC" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Mobile Phone</label><apex:inputField value="{!Contact.E_C_Cell_Phone__c}" id="ECmphone" html-placeholder="(xxx) xxx-xxxx" styleClass="slds-input phone-EC" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Work Phone</label><apex:inputField value="{!Contact.E_C_Work_Phone__c}" id="ECwphone" html-placeholder="(xxx) xxx-xxxx" styleClass="slds-input phone-EC" /></div>
+</div>
+ </div>
+</fieldset>
+<div class="slds-m-top--xx-large slds-button-group slds-grid slds-grid--align-center">
+                               <apex:commandButton action="{!moreinfo}" value="Submit" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch" /></div>
+                      </div>
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+<script>
+   var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        
+
+        $('form[id$=moreinfo]').validate({
+        //debug: true,
+        rules: {
+    'j_id0:moreinfo:Cphone': {
+      require_from_group: [1, ".phone-C"]
+    },
+    'j_id0:moreinfo:Cmphone': {
+      require_from_group: [1, ".phone-C"]
+    },
+    'j_id0:moreinfo:ECphone': {
+      require_from_group: [1, ".phone-EC"]
+    },
+    'j_id0:moreinfo:ECmphone': {
+      require_from_group: [1, ".phone-EC"]
+    },
+    'j_id0:moreinfo:ECwphone': {
+      require_from_group: [1, ".phone-EC"]
+    }
+  },
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+
+
+
+$(document).ready(function() {
+    $("input[name='j_id0:moreinfo:birthdate']").datepicker({
+        numYearsBefore: 100,
+        numYearsAfter: -5,
+        format: 'YYYY-MM-DD',
+        dayLabels: [
+            {
+                full: 'Sunday',
+                abbv: 'S'
+            },
+            {
+                full: 'Monday',
+                abbv: 'M'
+            },
+            {
+                full: 'Tuesday',
+                abbv: 'T'
+            },
+            {
+                full: 'Wednesday',
+                abbv: 'W'
+            },
+            {
+                full: 'Thursday',
+                abbv: 'T'
+            },
+            {
+                full: 'Friday',
+                abbv: 'F'
+            },
+            {
+                full: 'Saturday',
+                abbv: 'S'
+            }
+        ],
+        monthLabels: [
+            {
+                full: 'January',
+                abbv: ''
+            },
+            {
+                full: 'February',
+                abbv: ''
+            },
+            {
+                full: 'March',
+                abbv: ''
+            },
+            {
+                full: 'April',
+                abbv: ''
+            },
+            {
+                full: 'May',
+                abbv: ''
+            },
+            {
+                full: 'June',
+                abbv: ''
+            },
+            {
+                full: 'July',
+                abbv: ''
+            },
+            {
+                full: 'August',
+                abbv: ''
+            },
+            {
+                full: 'September',
+                abbv: ''
+            },
+            {
+                full: 'October',
+                abbv: ''
+            },
+            {
+                full: 'November',
+                abbv: ''
+            },
+            {
+                full: 'December',
+                abbv: ''
+            }
+        ],
+        onChange: function(datepicker) {
+            console.log(datepicker);
+        }
+    });
+$("input[name='j_id0:moreinfo:passport']").datepicker({
+        numYearsBefore: 0,
+        numYearsAfter: 11,
+        format: 'YYYY-MM-DD',
+        dayLabels: [
+            {
+                full: 'Sunday',
+                abbv: 'S'
+            },
+            {
+                full: 'Monday',
+                abbv: 'M'
+            },
+            {
+                full: 'Tuesday',
+                abbv: 'T'
+            },
+            {
+                full: 'Wednesday',
+                abbv: 'W'
+            },
+            {
+                full: 'Thursday',
+                abbv: 'T'
+            },
+            {
+                full: 'Friday',
+                abbv: 'F'
+            },
+            {
+                full: 'Saturday',
+                abbv: 'S'
+            }
+        ],
+        monthLabels: [
+            {
+                full: 'January',
+                abbv: ''
+            },
+            {
+                full: 'February',
+                abbv: ''
+            },
+            {
+                full: 'March',
+                abbv: ''
+            },
+            {
+                full: 'April',
+                abbv: ''
+            },
+            {
+                full: 'May',
+                abbv: ''
+            },
+            {
+                full: 'June',
+                abbv: ''
+            },
+            {
+                full: 'July',
+                abbv: ''
+            },
+            {
+                full: 'August',
+                abbv: ''
+            },
+            {
+                full: 'September',
+                abbv: ''
+            },
+            {
+                full: 'October',
+                abbv: ''
+            },
+            {
+                full: 'November',
+                abbv: ''
+            },
+            {
+                full: 'December',
+                abbv: ''
+            }
+        ],
+        onChange: function(datepicker) {
+            console.log(datepicker);
+        }
+    });
+    
+    toggleFields(); //call this first so we start out with the correct visibility depending on the selected form values
+    //this will call our toggleFields function every time the selection value of our underAge field changes
+    $('body').on('change', $('#j_id0:moreinfo:birthdate'), function() {
+        toggleFields();
+    });
+
+});
+//this toggles the visibility of our parent permission fields depending on the current selected value of the underAge field
+function toggleFields() {
+        var Dt = document.getElementById('j_id0:moreinfo:birthdate').value;
+        var Now = moment().subtract(18,'y');
+        var Current = moment(Dt,'YYYY-MM-DD');
+    if (Now < Current) {
+        $("#parent-guardian").addClass("slds-show");
+        $("#parent-guardian").removeClass("slds-hide");
+        $( "input[mi-parent='guardian_email']" ).rules( "add", {
+          required: true,
+          messages: {
+          required: "Required for Minors"
+          }
+        });
+        $( "input[mi-parent='guardian_name']" ).rules( "add", {
+          required: true,
+          messages: {
+          required: "Required for Minors"
+          }
+        });
+    } else {
+        $("#parent-guardian").addClass("slds-hide");
+        $("#parent-guardian").removeClass("slds-show");
+        $( "input[mi-parent='guardian_email']" ).rules( "remove", "required");
+        $( "input[mi-parent='guardian_name']" ).rules( "remove", "required");
+}
+}
+</script>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

@@ -1,0 +1,335 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c" extensions="NewReg_1">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Sign up for {!Event__c.Name}</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  input.fcheckbox {
+  width:16px;
+  height:16px;
+  margin-right:10px !important;
+  margin-top:5px !important;
+  }
+  
+  .error {
+  color:#D8000C
+  }
+  
+  .slds-textarea {
+  height:180px !important;
+  }
+  
+
+  </style>
+</head>        
+
+   
+
+<body>    
+<apex:outputField value="{!Event__c.Location__c}" rendered="false" />
+<apex:outputField value="{!Event__c.Group_Flight_Arrangements__c}" rendered="false" />
+<apex:outputField value="{!Event__c.Default_Fundraising_Blurb__c}" rendered="false" />
+<apex:outputField value="{!Event__c.Auto_Approve__c}" rendered="false" />
+<apex:outputField value="{!Event__c.fundraising_type__c}" rendered="false" />
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <script>
+  dataLayer.push({
+  'eventCategory': '{!Event__c.Trip_Type__c} {!Event__c.RecordType.Name}',
+  'eventAction': 'New Registration',
+  'eventLabel': '{!Event__c.Name}',
+  'eventId': '{!Event__c.Id}',
+  'eventValue': '{!Event__c.Fundraising_Goal__c}',
+  'currency': 'CAD'
+});
+  </script>
+  
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">  <apex:outputField value="{!Event__c.Outstanding_Registrations__c}" rendered="FALSE"></apex:outputfield><apex:outputField value="{!Event__c.Remaining_Capacity__c}" rendered="FALSE"></apex:outputfield>
+      <apex:messages styleClass="slds-notify slds-notify--alert slds-notify-alert--theme-texture slds-m-around--medium"/>
+<apex:outputPanel rendered="{!if($CurrentPage.parameters.error == 'exists',TRUE,FALSE)}">
+<div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture slds-m-around--medium" role="alert">
+  <span class="slds-assistive-text">Error</span>
+  <h2>
+    <svg aria-hidden="true" class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small">
+      <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+    </svg>You have an existing Fundraising Page with that title, please choose a unique title.</h2>
+</div>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!if($CurrentPage.parameters.error == 'already',TRUE,FALSE)}">
+<div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture slds-m-around--medium" role="alert">
+  <span class="slds-assistive-text">Error</span>
+  <h2>
+    <svg aria-hidden="true" class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small">
+      <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+    </svg>You have already registered for this Build. Please contact our office if you need help.</h2>
+</div>
+</apex:outputPanel>
+    <div role="dialog" class="" id="">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header no-border slds-box slds-theme--shade">
+            <h2 class="slds-text-heading--medium">{!if(Event__c.Auto_Approve__c == true,'Register','Apply')} for {!Event__c.Name}</h2>
+            <p>Thanks for your interest in {!Event__c.RecordType.Name}! Please {!IF(Event__c.RecordType.Name == 'Builds','complete','review')} the information below before submitting your {!if(Event__c.Auto_Approve__c == true,'registration','application')}</p>
+        </div>
+        <apex:form id="register">
+        <div class="slds-modal__content">
+        
+            <div>
+                
+                <div class="slds-form--stacked slds-m-top--large">
+                <apex:outputPanel rendered="{!If(Event__c.fundraising_type__c == 'Live Different' && Event__c.RecordType.Name == 'Builds',TRUE,FALSE)}">
+                <br></br>
+                <div class="slds-text-heading--medium">Let's start by setting up your fundraising page!{!if(Event__c.Auto_Approve__c == true,'',' You will use this once your application is accepted.')}
+                </div>
+  <div class="slds-form-element slds-m-top--medium">
+  <span class="slds-form-element__label">Minimum Fundraising Goal</span>
+  <div class="slds-form-element__control slds-has-divider--bottom">
+    <span class="slds-form-element__addon">$</span>
+    <span class="slds-form-element__static">{!Event__c.Fundraising_Goal__c}</span>
+  </div>
+</div>
+  <div class="slds-form-element slds-is-required">
+    <label class="slds-form-element__label slds-m-top--medium" for="TMRequest">Fundraising Page Title</label>
+    <div class="slds-form-element__control">
+      <apex:inputText styleClass="slds-input has-addon" html-data-rule-required="true" html-placeholder="Enter your fundraising page title here" value="{!FT}" ID="FT" />
+    </div>
+    <div class='slds-clearfix' />
+  </div>
+  <div class="slds-form-element slds-is-required">
+    <label class="slds-form-element__label slds-m-top--medium" for="TMRequest">Fundraising Blurb</label>
+    <div class="slds-form-element__control">
+      <apex:inputTextArea styleClass="slds-textarea" html-data-rule-required="true" value="{!FB}" ID="FB" />
+    </div>
+  </div>
+  <div class="slds-form-element slds-m-top--medium slds-m-bottom--medium" style='margin-top:32px'>
+    <label class="slds-text-body--medium" for="TMRequest">Support the <a href='https://livedifferent.com/emergency-relief-and-community-development-fund/' target='_blank' >Emergency Relief and Community Development Fund</a> - optional</label>
+    <div class='slds-text-body--small'>If you want to make an even greater impact, you can add to your fundraising page goal by specifying an amount below. This does not affect your minimum fundraising goal listed above, only the goal on your public fundraising page.</div>
+    <div class="slds-form-element__control">
+      <apex:inputText styleClass="slds-input" html-placeholder="$" value="{!EF}" ID="EF" />
+    </div>
+  </div>
+  </apex:outputPanel>
+    <apex:outputPanel rendered="{!If(OR(Event__c.Custom_Question_1__c != NULL,Event__c.Custom_Question_2__c != NULL,Event__c.Custom_Question_3__c != NULL),TRUE,FALSE)}">
+    <div class="slds-text-heading--medium">Other registration questions:
+                </div>
+                </apex:outputPanel>
+  <apex:outputPanel rendered="{!If(Event__c.Custom_Question_1__c != NULL,TRUE,FALSE)}">
+  <div class="slds-form-element slds-is-required">
+    <label class="slds-form-element__label slds-m-top--medium" for="TMRequest">{!Event__c.Custom_Question_1__c}</label>
+    <div class="slds-form-element__control">
+      <apex:inputTextarea styleClass="slds-input" value="{!C1}" ID="C1" html-data-rule-required="false" html-data-rule-maxlength="255" />
+    </div>
+  </div>
+  </apex:outputPanel>
+  <apex:outputPanel rendered="{!If(Event__c.Custom_Question_2__c != NULL,TRUE,FALSE)}">
+  <div class="slds-form-element slds-is-required">
+    <label class="slds-form-element__label slds-m-top--medium" for="TMRequest">{!Event__c.Custom_Question_2__c}</label>
+    <div class="slds-form-element__control">
+      <apex:inputText styleClass="slds-input" value="{!C2}" ID="C2" html-data-rule-required="true" html-data-rule-maxlength="255" />
+    </div>
+  </div>
+  </apex:outputPanel>
+  <apex:outputPanel rendered="{!If(Event__c.Custom_Question_3__c != NULL,TRUE,FALSE)}">
+  <div class="slds-form-element slds-is-required">
+    <label class="slds-form-element__label slds-m-top--medium" for="TMRequest">{!Event__c.Custom_Question_3__c}</label>
+    <div class="slds-form-element__control">
+      <apex:inputTextArea styleClass="slds-textarea" value="{!C3}" ID="C3" html-data-rule-required="true" html-data-rule-maxlength="19999" />
+    </div>
+  </div>
+  </apex:outputPanel>
+  
+ <apex:outputPanel rendered="{!AND(CONTAINS(UPPER(Event__c.Name), 'MUSKOKA'), NOT(CONTAINS(UPPER(Event__c.Name), 'STAFF')))}">
+
+  <div><iframe src="https://www.tfaforms.com/forms/view/5009604?tfa_25={!$User.ID}&tfa_27={!$User.FirstName}&tfa_28={!$User.LastName}" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+   </apex:outputPanel>
+  
+  <apex:outputPanel rendered="{!if((Event__c.Tax_Receipt__c == 'Full Value' || Event__c.Tax_Receipt__c == 'Split')  && (Event__c.fundraising_type__c == 'Live Different' || Event__c.fundraising_type__c == 'Group'),true,false)}" layout="none">
+  <!-- Standard Build Donation Policy -->
+  <div class="slds-text-heading--small slds-m-top--x-large slds-p-top--x-large">Donation / Fundraising &amp; Refund Policy</div>
+  <div class="slds-scrollable--y slds-box" style='margin: 0px auto;height:400px'>
+  <div class='slds-text-heading--label'>Donation / Fundraising Policy</div>
+  <div class='slds-text-body--small'>
+  <ul class='slds-list--dotted'>
+  <li>LiveDifferent Builds is a fully charitable program. This means that "participants/travelers" are functioning as volunteers, approved by our Board of Directors, to help achieve the charitable purpose of LiveDifferent. The direct beneficiaries of this charitable program are families and people in-need in our host countries, not those who deliver the program (even though it may be incredibly fun, rewarding and even life-changing to serve others in need).</li>
+<li>The humanitarian trip does not have a "personal recreational vacation" component that is more than incidental to the charitable project (eg. there are not multiple days of vacation free-time during the trip)</li>
+<li>There is a fundraising goal/trip fee for volunteers. Due to the expense and logistics of coordinating a volunteer humanitarian development project, an important qualification is for each volunteer to meet a minimum fundraising goal. Volunteers can solicit tax receiptable donations via their fundraising page to reach the minimum fundraising goal and help pay for the costs in carrying out the project. Such contributions are received by LiveDifferent for its charitable purposes.</li>
+<li>According to the Canada Revenue Agency, a donation is a voluntary transfer of property without valuable consideration (an “advantage”) to the donor; donors cannot choose the beneficiaries of their donations, and a charity must have full discretion in deciding how to allocate its funds.</li>
+<li>All donations are given to the project/charity, and though donations help meet the volunteer's fundraising goal and the costs associated with the charitable project, they are not being used as a direct monetary benefit to the volunteer (eg. monies won't be refunded, they won't be used to cover personal/recreational expenses, etc.)</li>
+<li>This means that ALL tax-receipted donations are absolutely, 100% non-refundable, as it is not legal for a charity to refund a donation. In the event of any form of cancellation whatsoever or exceeding a fundraising goal, funds will instead be allocated towards where most needed in the project or in other charitable programs. In the event that a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of LiveDifferent.</li>
+<li>If you receive anonymous cash donations or proceeds from a fundraising sale, it is not legal to claim this as a tax‑receiptable donation using your name/address, as you will receive a tax‑deductible receipt for a donation that wasn’t really from you.</li>
+<li>Alternatively, if you do not wish to give a donation or fundraise, please contact our office to make a direct, NON TAX RECEIPTABLE payment.</li>
+<li>“Non-arm’s length” donations will get a split tax receipt for 70% of the donation. 70% (the percentage related to humanitarian project costs) of a donation from immediate relatives (eg. yourself, spouse, common-law partner, grandparents, parents, brothers, sisters, children, and grandchildren) will be tax-deductible, and 30% (percentage related to accommodation, food and travel) will not be tax-deductible.</li>
+<li>The reason we split receipts for immediate family member donations is because tax-receipting for personal (ie. recreational) travel is something that has often been abused/defrauded by charities or donors, and is of concern to the CRA. Although, as stated above, LiveDifferent Builds are structured to be fully charitable and not recreational travel, it is out of an abundance of caution that we split off any amount that could be misperceived by the CRA (as they lack clear guidance on this matter) as a personal benefit or advantage. This helps to protect both donors and LiveDifferent.</li>
+<li>“Non-arm’s length” donation receipts will be issued AFTER the trip is completed. In the event that a group has indicated they have purchased trip interruption/cancellation insurance, LiveDifferent will not issue tax-receipts to immediate family members until after the end date of the trip has expired. If, after fundraising, a volunteer subsequently receives insurance compensation for a trip cancellation, there is a risk that it could potentially constitute an “advantage” (a monetary benefit resulting from making a donation) to any non-arm’s length donors. This complex scenario can be easily avoided by issuing a tax receipt AFTER any potential advantage (eg. insurance compensation) is negated (due to the Build being completed).</li>
+</ul>
+  </div>
+<div class='slds-text-heading--label slds-m-top--medium'>Refund Policy (only for those that arrange a direct payment option)</div>
+<div class='slds-text-body--small'>
+<ul class='slds-list--dotted'>
+ <li>This Refund Policy does NOT apply to any donated monies. Donations are 100% non-refundable, whether directly to LiveDifferent or via a 3rd party charity  (eg. GoFundMe, Benevity or Facebook fundraising). It is not legal to refund donations.</li>
+<li>This Refund Policy only applies to those who have contacted us to arrange direct payment, or have used the direct payment form.</li>
+<li>Up to 80% of LiveDifferent Build payments (not donations) may be refunded up to the refund deadline which is six (6) weeks prior to the Build start date.</li>
+<li>Once the refund deadline has passed and it is within 6 weeks of the Build start date, no refunds will be given except for extreme circumstances such as death or severe illness/injury resulting in the individual being unable to participate. In such cases, up to 80% of LiveDifferent Build payments (not donations) may be refunded at LiveDifferent’s discretion. Requests for refund after the refund deadline must be made to LiveDifferent in writing and include any relevant information that would be helpful to understand the nature of the situation.</li>
+<li>In the event of failing to meet registration requirements (e.g. not obtaining a valid passport, not meeting minimum fundraising goals, etc), LiveDifferent reserves the right to cancel participation with no refund of payment.</li>
+<li>LiveDifferent also reserves the right, in its discretion, to cancel any LiveDifferent Build at any time because of instability, travel restrictions, illness and epidemics, risk of harm to volunteers or LiveDifferent staff or other factors in the countries which volunteers are travelling or transiting through, or otherwise. In such cases, LiveDifferent reserves the right to cancel the LiveDifferent Builds with no refund of payment.</li>
+<li>At the discretion of LiveDifferent, requests for payments to be reapplied towards a future LiveDifferent Build (within a year of the original Build opportunity). Requests to transfer payments to another volunteer currently registered for a LiveDifferent Build will be considered.</li></ul>
+</div>
+</div>
+</apex:outputPanel>
+<!-- Begin non receiptable Build Policy -->
+<apex:outputPanel rendered="{!if(Event__c.Tax_Receipt__c == 'None' && Event__c.fundraising_type__c == 'Live Different',true,false)}" layout="none">
+
+<div class="slds-text-heading--small slds-m-top--x-large slds-p-top--x-large">Donation / Fundraising &amp; Refund Policy</div>
+  <div class="slds-scrollable--y slds-box" style='margin: 0px auto;height:400px'>
+  <div class='slds-text-heading--label'>Donation / Fundraising Policy</div>
+  <div class='slds-text-body--small'>
+  Because this is not a typical Build (is not associated with a major project), donations made to your Build are not eligible for tax receipts.
+  </div>
+<div class='slds-text-heading--label slds-m-top--medium'>Refund Policy</div>
+<div class='slds-text-body--small'>
+<ul class='slds-list--dotted'>
+  <li>This Refund Policy only applies to this Build or to a standard Build for those who have contacted us to arrange direct payment, or have used the direct payment form.</li>
+  <li>Up to 50% of trip payments (not donations) can be refunded up to&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Refund_Deadline_1__c}" />
+         </apex:outputText>.</li>
+  <li>After &nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Refund_Deadline_1__c}" />
+         </apex:outputText>, no refunds will be given except for extreme circumstances such as death or severe illness/injury resulting in the individual being unable to participate. In such cases, up to 80% of trip payments (not donations) may be refunded at Live Different's discretion. Requests for refund must be made in writing and be accompanied by a death certificate or a doctor's note.</li>
+  <li>All requests for refund must be forwarded to Live Different in writing.</li>
+  <li>In the event of failing to meet registration requirements (e.g. not obtaining a valid passport, not meeting minimum fundraising goals, etc), Live Different reserves the right to cancel participation with no refund of payment.</li>
+  <li>Payments cannot be forwarded towards a future Live Different Build or transferred to another volunteer, however, in such an event where a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+</ul>
+</div>
+</div>
+
+</apex:outputPanel>
+<apex:outputPanel rendered="{!IF(Event__c.RecordType.Name == 'Builds',true,false)}" layout="none">
+<fieldset class="slds-form-element" style="width:370px;margin:10px auto">
+    <div class="slds-form-element__control slds-is-required slds-m-top--medium slds-m-bottom--medium">
+      <label class="" for="agree">
+        <apex:inputcheckbox value="{!Consent}" html-data-rule-required="true" id="consent" styleClass="fcheckbox" /><span class="slds-form-element__label">I {!IF(Event__c.Tax_Receipt__c != 'None' && (Event__c.fundraising_type__c == 'Live Different' || Event__c.fundraising_type__c == 'Group'),'agree to the Fundraising / Donation & Refund Policy',IF(Event__c.fundraising_type__c != 'None','acknowledge that donations to this Build are not eligible for tax receipts.','have received an invitation to join this Build'))}</span>
+      </label>
+    </div>
+  </fieldset>
+  </apex:outputPanel>
+  <apex:outputPanel rendered="{!IF(Event__c.RecordType.Name == 'Academy',true,false)}" layout="none">
+  <div class='slds-m-bottom--medium slds-text-align--center slds-text-heading--medium'>
+  After you sign up by clicking below
+  </div>
+  <div class='slds-text-align--left slds-container--small slds-container--center slds-text-body--small slds-m-bottom--large slds-p-left--large'>
+      <ol>
+          <li>1) You will receive a confirmation email within 1 hour</li>
+          <li>2) We will email to setup a time to connect with an Academy staff, so that we can get to know you, and answer any questions you might have.</li>
+          <li>3) We will do a little dance, because you signed up for Academy!</li>
+      </ol>
+   </div>
+  </apex:outputPanel>
+</div>
+            </div>
+        </div>
+        <div class="slds-modal__footer slds-modal__footer--directional">
+            <a href='/apex/Event?ID={!Event__c.Id}' class="slds-button slds-button--neutral">Cancel</a>
+            <apex:commandButton value="{!if(Event__c.Auto_Approve__c == true,'Sign Me Up!','Apply Now!')}" styleClass="slds-button slds-button--neutral slds-button--brand" action="{!NewReg}"/>
+        </div>
+        </apex:form>
+
+    </div>
+
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER --> 
+</body>    
+
+<!-- JAVASCRIPT -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+    var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+
+$(document).ready(function() {
+    $('body').popoverslds({
+        selector: '[data-aljs="popover"]'
+    });
+});
+    
+    $.validator.methods.title = function( value, element ) {
+  return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+}
+
+$.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Please use only letters, numbers, and dashes."
+);
+
+        $('form[id$=register]').validate({
+        //debug: true,
+        rules: {
+    'j_id0:register:FT': {
+      regex: "^[a-zA-Z0-9- ]+$"
+    }
+  },
+        Element: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+        
+        
+        
+
+    </script>    
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

@@ -1,0 +1,344 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c">    
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Registration__c" jsShorthand="Registration" fields="Custom_Answer_1__c,Event__c,Amount__c,Contact_Name__c,Consent_Package_Signed__c,Child_Protection_Policy_Signed__c,Stage__c,CRC__c,Contact_Info__c"/>
+</apex:remoteObjects> 
+<head>
+  <title>LiveDifferent Volunteer Portal -- Private Trip</title>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+  <style>
+  .slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+}
+
+.fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+    z-index:-1;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+    z-index:0;
+}
+
+.fundraise-inner {
+    padding:270px 12px 100px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.hp_bg-image {
+    color:#fff;
+    height:100px;
+    padding:30px;
+    text-align:center;
+    font-weight:bold;
+    background-size:cover;
+    border-radius:8px;
+}
+
+.popover.tour {
+   z-index:1200 !important;
+}
+  </style>
+</head>        
+<apex:outputPanel rendered="{!IF($User.ContactId == Event__c.Event_Organizer__r.ID,true,false)}">
+<body>
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert>   
+  <div ID="Inner" class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+  
+  <div class="slds-page-header slds-container--large slds-container--center slds-m-top--medium" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid slds-wrap slds-max-width--large">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+         
+        </div>
+        
+
+        <div class="slds-media__body">
+          
+          <h1 class="slds-text-heading--medium slds-m-top--large">{!Event__c.Name}</h1>
+        <!-- Address was here -->
+        
+        
+        </div>
+        </div>
+      </div>
+          <div ID="nextBuild" class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+    <div class='slds-m-bottom--small' style='font-size:22px'></div>
+    </div>
+
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+    <!-- / PAGE HEADER -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-container--large slds-container--center">
+<div class="slds-tabs--default slds-m-top--large slds-m-bottom--xx-large slds-box slds-theme--neutral" style="background-color:#FFF" id="MyInfo">
+  
+
+  <div id="tab-default-1" class="slds-tabs__content slds-show" role="tabpanel" aria-labelledby="Tab1">
+      <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Start Date</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Trip_Start_Date__c}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">End Date</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Trip_End_Date__c}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Location</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Event__c.Location__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Reg Deadline</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Registration_Deadline__c}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+</div>
+    <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Payment Deadline</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Event__c.Fundraising_Deadline__c}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Fundraising Goal</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">$<apex:outputText value="{0, number, #,##0.00}">
+       <apex:param value="{!Event__c.Fundraising_Goal__c}" />
+ </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Total Fundraised to Date </p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">$<apex:outputText value="{0, number, #,##0.00}">
+       <apex:param value="{!Event__c.reg_fundraising_to_date__c}" />
+ </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+
+  <!-- TAB INFO / ROW 2 / COLUMN 4 -->
+   <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Deposit</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">$<apex:outputText value="{0, number, #,##0.00}">
+       <apex:param value="{!Event__c.Deposit__c}" />
+ </apex:outputText></p>
+  </div>
+</div>
+  </div>
+    </div>
+<!-- / TAB INFO DETAIL ROW -->
+  </div>
+</div>
+</div>
+ <div class='slds-container--large slds-container--center'>
+  <div class="slds-col slds-col--pull-padded slds-m-bottom--large slds-size--1-of-1 slds-col-padded" id="Registrations">
+
+  <div class="slds-card">
+
+    <header class="slds-card__header slds-grid">
+      <div class="slds-col slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS0120, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <h3 class="slds-text-heading--small">Volunteers</h3>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- CARD BODY = TABLE -->
+    <section class="slds-card__body">
+      <div id="volList" class="slds-scrollable--x"><h3>No One has signed up.</h3>      </div>
+    </section>
+    <!-- / CARD BODY = SECTION + TABLE -->
+
+    <footer class="slds-card__footer">
+     <div class=''>Total Number of Active Volunteers: <strong>{!ROUND(Event__c.Registrations__c,0)}</strong></div>
+    </footer>
+  </div>
+</div>
+</div>
+<apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+</div>
+</body>
+<script>
+
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+
+$(document).ready(function() {
+    $('body').popoverslds({
+        selector: '[data-aljs="popover"]'
+    });
+});
+
+var registration = new SObjectModel.Registration();
+  var outputDiv = document.getElementById("volList");
+  
+  function updateoutputDiv() {    
+
+    registration.retrieve(
+      { where: { 
+      Event__c: {eq: '{!Event__c.Id}' }
+      },
+      orderby: [{Amount__c: 'DESC'}], limit: 100},
+      function(error, records) {
+        if (error) {
+          outputDiv.innerHTML = 'Sorry, an error has occured';
+          alert(error.message);
+        } else {
+        var EVNT = "{!Event__c.Custom_Question_1__c}";
+        var CRCR = "{!Event__c.CRC_Not_Required__c}";
+        var CPPR = "{!Event__c.cpp_not_required__c}";
+          
+          var html = '<table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal"><thead><tr class="slds-text-heading--label"><th class="slds-is-sortable" scope="col">Name</th><th scope="col">Status</th><th scope="col">Amount Paid</th><th scope="col"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="top" title="Consent Package Status - Signed or Not Signed">CP</span></th><th scope="col"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="top" title="Child Protection Policy - Signed or Not Signed">CPP</span></th><th scope="col"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="top" title="Criminal Record Check - Valid,Expired or Needed">CRC</span></th>';
+          if (EVNT != "") { html = html + '<th scope="col"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="top" title="The answer to: {!Event__c.Custom_Question_1__c}">Custom</span></th>'};
+          var html = html + '</tr></thead>';
+          var html = html + '<tbody>';
+        
+          records.forEach(function(record) {
+          var CP = record.get("Consent_Package_Signed__c");
+          var CPP = record.get("Child_Protection_Policy_Signed__c");
+          var CRC = record.get("CRC__c");
+          var STG = record.get("Stage__c");
+          if (STG.indexOf('Lost') >= 0) {Stage = "error"} else {Stage = "check"};
+              html = html + '<tr class="slds-hint-parent"><th data-label="Name" role="row"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="right" title="' + record.get("Contact_Info__c") + '">' + record.get("Contact_Name__c") + '</span></th><td class="slds-size--1-of-12" data-label="Status"><div class="slds-icon_container--circle"><svg aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default"><use xlink:href="/resource/1450368891000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#' + Stage + '"></use></svg></div></td><td class="slds-size--2-of-12" data-label="Amount Paid">$';
+              html = html + record.get("Amount__c") + '</td><td class="slds-size--1-of-12" data-label="Consent Package"><div class="slds-icon_container--circle"><svg aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default"><use xlink:href="/resource/1450368891000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#';
+              if(CP == true) {html = html + 'check'} else {html = html + 'clear'}; 
+              html = html + '"></use></svg></div></td><td class="slds-size--1-of-12" data-label="Child Protection Policy"><div class="slds-icon_container--circle"><svg aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default"><use xlink:href="/resource/1450368891000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#';
+              if(CPP == true) {html = html + 'check'} else {html = html + 'clear'}; 
+              html = html + '"></use></svg></div></td><td class="slds-size--1-of-12" data-label="Criminal Record Check"><div class="slds-icon_container--circle"><svg aria-hidden="true" class="slds-icon slds-icon--x-small slds-icon-text-default"><use xlink:href="/resource/1450368891000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#';
+              if(CRC.indexOf('valid') >= 0) {html = html + 'check'} else {html = html + 'clear'}; 
+              html = html + '"></use></svg></div></td>';
+              if(EVNT != "") { html = html + '<td class="slds-size--4-of-12" data-label="Answer">' + record.get("Custom_Answer_1__c") +'</td>'};
+          });
+          html = html + '</tr></tbody></table>';
+          outputDiv.innerHTML = html;
+        }
+      }
+    );
+  }
+  updateoutputDiv();
+
+</script>
+</apex:outputPanel>
+</html>
+</apex:page>

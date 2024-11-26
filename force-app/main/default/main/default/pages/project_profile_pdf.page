@@ -1,0 +1,111 @@
+<apex:page renderAs="pdf" standardController="Project__c" applybodyTag="false" extensions="projectImages">
+<head>
+        <style type="text/css" media="print">
+            /*
+    Created by: Greg Hacic
+    Last Update: 5 August 2015 by Greg Hacic
+    Questions?: greg@interactiveties.com
+    
+
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.floatright {
+    float:right;
+    margin-right:30px;
+}
+
+.smallfont {
+    font-size:11px;
+}
+
+
+.address {
+    font-style:italic;
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+@page {
+    size: 8.5in 11in; /* A4 width and height */
+    /*page numbers in the bottom center of each page in the pdf document */
+    @bottom-right {
+        content: "Builds Project Profile";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @bottom-left {
+        content: "{!Project__c.Event__r.Name}";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+ 
+}
+                .header {
+                    height:350px;
+                    width:100%;
+                    margin-bottom:10px;
+                    overflow:hidden;
+                }
+               
+                .content {
+                    width:64%;
+                    float:left;
+                    margin-right:20px;
+                    font-size:12px;
+                    margin-top:20px;
+                }
+                .projecttitle {
+                    
+                    color:#000000;
+                    font-size:25px;
+                    font-weight:bold;
+                    padding-bottom:5px;
+                }
+                .country {
+                    font-size:14px;
+                    font-weight:bold;
+                    padding-top:35px;
+                    margin-bottom:20px;
+                    line-height:20px;
+                }
+               .logo {
+               text-align:center;
+               margin-top:-20px;
+               }
+        </style>
+    </head>
+    <body>
+    <div>
+        <div class='logo'>
+        <img src='{!URLFOR($Resource.logoblack)}' width="140px" />
+        </div>
+        <div class='header'>
+        <img src='{!imgurl}' width='100%' />
+        </div>
+    </div>
+    <div>
+        <div class='content'>
+        <div class='projecttitle'>
+        {!Project__c.Family_Project_Name__c}
+        </div>
+        <apex:outputText escape="false" value="{!Project__c.Description__c}" styleClass="" />
+        </div>
+        <div class='sidebar'>
+            <div class='country'>
+            Country: {!Project__c.Country__c}<br />
+            Community: {!Project__c.Community__c}
+            </div>
+            <apex:repeat value="{!Strings}" var="img">
+                 <div class='thumbs'>
+                      <a href="{!img}" title=""><img src="{!img}" width="200" /></a>
+                 </div>
+            </apex:repeat>
+        </div>
+    </div>
+    
+    
+    </body>
+</apex:page>

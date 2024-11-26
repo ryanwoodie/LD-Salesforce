@@ -1,0 +1,7 @@
+<apex:page standardController="Registration__c">
+    Hello {!$User.FirstName}!
+    <p>Closed_Lost formula field boolean: {!Registration__c.Closed_Lost__c}</p>
+     <p>Fundraising Type picklist {!Registration__c.Fundraising_Type__c}</p>
+      <p>Stage picklist {!Registration__c.Stage__c}</p>
+      L:<apex:outputText value="{!Registration__c.Closed_Lost__c}" escape="false"/>
+</apex:page>

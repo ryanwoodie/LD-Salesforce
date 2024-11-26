@@ -1,0 +1,9 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Registration__c" extensions="BiWeeklyRemover">    
+  <div style='margin:30px'><!-- Begin Default Content REMOVE THIS -->
+  <p style='margin-top:30px;font-family: sans-sefir, arial'>
+  {!Greeting}</p>
+  <apex:form >
+  <apex:commandButton action="{!unSub}" styleclass="slds-m-top--large slds-button slds-button--brand" value="Remove Me" id="submit"/>
+  </apex:form>
+  </div>
+</apex:page>

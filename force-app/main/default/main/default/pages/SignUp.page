@@ -1,0 +1,109 @@
+<apex:page id="communitiesSelfRegPage" standardStylesheets="false" sidebar="false" showHeader="false" controller="CommunitiesSelfRegController" title="{!$Label.site.user_registration}">
+<header>
+<title>Live Different -- Sign Up</title>
+       <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</header>
+     <apex:define name="body">
+     <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+     <div class='slds'>
+     <apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+      <div class="slds-form--stacked slds-container--small slds-container--center slds-m-top--x-large slds-p-top--x-large">
+<apex:form id="theForm" forceSSL="true">
+    <apex:pageMessages id="error"/>
+    <div class='slds-text-body--regular slds-m-bottom--medium' style="font-size: 20px;">
+  Already have an account? <a href="https://my.livedifferent.com/login?ec=302&inst=5&startURL=%2FNew_Registration%3FID={!$CurrentPage.parameters.id}" target="_blank" style="text-decoration: underline;">Login here</a>
+</div>
+
+    <!-- Display this line if eventName exists -->
+<div class='slds-text-heading--medium'>
+  <apex:outputText value="To join {!eventName}, create your 'My LiveDifferent' account." rendered="{!NOT(ISBLANK(eventName))}" />
+  <apex:outputText value="Create your 'My Live Different' account." rendered="{!ISBLANK(eventName)}" />
+</div>
+    <div class='slds-text-body--regular slds-m-bottom--large'>Please create an account for each individual volunteer.</div>
+    <div class="slds-form-element__control">
+        <label class="slds-form-element__helper" for="First Name"><abbr class="slds-required" title="required">*</abbr>Volunteer's First Name</label>
+        <div class="slds-form-element__control slds-m-bottom--medium">
+           <apex:inputText required="true" styleclass="slds-input" id="firstName" value="{!firstName}" html-data-rule-required="true" label="First Name"/>
+        </div>
+    </div>
+    <div class="slds-form-element__control slds-m-bottom--medium">
+        <label class="slds-form-element__helper" for="Last Name"><abbr class="slds-required" title="required">*</abbr>Volunteer's Last Name</label>
+        <div class="slds-form-element__control">
+           <apex:inputText required="true" id="lastName" styleclass="slds-input" html-data-rule-required="true" value="{!lastName}" label="Last Name"/>
+        </div>
+    </div>
+    <div class="slds-form-element__control slds-m-bottom--medium">
+        <label class="slds-form-element__helper" for="email"><abbr class="slds-required" title="required">*</abbr>Email</label>
+        <div class="slds-form-element__control">
+           <apex:inputText required="true" styleclass="slds-input" html-data-rule-email="true" html-data-rule-required="true" id="email" value="{!email}" label="{!$Label.site.email}"/>
+        </div>
+    </div>
+    <div class="slds-form-element__control slds-m-bottom--medium">
+        <label class="slds-form-element__helper" for="mobilephone"><abbr class="slds-required" title="required">*</abbr>Mobile Phone</label>
+        <div class="slds-form-element__control">
+           <apex:inputText required="true" styleclass="slds-input" html-data-rule-phone="true" html-data-rule-required="true" id="mphone" value="{!mphone}" />
+        </div>
+    </div>
+    <div class="slds-form-element__control slds-m-bottom--medium">
+        <label class="slds-form-element__helper" for="heard"><abbr class="slds-required" title="required">*</abbr>How did you hear about us?</label>
+        <div class="slds-form-element__control">
+           <apex:selectList id="heardofus" value="{!heardofus}" size="1" required="true">
+    <apex:selectOptions value="{!heardoptions}"/>        
+</apex:selectList> 
+        </div>
+    </div>
+    
+      <apex:commandButton action="{!registerUser}" styleclass="slds-m-top--large slds-button slds-button--brand" value="{!$Label.site.submit}" id="submit"/> 
+  <br/>
+</apex:form>
+</div>
+      <br/>
+      <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+      </div>
+    </apex:define>
+    <apex:includeScript value="{!URLFOR($Resource.jqueryval)}" />
+    <apex:includeScript value="{!URLFOR($Resource.jqueryvaladi)}" />        <script>
+        $('form[id$=theForm]').validate({
+        //debug: true,
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+</script>
+
+</apex:page>

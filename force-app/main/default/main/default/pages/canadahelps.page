@@ -1,0 +1,239 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Event Details</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#FFF !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+}
+
+div#___plusone_0 {
+   vertical-align:top !important;
+   }
+  </style>
+</head>        
+
+   
+
+  
+<body> 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->   
+<!-- REQUIRED SLDS WRAPPER -->
+
+  <div class="slds">   
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+  <div class='slds-container--large slds-container--center slds-m-top--large'> 
+  <div id='canadahelps' class='tab-content'><div class='slds-text-heading--medium slds-m-top--x-large'>Canada Helps Setup Instructions</div>
+
+<p>To begin your fundraising efforts please set up a personal&nbsp;Fundraising Page on the CanadaHelps website*. CanadaHelps is a safe, secure and credible not-for profit&nbsp;website that provides an easy to set-up and use tool for individual fundraising purposes.&nbsp;The Fundraising Page makes it easy for donors (including yourself) to&nbsp;give by credit card, PayPal, and even Interac. Another benefit is that Canada Helps will immediately&nbsp;send tax receipts to donors for gifts that are made through your personal Fundraiser.</p>
+
+<p>Live Different Build volunteers have had good success with using their Fundraising Pages and found it to be so helpful that we have adopted it as the main fundraising tool for all trips.</p>
+
+
+<p>After watching the tutorial video or reading through the directions below, if you still need any help setting up your page, please&nbsp;<a href="http://livedifferent.com/contact" rel="nofollow">call us</a>, and we will help set it up for you.</p>
+
+<div class='slds-text-align--center slds-m-top--medium slds-m-bottom--medium'><iframe width="560" height="315" src="//www.youtube.com/embed/videoseries?list=PLz0RxTH437PuoMQqqvE_rY957z7Hcf_7o" frameborder="0"></iframe></div>
+
+<p>To see a sample Live Different volunteer Fundraising Page <a href="https://www.canadahelps.org/en/pages/ryans-hh-fundraiser-for-ht-test-page-2/" rel="nofollow" target='_blank'>click here.</a></p>
+
+<p><ins>Important:</ins>&nbsp; All monies raised through CanadaHelps are tax-receiptable donations and 100% non-refundable. Please review the <button class="slds-button" data-aljs="modal" data-aljs-show="modal-1">Refund/Donation Policy</button> for more information on this.</p>
+
+<p>Whenever possible, please encourage your donors to support your fundraising efforts by donating through your personal CanadaHelps Fundraiser. However, if you do need to receive funds offline (eg. cheques, cash donations or proceeds from fund-raising sales/events), <a href="http://livedifferent.com/contact" rel="nofollow">please contact us</a>, and we will send you a form for these offline funds</p>
+
+<p class='slds-text-body--small'>&#42; If you do not wish to fundraise or use CanadaHelps, please&nbsp;<a href="http://livedifferent.com/contact" rel="nofollow">contact us</a>&nbsp;to arrange a direct payment option.</p>
+
+<div class='slds-text-heading--medium slds-m-bottom--x-small slds-m-top--medium'>To Set-Up Your Personal Fundraising Page</div>
+<ul class='slds-list--dotted'>
+    <li><a href="https://www.canadahelps.org/en/signin.aspx" rel="nofollow" target='_blank'>Register/Login to CanadaHelps</a>&nbsp;to get started.</li>
+
+    <li>Choose: Login with Facebook or Google ID <b>OR</b> click "Don't have an account yet? Create one" in the login box.
+    <ul>
+        <li>If you click "Don't have an account yet? Create one" (instead of using Facebook/Google login), be sure to remember your password as you will need it to access your account and to manage your Fundraiser.</li>
+    </ul>
+    </li>
+
+    <li>Once you are signed in to CanadaHelps, go to:&nbsp;<a href="https://www.canadahelps.org/MyCH/Welcome.aspx" rel="nofollow" target='_blank'>https://www.canadahelps.org/MyCH/Welcome.aspx</a> and click "<a href="https://www.canadahelps.org/en/pages/page/new/" rel="nofollow" target='_blank'>Create a Fundraising Page</a>"</li>
+
+    <li><strong>Search for your charity</strong> &#8211;&nbsp;<b>IMPORTANT:</b>&nbsp;You must choose&nbsp;<a href="https://www.canadahelps.org/en/charities/live-different/" rel="nofollow"><strong>Live Different</strong></a>. There is only one "Live Different" registered with CanadaHelps, so when you enter their name into the search box the proper Live Different should appear at the top of the dialogue box. For confirmation, the correct Live Different's address is:&nbsp; Suite B3 - 15 Wellington St. N, HAMILTON, ON, CA, L8R1M7. Click "Add Charity" to add Live Different.  The dialogue box will close, and Live Different will be added to your page.  Be sure to click on the small drop down arrow beside "General" and choose "Live Different Humanitarian Trips".</li>
+
+    <li><strong>Type of fundraiser</strong>: select "Humanitarian Trip"</li>
+
+    <li><strong>Enter the trip destination and purpose of the trip</strong>: put the country you will be traveling to, and what your group will be doing while there (building a house, constructing a classroom for the school in Haiti, etc)</li>
+
+    <li><strong>Enter the title of your fundraiser</strong>: IMPORTANT: please include your full name in the title of your page, so your page can be found through CanadaHelps' search engine.  The rest of the title can be named whatever you want. A sample title may be: (Your name)'s Live Different Build: Building a house in Dominican Republic <span class="date-display-start" property="dc:date" datatype="xsd:dateTime" content="2016-12-27T00:00:00-05:00">Dec 27, 2016</span> to <span class="date-display-end" property="dc:date" datatype="xsd:dateTime" content="2017-01-05T00:00:00-05:00">Jan 5, 2017</span> </li>
+
+    <li><strong>Set your fundraising period</strong>: We recommend that you leave your Fundraiser&nbsp;active for 3 to 6 months following your trip, as supporters may wish to refer back to your page or share the link even after the trip is done, and the link will be a dead end once the page expires.&nbsp;Your friends and family may be so inspired by what they see and hear from you during and after the trip that they want to give again to a very important project.</li>
+
+    <li><strong>Set your fundraising goal</strong>: Be sure to set your minimum goal to cover your minimum fundraising goal of $2395. Tip: We welcome you to set your fundraising goal higher as all excess funds raised will go toward important needs on this project and others.</li>
+
+    <li><strong>Enter the name of the page owner</strong>: is your name.</li>
+
+    <li><strong>Make the list of received donations visible to all visitors to my page</strong>: Choose whether or not you would like those who visit your page to see who has contributed to you. Donors often like to leave encouraging notes with their donations, so you may want to choose "YES" for this reason. (Note: donors will still have the option to have their donation made public or not).&nbsp;</li>
+
+    <li><strong>Send me an email each time someone makes a donation to my fundraiser</strong>: We encourage you to tick this box and choose to be alerted when donations are made to you so you can keep on top of your fundraising efforts and can send timely personal acknowledgements to those who choose to support you.</li>
+
+    <li><strong>Personal Message</strong>: is your chance to tell those who visit your page what you are doing and to ask them to support you. You are limited to 500 characters and cannot include hyperlinks. Here is a sample personal message you can use:
+
+<ul><li><p style='margin-left:40px;width:300px'><em>I am very lucky to be participating in the Live Different New Year&#039;s Build taking place December 27, 2016 - January 5, 2017.
+A Live Different Build is a humanitarian trip to the Dominican Republic where we will be immersing ourselves in the local community and building new homes for families living in extreme poverty.
+I hope that you will support me in my efforts to bring love, hope and change to these deserving families by making a donation via this page to Live Different, the charity that is facilitating this project.</em></p></li></ul></li>
+<li>Click "Create Fundraising Page"</li>
+
+
+    <li>Next, you will be given an opportunity to <strong>"upload an image"</strong> to personalize your page. Here are some photos that you can use (<a href="http://media.livedifferent.com/?c=18&k=ddd91e58c1" rel="nofollow" target='_blank'>For more photos click here</a>). &nbsp;Right-click and then save to your computer, then upload to CanadaHelps: <br />
+        <div class='gpphotos'>
+          <div class='gpphoto'>
+            <a href='http://livedifferent.com/sites/default/files/gp/DR/gp1.jpg' target='_blank'><img src='http://livedifferent.com/sites/default/files/gp/DR/gp1t.jpg' /><br />right click here</a>
+          </div>
+          <div class='gpphoto'>
+          <a href='http://livedifferent.com/sites/default/files/gp/DR/gp2.jpg'><img src='http://livedifferent.com/sites/default/files/gp/DR/gp2t.jpg' /><br />right click here</a>
+          </div>        <br class='clearfloat' />
+        </div></li>
+<li>You can also upload videos to your Fundraiser Page. These can be from a past Live Different Build you've been on or you can use any of our videos that can be found on the Live Different YouTube page <a href="http://www.youtube.com/user/Livedifferent" rel="nofollow" target='_blank'>here</a>
+</li>
+    <li>Once you have selected and uploaded your desired media, click <strong>'Save images and Videos'</strong>.</li>
+
+    <li>Your page is now complete and can be viewed online. You can log into your Fundraiser at any time and change your personal message, photo and Fundraiser settings. To do this simply log in and go here:&nbsp;<a href="https://www.canadahelps.org/en/MyCH/FundraisingPages.aspx" rel="nofollow">https://www.canadahelps.org/en/MyCH/FundraisingPages.aspx</a></li>
+    <li>On your Fundraising page there is a button that says "Share/Save", that you can use to share your Fundraiser on Facebook, Twitter, email, etc. Alternately, you can simply share/post the direct URL of your Fundraiser.</li>
+
+<li>Raising funds offline? <a href='http://livedifferent.com/sites/default/files/pdf/offlinefunds.pdf'>Click here for instructions on how to upload offline donations to your Fundraiser</a></li>
+</ul>
+
+</div>
+</div>
+<apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+  <!-- Modals -->
+<div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-1">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <h2 class="slds-text-heading--medium">Donation Policy / Direct Payment</h2>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        <ul class='slds-list--dotted'>
+  <li>Note: for those using CanadaHelps GivingPage, tax receipts will be issued by CanadaHelps and not from Live Different (CanadaHelps disburses the funds raised online to Live Different on a weekly basis). All of the below principles of what a legal charitable donation is apply whether CanadaHelps or Live Different is processing the donation.</li>
+    <li>It is important to understand that Live Different 
+        Builds is a <strong>charitable program</strong>. This means that "participants/travelers" are functioning as volunteers, approved by our Board of Directors, to help achieve the charitable purpose of Live Different. The beneficiaries of this charitable program are families and people in-need in our host countries, not those who deliver the program (even though it may be incredibly fun, rewarding and even life-changing to serve others in need).</li>
+        <li>Additionally, the humanitarian trip does not have a "personal recreational vacation" component that is more than incidental to the charitable project (eg. if there were multiple days of personal vacation free-time this would be a monetary-type personal benefit and funds raised would not qualify as a gift for income tax purposes).</li>
+    <li>Due to the expense and logistics of coordinating a volunteer humanitarian development project, an important qualification is for each volunteer to meet their trip's <strong>minimum fundraising goal</strong>. Volunteers can solicit tax receiptable donations (via CanadaHelps) to reach the minimum fundraising goal to help pay for their costs in carrying out the project, and such designated contributions are received by Live Different (via CanadaHelps) for its charitable purposes. According to charity law, a donation is a voluntary transfer of property without valuable consideration to the donor; donors cannot choose the beneficiaries of their donations, and a charity must have full discretion in deciding how to allocate its funds. Even if related persons or the volunteer make contributions to meet the fundraising goal of the humanitarian trip, the contributions are gifts for income tax purposes because they pass the CRA tests. Therefore, CanadaHelps or Live Different are able to issue an official receipt for income tax purposes. It is the volunteer's obligation to inform donors that all donations are given to the project/charity, and though donations help meet the volunteer's fundraising goal and their costs associated with the charitable project, they are not being used as a direct monetary benefit to the volunteer (eg. monies won't be refunded, they won't be used to cover personal/recreational expenses, etc.)</li>
+    <li><b>This means that ALL donations are absolutely, 100% non-refundable</b> (whether given via CanadaHelps or directly to Live Different), as it is not legal for a charity to refund a donation. In event of any form of cancellation whatsoever or exceeding a fundraising goal, funds will instead be allocated towards where most needed in the project or in other charitable programs. In the event that a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+        <li>If you receive anynonmous cash donations or proceeds from a fundraising sale, it is not legal to claim this as a tax-receiptable donation using your name/address, as you will receive a tax-deductible receipt for a donation that wasn't really from you.</li>
+    <li>Alternately, if you do not wish to give a donation, fundraise, or use CanadaHelps, please contact us to discuss making a non-tax receiptable direct payment that will have the benefit of falling under our refund policy.</li>
+</ul>
+
+<br />
+<span class="slds-text-heading--medium">Refund Policy</span>
+
+<ul class='slds-list--dotted'>
+    <li>This Refund Policy does NOT apply to any monies given via CanadaHelps. <strong>Donations are 100% non-refundable, whether given via CanadaHelps or directly to Live Different.</strong> (It is not legal to refund donations).</li>
+        <li>This Refund Policy only applies to those who have contacted us to arrange direct payment, and have explicitly marked monies as "Payment" on the payment form.</li>
+    <li>Up to 50% of trip payments (not donations) can be refunded up to&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!Event__c.Refund_Deadline_1__c}" /></apex:outputText>.</li>
+    <li>After&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!Event__c.Refund_Deadline_1__c}" /></apex:outputText>, no refunds will be given except for extreme circumstances such as death or severe illness/injury resulting in the individual being unable to participate. In such cases, up to 80% of trip payments (not donations) may be refunded at Live Different's discretion. Requests for refund must be made in writing and be accompanied by a death certificate or a doctor's note</li>
+    <li>All requests for refund must be forwarded to Live Different in writing.</li>    
+        <li>In the event of failing to meet registration requirements (e.g. not obtaining a valid passport, not meeting minimum fundraising goals, etc), Live Different reserves the right to cancel participation with no refund of payment.</li>
+        <li>Payments cannot be forwarded towards a future Live Different Build or transferred to another volunteer, however, in such an event where a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- End Modals -->
+</div>
+<script>
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+</script>
+</body>
+</html>
+</apex:page>

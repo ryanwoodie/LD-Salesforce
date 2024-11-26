@@ -1,0 +1,197 @@
+<apex:page renderas="pdf" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="opportunity">
+<html>
+<head>
+  <STYLE type="text/css">
+           body {background-color:#efefef;font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif}
+           TH {font-size: 11px; font-face: arial;background: #EDEDED; border-width: 0;  text-align: center }
+     </STYLE>
+     </head>
+<table id="invoice" style="font-size: 100%;font: inherit;vertical-align: baseline;position: relative;max-width: 700px;background: #f5f5f5;-webkit-box-shadow: 0 0 1px #888888;-moz-box-shadow: 0 0 1px #888888;-o-box-shadow: 0 0 1px #888888;box-shadow: 0 0 1px #888888;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;" width='700'>
+<tr>
+    <td>
+    <header id="header">
+        <div class="invoice-intro">
+            <img src='{!$Resource.Logo_Portal}' width='169px' height='40px' alt='Live Different' />
+            
+        </div>
+        <div class="floatclear">&nbsp;</div>
+        <table align='center' width='400' style='text-align:left'>
+                    <tr>
+                        <td>
+            <strong>Invoice and Contract #</strong></td>
+                        <td>{!opportunity.Contract_Number__c}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Date of Invoice</strong>
+                        </td>
+                        <td>
+                        <apex:outputText value="{0,date,MMMM dd, yyyy}">
+                           <apex:param value="{!TODAY()}" />
+                        </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Date of Keynote</strong> 
+                        </td>
+                        <td>
+                        <apex:outputText value="{0,date,MMMM dd, yyyy}">
+                           <apex:param value="{!opportunity.Invoice_Date__c}" />
+                        </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+    </header>
+    <!-- e: invoice header -->
+<table width="690px" cellpadding='20' style='text-align:left;vertical-align:top'>
+    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="invoice-to">
+                                    <h2 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice To:</h2>
+                                    <div class="vcard" id="recipient">
+                                        {!opportunity.Contact_Survey__r.Name}
+                                        <div class="org">
+                                            {!opportunity.Account.Name}</div>
+                                        {!opportunity.survey_Email__c}
+                                        <div class="adr">
+                                            <div class="street-address">
+                                                {!opportunity.Account.BillingStreet}<br />{!opportunity.Account.BillingCity}, {!opportunity.Account.BillingState}    {!opportunity.Account.BillingPostalCode}</div>
+                                        </div>
+                                        <div class="tel">
+                                            {!opportunity.Account.Phone}</div>
+                                    </div>
+                                    <!-- e: vcard --></div>
+                                <!-- e invoice-to --></td>
+                            <td valign="top">
+                                <div class="invoice-from">
+                                    <h2 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice From:</h2>
+                                    <div class="vcard" id="livedifferent">
+                                        {!$Organization.Name}<br />
+                                        <div class="org">
+                                            info@livedifferent.com</div>
+                                        <div class="adr">
+                                            <div class="street-address">
+                                                {!$Organization.Street}<br />
+                                                {!$Organization.City}, {!$Organization.State}   {!$Organization.PostalCode}</div>
+                                        </div>
+                                        <div class="tel">
+                                            {!$Organization.Phone}</div>
+                                    </div>
+                                    <!-- e: vcard --></div>
+                                <!-- e invoice-from --></td>
+                            <td valign="top">
+                                <div class="invoice-status">
+                                    <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice Status</h3>
+                                    <strong>Invoice is <span style="margin: 0;padding: 8px;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;font-weight: bold;color:{!IF(opportunity.Amount_Due__c=0,"#FFF","#000")};display: block;background-color:{!IF(opportunity.Amount_Due__c=0,"#7ab900","#DF2A2A")};">{!IF(opportunity.Amount_Due__c=0,"Paid","Unpaid")}</span></strong></div>
+                                <!-- e: invoice-status --></td>
+                        </tr>
+                    </tbody>
+</table>
+
+    <section class="invoice-financials">
+        <div class="invoice-items" style="text-align:left;margin:40px 0px">
+                        <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                            Your Invoice</h3>
+                        <table style="margin: 0;padding: 0;border: 0;font-size: 12px;font: inherit;vertical-align: baseline;border-collapse: collapse;border-spacing: 0;width: 100%;text-align:left">
+                            <thead>
+                                <tr>
+                                    <th style="background: #e5e5e5" width="60%">
+                                        Item &amp; Description</th>
+                                    <th style="background: #e5e5e5" width="20%">
+                                        Quantity</th>
+                                    <th style="background: #e5e5e5" width="20%">
+                                        Price</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                            </tfoot>
+                            <tbody>
+                            <apex:repeat var="lineitems" value="{!opportunity.OpportunityLineItems}">
+
+   <tr>
+       <td style='text-align:center'>{!lineitems.Description}</td>
+       <td style='text-align:center'>{!lineitems.Quantity}</td>
+       <td style='text-align:center'><apex:outputText value="{0, number, currency}">
+<apex:param value="{!lineitems.UnitPrice}" />
+</apex:outputText></td>
+   </tr>
+</apex:repeat>
+                            </tbody>
+                        </table>
+                    </div><!-- e: invoice items -->
+
+
+        <div class="invoice-totals">
+                        <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                            Totals:</h3>
+                        <table style="text-align:left" width="100%">
+                            <tbody>
+                            <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Deposit (due two weeks after e-contract submitted:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                        {!TEXT(opportunity.Keynote_Expenses__c+opportunity.hhdeposit__c)}</td>
+                                </tr>
+                                 <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Total:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                    <apex:outputText value="{0, number, currency}">
+<apex:param value="{!opportunity.Amount}" />
+</apex:outputText></td>
+                                </tr>
+                                <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Amount Paid:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                    <apex:outputText value="{0, number, currency}">
+<apex:param value="{!opportunity.Amount_Paid__c}" />
+</apex:outputText></td>
+                                </tr>
+                                <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Amount Due:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%"><apex:outputText value="{0, number, currency}">
+<apex:param value="{!opportunity.Amount_Due__c}" />
+</apex:outputText></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- e: invoice totals -->
+
+
+        <div class="invoice-notes" style="text-align:left">
+                        <h2>
+                            Notes &amp; Information:</h2>
+                        <p>
+                            Please send cheque to below address, or give directly to speaker on the day of the Keynote. Make cheques payable to:<br />
+{!$Organization.Name}<br />
+{!$Organization.Street}<br />
+{!$Organization.City}, {!$Organization.State}   {!$Organization.PostalCode}</p>
+                    </div><!-- e: invoice-notes -->
+
+    </section><!-- e: invoice financials -->
+
+
+    <footer id="footer">
+        <p><a href='http://livedifferent.com'>Live Different</a> is a registered charity: Business #86123 2890 RR0001</p>
+    </footer>
+
+
+    </td>
+</tr>
+</table>
+</html>   
+</apex:page>

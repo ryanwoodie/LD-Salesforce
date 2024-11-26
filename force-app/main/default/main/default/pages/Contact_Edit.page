@@ -1,0 +1,331 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="CustomerUserID">    
+<!-- <apex:outputText value="{!Contact.Preferred_Pronouns__c}" rendered="false"/> -->
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Personal Details</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+  span.dateFormat{
+    display:none;
+    }
+  </style>
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+<apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+    <!-- MASTHEAD -->
+      <!-- / MASTHEAD -->    
+    <!-- / PAGE HEADER -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form id="personal">
+  <div class="slds-container--small slds-container--center">
+<fieldset class="slds-form--compound">
+<legend class="slds-form-element__label slds-text-heading--medium">Personal Info</legend>
+<div class="slds-text-heading--label slds-m-bottom--medium">Enter your details below so we know how to contact you</div>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Volunteer First Name</label><apex:inputfield value="{!Contact.FirstName}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Volunteer Last Name</label><apex:inputfield value="{!Contact.LastName}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Gender</label><apex:inputfield value="{!Contact.Male_Female__c}" html-data-rule-required="true" styleClass="slds-select"/></div><div class="slds-form-element slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper" for="date"><abbr class="slds-required" title="required">*</abbr>Birthdate (YYYY-MM-DD)</label><div class="slds-form-element__control"><div class="slds-input-has-icon slds-input-has-icon--right"><svg aria-hidden="true" class="slds-input__icon slds-icon-text-default" style="cursor:pointer;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use></svg><apex:inputfield value="{!Contact.Birthdate}" html-data-rule-required="true" id="birthdate" type="date" styleClass="slds-input" /></div></div></div></div>
+<!-- <div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Any preferred pronouns?</label><apex:inputfield value="{!Contact.Preferred_Pronouns__c}" type="text" styleClass="slds-input"/></div> -->
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Home Phone</label><apex:inputfield value="{!Contact.Phone}" html-data-rule-required="true" type="tel" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Mobile Phone</label><apex:inputfield value="{!Contact.MobilePhone}" type="tel" styleClass="slds-input"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-1"><label class="slds-form-element__helper"><abbr class="" title="required"></abbr>Text Updates</label><apex:inputcheckbox value="{!Contact.sms_notifications__c}" html-data-rule-required="true" styleClass="slds-input slds-checkbox_faux"/><p class='slds-text-body--small'>Yes please, I’d like to receive important text updates—like when someone donates towards my Build.</p></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputfield value="{!Contact.email}" html-data-rule-required="true" type="email" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Alternate Email</label><apex:inputfield value="{!Contact.Email_Alternate__c}" type="email" styleClass="slds-input"/></div>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--medium">Address</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Street</label><apex:inputfield value="{!Contact.MailingStreet}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--6-of-12"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>City</label><apex:inputfield value="{!Contact.MailingCity}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--2-of-12" html-data-rule-required="true"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Province</label><apex:inputfield value="{!Contact.MailingState}" html-data-rule-required="true" html-data-rule-minlength="2" html-data-rule-maxlength="2" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--4-of-12"><label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Postal Code</label><apex:inputfield value="{!Contact.MailingPostalCode}" html-data-rule-required="true" type="text" styleClass="slds-input"/></div>
+</div>  </div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+<legend class="slds-form-element__label  slds-text-heading--medium">Travel Documents</legend>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Full Passport Name</label><apex:inputfield value="{!Contact.Passport_Name__c}" type="text" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Passport Number</label><apex:inputfield value="{!Contact.Passport_Number__c}" type="text" styleClass="slds-input"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Passport Expiry (YYYY-MM-DD)</label><div class="slds-form-element__control"><div class="slds-input-has-icon slds-input-has-icon--right"><div class="slds-input-has-icon slds-input-has-icon--right"><svg aria-hidden="true" class="slds-input__icon slds-icon-text-default" style="cursor:pointer;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use></svg><apex:inputfield value="{!Contact.Passport_Expiry__c}" id="passport" type="date" styleClass="slds-input"/></div></div></div></div>
+</div>
+</div>
+</fieldset>
+<div class="slds-m-top--xx-large slds-button-group slds-grid slds-grid--align-center">
+                               <apex:outputLink value="/apex/Volunteer_Dashboard" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</apex:outputLink><apex:commandButton action="{!save}" value="Save" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch" /></div>
+                      </div>
+                      
+                  
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="slds-p-around--large">
+      <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    </footer>
+    <!-- / FOOTER --> 
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+
+<!-- JAVASCRIPT -->
+<script>
+   var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+$(document).ready(function() {
+    $("input[name='j_id0:personal:birthdate']").datepicker({
+        numYearsBefore: 85,
+        numYearsAfter: -5,
+        format: 'YYYY-MM-DD',
+        dayLabels: [
+            {
+                full: 'Sunday',
+                abbv: 'S'
+            },
+            {
+                full: 'Monday',
+                abbv: 'M'
+            },
+            {
+                full: 'Tuesday',
+                abbv: 'T'
+            },
+            {
+                full: 'Wednesday',
+                abbv: 'W'
+            },
+            {
+                full: 'Thursday',
+                abbv: 'T'
+            },
+            {
+                full: 'Friday',
+                abbv: 'F'
+            },
+            {
+                full: 'Saturday',
+                abbv: 'S'
+            }
+        ],
+        monthLabels: [
+            {
+                full: 'January',
+                abbv: ''
+            },
+            {
+                full: 'February',
+                abbv: ''
+            },
+            {
+                full: 'March',
+                abbv: ''
+            },
+            {
+                full: 'April',
+                abbv: ''
+            },
+            {
+                full: 'May',
+                abbv: ''
+            },
+            {
+                full: 'June',
+                abbv: ''
+            },
+            {
+                full: 'July',
+                abbv: ''
+            },
+            {
+                full: 'August',
+                abbv: ''
+            },
+            {
+                full: 'September',
+                abbv: ''
+            },
+            {
+                full: 'October',
+                abbv: ''
+            },
+            {
+                full: 'November',
+                abbv: ''
+            },
+            {
+                full: 'December',
+                abbv: ''
+            }
+        ],
+        onChange: function(datepicker) {
+            console.log(datepicker);
+        }
+    });
+$("input[name='j_id0:personal:passport']").datepicker({
+        numYearsBefore: 0,
+        numYearsAfter: 11,
+        format: 'YYYY-MM-DD',
+        dayLabels: [
+            {
+                full: 'Sunday',
+                abbv: 'S'
+            },
+            {
+                full: 'Monday',
+                abbv: 'M'
+            },
+            {
+                full: 'Tuesday',
+                abbv: 'T'
+            },
+            {
+                full: 'Wednesday',
+                abbv: 'W'
+            },
+            {
+                full: 'Thursday',
+                abbv: 'T'
+            },
+            {
+                full: 'Friday',
+                abbv: 'F'
+            },
+            {
+                full: 'Saturday',
+                abbv: 'S'
+            }
+        ],
+        monthLabels: [
+            {
+                full: 'January',
+                abbv: ''
+            },
+            {
+                full: 'February',
+                abbv: ''
+            },
+            {
+                full: 'March',
+                abbv: ''
+            },
+            {
+                full: 'April',
+                abbv: ''
+            },
+            {
+                full: 'May',
+                abbv: ''
+            },
+            {
+                full: 'June',
+                abbv: ''
+            },
+            {
+                full: 'July',
+                abbv: ''
+            },
+            {
+                full: 'August',
+                abbv: ''
+            },
+            {
+                full: 'September',
+                abbv: ''
+            },
+            {
+                full: 'October',
+                abbv: ''
+            },
+            {
+                full: 'November',
+                abbv: ''
+            },
+            {
+                full: 'December',
+                abbv: ''
+            }
+        ],
+        onChange: function(datepicker) {
+            console.log(datepicker);
+        }
+    });
+});
+
+
+
+</script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+        <script>
+        $('form[id$=personal]').validate({
+        //debug: false,
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+</script>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

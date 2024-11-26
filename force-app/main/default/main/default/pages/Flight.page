@@ -1,0 +1,2377 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="FlightController">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Flight Details</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  span.dateFormat{
+    display:none;
+    }
+  </style>
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+<apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+      
+    <!-- / PAGE HEADER -->    
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form id="flight">
+  <div class="slds-container--small slds-container--center">
+  <legend class="slds-form-element__label  slds-text-heading--medium">Flight Info</legend>
+  <div class="slds-text-heading--small">Let us know how you're arriving at and departing from {!hostlocation}. Please create a record for each direction of flight.</div>
+  <div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Direction</label><apex:inputfield value="{!flight.Arrival_or_Departure__c}" id="arrdep" html-data-rule-required="true" type="auto" styleClass="slds-select"/></div>
+<div id='hideform' class=''>
+<fieldset class="slds-form--compound">
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Airline</label><apex:inputfield value="{!flight.Airline__c}" html-data-rule-required="true" type="auto" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Flight Number</label><apex:inputfield value="{!flight.Name}" html-data-rule-required="true" type="auto" styleClass="slds-input"/></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Terminal</label><apex:inputfield value="{!flight.Terminal__c}" type="auto" html-data-rule-required="true" styleClass="slds-input"/></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Connecting Flight Number(s)</label><apex:inputfield value="{!flight.Flight_Connections__c}" type="text" styleClass="slds-input"/></div>
+</div>
+<div id='airporthost' class="slds-form-element__row slds-box slds-grid slds-wrap">
+  <div class="slds-size--1-of-1 slds-m-bottom--medium">
+    <div class="slds-form-element">
+      <label class="slds-form-element__label" for="text-input-01"><span id='hostairport'>Destination</span></label>
+      <div class="slds-form-element__control slds-has-divider--bottom">
+        <span class="slds-form-element__static">{!hostlocation}</span>
+      </div>
+    </div>
+  </div>
+    <div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-1"><label class="slds-form-element__helper">Date/Time you are <span  id='DandT'>arriving in</span> {!hostLocation}</label><div class='slds-text-body--small'>(dd/mm/yyyy hh:mm PM)</div><apex:inputfield value="{!flight.Date_Time__c}"  ID="date" html-data-rule-required="true" html-placeholder="Date and Time" styleClass="slds-input"/></div>
+  </div>
+</div>
+<div id='airportlocal' class="slds-form-element__row slds-m-bottom--medium slds-grid slds-wrap">
+  <div class="slds-form-element slds-lookup" data-select="single" data-scope="single">
+    <label class="slds-form-element__label" for="lookup-01"><span id='localairport'>Departure</span></label>
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+     <svg aria-hidden="true" class="slds-input__icon slds-icon-text-default">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+     </svg>
+     <input id="lookup-01" class="slds-lookup__search-input slds-input" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Search Airports" />
+    </div>
+  </div>
+</div>
+<apex:inputhidden value="{!flight.Airport__c}" id="airport" />
+<div class="slds-form-element__row">
+<label class="slds-form-element__control slds-size--1-of-1"><span class="slds-form-element__helper">Additional Details (ie. is your connecting flight on a different day)</span><apex:inputfield value="{!flight.Additional_Comments__c}" type="auto" styleClass="slds-input"/></label>
+</div>
+</fieldset>
+
+<div class="slds-m-top--xx-large">
+<center>
+                                <apex:outputLink value="/apex/Registration?ID={!flight.Registration__c}" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</apex:outputLink><apex:commandButton action="{!insertRecord}" value="Create" styleClass="slds-button slds-button--brand slds-max-small-button--stretch" rendered="{!if(isNewRecord == TRUE,TRUE,FALSE)}"/><apex:commandButton action="{!updateRecord}" value="Save" styleClass="slds-button slds-button--brand slds-max-small-button--stretch" rendered="{!if(isNewRecord == TRUE,FALSE,TRUE)}"/></center></div>
+                      </div></div>
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>
+    
+<script>
+<!-- JAVASCRIPT -->
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+$(document).ready(function() {
+   $('[data-aljs="popover"]').popoverslds();
+});
+
+  
+
+$(document).ready(function() {
+    $('#j_id0\\:flight\\:arrdep').change(function() {
+    var DandT = "";
+    var host = "";
+    var local = "";
+    if ($(this).val() == "Arrival") {DandT = "arriving in";
+    host = "Arriving to";
+    local = "Departing From";
+    $('#airporthost').insertAfter('#airportlocal');
+    $('#hideform').removeClass('slds-hide');}
+    else if ($(this).val() == "Departure") {DandT = "departing from";
+    $('#airportlocal').insertAfter('#airporthost');
+    host = "Departing From";
+    local = "Arriving At";
+    $('#hideform').removeClass('slds-hide');}
+    else if ($(this).val() == "") {$('#hideform').addClass('slds-hide');}
+    $('#DandT').text(DandT);
+    $('#hostairport').text(host);
+    $('#localairport').text(local);
+    
+}).trigger('change');
+
+    $('#lookup-01').lookup({
+        initialSelection: { id: '{!flight.airport__c}', label: '{!flight.airport__c}'},
+        onChange: function(currentSelection, isAdd) {
+        if(isAdd == true) {
+        document.getElementById('j_id0:flight:airport').value = currentSelection.id;
+                } else {
+        document.getElementById('j_id0:flight:airport').value = '';
+        }
+        },
+        objectIconUrl: '{!URLFOR($Resource.SLDS100, '/assets/icons/action-sprite/svg/symbols.svg#new_custom20')}',
+        objectIconClass: 'slds-icon-standard-lead',
+        items: [
+ {
+   "id": "ZMH - 108 Mile Ranch",
+   "label": "ZMH - 108 Mile Ranch"
+ },
+ {
+   "id": "YXX - Abbotsford",
+   "label": "YXX - Abbotsford"
+ },
+ {
+   "id": "LAK - Aklavik",
+   "label": "LAK - Aklavik"
+ },
+ {
+   "id": "AKV - Akulivik",
+   "label": "AKV - Akulivik"
+ },
+ {
+   "id": "YLT - Alert",
+   "label": "YLT - Alert"
+ },
+ {
+   "id": "YAL - Alert Bay",
+   "label": "YAL - Alert Bay"
+ },
+ {
+   "id": "ZAA - Alice Arm",
+   "label": "ZAA - Alice Arm"
+ },
+ {
+   "id": "YTF - Alma",
+   "label": "YTF - Alma"
+ },
+ {
+   "id": "YAE - Alta Lake",
+   "label": "YAE - Alta Lake"
+ },
+ {
+   "id": "YEY - Amos",
+   "label": "YEY - Amos"
+ },
+ {
+   "id": "YAA - Anahim Lake",
+   "label": "YAA - Anahim Lake"
+ },
+ {
+   "id": "YAX - Angling Lake",
+   "label": "YAX - Angling Lake"
+ },
+ {
+   "id": "YAB - Arctic Bay",
+   "label": "YAB - Arctic Bay"
+ },
+ {
+   "id": "NWP - Argentia",
+   "label": "NWP - Argentia"
+ },
+ {
+   "id": "YYW - Armstrong",
+   "label": "YYW - Armstrong"
+ },
+ {
+   "id": "YNR - Arnes",
+   "label": "YNR - Arnes"
+ },
+ {
+   "id": "YEK - Arviat",
+   "label": "YEK - Arviat"
+ },
+ {
+   "id": "YAF - Asbestos Hill",
+   "label": "YAF - Asbestos Hill"
+ },
+ {
+   "id": "YZA - Ashcroft",
+   "label": "YZA - Ashcroft"
+ },
+ {
+   "id": "YIB - Atikokan",
+   "label": "YIB - Atikokan"
+ },
+ {
+   "id": "YAT - Attawapiskat",
+   "label": "YAT - Attawapiskat"
+ },
+ {
+   "id": "YPJ - Aupaluk",
+   "label": "YPJ - Aupaluk"
+ },
+ {
+   "id": "YBG - Bagotville",
+   "label": "YBG - Bagotville"
+ },
+ {
+   "id": "YBC - Baie Comeau",
+   "label": "YBC - Baie Comeau"
+ },
+ {
+   "id": "YBJ - Baie Johan Beetz",
+   "label": "YBJ - Baie Johan Beetz"
+ },
+ {
+   "id": "YBK - Baker Lake",
+   "label": "YBK - Baker Lake"
+ },
+ {
+   "id": "YBF - Bamfield",
+   "label": "YBF - Bamfield"
+ },
+ {
+   "id": "YBA - Banff",
+   "label": "YBA - Banff"
+ },
+ {
+   "id": "ZBF - Bathurst",
+   "label": "ZBF - Bathurst"
+ },
+ {
+   "id": "XBE - Bearskin Lake",
+   "label": "XBE - Bearskin Lake"
+ },
+ {
+   "id": "YZC - Beatton River",
+   "label": "YZC - Beatton River"
+ },
+ {
+   "id": "YXQ - Beaver Creek",
+   "label": "YXQ - Beaver Creek"
+ },
+ {
+   "id": "YBW - Bedwell Harbor",
+   "label": "YBW - Bedwell Harbor"
+ },
+ {
+   "id": "ZEL - Bella Bella",
+   "label": "ZEL - Bella Bella"
+ },
+ {
+   "id": "QBC - Bella Coola",
+   "label": "QBC - Bella Coola"
+ },
+ {
+   "id": "YBV - Berens River",
+   "label": "YBV - Berens River"
+ },
+ {
+   "id": "YIG - Big Bay Marina",
+   "label": "YIG - Big Bay Marina"
+ },
+ {
+   "id": "YYA - Big Bay Yacht Club",
+   "label": "YYA - Big Bay Yacht Club"
+ },
+ {
+   "id": "YTL - Big Trout",
+   "label": "YTL - Big Trout"
+ },
+ {
+   "id": "YBI - Black Tickle",
+   "label": "YBI - Black Tickle"
+ },
+ {
+   "id": "YBX - Blanc Sablon",
+   "label": "YBX - Blanc Sablon"
+ },
+ {
+   "id": "YDV - Bloodvein",
+   "label": "YDV - Bloodvein"
+ },
+ {
+   "id": "XBB - Blubber Bay",
+   "label": "XBB - Blubber Bay"
+ },
+ {
+   "id": "YBO - Bobquinn Lake",
+   "label": "YBO - Bobquinn Lake"
+ },
+ {
+   "id": "YVB - Bonaventure",
+   "label": "YVB - Bonaventure"
+ },
+ {
+   "id": "YBY - Bonnyville",
+   "label": "YBY - Bonnyville"
+ },
+ {
+   "id": "YBN - Borden",
+   "label": "YBN - Borden"
+ },
+ {
+   "id": "YBR - Brandon",
+   "label": "YBR - Brandon"
+ },
+ {
+   "id": "YDR - Broadview",
+   "label": "YDR - Broadview"
+ },
+ {
+   "id": "YBT - Brochet",
+   "label": "YBT - Brochet"
+ },
+ {
+   "id": "XBR - Brockville",
+   "label": "XBR - Brockville"
+ },
+ {
+   "id": "ZBM - Bromont",
+   "label": "ZBM - Bromont"
+ },
+ {
+   "id": "YBM - Bronson Creek",
+   "label": "YBM - Bronson Creek"
+ },
+ {
+   "id": "YZM - Buchans",
+   "label": "YZM - Buchans"
+ },
+ {
+   "id": "YVT - Buffalo Narrows",
+   "label": "YVT - Buffalo Narrows"
+ },
+ {
+   "id": "YBH - Bull Harbour",
+   "label": "YBH - Bull Harbour"
+ },
+ {
+   "id": "YPZ - Burns Lake",
+   "label": "YPZ - Burns Lake"
+ },
+ {
+   "id": "YEI - Bursa",
+   "label": "YEI - Bursa"
+ },
+ {
+   "id": "YDB - Burwash Landings",
+   "label": "YDB - Burwash Landings"
+ },
+ {
+   "id": "YYC - Calgary",
+   "label": "YYC - Calgary"
+ },
+ {
+   "id": "YCB - Cambridge Bay",
+   "label": "YCB - Cambridge Bay"
+ },
+ {
+   "id": "YBL - Campbell River",
+   "label": "YBL - Campbell River"
+ },
+ {
+   "id": "YHH - Campbell River",
+   "label": "YHH - Campbell River"
+ },
+ {
+   "id": "YTE - Cape Dorset",
+   "label": "YTE - Cape Dorset"
+ },
+ {
+   "id": "YCJ - Cape St James",
+   "label": "YCJ - Cape St James"
+ },
+ {
+   "id": "YCI - Caribou Island",
+   "label": "YCI - Caribou Island"
+ },
+ {
+   "id": "YCV - Cartierville",
+   "label": "YCV - Cartierville"
+ },
+ {
+   "id": "YRF - Cartwright",
+   "label": "YRF - Cartwright"
+ },
+ {
+   "id": "YCG - Castlegar",
+   "label": "YCG - Castlegar"
+ },
+ {
+   "id": "YAC - Cat Lake",
+   "label": "YAC - Cat Lake"
+ },
+ {
+   "id": "YCE - Centralia",
+   "label": "YCE - Centralia"
+ },
+ {
+   "id": "YLD - Chapleau",
+   "label": "YLD - Chapleau"
+ },
+ {
+   "id": "YCL - Charlo",
+   "label": "YCL - Charlo"
+ },
+ {
+   "id": "YHG - Charlottetown",
+   "label": "YHG - Charlottetown"
+ },
+ {
+   "id": "YYG - Charlottetown",
+   "label": "YYG - Charlottetown"
+ },
+ {
+   "id": "XCM - Chatham",
+   "label": "XCM - Chatham"
+ },
+ {
+   "id": "YCS - Chesterfield Inlet",
+   "label": "YCS - Chesterfield Inlet"
+ },
+ {
+   "id": "YCQ - Chetwynd",
+   "label": "YCQ - Chetwynd"
+ },
+ {
+   "id": "YHR - Chevery",
+   "label": "YHR - Chevery"
+ },
+ {
+   "id": "YMT - Chibougamau",
+   "label": "YMT - Chibougamau"
+ },
+ {
+   "id": "CJH - Chilko Lake",
+   "label": "CJH - Chilko Lake"
+ },
+ {
+   "id": "YCW - Chilliwack",
+   "label": "YCW - Chilliwack"
+ },
+ {
+   "id": "YKU - Chisasibi",
+   "label": "YKU - Chisasibi"
+ },
+ {
+   "id": "ZUM - Churchill Falls",
+   "label": "ZUM - Churchill Falls"
+ },
+ {
+   "id": "YWQ - Chute-Des-Passes",
+   "label": "YWQ - Chute-Des-Passes"
+ },
+ {
+   "id": "YLM - Clinton Creek",
+   "label": "YLM - Clinton Creek"
+ },
+ {
+   "id": "XCL - Cluff Lake",
+   "label": "XCL - Cluff Lake"
+ },
+ {
+   "id": "YCY - Clyde River",
+   "label": "YCY - Clyde River"
+ },
+ {
+   "id": "YCN - Cochrane",
+   "label": "YCN - Cochrane"
+ },
+ {
+   "id": "YOD - Cold Lake",
+   "label": "YOD - Cold Lake"
+ },
+ {
+   "id": "YKC - Collins Bay",
+   "label": "YKC - Collins Bay"
+ },
+ {
+   "id": "YCK - Colville Lake",
+   "label": "YCK - Colville Lake"
+ },
+ {
+   "id": "YQQ - Comox",
+   "label": "YQQ - Comox"
+ },
+ {
+   "id": "YCP - Co-op Point",
+   "label": "YCP - Co-op Point"
+ },
+ {
+   "id": "YZS - Coral Harbour",
+   "label": "YZS - Coral Harbour"
+ },
+ {
+   "id": "YNF - Corner Brook",
+   "label": "YNF - Corner Brook"
+ },
+ {
+   "id": "YCC - Cornwall",
+   "label": "YCC - Cornwall"
+ },
+ {
+   "id": "YCT - Coronation",
+   "label": "YCT - Coronation"
+ },
+ {
+   "id": "YCF - Cortes Bay",
+   "label": "YCF - Cortes Bay"
+ },
+ {
+   "id": "YCA - Courtenay",
+   "label": "YCA - Courtenay"
+ },
+ {
+   "id": "YYM - Cowley",
+   "label": "YYM - Cowley"
+ },
+ {
+   "id": "YXC - Cranbrook",
+   "label": "YXC - Cranbrook"
+ },
+ {
+   "id": "CFQ - Creston",
+   "label": "CFQ - Creston"
+ },
+ {
+   "id": "YCR - Cross Lake",
+   "label": "YCR - Cross Lake"
+ },
+ {
+   "id": "YDH - Daniels Harbour",
+   "label": "YDH - Daniels Harbour"
+ },
+ {
+   "id": "YDN - Dauphin",
+   "label": "YDN - Dauphin"
+ },
+ {
+   "id": "YDI - Davis Inlet",
+   "label": "YDI - Davis Inlet"
+ },
+ {
+   "id": "YDA - Dawson City",
+   "label": "YDA - Dawson City"
+ },
+ {
+   "id": "YDQ - Dawson Creek",
+   "label": "YDQ - Dawson Creek"
+ },
+ {
+   "id": "YRD - Dean River",
+   "label": "YRD - Dean River"
+ },
+ {
+   "id": "YDL - Dease Lake",
+   "label": "YDL - Dease Lake"
+ },
+ {
+   "id": "YGY - Deception",
+   "label": "YGY - Deception"
+ },
+ {
+   "id": "YDF - Deer Lake",
+   "label": "YDF - Deer Lake"
+ },
+ {
+   "id": "YVZ - Deer Lake",
+   "label": "YVZ - Deer Lake"
+ },
+ {
+   "id": "YWJ - Deline",
+   "label": "YWJ - Deline"
+ },
+ {
+   "id": "YDS - Desolation Sound",
+   "label": "YDS - Desolation Sound"
+ },
+ {
+   "id": "DVK - Diavik",
+   "label": "DVK - Diavik"
+ },
+ {
+   "id": "YDG - Digby",
+   "label": "YDG - Digby"
+ },
+ {
+   "id": "YDX - Doc Creek",
+   "label": "YDX - Doc Creek"
+ },
+ {
+   "id": "YDO - Dolbeau",
+   "label": "YDO - Dolbeau"
+ },
+ {
+   "id": "YDC - Drayton Valley",
+   "label": "YDC - Drayton Valley"
+ },
+ {
+   "id": "YHD - Dryden",
+   "label": "YHD - Dryden"
+ },
+ {
+   "id": "DUQ - Duncan/Quam",
+   "label": "DUQ - Duncan/Quam"
+ },
+ {
+   "id": "YXR - Earlton",
+   "label": "YXR - Earlton"
+ },
+ {
+   "id": "ZEM - East Main",
+   "label": "ZEM - East Main"
+ },
+ {
+   "id": "YEG - Edmonton",
+   "label": "YEG - Edmonton"
+ },
+ {
+   "id": "YXD - Edmonton",
+   "label": "YXD - Edmonton"
+ },
+ {
+   "id": "YED - Edmonton",
+   "label": "YED - Edmonton"
+ },
+ {
+   "id": "YET - Edson",
+   "label": "YET - Edson"
+ },
+ {
+   "id": "YOA - Ekati",
+   "label": "YOA - Ekati"
+ },
+ {
+   "id": "YEL - Elliot Lake",
+   "label": "YEL - Elliot Lake"
+ },
+ {
+   "id": "YPF - Esquimalt",
+   "label": "YPF - Esquimalt"
+ },
+ {
+   "id": "YEN - Estevan",
+   "label": "YEN - Estevan"
+ },
+ {
+   "id": "YEP - Estevan Point",
+   "label": "YEP - Estevan Point"
+ },
+ {
+   "id": "YEU - Eureka",
+   "label": "YEU - Eureka"
+ },
+ {
+   "id": "YCZ - Fairmount Springs",
+   "label": "YCZ - Fairmount Springs"
+ },
+ {
+   "id": "ZFW - Fairview",
+   "label": "ZFW - Fairview"
+ },
+ {
+   "id": "YOE - Falher",
+   "label": "YOE - Falher"
+ },
+ {
+   "id": "ZFA - Faro",
+   "label": "ZFA - Faro"
+ },
+ {
+   "id": "ZRR - Fiumicino",
+   "label": "ZRR - Fiumicino"
+ },
+ {
+   "id": "YFO - Flin Flon",
+   "label": "YFO - Flin Flon"
+ },
+ {
+   "id": "ZFD - Fond Du Lac",
+   "label": "ZFD - Fond Du Lac"
+ },
+ {
+   "id": "YFG - Fontanges",
+   "label": "YFG - Fontanges"
+ },
+ {
+   "id": "YFE - Forestville",
+   "label": "YFE - Forestville"
+ },
+ {
+   "id": "YFA - Fort Albany",
+   "label": "YFA - Fort Albany"
+ },
+ {
+   "id": "YPY - Fort Chipewyan",
+   "label": "YPY - Fort Chipewyan"
+ },
+ {
+   "id": "YAG - Fort Frances",
+   "label": "YAG - Fort Frances"
+ },
+ {
+   "id": "YGH - Fort Good Hope",
+   "label": "YGH - Fort Good Hope"
+ },
+ {
+   "id": "YFH - Fort Hope",
+   "label": "YFH - Fort Hope"
+ },
+ {
+   "id": "YJF - Fort Liard",
+   "label": "YJF - Fort Liard"
+ },
+ {
+   "id": "YMM - Fort Mcmurray",
+   "label": "YMM - Fort Mcmurray"
+ },
+ {
+   "id": "ZFM - Fort Mcpherson",
+   "label": "ZFM - Fort Mcpherson"
+ },
+ {
+   "id": "YYE - Fort Nelson",
+   "label": "YYE - Fort Nelson"
+ },
+ {
+   "id": "YFL - Fort Reliance",
+   "label": "YFL - Fort Reliance"
+ },
+ {
+   "id": "YFR - Fort Resolution",
+   "label": "YFR - Fort Resolution"
+ },
+ {
+   "id": "YER - Fort Severn",
+   "label": "YER - Fort Severn"
+ },
+ {
+   "id": "YFS - Fort Simpson",
+   "label": "YFS - Fort Simpson"
+ },
+ {
+   "id": "YSM - Fort Smith",
+   "label": "YSM - Fort Smith"
+ },
+ {
+   "id": "YXJ - Fort St John",
+   "label": "YXJ - Fort St John"
+ },
+ {
+   "id": "YFX - Fox Harbour (St Lewis)",
+   "label": "YFX - Fox Harbour (St Lewis)"
+ },
+ {
+   "id": "YFC - Fredericton",
+   "label": "YFC - Fredericton"
+ },
+ {
+   "id": "YCX - Gagetown",
+   "label": "YCX - Gagetown"
+ },
+ {
+   "id": "YGA - Gagnon",
+   "label": "YGA - Gagnon"
+ },
+ {
+   "id": "YQX - Gander",
+   "label": "YQX - Gander"
+ },
+ {
+   "id": "YGG - Ganges Harbor",
+   "label": "YGG - Ganges Harbor"
+ },
+ {
+   "id": "YGQ - Geraldton",
+   "label": "YGQ - Geraldton"
+ },
+ {
+   "id": "YGS - Germansen",
+   "label": "YGS - Germansen"
+ },
+ {
+   "id": "ZGS - Gethsemani",
+   "label": "ZGS - Gethsemani"
+ },
+ {
+   "id": "YGX - Gillam",
+   "label": "YGX - Gillam"
+ },
+ {
+   "id": "YGB - Gillies Bay",
+   "label": "YGB - Gillies Bay"
+ },
+ {
+   "id": "YGM - Gimli",
+   "label": "YGM - Gimli"
+ },
+ {
+   "id": "YHK - Gjoa Haven",
+   "label": "YHK - Gjoa Haven"
+ },
+ {
+   "id": "YGO - Gods Narrows",
+   "label": "YGO - Gods Narrows"
+ },
+ {
+   "id": "ZGI - Gods River",
+   "label": "ZGI - Gods River"
+ },
+ {
+   "id": "YYR - Goose Bay",
+   "label": "YYR - Goose Bay"
+ },
+ {
+   "id": "YZE - Gore Bay",
+   "label": "YZE - Gore Bay"
+ },
+ {
+   "id": "YGE - Gorge Harbor",
+   "label": "YGE - Gorge Harbor"
+ },
+ {
+   "id": "ZGF - Grand Forks",
+   "label": "ZGF - Grand Forks"
+ },
+ {
+   "id": "YGC - Grande Cache",
+   "label": "YGC - Grande Cache"
+ },
+ {
+   "id": "YQU - Grande Prairie",
+   "label": "YQU - Grande Prairie"
+ },
+ {
+   "id": "XGL - Granville Lake",
+   "label": "XGL - Granville Lake"
+ },
+ {
+   "id": "DAS - Great Bear Lake",
+   "label": "DAS - Great Bear Lake"
+ },
+ {
+   "id": "YGN - Greenway Sound",
+   "label": "YGN - Greenway Sound"
+ },
+ {
+   "id": "YZX - Greenwood",
+   "label": "YZX - Greenwood"
+ },
+ {
+   "id": "YGZ - Grise Fiord",
+   "label": "YGZ - Grise Fiord"
+ },
+ {
+   "id": "YHT - Haines Junction",
+   "label": "YHT - Haines Junction"
+ },
+ {
+   "id": "YHC - Hakai Pass",
+   "label": "YHC - Hakai Pass"
+ },
+ {
+   "id": "YWF - Halifax",
+   "label": "YWF - Halifax"
+ },
+ {
+   "id": "YHZ - Halifax",
+   "label": "YHZ - Halifax"
+ },
+ {
+   "id": "YAW - Halifax",
+   "label": "YAW - Halifax"
+ },
+ {
+   "id": "YUX - Hall Beach",
+   "label": "YUX - Hall Beach"
+ },
+ {
+   "id": "YHM - Hamilton",
+   "label": "YHM - Hamilton"
+ },
+ {
+   "id": "YTB - Hartley Bay",
+   "label": "YTB - Hartley Bay"
+ },
+ {
+   "id": "YDJ - Hatchet Lake",
+   "label": "YDJ - Hatchet Lake"
+ },
+ {
+   "id": "YGV - Havre St Pierre",
+   "label": "YGV - Havre St Pierre"
+ },
+ {
+   "id": "YHY - Hay River",
+   "label": "YHY - Hay River"
+ },
+ {
+   "id": "YHF - Hearst",
+   "label": "YHF - Hearst"
+ },
+ {
+   "id": "YOJ - High Level",
+   "label": "YOJ - High Level"
+ },
+ {
+   "id": "ZHP - High Prairie",
+   "label": "ZHP - High Prairie"
+ },
+ {
+   "id": "YHI - Holman",
+   "label": "YHI - Holman"
+ },
+ {
+   "id": "YHE - Hope",
+   "label": "YHE - Hope"
+ },
+ {
+   "id": "YHO - Hopedale",
+   "label": "YHO - Hopedale"
+ },
+ {
+   "id": "YHN - Hornepayne",
+   "label": "YHN - Hornepayne"
+ },
+ {
+   "id": "ZHO - Houston",
+   "label": "ZHO - Houston"
+ },
+ {
+   "id": "YHB - Hudson Bay",
+   "label": "YHB - Hudson Bay"
+ },
+ {
+   "id": "YGT - Igloolik",
+   "label": "YGT - Igloolik"
+ },
+ {
+   "id": "ZUC - Ignace",
+   "label": "ZUC - Ignace"
+ },
+ {
+   "id": "YGR - Iles De La Madeleine",
+   "label": "YGR - Iles De La Madeleine"
+ },
+ {
+   "id": "ILF - Ilford",
+   "label": "ILF - Ilford"
+ },
+ {
+   "id": "YPH - Inukjuak",
+   "label": "YPH - Inukjuak"
+ },
+ {
+   "id": "YEV - Inuvik",
+   "label": "YEV - Inuvik"
+ },
+ {
+   "id": "TIL - Inverlake",
+   "label": "TIL - Inverlake"
+ },
+ {
+   "id": "YFB - Iqaluit",
+   "label": "YFB - Iqaluit"
+ },
+ {
+   "id": "YIV - Island Lk/Garden Hill",
+   "label": "YIV - Island Lk/Garden Hill"
+ },
+ {
+   "id": "YIK - Ivujivik",
+   "label": "YIK - Ivujivik"
+ },
+ {
+   "id": "YJP - Jasper-Hinton",
+   "label": "YJP - Jasper-Hinton"
+ },
+ {
+   "id": "ZJG - Jenpeg",
+   "label": "ZJG - Jenpeg"
+ },
+ {
+   "id": "YJO - Johnny Mountain",
+   "label": "YJO - Johnny Mountain"
+ },
+ {
+   "id": "YKA - Kamloops",
+   "label": "YKA - Kamloops"
+ },
+ {
+   "id": "XGR - Kangiqsualujjuaq",
+   "label": "XGR - Kangiqsualujjuaq"
+ },
+ {
+   "id": "YWB - Kangiqsujuaq",
+   "label": "YWB - Kangiqsujuaq"
+ },
+ {
+   "id": "YKG - Kangirsuk",
+   "label": "YKG - Kangirsuk"
+ },
+ {
+   "id": "YYU - Kapuskasing",
+   "label": "YYU - Kapuskasing"
+ },
+ {
+   "id": "XKS - Kasabonika",
+   "label": "XKS - Kasabonika"
+ },
+ {
+   "id": "YDU - Kasba Lake",
+   "label": "YDU - Kasba Lake"
+ },
+ {
+   "id": "ZKE - Kaschechewan",
+   "label": "ZKE - Kaschechewan"
+ },
+ {
+   "id": "YAU - Kattiniq",
+   "label": "YAU - Kattiniq"
+ },
+ {
+   "id": "KEW - Keewaywin",
+   "label": "KEW - Keewaywin"
+ },
+ {
+   "id": "ZKG - Kegaska",
+   "label": "ZKG - Kegaska"
+ },
+ {
+   "id": "YLW - Kelowna",
+   "label": "YLW - Kelowna"
+ },
+ {
+   "id": "KES - Kelsey",
+   "label": "KES - Kelsey"
+ },
+ {
+   "id": "XKO - Kemano",
+   "label": "XKO - Kemano"
+ },
+ {
+   "id": "YKI - Kennosao Lake",
+   "label": "YKI - Kennosao Lake"
+ },
+ {
+   "id": "YQK - Kenora",
+   "label": "YQK - Kenora"
+ },
+ {
+   "id": "YKJ - Key Lake",
+   "label": "YKJ - Key Lake"
+ },
+ {
+   "id": "YXI - Killaloe",
+   "label": "YXI - Killaloe"
+ },
+ {
+   "id": "XBW - Killineq",
+   "label": "XBW - Killineq"
+ },
+ {
+   "id": "YQE - Kimberley",
+   "label": "YQE - Kimberley"
+ },
+ {
+   "id": "YLC - Kimmirut/Lake Harbour",
+   "label": "YLC - Kimmirut/Lake Harbour"
+ },
+ {
+   "id": "YKD - Kincardine",
+   "label": "YKD - Kincardine"
+ },
+ {
+   "id": "YKY - Kindersley",
+   "label": "YKY - Kindersley"
+ },
+ {
+   "id": "KIF - Kingfisher Lake",
+   "label": "KIF - Kingfisher Lake"
+ },
+ {
+   "id": "YGK - Kingston",
+   "label": "YGK - Kingston"
+ },
+ {
+   "id": "KNY - Kinoosao",
+   "label": "KNY - Kinoosao"
+ },
+ {
+   "id": "YKX - Kirkland Lake",
+   "label": "YKX - Kirkland Lake"
+ },
+ {
+   "id": "YKF - Kitchener/Waterloo",
+   "label": "YKF - Kitchener/Waterloo"
+ },
+ {
+   "id": "YKK - Kitkatla",
+   "label": "YKK - Kitkatla"
+ },
+ {
+   "id": "YKT - Klemtu",
+   "label": "YKT - Klemtu"
+ },
+ {
+   "id": "YKE - Knee Lake",
+   "label": "YKE - Knee Lake"
+ },
+ {
+   "id": "KNV - Knights Inlet",
+   "label": "KNV - Knights Inlet"
+ },
+ {
+   "id": "YBB - Kugaaruk",
+   "label": "YBB - Kugaaruk"
+ },
+ {
+   "id": "YCO - Kugluktuk/Coppermine",
+   "label": "YCO - Kugluktuk/Coppermine"
+ },
+ {
+   "id": "YVP - Kuujjuaq",
+   "label": "YVP - Kuujjuaq"
+ },
+ {
+   "id": "YGW - Kuujjuarapik",
+   "label": "YGW - Kuujjuarapik"
+ },
+ {
+   "id": "YGL - La Grande",
+   "label": "YGL - La Grande"
+ },
+ {
+   "id": "YVC - La Ronge",
+   "label": "YVC - La Ronge"
+ },
+ {
+   "id": "SSQ - La Sarre",
+   "label": "SSQ - La Sarre"
+ },
+ {
+   "id": "ZLT - La Tabatiere",
+   "label": "ZLT - La Tabatiere"
+ },
+ {
+   "id": "YLQ - La Tuque",
+   "label": "YLQ - La Tuque"
+ },
+ {
+   "id": "YLB - Lac Biche",
+   "label": "YLB - Lac Biche"
+ },
+ {
+   "id": "XLB - Lac Brochet",
+   "label": "XLB - Lac Brochet"
+ },
+ {
+   "id": "YLF - LaForges",
+   "label": "YLF - LaForges"
+ },
+ {
+   "id": "YAR - Lagrande 3",
+   "label": "YAR - Lagrande 3"
+ },
+ {
+   "id": "YAH - Lagrande 4",
+   "label": "YAH - Lagrande 4"
+ },
+ {
+   "id": "YLA - Langara",
+   "label": "YLA - Langara"
+ },
+ {
+   "id": "YLY - Langley",
+   "label": "YLY - Langley"
+ },
+ {
+   "id": "YLH - Lansdowne House",
+   "label": "YLH - Lansdowne House"
+ },
+ {
+   "id": "LRQ - Laurie River",
+   "label": "LRQ - Laurie River"
+ },
+ {
+   "id": "XLF - Leaf Bay",
+   "label": "XLF - Leaf Bay"
+ },
+ {
+   "id": "YLR - Leaf Rapids",
+   "label": "YLR - Leaf Rapids"
+ },
+ {
+   "id": "YLS - Lebel-Sur-Quevillon",
+   "label": "YLS - Lebel-Sur-Quevillon"
+ },
+ {
+   "id": "YQL - Lethbridge",
+   "label": "YQL - Lethbridge"
+ },
+ {
+   "id": "ZGR - Little Grand Rapids",
+   "label": "ZGR - Little Grand Rapids"
+ },
+ {
+   "id": "YLL - Lloydminster",
+   "label": "YLL - Lloydminster"
+ },
+ {
+   "id": "YLX - Long Point",
+   "label": "YLX - Long Point"
+ },
+ {
+   "id": "YWO - Lupin",
+   "label": "YWO - Lupin"
+ },
+ {
+   "id": "YSG - Lutselke/Snowdrift",
+   "label": "YSG - Lutselke/Snowdrift"
+ },
+ {
+   "id": "YAJ - Lyall Harbour",
+   "label": "YAJ - Lyall Harbour"
+ },
+ {
+   "id": "YYL - Lynn Lake",
+   "label": "YYL - Lynn Lake"
+ },
+ {
+   "id": "XMP - Macmillan Pass",
+   "label": "XMP - Macmillan Pass"
+ },
+ {
+   "id": "YDK - Main Duck Island",
+   "label": "YDK - Main Duck Island"
+ },
+ {
+   "id": "YMN - Makkovik",
+   "label": "YMN - Makkovik"
+ },
+ {
+   "id": "YMG - Manitouwadge",
+   "label": "YMG - Manitouwadge"
+ },
+ {
+   "id": "YEM - Manitowaning",
+   "label": "YEM - Manitowaning"
+ },
+ {
+   "id": "YMW - Maniwaki",
+   "label": "YMW - Maniwaki"
+ },
+ {
+   "id": "YAQ - Maple Bay",
+   "label": "YAQ - Maple Bay"
+ },
+ {
+   "id": "YSP - Marathon",
+   "label": "YSP - Marathon"
+ },
+ {
+   "id": "YMC - Maricourt Airstrip",
+   "label": "YMC - Maricourt Airstrip"
+ },
+ {
+   "id": "ZMT - Masset",
+   "label": "ZMT - Masset"
+ },
+ {
+   "id": "YNM - Matagami",
+   "label": "YNM - Matagami"
+ },
+ {
+   "id": "YME - Matane",
+   "label": "YME - Matane"
+ },
+ {
+   "id": "YMA - Mayo",
+   "label": "YMA - Mayo"
+ },
+ {
+   "id": "YLJ - Meadow Lake",
+   "label": "YLJ - Meadow Lake"
+ },
+ {
+   "id": "YXH - Medicine Hat",
+   "label": "YXH - Medicine Hat"
+ },
+ {
+   "id": "YMB - Merritt",
+   "label": "YMB - Merritt"
+ },
+ {
+   "id": "YMR - Merry Island",
+   "label": "YMR - Merry Island"
+ },
+ {
+   "id": "YMI - Minaki",
+   "label": "YMI - Minaki"
+ },
+ {
+   "id": "YAV - Miners Bay",
+   "label": "YAV - Miners Bay"
+ },
+ {
+   "id": "YLP - Mingan",
+   "label": "YLP - Mingan"
+ },
+ {
+   "id": "YCH - Miramichi",
+   "label": "YCH - Miramichi"
+ },
+ {
+   "id": "YYY - Mont Joli",
+   "label": "YYY - Mont Joli"
+ },
+ {
+   "id": "YTM - Mont Tremblant",
+   "label": "YTM - Mont Tremblant"
+ },
+ {
+   "id": "YMF - Montagne Harbor",
+   "label": "YMF - Montagne Harbor"
+ },
+ {
+   "id": "YMX - Montreal",
+   "label": "YMX - Montreal"
+ },
+ {
+   "id": "YUL - Montreal",
+   "label": "YUL - Montreal"
+ },
+ {
+   "id": "YHU - Montreal",
+   "label": "YHU - Montreal"
+ },
+ {
+   "id": "XLM - Montreal",
+   "label": "XLM - Montreal"
+ },
+ {
+   "id": "YMJ - Moose Jaw",
+   "label": "YMJ - Moose Jaw"
+ },
+ {
+   "id": "YAD - Moose Lake",
+   "label": "YAD - Moose Lake"
+ },
+ {
+   "id": "YMO - Moosonee",
+   "label": "YMO - Moosonee"
+ },
+ {
+   "id": "YMD - Mould Bay",
+   "label": "YMD - Mould Bay"
+ },
+ {
+   "id": "YML - Murray Bay",
+   "label": "YML - Murray Bay"
+ },
+ {
+   "id": "YQA - Muskoka",
+   "label": "YQA - Muskoka"
+ },
+ {
+   "id": "MSA - Muskrat Dam",
+   "label": "MSA - Muskrat Dam"
+ },
+ {
+   "id": "YDP - Nain",
+   "label": "YDP - Nain"
+ },
+ {
+   "id": "YQN - Nakina",
+   "label": "YQN - Nakina"
+ },
+ {
+   "id": "ZNU - Namu",
+   "label": "ZNU - Namu"
+ },
+ {
+   "id": "ZNA - Nanaimo",
+   "label": "ZNA - Nanaimo"
+ },
+ {
+   "id": "YCD - Nanaimo",
+   "label": "YCD - Nanaimo"
+ },
+ {
+   "id": "YSR - Nanisivik",
+   "label": "YSR - Nanisivik"
+ },
+ {
+   "id": "YNA - Natashquan",
+   "label": "YNA - Natashquan"
+ },
+ {
+   "id": "YNP - Natuashish",
+   "label": "YNP - Natuashish"
+ },
+ {
+   "id": "ZNG - Negginan",
+   "label": "ZNG - Negginan"
+ },
+ {
+   "id": "YNS - Nemiscau",
+   "label": "YNS - Nemiscau"
+ },
+ {
+   "id": "YBD - New Westminster",
+   "label": "YBD - New Westminster"
+ },
+ {
+   "id": "YNI - Nitchequon",
+   "label": "YNI - Nitchequon"
+ },
+ {
+   "id": "YNK - Nootka Sound",
+   "label": "YNK - Nootka Sound"
+ },
+ {
+   "id": "YVQ - Norman Wells",
+   "label": "YVQ - Norman Wells"
+ },
+ {
+   "id": "YQW - North Battleford",
+   "label": "YQW - North Battleford"
+ },
+ {
+   "id": "YYB - North Bay",
+   "label": "YYB - North Bay"
+ },
+ {
+   "id": "YNO - North Spirit Lake",
+   "label": "YNO - North Spirit Lake"
+ },
+ {
+   "id": "YNE - Norway House",
+   "label": "YNE - Norway House"
+ },
+ {
+   "id": "YDW - Obre Lake",
+   "label": "YDW - Obre Lake"
+ },
+ {
+   "id": "ZOF - Ocean Falls",
+   "label": "ZOF - Ocean Falls"
+ },
+ {
+   "id": "YOG - Ogoki",
+   "label": "YOG - Ogoki"
+ },
+ {
+   "id": "YOC - Old Crow",
+   "label": "YOC - Old Crow"
+ },
+ {
+   "id": "ZFB - Old Fort Bay",
+   "label": "ZFB - Old Fort Bay"
+ },
+ {
+   "id": "YBS - Opapamiska Lake",
+   "label": "YBS - Opapamiska Lake"
+ },
+ {
+   "id": "YOO - Oshawa",
+   "label": "YOO - Oshawa"
+ },
+ {
+   "id": "ZIF - Ottawa",
+   "label": "ZIF - Ottawa"
+ },
+ {
+   "id": "YND - Ottawa",
+   "label": "YND - Ottawa"
+ },
+ {
+   "id": "YOW - Ottawa",
+   "label": "YOW - Ottawa"
+ },
+ {
+   "id": "YRO - Ottawa",
+   "label": "YRO - Ottawa"
+ },
+ {
+   "id": "YOS - Owen Sound",
+   "label": "YOS - Owen Sound"
+ },
+ {
+   "id": "YOH - Oxford House",
+   "label": "YOH - Oxford House"
+ },
+ {
+   "id": "YIF - Pakuashipi",
+   "label": "YIF - Pakuashipi"
+ },
+ {
+   "id": "YXP - Pangnirtung",
+   "label": "YXP - Pangnirtung"
+ },
+ {
+   "id": "YDE - Paradise River",
+   "label": "YDE - Paradise River"
+ },
+ {
+   "id": "YPD - Parry Sound",
+   "label": "YPD - Parry Sound"
+ },
+ {
+   "id": "YPC - Paulatuk",
+   "label": "YPC - Paulatuk"
+ },
+ {
+   "id": "YPE - Peace River",
+   "label": "YPE - Peace River"
+ },
+ {
+   "id": "YPO - Peawanuck",
+   "label": "YPO - Peawanuck"
+ },
+ {
+   "id": "YTA - Pembroke",
+   "label": "YTA - Pembroke"
+ },
+ {
+   "id": "YPT - Pender Harbor",
+   "label": "YPT - Pender Harbor"
+ },
+ {
+   "id": "YYF - Penticton",
+   "label": "YYF - Penticton"
+ },
+ {
+   "id": "YWA - Petawawa",
+   "label": "YWA - Petawawa"
+ },
+ {
+   "id": "YPQ - Peterborough",
+   "label": "YPQ - Peterborough"
+ },
+ {
+   "id": "YPL - Pickle Lake",
+   "label": "YPL - Pickle Lake"
+ },
+ {
+   "id": "YPM - Pikangikum",
+   "label": "YPM - Pikangikum"
+ },
+ {
+   "id": "PIW - Pikwitonei",
+   "label": "PIW - Pikwitonei"
+ },
+ {
+   "id": "WPC - Pincher Creek",
+   "label": "WPC - Pincher Creek"
+ },
+ {
+   "id": "ZPO - Pine House",
+   "label": "ZPO - Pine House"
+ },
+ {
+   "id": "YPP - Pine Point",
+   "label": "YPP - Pine Point"
+ },
+ {
+   "id": "YNL - Points North Landing",
+   "label": "YNL - Points North Landing"
+ },
+ {
+   "id": "YIO - Pond Inlet",
+   "label": "YIO - Pond Inlet"
+ },
+ {
+   "id": "YHP - Poplar Hill",
+   "label": "YHP - Poplar Hill"
+ },
+ {
+   "id": "XPP - Poplar River",
+   "label": "XPP - Poplar River"
+ },
+ {
+   "id": "YPB - Port Alberni",
+   "label": "YPB - Port Alberni"
+ },
+ {
+   "id": "YZT - Port Hardy",
+   "label": "YZT - Port Hardy"
+ },
+ {
+   "id": "YPS - Port Hawkesbury",
+   "label": "YPS - Port Hawkesbury"
+ },
+ {
+   "id": "YHA - Port Hope Simpson",
+   "label": "YHA - Port Hope Simpson"
+ },
+ {
+   "id": "YMP - Port McNeil",
+   "label": "YMP - Port McNeil"
+ },
+ {
+   "id": "YPN - Port Menier",
+   "label": "YPN - Port Menier"
+ },
+ {
+   "id": "YPI - Port Simpson",
+   "label": "YPI - Port Simpson"
+ },
+ {
+   "id": "YPG - Portage La Prairie",
+   "label": "YPG - Portage La Prairie"
+ },
+ {
+   "id": "YSO - Postville",
+   "label": "YSO - Postville"
+ },
+ {
+   "id": "YPX - Povungnituk",
+   "label": "YPX - Povungnituk"
+ },
+ {
+   "id": "WPL - Powell Lake",
+   "label": "WPL - Powell Lake"
+ },
+ {
+   "id": "YPW - Powell River",
+   "label": "YPW - Powell River"
+ },
+ {
+   "id": "YPA - Prince Albert",
+   "label": "YPA - Prince Albert"
+ },
+ {
+   "id": "YXS - Prince George",
+   "label": "YXS - Prince George"
+ },
+ {
+   "id": "XDV - Prince George",
+   "label": "XDV - Prince George"
+ },
+ {
+   "id": "YPR - Prince Rupert",
+   "label": "YPR - Prince Rupert"
+ },
+ {
+   "id": "XDW - Prince Rupert",
+   "label": "XDW - Prince Rupert"
+ },
+ {
+   "id": "ZSW - Prince Rupert",
+   "label": "ZSW - Prince Rupert"
+ },
+ {
+   "id": "XPK - Pukatawagan",
+   "label": "XPK - Pukatawagan"
+ },
+ {
+   "id": "YVM - Qikiqtarjuaq",
+   "label": "YVM - Qikiqtarjuaq"
+ },
+ {
+   "id": "XQU - Qualicum",
+   "label": "XQU - Qualicum"
+ },
+ {
+   "id": "YQC - Quaqtaq",
+   "label": "YQC - Quaqtaq"
+ },
+ {
+   "id": "YQB - Québec City",
+   "label": "YQB - Québec City"
+ },
+ {
+   "id": "XFZ - Quebec",
+   "label": "XFZ - Quebec"
+ },
+ {
+   "id": "XLJ - Quebec",
+   "label": "XLJ - Quebec"
+ },
+ {
+   "id": "XFY - Quebec",
+   "label": "XFY - Quebec"
+ },
+ {
+   "id": "ZQS - Queen Charlotte Is",
+   "label": "ZQS - Queen Charlotte Is"
+ },
+ {
+   "id": "YQZ - Quesnel",
+   "label": "YQZ - Quesnel"
+ },
+ {
+   "id": "YRA - Rae Lakes",
+   "label": "YRA - Rae Lakes"
+ },
+ {
+   "id": "YOP - Rainbow Lake",
+   "label": "YOP - Rainbow Lake"
+ },
+ {
+   "id": "YRT - Rankin Inlet",
+   "label": "YRT - Rankin Inlet"
+ },
+ {
+   "id": "YQF - Red Deer",
+   "label": "YQF - Red Deer"
+ },
+ {
+   "id": "YRL - Red Lake",
+   "label": "YRL - Red Lake"
+ },
+ {
+   "id": "YRS - Red Sucker Lake",
+   "label": "YRS - Red Sucker Lake"
+ },
+ {
+   "id": "YQR - Regina, Saskatchewan",
+   "label": "YQR - Regina, Saskatchewan"
+ },
+ {
+   "id": "YUT - Repulse Bay",
+   "label": "YUT - Repulse Bay"
+ },
+ {
+   "id": "YRB - Resolute",
+   "label": "YRB - Resolute"
+ },
+ {
+   "id": "YRE - Resolution Island",
+   "label": "YRE - Resolution Island"
+ },
+ {
+   "id": "YRV - Revelstoke",
+   "label": "YRV - Revelstoke"
+ },
+ {
+   "id": "YRG - Rigolet",
+   "label": "YRG - Rigolet"
+ },
+ {
+   "id": "YXK - Rimouski",
+   "label": "YXK - Rimouski"
+ },
+ {
+   "id": "YYI - Rivers",
+   "label": "YYI - Rivers"
+ },
+ {
+   "id": "YRN - Owekeno Village",
+   "label": "YRN - Owekeno Village"
+ },
+ {
+   "id": "YTN - Riviere Au Tonnerre",
+   "label": "YTN - Riviere Au Tonnerre"
+ },
+ {
+   "id": "YRI - Riviere Du Loup",
+   "label": "YRI - Riviere Du Loup"
+ },
+ {
+   "id": "YRJ - Roberval",
+   "label": "YRJ - Roberval"
+ },
+ {
+   "id": "YRM - Rocky Mountain House",
+   "label": "YRM - Rocky Mountain House"
+ },
+ {
+   "id": "XRR - Ross River",
+   "label": "XRR - Ross River"
+ },
+ {
+   "id": "ZRJ - Round Lake",
+   "label": "ZRJ - Round Lake"
+ },
+ {
+   "id": "YUY - Rouyn",
+   "label": "YUY - Rouyn"
+ },
+ {
+   "id": "YSA - Sable Island",
+   "label": "YSA - Sable Island"
+ },
+ {
+   "id": "ZPB - Sachigo Lake",
+   "label": "ZPB - Sachigo Lake"
+ },
+ {
+   "id": "YSY - Sachs Harbour",
+   "label": "YSY - Sachs Harbour"
+ },
+ {
+   "id": "YSV - Saglek",
+   "label": "YSV - Saglek"
+ },
+ {
+   "id": "YSJ - Saint John",
+   "label": "YSJ - Saint John"
+ },
+ {
+   "id": "YZG - Salluit",
+   "label": "YZG - Salluit"
+ },
+ {
+   "id": "YSN - Salmon Arm",
+   "label": "YSN - Salmon Arm"
+ },
+ {
+   "id": "YZP - Sandspit",
+   "label": "YZP - Sandspit"
+ },
+ {
+   "id": "ZSJ - Sandy Lake",
+   "label": "ZSJ - Sandy Lake"
+ },
+ {
+   "id": "YSK - Sanikiluaq",
+   "label": "YSK - Sanikiluaq"
+ },
+ {
+   "id": "YSI - Sans Souci",
+   "label": "YSI - Sans Souci"
+ },
+ {
+   "id": "YZR - Sarnia",
+   "label": "YZR - Sarnia"
+ },
+ {
+   "id": "YXE - Saskatoon",
+   "label": "YXE - Saskatoon"
+ },
+ {
+   "id": "YAM - Sault Ste Marie",
+   "label": "YAM - Sault Ste Marie"
+ },
+ {
+   "id": "YKL - Schefferville",
+   "label": "YKL - Schefferville"
+ },
+ {
+   "id": "YHS - Sechelt",
+   "label": "YHS - Sechelt"
+ },
+ {
+   "id": "YZV - Sept-Iles",
+   "label": "YZV - Sept-Iles"
+ },
+ {
+   "id": "ZTM - Shamattawa",
+   "label": "ZTM - Shamattawa"
+ },
+ {
+   "id": "YSX - Shearwater",
+   "label": "YSX - Shearwater"
+ },
+ {
+   "id": "YSC - Sherbrooke",
+   "label": "YSC - Sherbrooke"
+ },
+ {
+   "id": "YLO - Shilo",
+   "label": "YLO - Shilo"
+ },
+ {
+   "id": "SYF - Silva Bay",
+   "label": "SYF - Silva Bay"
+ },
+ {
+   "id": "YXL - Sioux Lookout",
+   "label": "YXL - Sioux Lookout"
+ },
+ {
+   "id": "YSS - Slate Island",
+   "label": "YSS - Slate Island"
+ },
+ {
+   "id": "YZH - Slave Lake",
+   "label": "YZH - Slave Lake"
+ },
+ {
+   "id": "YSH - Smith Falls",
+   "label": "YSH - Smith Falls"
+ },
+ {
+   "id": "YYD - Smithers",
+   "label": "YYD - Smithers"
+ },
+ {
+   "id": "YXF - Snake River",
+   "label": "YXF - Snake River"
+ },
+ {
+   "id": "YFJ - Snare Lake",
+   "label": "YFJ - Snare Lake"
+ },
+ {
+   "id": "XSI - South Indian Lake",
+   "label": "XSI - South Indian Lake"
+ },
+ {
+   "id": "ZFL - South Trout Lake",
+   "label": "ZFL - South Trout Lake"
+ },
+ {
+   "id": "YSQ - Spring Island",
+   "label": "YSQ - Spring Island"
+ },
+ {
+   "id": "YSE - Squamish",
+   "label": "YSE - Squamish"
+ },
+ {
+   "id": "YSZ - Squirrel Cove",
+   "label": "YSZ - Squirrel Cove"
+ },
+ {
+   "id": "YAY - St Anthony",
+   "label": "YAY - St Anthony"
+ },
+ {
+   "id": "YCM - St Catharines",
+   "label": "YCM - St Catharines"
+ },
+ {
+   "id": "YJN - St Jean",
+   "label": "YJN - St Jean"
+ },
+ {
+   "id": "YSL - St Leonard",
+   "label": "YSL - St Leonard"
+ },
+ {
+   "id": "ZSP - St Paul",
+   "label": "ZSP - St Paul"
+ },
+ {
+   "id": "YQS - St Thomas",
+   "label": "YQS - St Thomas"
+ },
+ {
+   "id": "YST - Ste Therese Point",
+   "label": "YST - Ste Therese Point"
+ },
+ {
+   "id": "YJT - Stephenville",
+   "label": "YJT - Stephenville"
+ },
+ {
+   "id": "ZST - Stewart",
+   "label": "ZST - Stewart"
+ },
+ {
+   "id": "YSF - Stony Rapids",
+   "label": "YSF - Stony Rapids"
+ },
+ {
+   "id": "YRR - Stuart Island",
+   "label": "YRR - Stuart Island"
+ },
+ {
+   "id": "YTC - Sturdee",
+   "label": "YTC - Sturdee"
+ },
+ {
+   "id": "YSB - Sudbury",
+   "label": "YSB - Sudbury"
+ },
+ {
+   "id": "XDY - Sudbury",
+   "label": "XDY - Sudbury"
+ },
+ {
+   "id": "YSD - Suffield",
+   "label": "YSD - Suffield"
+ },
+ {
+   "id": "YTG - Sullivan Bay",
+   "label": "YTG - Sullivan Bay"
+ },
+ {
+   "id": "SUR - Summer Beaver",
+   "label": "SUR - Summer Beaver"
+ },
+ {
+   "id": "YSU - Summerside",
+   "label": "YSU - Summerside"
+ },
+ {
+   "id": "IUM - Summit Lake",
+   "label": "IUM - Summit Lake"
+ },
+ {
+   "id": "ZJN - Swan River",
+   "label": "ZJN - Swan River"
+ },
+ {
+   "id": "YYN - Swift Current",
+   "label": "YYN - Swift Current"
+ },
+ {
+   "id": "YQY - Sydney",
+   "label": "YQY - Sydney"
+ },
+ {
+   "id": "XTL - Tadoule Lake",
+   "label": "XTL - Tadoule Lake"
+ },
+ {
+   "id": "ZTS - Tahsis",
+   "label": "ZTS - Tahsis"
+ },
+ {
+   "id": "YYH - Taloyoak",
+   "label": "YYH - Taloyoak"
+ },
+ {
+   "id": "GSL - Taltheilei Narrows",
+   "label": "GSL - Taltheilei Narrows"
+ },
+ {
+   "id": "YTQ - Tasiujuaq",
+   "label": "YTQ - Tasiujuaq"
+ },
+ {
+   "id": "YTU - Tasu",
+   "label": "YTU - Tasu"
+ },
+ {
+   "id": "YTX - Telegraph Creek",
+   "label": "YTX - Telegraph Creek"
+ },
+ {
+   "id": "YBQ - Telegraph Harbour",
+   "label": "YBQ - Telegraph Harbour"
+ },
+ {
+   "id": "YXT - Terrace",
+   "label": "YXT - Terrace"
+ },
+ {
+   "id": "YTJ - Terrace Bay",
+   "label": "YTJ - Terrace Bay"
+ },
+ {
+   "id": "YZW - Teslin",
+   "label": "YZW - Teslin"
+ },
+ {
+   "id": "ZTB - Tete-a-La Baleine",
+   "label": "ZTB - Tete-a-La Baleine"
+ },
+ {
+   "id": "YQD - The Pas",
+   "label": "YQD - The Pas"
+ },
+ {
+   "id": "YTD - Thicket Portage",
+   "label": "YTD - Thicket Portage"
+ },
+ {
+   "id": "YTH - Thompson",
+   "label": "YTH - Thompson"
+ },
+ {
+   "id": "YQT - Thunder Bay",
+   "label": "YQT - Thunder Bay"
+ },
+ {
+   "id": "YTS - Timmins",
+   "label": "YTS - Timmins"
+ },
+ {
+   "id": "YTT - Tisdale",
+   "label": "YTT - Tisdale"
+ },
+ {
+   "id": "YTP - Tofino",
+   "label": "YTP - Tofino"
+ },
+ {
+   "id": "YAZ - Tofino",
+   "label": "YAZ - Tofino"
+ },
+ {
+   "id": "YYZ - Toronto",
+   "label": "YYZ - Toronto"
+ },
+ {
+   "id": "YTR - Trenton",
+   "label": "YTR - Trenton"
+ },
+ {
+   "id": "YTI - Triple Island",
+   "label": "YTI - Triple Island"
+ },
+ {
+   "id": "YRQ - Trois-Rivieres",
+   "label": "YRQ - Trois-Rivieres"
+ },
+ {
+   "id": "YUB - Tuktoyaktuk",
+   "label": "YUB - Tuktoyaktuk"
+ },
+ {
+   "id": "ZFN - Tulita/Fort Norman",
+   "label": "ZFN - Tulita/Fort Norman"
+ },
+ {
+   "id": "YTK - Tulugak",
+   "label": "YTK - Tulugak"
+ },
+ {
+   "id": "TUX - Tumbler Ridge",
+   "label": "TUX - Tumbler Ridge"
+ },
+ {
+   "id": "TNS - Tungsten",
+   "label": "TNS - Tungsten"
+ },
+ {
+   "id": "YUD - Umiujaq",
+   "label": "YUD - Umiujaq"
+ },
+ {
+   "id": "YBE - Uranium City",
+   "label": "YBE - Uranium City"
+ },
+ {
+   "id": "YOY - Valcartier",
+   "label": "YOY - Valcartier"
+ },
+ {
+   "id": "YDT - Vancouver",
+   "label": "YDT - Vancouver"
+ },
+ {
+   "id": "CXH - Vancouver",
+   "label": "CXH - Vancouver"
+ },
+ {
+   "id": "YVR - Vancouver",
+   "label": "YVR - Vancouver"
+ },
+ {
+   "id": "XEA - Vancouver",
+   "label": "XEA - Vancouver"
+ },
+ {
+   "id": "YVG - Vermilion",
+   "label": "YVG - Vermilion"
+ },
+ {
+   "id": "YVE - Vernon",
+   "label": "YVE - Vernon"
+ },
+ {
+   "id": "YYJ - Victoria",
+   "label": "YYJ - Victoria"
+ },
+ {
+   "id": "YWH - Victoria",
+   "label": "YWH - Victoria"
+ },
+ {
+   "id": "YWK - Wabush",
+   "label": "YWK - Wabush"
+ },
+ {
+   "id": "YKQ - Waskaganish",
+   "label": "YKQ - Waskaganish"
+ },
+ {
+   "id": "YQH - Watson Lake",
+   "label": "YQH - Watson Lake"
+ },
+ {
+   "id": "YXZ - Wawa",
+   "label": "YXZ - Wawa"
+ },
+ {
+   "id": "YWP - Webequie",
+   "label": "YWP - Webequie"
+ },
+ {
+   "id": "YNC - Wemindji",
+   "label": "YNC - Wemindji"
+ },
+ {
+   "id": "YLE - Wha Ti/Lac La Martre",
+   "label": "YLE - Wha Ti/Lac La Martre"
+ },
+ {
+   "id": "YXN - Whale Cove",
+   "label": "YXN - Whale Cove"
+ },
+ {
+   "id": "YWS - Whistler",
+   "label": "YWS - Whistler"
+ },
+ {
+   "id": "YWR - White River",
+   "label": "YWR - White River"
+ },
+ {
+   "id": "YZU - Whitecourt",
+   "label": "YZU - Whitecourt"
+ },
+ {
+   "id": "YXY - Whitehorse",
+   "label": "YXY - Whitehorse"
+ },
+ {
+   "id": "YVV - Wiarton",
+   "label": "YVV - Wiarton"
+ },
+ {
+   "id": "YWM - Williams Harbour",
+   "label": "YWM - Williams Harbour"
+ },
+ {
+   "id": "YWL - Williams Lake",
+   "label": "YWL - Williams Lake"
+ },
+ {
+   "id": "YQG - Windsor",
+   "label": "YQG - Windsor"
+ },
+ {
+   "id": "YWN - Winisk",
+   "label": "YWN - Winisk"
+ },
+ {
+   "id": "YWG - Winnipeg",
+   "label": "YWG - Winnipeg"
+ },
+ {
+   "id": "ZWL - Wollaston Lake",
+   "label": "ZWL - Wollaston Lake"
+ },
+ {
+   "id": "YWY - Wrigley",
+   "label": "YWY - Wrigley"
+ },
+ {
+   "id": "WNN - Wunnummin Lake",
+   "label": "WNN - Wunnummin Lake"
+ },
+ {
+   "id": "YQI - Yarmouth",
+   "label": "YQI - Yarmouth"
+ },
+ {
+   "id": "YZF - Yellowknife",
+   "label": "YZF - Yellowknife"
+ },
+ {
+   "id": "ZAC - York Landing",
+   "label": "ZAC - York Landing"
+ },
+ {
+   "id": "YQV - Yorkton",
+   "label": "YQV - Yorkton"
+ },
+ {
+   "id": "YCU - Yun Cheng",
+   "label": "YCU - Yun Cheng"
+ },
+ {
+   "id": "YXU - London",
+   "label": "YXU - London"
+ },
+ {
+   "id": "YYT - St. John's",
+   "label": "YYT - St. John's"
+ },
+ {
+   "id": "POP - Puerto Plata, DR",
+   "label": "POP - Puerto Plata, DR"
+ },
+ {
+   "id": "SAN - San Diego, CA",
+   "label": "SAN - San Diego, CA"
+ },
+ {
+   "id": "CAP - Cap Haitien, HT",
+   "label": "CAP - Cap Haitien, HT"
+ },
+ {
+   "id": "CNX - Chiang Mai, TH",
+   "label": "CNX - Chiang Mai, TH"
+ }
+],
+    });
+
+});
+</script>
+ <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+        <script>
+        $('form[id$=flight]').validate({
+        //debug: true,
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+</script>
+<!-- / JAVASCRIPT -->
+</html>
+</apex:page>

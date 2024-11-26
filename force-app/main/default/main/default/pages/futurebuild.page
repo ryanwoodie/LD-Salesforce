@@ -1,0 +1,312 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">    
+<html lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <head>
+      <title>Start Fundraising | Live Different</title>
+        <script>
+          dataLayer = [{
+            'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+          }];
+        </script>
+      <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+      <!-- End Google Tag Manager -->
+    <meta property="og:title" content="Future Build" />
+    <meta property="og:url" content="https://my.livedifferent.com/futurebuild}" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Start fundraising for a Build! With Live Different Builds, you'll have the opportunity to make a difference as you join community leaders, contractors, and our staff, to build houses or complete other needed projects in the developing world. Volunteer on a Live Different Build and expand your worldview!" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet' />
+    <!-- Bootstrap core CSS -->
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+    <!-- Custom styles for this template -->
+    <link href="{!URLFOR($Resource.bootstrap, 'EventPage.css')}" rel="stylesheet" />
+    <style>
+    body {font-family:roboto}
+    .content {
+        font-size:14px;
+        line-height:20px;
+    }
+    
+    .dropdown-toggle::after {
+    display:none
+    }
+    .sf-menu li {
+        list-style:none;
+    }
+    </style>
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+    <!-- Navigation -->
+   <c:SiteHeaderV2 ></c:SiteHeaderV2>
+    <!-- Header with Background Image -->
+    <header class="business-header" style="background-position:top !important;background-image: url(/resource/1458331618000/Fundraising_Headers/Do.jpg) !important">
+      <div class="container">
+        <div class="row" style="padding-top:160px">
+          <div class="col-lg-8 mb-4">
+            <h1 class="display-4 text-left text-white mt-4">Start Fundraising for a Build</h1>
+            <div class='font--small text-white text-left'>
+                </div>
+              </div>
+              <div class="col-lg-4 text-right hidden-sm text-white mt-lg-5 mb-4">
+              <apex:pageBlock rendered="{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),TRUE,FALSE)}"><apex:outputLink value="/New_Registration?ID=XXID" styleclass="btn btn-primary btn-lg btn-block">Start Fundraising Now</apex:outputLink>
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!IF(ISPICKVAL($User.UserType,'Guest'),TRUE,FALSE)}">
+    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Register_Apply">Start Fundraising</button></apex:pageBlock>
+    <button type="button" class="btn btn-secondary btn-block mt-4" onClick="olark('api.box.expand');">Request More Information</button>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container mb-5">
+    
+      
+
+<div class="row">
+ <div class="col-lg-8 mt-5">
+          <div class='content'>
+            So you want to start fundraising for a Build, but you're not sure which one yet?
+          </div>
+          <div class="row mb-5">
+            <div class="col-lg-6 mt-5">
+              <div class="card">
+                  <div class="card-header">
+                      What Is Included
+                  </div>
+                  <div class="card-body">
+                  
+                    Included Stuff
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+              <div class="card">
+                  <div class="card-header">
+                  What Is Not Included
+                  </div>
+                  <div class="card-body">
+                  
+                    Not included stuff                  </div>
+              </div>
+            </div>
+          </div>
+ <div>
+          <div class='mt-4'>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+             
+              <li class="nav-item">
+                <a class="nav-link active" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">FAQ</a>
+              </li>
+              <!-- li class="nav-item">
+                <a class="nav-link" id="packing-tab" data-toggle="tab" href="#packing" role="tab" aria-controls="packing" aria-selected="false">Packing List</a>
+              </li -->
+            </ul>
+          </div>
+  <div class="tab-content" id="myTabContent">
+   
+    <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+     
+      <span id="j_id0:j_id53">
+          <div class="mt-5" id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button aria-controls="collapseOne" aria-expanded="false" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse">
+          Where do I stay?
+        </button>
+      </h5>
+    </div>
+    <div aria-labelledby="headingOne" class="collapse" data-parent="#accordion" id="collapseOne">
+      <div class="card-body">
+        <p>Accomodations are always a priority for us, but will vary based on location. In Mexico, we have our own campus with dorm rooms. In the Dominican Republic, Haiti and Thailand you will stay in a resort.</p><span id="j_id0:j_id53:j_id54:j_id60" style="display: none;"></span><span id="j_id0:j_id53:j_id54:j_id62" style="display: none;"></span><span id="j_id0:j_id53:j_id54:j_id64" style="display: none;"></span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse">
+          How do I fundraise for my Build?
+        </button>
+      </h5>
+    </div>
+    <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="collapseTwo">
+      <div class="card-body">
+        Most volunteers choose to fundraise using their my.livedifferent.com fundraising page. When you register for a Build, you will have the opportunity to create one too. Not everyone fundraises though, some choose to pay for their Build themselves.
+      </div>
+    </div>
+  </div><span id="j_id0:j_id53:j_id54:j_id67">
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseThree" data-toggle="collapse">
+          What about flights?
+        </button>
+      </h5>
+    </div>
+    <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
+      <div class="card-body">
+        <p>You will need to arrange flights to and from the meeting point for your Build. In the Dominican Republic, this is Peurto Plata. For Builds to Mexico, we meet you in Sandiego, California. For Thailand and Haiti, the meeting point can vary based on the Build dates.</p>
+     </div>
+    </div>
+  </div></span><span id="j_id0:j_id53:j_id54:j_id69" style="display: none;"></span>
+</div></span>
+      <div class='mt-5 text-center'>
+      <div class=''>Don't see the answer to your question?</div>
+      <div class='text-center'><a href='https://livedifferent.com/faqs/' class='btn mt-3 btn-primary'>See more FAQ's</a></div>
+      </div>
+    </div>
+    <!-- div class="tab-pane fade" id="packing" role="tabpanel" aria-labelledby="packing-tab">
+      <div class='mt-5'>
+        Packing List
+      </div>
+    </div -->
+  </div>
+ </div>         
+        </div>
+        <div class="col-lg-4 order-lg-last order-first">
+         
+          <div>
+          
+          </div>
+         <div>
+          <h2 class="mt-4">Gallery</h2>
+            <div>
+                <div class="popup-gallery">
+                    
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/DR/image1.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/DR/image1_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Me/image2.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Me/image2_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Th/image3.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Th/image3_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/DR/image4.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/DR/image4_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Ha/image5.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Ha/image5_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Me/image6.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Me/image6_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Th/image7.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/Th/image7_thumb.jpg" width="75" height="75" /></a>
+                </div>
+            </div>
+         </div>
+         <div class="mt-5 mb-4">
+            <div class="videoWrapper">
+              <iframe src="https://player.vimeo.com/video/79435915?api=1&title=0&byline=0&portrait=0&player_id=vimeo-player-1" id="vimeo-player-1" frameborder="0" data-progress="true" data-seek="true" data-bounce="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+              <script src="{!URLFOR($Resource.vimeo_analytics)}"></script>
+            </div>
+        
+         </div>
+         <div>
+          <h2 class="mt-5 mb-3">Questions?</h2>
+          <p>Let me know how I can help!</p>
+            <div>
+               <ul class="list-unstyled">
+                  <li class="media mb-3">
+                    <img class="mr-3" src="https://livedifferent.com/sites/files/austin.png" alt="Administrator Photo" width="70px" />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-0">Austin Gauthier</h5>
+                      <p class="mt-0"><small>austin@livedifferent.com<br />(866) 432 4464</small></p>
+                      
+                    </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         
+         
+         </div>
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5" style='background-color:#252525'>
+    <div class='container'>
+        <c:SiteFooter >
+        </c:SiteFooter>
+    </div>
+      <!-- /.container -->
+    </footer>
+<!-- Modals -->
+<div class="modal fade" id="Register_Apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">You need a My Live Different account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mt-4 text-center">
+        <a href='/Signup?id=a0e2J00000DWTeB' class="btn btn-primary btn-block">Create a My Live Different Account</a>
+        <p class='mt-4'>Do you already have an account?</p>
+        <a href='/login?ec=302&inst=5&startURL=%2FNew_Registration%3FID=a0e2J00000DWTeB' class="btn btn-secondary btn-block">Log In</a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Modals -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="{!URLFOR($Resource.bootstrap, 'magnific-popup.css')}" />
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    
+
+    <!-- Magnific Popup core JS file -->
+    <script src="{!URLFOR($Resource.bootstrap, 'jquery.magnific-popup.js')}"></script>
+    <!-- End Magnifique Scripts -->
+<script>
+$(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        }
+    });
+});
+
+// Tag Manager datalayer
+dataLayer.push({
+  'event': 'Event Pageview',
+  'eventLabel': 'Future Build',
+  'eventCategory': 'Unknown',
+  'eventType': 'Unknown',
+  'eventId': 'a0e2J00000DWTeB',
+  'eventAction': 'View',
+  'eventValue': '1500.00'
+});
+
+</script>
+<!-- / JAVASCRIPT --> 
+<!-- / Sharing Scripts -->
+  </body>
+</html>
+</apex:page>

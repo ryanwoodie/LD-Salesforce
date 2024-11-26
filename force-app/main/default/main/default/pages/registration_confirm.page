@@ -1,0 +1,149 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Registration__c" >    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Welcome to {!Registration__c.Event__r.Name} | Live Different</title>
+   
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+<script>
+  dataLayer.push({
+  'eventCategory': '{!Registration__c.Event__r.Trip_Type__c} {!Registration__c.Event__r.RecordType.Name}',
+  'eventAction': 'New Registration',
+  'eventLabel': '{!Registration__c.Event__r.Name}',
+  'eventId': '{!Registration__c.Event__r.Id}',
+  'eventValue': '{!Registration__c.Fundraising_Goal__c}',
+  'currency': 'CAD'
+});
+</script>
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  input.fcheckbox {
+  width:16px;
+  height:16px;
+  margin-right:10px !important;
+  margin-top:5px !important;
+  }
+  
+  .error {
+  color:#D8000C
+  }
+  
+  .slds-textarea {
+  height:180px !important;
+  }
+  
+
+  </style>
+</head>        
+
+   
+
+<body>    
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <script>
+  dataLayer.push({
+  'eventCategory': 'Builds',
+  'eventAction': 'New Registration',
+  'eventLabel': '{!Registration__c.Event__r.Name}',
+  'eventId': '{!Registration__c.Event__r.Id}',
+  'eventValue': '{!Registration__c.Fundraising_Goal__c}',
+  'currency': 'CAD'
+});
+  </script>
+  
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">  
+      
+    <div role="dialog" class="" id="">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header no-border slds-box slds-theme--shade">
+            <h2 class="slds-text-heading--medium">{!IF(Registration__c.Stage__c = 'Application Received',"Application","Registration")} Complete!</h2>
+            
+        </div>
+        <div class='slds-text-align--center'>
+        <!-- Thank You -->
+        <div class='slds-m-top--large slds-m-bottom--large'>{!Registration__c.Contact__r.Name} {!IF(Registration__c.Stage__c = 'Application Received',"has successfully applied for","is now registered for")} {!Registration__c.Event__r.name}!<br />If you have any questions, don't hesitate to ask.</div>
+        <!-- Donation link -->
+        <apex:outputPanel rendered="{!IF(Registration__c.Deposit_Paid__c = false && Registration__c.Fundraising_Type__c = 'Live Different' && Registration__c.Event__r.Recordtype.name = 'Builds' && Registration__c.Stage__c != 'Application Received',true,false)}" layout="none">
+        Check out your new fundraising page and make your initial donation to secure your spot on this Build.
+        <div class='slds-m-top--medium'><a href='/fundraising/{!Registration__c.C_url__c}' class='slds-button slds-button--brand'>Go to my fundraising page</a></div>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!IF(Registration__c.Deposit_Paid__c = false && Registration__c.Fundraising_Type__c = 'Live Different' && Registration__c.Event__r.Recordtype.name = 'Academy',true,false)}" layout="none">
+        <p><img style="background-color: white;" src="https://api.memegen.link/images/custom/{!Registration__c.Contact__r.FirstName}%E2%80%94we_are_this_excited/for_you_to_join_Academy!!.gif?background=https%3A%2F%2Flivedifferent.com%2Fwp-content%2Fuploads%2F2022%2F03%2FDancing-Tall.gif" alt="Anthong Dancing" width="339" height="400"/></p>
+        Thanks for signing up for the LiveDifferent Academy! We will be in touch soon, and feel free to reach out to us at academy@livedifferent.com anytime.
+        </apex:outputPanel>
+        
+        <!-- Payment Link -->
+        <apex:outputPanel rendered="{!IF(Registration__c.Deposit_Paid__c = false && Registration__c.Fundraising_Type__c = 'none' && Registration__c.Stage__c != 'Application Received',true,false)}" layout="none">
+        Make your initial <apex:outputText value="{0, number, $#,#00.00}">
+<apex:param value="{!Registration__c.Event__r.Deposit__c}" />
+</apex:outputText> donation now to reserve your spot!
+        <div class='slds-m-top--medium'><a href='/registration_payment?ID={!Registration__c.Id}' class='slds-button slds-button--brand'>Reserve my spot now</a></div>
+        </apex:outputPanel>
+        <!-- Group Fundraising Text -->
+        <apex:outputPanel rendered="{!IF(Registration__c.Fundraising_Type__c = 'Group' && Registration__c.Stage__c != 'Application Received',true,false)}" layout="none">
+        <div class='slds-m-bottom--large'>The Build you registered for is doing a group fundraiser, connect with {!Registration__c.Event__r.Event_Organizer__r.Name} to learn more and get involved!
+        </div>
+        <div>Next Step: Proceed to your registration page and begin filling out the required documents</div>
+        <div class='slds-m-top--medium'><a href='/registration?ID={!Registration__c.Id}' class='slds-button slds-button--brand'>Go to my new registration page</a></div>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!IF(Registration__c.Fundraising_Type__c != 'Group' && Registration__c.Deposit_Paid__c = true && Registration__c.Stage__c != 'Application Received' ,true,false)}" layout="none">
+        
+        <div>Next Step: Proceed to your registration page and review your details.</div>
+        <div class='slds-m-top--medium'><a href='/registration{!IF(Registration__c.Event__r.RecordType.Name == "International Tour","tour","")}?ID={!Registration__c.Id}' class='slds-button slds-button--brand' >Go to my new registration page</a></div>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!IF(Registration__c.Stage__c = 'Application Received' && Registration__c.Event__r.Recordtype.name = 'Builds',true,false)}" layout="none">
+        <div>{!Registration__c.Event__r.Owner.FirstName} will review your application and will reach out shortly.</div>  
+        </apex:outputPanel>
+            <div class='slds-m-top--medium'><a href='/Volunteer_Dashboard' class='slds-button slds-button--brand'>Go to my Volunteer Dashboard</a></div>
+    </div>
+    </div>
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER --> 
+</body>    
+
+<!-- JAVASCRIPT -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+    var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+
+
+    </script>    
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

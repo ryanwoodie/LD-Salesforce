@@ -1,0 +1,113 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="CustomerUserID">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Medical Information</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds"> 
+  <!-- MASTHEAD -->   
+<apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+        <!-- / MASTHEAD -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form id="medical">
+  <div class="slds-container--small slds-container--center">
+<fieldset class="slds-form--compound slds-m-top--large">
+<legend class="slds-form-element__label slds-text-heading--medium">Medical Info</legend>
+<div class="slds-text-heading--label slds-m-bottom--medium">Please make sure all medical information is up to date and accurate. Enter 'none' if no conditions apply.</div>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Health Card #</label><apex:inputField value="{!Contact.Health_Card__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Allergies</label><apex:inputField value="{!Contact.Allergies__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Medical Conditions</label><apex:inputField value="{!Contact.Medical_Conditions__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Medications</label><apex:inputField value="{!Contact.Medications__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Medical Comments</label><apex:inputField value="{!Contact.Medical_Condition_Comments__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Dietary Restrictions</label><apex:inputField value="{!Contact.Dietary_Restrictions__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+
+</div>
+</fieldset>
+<div class="slds-m-top--xx-large slds-button-group slds-grid slds-grid--align-center">
+                               <apex:outputLink value="/apex/Volunteer_Dashboard" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</apex:outputLink><apex:commandButton action="{!save}" value="Save" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch" /></div>
+                      </div>
+                        </apex:form>
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+        <script>
+        $('form[id$=medical]').validate({
+        //debug: true,
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+</script>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

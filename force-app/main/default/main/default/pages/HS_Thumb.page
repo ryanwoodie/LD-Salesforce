@@ -1,0 +1,12 @@
+<apex:page applyBodyTag="false" applyHtmlTag="false" showHeader="false" pageStyle="none" >
+<html>   
+    <head>
+        <style>
+          
+        </style>
+    </head>
+    <body >
+        <img src='http://livedifferent.com/sites/files/{!$CurrentPage.parameters.Name}.png' width="50px" />
+    </body>
+    </html>
+</apex:page>

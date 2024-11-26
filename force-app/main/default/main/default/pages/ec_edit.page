@@ -1,0 +1,171 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="CustomerUserID">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Emergency Contact Information</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds"> 
+  <!-- MASTHEAD -->   
+<apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert>
+    
+    
+    <!-- / MASTHEAD -->      
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form id="emergency">
+  <div class="slds-container--small slds-container--center">
+  <legend class="slds-form-element__label  slds-text-heading--medium">Emergency Contact Information</legend>
+<div class="slds-text-heading--label slds-m-bottom--medium">Who should we contact in the event of an emergency?</div>
+<fieldset class="slds-form--compound slds-m-top--large" id="parent-guardian">
+<legend class="slds-form-element__label  slds-text-heading--small">Parent / Legal Guardian</legend>
+<div class="form-element__group">
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control is-required slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Full Name</label><apex:inputField value="{!Contact.Parent_Name__c}" html-mi-parent="guardian_name" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control is-required slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputField value="{!Contact.Email_parents__c}" html-data-rule-required="true" html-mi-parent="guardian_email" styleClass="slds-input" /></div>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--small">Emergency Contact</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Full Name</label><apex:inputField value="{!Contact.Emergency_Contact__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Relationship</label><apex:inputField value="{!Contact.E_C_Relationship__c}" html-data-rule-required="true" styleClass="slds-input" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Email</label><apex:inputField value="{!Contact.E_C_Email_Address__c}" html-data-rule-required="true" styleClass="slds-input" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Home Phone</label><apex:inputField value="{!Contact.E_C_Home_Phone__c}" id="ECphone" styleClass="slds-input phone-ec" /></div>
+</div>
+<div class="slds-form-element__row slds-grid slds-wrap"><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper"><abbr class="slds-required" title="required">*</abbr>Mobile Phone</label><apex:inputField value="{!Contact.E_C_Cell_Phone__c}" id="ECmphone" styleClass="slds-input phone-ec" /></div><div class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><label class="slds-form-element__helper">Work Phone</label><apex:inputField value="{!Contact.E_C_Work_Phone__c}" id="ECwphone" styleClass="slds-input phone-ec" /></div>
+</div>
+ </div>
+</fieldset>
+<div class="slds-m-top--xx-large slds-button-group slds-grid slds-grid--align-center">
+                               <apex:outputLink value="/apex/Volunteer_Dashboard" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</apex:outputLink><apex:commandButton action="{!save}" value="Save" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch" /></div>
+                      </div>
+
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+        <script>
+        $('form[id$=emergency]').validate({
+        //debug: true,
+        rules: {
+            'j_id0:emergency:ECphone': {
+              require_from_group: [1, ".phone-ec"]
+            },
+            'j_id0:emergency:ECmphone': {
+              require_from_group: [1, ".phone-ec"]
+            },
+            'j_id0:emergency:ECwphone': {
+              require_from_group: [1, ".phone-ec"]
+            }
+          },
+        errorElement: "div",
+        errorClass: "slds-form-element__help",
+        //place all errors in a <div id="errors"> element
+        errorPlacement: function(error, element) {
+        error.insertAfter(element);
+        //error.appendTo("div.slds-form-element__help");
+        },
+        highlight: function(element) {
+        $(element).parent().addClass("slds-has-error");
+    },
+    unhighlight: function(element) {
+        $(element).parent().removeClass("slds-has-error");
+    }
+        });
+        
+
+$(document).ready(function() {
+    toggleFields(); //call this first so we start out with the correct visibility depending on the selected form values
+    //this will call our toggleFields function every time the selection value of our underAge field changes
+    });
+        
+        
+
+//this toggles the visibility of our parent permission fields depending on the current selected value of the underAge field
+function toggleFields() {
+        var Dt = "{!Contact.Birthdate}";
+        var Now = moment().subtract(18,'y');
+        var Current = moment(Dt);
+    if (Now < Current) {
+        $("#parent-guardian").addClass("slds-show");
+        $("#parent-guardian").removeClass("slds-hide");
+        $( "input[mi-parent='guardian_email']" ).rules( "add", {
+          required: true,
+          messages: {
+          required: "Required for Minors"
+          }
+        });
+        $( "input[mi-parent='guardian_name']" ).rules( "add", {
+          required: true,
+          messages: {
+          required: "Required for Minors"
+          }
+        });
+    } else {
+        $("#parent-guardian").addClass("slds-hide");
+        $("#parent-guardian").removeClass("slds-show");
+        $( "input[mi-parent='guardian_email']" ).rules( "remove", "required");
+        $( "input[mi-parent='guardian_name']" ).rules( "remove", "required");
+}
+}
+</script>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

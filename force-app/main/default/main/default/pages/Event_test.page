@@ -1,0 +1,486 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c" extensions="eventImages,eventpassword">
+<html lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <head>
+      <title>{!Event__c.Name} | Live Different</title>
+        <script>
+          dataLayer = [{
+            'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+          }];
+        </script>
+      <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+      <!-- End Google Tag Manager --><apex:outputText value="{!Event__c.C_Url__c}" rendered="false"/>
+    <meta property="og:title" content="{!Event__c.Name}" />
+    <meta property="og:url" content="https://my.livedifferent.com/event/{!Event__c.C_Url__c}" />
+    <meta property="og:image" content="{!imgUrl}" />
+    <meta property="og:description" content="With Live Different Builds, you'll have the opportunity to make a difference as you join community leaders, contractors, and our staff, to build houses or complete other needed projects in the developing world. Volunteer on a Live Different Build and expand your worldview!" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet' />
+    <!-- Bootstrap core CSS -->
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+    <!-- Custom styles for this template -->
+    <link href="{!URLFOR($Resource.bootstrap, 'EventPage.css')}" rel="stylesheet" />
+    <style>
+    body {font-family:roboto}
+    .content {
+        font-size:14px;
+        line-height:20px;
+    }
+
+    .dropdown-toggle::after {
+    display:none
+    }
+    .sf-menu li {
+        list-style:none;
+    }
+    </style>
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<apex:outputPanel rendered="{!If(passwordcheck == true && (CONTAINS(Event__c.Stage__c,'Published') || CONTAINS(Event__c.Stage__c,'Draft')),true,false)}" layout="none">
+    <!-- Navigation -->
+   <c:SiteHeaderV2 ></c:SiteHeaderV2>
+    <!-- Header with Background Image -->
+    <header class="business-header" style="background-position:top !important;background-image: url({!imgUrl}) !important">
+      <div class="container">
+        <div class="row" style="padding-top:160px">
+          <div class="col-lg-8 mb-4">
+            <h1 class="display-4 text-left text-white mt-4">{!Event__c.Name}</h1>
+            <div class='font--small text-white text-left'>
+                <apex:outputPanel rendered="{!IF(Event__c.Age__c != 'N/A',true,false)}" Layout="none">Ages: {!Event__c.Age__c}  &nbsp; &#8226; &nbsp; </apex:outputPanel>Location: {!Event__c.Location__c} &nbsp; &#8226; &nbsp; Length: {!Event__c.Trip_End_Date__c - Event__c.Trip_Start_Date__c + 1} Days<br />
+                ${!IF(Event__c.RecordType.Name = 'Builds',Event__c.Fundraising_Goal__c,Event__c.Fundraising_Goal__c + Event__c.Indv_Tuition__c)} {!IF(CONTAINS(Event__c.Travel__c,'include'),'','+')} {!Event__c.Travel__c}  <apex:outputPanel rendered="{!IF(Event__c.service_hours__c != null && Event__c.service_hours__c != 0,true,false)}" Layout="none">&nbsp; &#8226; &nbsp;  Service Hours: {!Event__c.Service_Hours__c}</apex:outputPanel><br />
+                {!IF(CONTAINS(Event__c.Travel__c,'Bus'),'Departs From:','Meeting Point:')} {!Event__c.Departure_Location__c}
+              </div>
+              </div>
+              <div class="col-lg-4 text-right hidden-sm text-white mt-lg-5 mb-4">
+              <apex:pageBlock rendered="{!IF(AND(NOT(ISPICKVAL($User.UserType,'Guest')),Event__c.Trip_Type__c == 'Private'),TRUE,FALSE)}"><apex:outputLink value="/New_Registration?ID={!Event__c.Id}" styleclass="btn btn-primary btn-lg btn-block">{!IF(AND(Event__c.Auto_Approve__c == true,Event__c.Remaining_Capacity__c > 1),"Register","Apply")} Now</apex:outputLink>
+    </apex:pageBlock>
+    <apex:pageBlock rendered="{!IF(ISPICKVAL($User.UserType,'Guest'),TRUE,FALSE)}">
+    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Register_Apply">{!IF(AND(Event__c.Auto_Approve__c == true,Event__c.Remaining_Capacity__c > 1),"Register","Apply")}</button></apex:pageBlock>
+    <apex:pageBlock rendered="{!IF(Event__c.Trip_Type__c == 'Private',TRUE,FALSE)}"><button type="button" class="btn btn-secondary btn-block mt-4" onClick="olark('api.box.expand');">Request More Information</button></apex:pageBlock>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container mb-5">
+
+        <apex:outputPanel rendered="{!IF(Event__c.Trip_Start_Date__c < Today() + 30,true,false)}" layout="none" >
+<!-- Tentative Dates Warning -->
+<div class="alert alert-danger fade show mt-4" role="alert">
+  <strong>It's not too late!</strong> This trip is happening soon, but you can still join. Contact our office for details.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- END Tentative Dates Warning -->
+</apex:outputPanel>
+<apex:outputPanel rendered="{!IF(AND(Event__c.Remaining_Capacity__c < 6,Event__c.Remaining_Capacity__c > 0),true,false)}" layout="none" >
+<!-- Tentative Dates Warning -->
+<div class="alert alert-danger fade show mt-4" role="alert">
+  <strong>This {!IF(Event__c.RecordType.Name == 'Academy','Academy','Build')} is almost full! Register and fundraise/pay your deposit soon to secure your spot!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- END Tentative Dates Warning -->
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!IF(Event__c.Remaining_Capacity__c < 1,true,false)}" layout="none" >
+<!-- Tentative Dates Warning -->
+<div class="alert alert-danger fade show mt-4" role="alert">
+  <strong>This Build is full! Apply now to be put on a waiting list.</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- END Tentative Dates Warning -->
+</apex:outputPanel>
+
+    <apex:outputPanel rendered="{!IF(AND(Event__c.Tax_Receipt__c == 'None',Event__c.fundraising_type__c != 'None'),true,false)}" layout="none" >
+<!-- No Tax Receipt Warning -->
+<div class="alert alert-primary alert-dismissible fade show mt-4" role="alert">
+  <strong>**Donations</strong> to this Build are not eligible for tax receipts (details button to modal).
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- END No Tax Receipt Warning -->
+</apex:outputPanel>
+
+    <apex:outputPanel rendered="{!IF(CONTAINS(Event__c.Stage__c, 'Tentative'),true,false)}" layout="none" >
+<!-- Tentative Dates Warning -->
+<div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+  <strong>Please Note</strong> dates may change slightly and will be confirmed 10 months before the start date.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- END Tentative Dates Warning -->
+</apex:outputPanel>
+
+<div class="row">
+ <div class="col-lg-8 mt-5">
+          <div class='content'>
+            <apex:outputText escape="false" value="{!Event__c.Description__c}" styleClass="slds-custom_rt" />
+          </div>
+          <div class="row mb-5">
+            <div class="col-lg-6 mt-5">
+              <div class="card">
+                  <div class="card-header">
+                      What Is Included
+                  </div>
+                  <div class="card-body">
+
+                    <apex:outputText escape="false" value="{!Event__c.Included__c}" styleClass="slds-custom_rt" />
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+              <div class="card">
+                  <div class="card-header">
+                  What Is Not Included
+                  </div>
+                  <div class="card-body">
+
+                    <apex:outputText escape="false" value="{!Event__c.Not_Included__c}" styleClass="slds-custom_rt" />
+                  </div>
+              </div>
+            </div>
+          </div>
+ <div>
+          <div class='mt-4'>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <apex:outputPanel layout="none" rendered="{!IF(Event__c.Itinerary__c != '',true,false)}">
+               <li class="nav-item">
+                <a class="nav-link" id="Itinerary-tab" data-toggle="tab" href="#Itinerary" role="tab" aria-controls="Itinerary" aria-selected="true">Itinerary</a>
+              </li>
+              </apex:outputPanel>
+              <li class="nav-item">
+                <a class="nav-link active" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">FAQ</a>
+              </li>
+              <!-- li class="nav-item">
+                <a class="nav-link" id="packing-tab" data-toggle="tab" href="#packing" role="tab" aria-controls="packing" aria-selected="false">Packing List</a>
+              </li -->
+            </ul>
+          </div>
+  <div class="tab-content" id="myTabContent">
+    <apex:outputPanel layout="none" rendered="{!IF(Event__c.Itinerary__c != '',true,false)}">
+      <div class="tab-pane fade" id="Itinerary" role="tabpanel" aria-labelledby="Itinerary-tab">
+        <div class='mt-4'>
+          <apex:outputText escape="false" value="{!Event__c.Itinerary__r.Details__c}" styleClass="" />
+        </div>
+      </div>
+    </apex:outputPanel>
+    <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+      <c:FAQs location="{!Event__c.Location__c}" rendered="{!IF(Event__c.ID = 'a0e2J00000DrcehQAB',FALSE,TRUE)}" type="{!Event__c.Trip_Type__c}" flights="{!Event__c.Travel__c}" Rtype="{!Event__c.RecordType.Name}" flightcode="{!Event__c.flight_discount_code__c}" fundraising="{!Event__c.fundraising_type__c}" />
+      <apex:outputPanel layout="none" rendered="{!IF(Event__c.ID = 'a0e2J00000DrcehQAB',TRUE,FALSE)}">
+      <span id="j_id0:j_id53">
+          <div class="mt-5" id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button aria-controls="collapseOne" aria-expanded="false" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse">
+          Where do I stay?
+        </button>
+      </h5>
+    </div>
+    <div aria-labelledby="headingOne" class="collapse" data-parent="#accordion" id="collapseOne">
+      <div class="card-body">
+        <p>While volunteering in the Dominican Republic you will be staying at <a href="http://sosuabythesea.com">Sosua By The Sea</a>. This cozy boutique style resort sits on the corner of Sosua Bay, and is surrounded by beaches.</p><span id="j_id0:j_id53:j_id54:j_id60" style="display: none;"></span><span id="j_id0:j_id53:j_id54:j_id62" style="display: none;"></span><span id="j_id0:j_id53:j_id54:j_id64" style="display: none;"></span>
+      </div>
+    </div>
+  </div>
+ <span id="j_id0:j_id53:j_id54:j_id67">
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseThree" data-toggle="collapse">
+          What about flights?
+        </button>
+      </h5>
+    </div>
+    <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
+      <div class="card-body">
+        <p>We require that all volunteers arrange their own flights.</p>
+        <p>WestJet has provided a discount code for this Build! Enter "{!Event__c.Flight_Discount_Code__c}" when purchasing your flight through WestJet for this Build.</p>
+     </div>
+    </div>
+  </div></span><span id="j_id0:j_id53:j_id54:j_id69" style="display: none;"></span>
+</div></span>
+      </apex:outputPanel>
+      <div class='mt-5 text-center'>
+      <div class=''>Don't see the answer to your question?</div>
+      <div class='text-center'><a href='https://livedifferent.com/faqs/' class='btn mt-3 btn-primary'>See more FAQ's</a></div>
+      </div>
+    </div>
+    <!-- div class="tab-pane fade" id="packing" role="tabpanel" aria-labelledby="packing-tab">
+      <div class='mt-5'>
+        <c:Packing_List location="{!Event__c.Location__c}" />
+      </div>
+    </div -->
+  </div>
+ </div>
+        </div>
+        <div class="col-lg-4 order-lg-last order-first">
+<div class='mt-5'>
+            <h3 class="text-headline">Dates</h3>
+            <div class="text-danger"><apex:outputText value="{0, date, MMM d','  yyyy}"><apex:param value="{!Event__c.Trip_Start_Date__c}" /></apex:outputText> - <apex:outputText value="{0, date, MMM d','  yyyy}"><apex:param value="{!Event__c.Trip_End_Date__c}" /> </apex:outputText></div>
+          </div>
+          <div class="mt-4">
+          <a href='/apex/Print_Event?ID={!Event__c.Id}' class="btn btn-outline-info btn-block">Print Travel Packet</a>
+          </div>
+          <div>
+
+          </div>
+         <div>
+          <h2 class="mt-4">Gallery</h2>
+            <div>
+                <div class="popup-gallery">
+                    <apex:repeat value="{!Strings}" var="img">
+                      <a href="{!img}" title=""><img src="{!img}" width="75" height="75" /></a>
+                    </apex:repeat>
+                    <apex:outputPanel rendered="{!IF(Event__c.Remove_Default_Images__c = false,true,false)}" layout="none">
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image1.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image1_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image2.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image2_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image3.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image3_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image4.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image4_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image5.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image5_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image6.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image6_thumb.jpg" width="75" height="75" /></a>
+                    <a href="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image7.jpg" ><img src="https://d1rnoxujb5mndq.cloudfront.net/images/countries/{!LEFT(Event__c.Location__c,2)}/image7_thumb.jpg" width="75" height="75" /></a>
+                    </apex:outputPanel>
+                </div>
+            </div>
+         </div>
+         <div class="mt-5 mb-4">
+            <div class="videoWrapper">
+              <iframe src="https://player.vimeo.com/video/{!IF(Event__c.Video_Url__c != '',Event__c.Video_Url__c,if(Event__c.Location__c == 'Mexico','187345435','79435915'))}?api=1&title=0&byline=0&portrait=0&player_id=vimeo-player-1" id="vimeo-player-1" frameborder="0" data-progress="true" data-seek="true" data-bounce="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+              <script src="{!URLFOR($Resource.vimeo_analytics)}"></script>
+            </div>
+            <apex:outputPanel rendered="{!IF(Event__c.Video_Url_2__c != '',TRUE,FALSE)}" layout="none">
+            <div class="videoWrapper">
+              <iframe src="https://player.vimeo.com/video/{!Event__c.Video_url_2__c}?api=1&title=0&byline=0&portrait=0&player_id=vimeo-player-1" id="vimeo-player-1" frameborder="0" data-progress="true" data-seek="true" data-bounce="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+            </div></apex:outputPanel>
+
+         </div>
+         <div>
+          <h2 class="mt-5 mb-3">Questions?</h2>
+          <p>Let me know how I can help!</p>
+            <div>
+               <ul class="list-unstyled">
+                  <li class="media mb-3">
+                    <img class="mr-3" src="https://livedifferent.com/sites/files/{!IF(Event__c.RecordType.Name != 'Academy',LOWER(Event__c.Owner.FirstName),'rose')}.png" alt="Administrator Photo" width="70px" />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-0">{!IF(Event__c.RecordType.Name != 'Academy',Event__c.Owner.Name,'Rose Friesen')}</h5>
+                      <p class="mt-0"><small>{!IF(Event__c.RecordType.Name != 'Academy',Event__c.Owner.Email,'Rose@livedifferent.com')}<br />(866) 432 4464</small></p>
+
+                    </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <apex:variable var="v" value="{!Event__c.Staff__r}"/>
+         <apex:variable var="v2" value="[]"/>
+         <apex:outputPanel rendered="{!v == v2}" layout="none">
+         <div>
+          <h3 class="mt-5 mb-3">Your Team on the Ground</h3>
+            <div>
+               <ul class="list-unstyled">
+                <apex:repeat value="{!Event__c.Staff__r}" var="staff" rendered="TRUE">
+                <apex:outputPanel layout="none" rendered="{!IF(staff.Public__c = TRUE,TRUE,FALSE)}" >
+                  <li class="media mb-3">
+                    <img class="mr-3" src="https://livedifferent.com/sites/files/{!LOWER(staff.Staff_Headshot__c)}.png" alt="Staff Headshot" width="70px" />
+                    <div class="media-body">
+                      <h5 class="mt-2 mb-0">{!Staff.Staff_Name__c}</h5>
+                      <p class="mt-0"><small>{!staff.Roles__c}</small></p>
+
+                    </div>
+                  </li>
+                  </apex:outputPanel>
+                </apex:repeat>
+               </ul>
+            </div>
+         </div>
+         </apex:outputPanel>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5" style='background-color:#252525'>
+    <div class='container'>
+        <c:SiteFooter >
+        </c:SiteFooter>
+    </div>
+      <!-- /.container -->
+    </footer>
+<!-- Modals -->
+<div class="modal fade" id="Register_Apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">You need a My Live Different account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mt-4 text-center">
+        <a href='/Signup?id={!Event__c.Id}' class="btn btn-primary btn-block">Create a My Live Different Account</a>
+        <p class='mt-4'>Do you already have an account?</p>
+        <a href='/login?ec=302&inst=5&startURL=%2FNew_Registration%3FID={!Event__c.Id}' class="btn btn-secondary btn-block">Log In</a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!If(passwordcheck == false && (CONTAINS(Event__c.Stage__c,'Published') || CONTAINS(Event__c.Stage__c, 'Draft')),true,false)}">
+<style>
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
+  <apex:outputPanel rendered="{!if($CurrentPage.parameters.password != Event__c.Password__c && $CurrentPage.parameters.password != null,TRUE,FALSE)}">
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Incorrect Password!</strong> Please try again.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</apex:outputPanel>
+   <form class="form-signin text-center" action="/Event" method="get">
+      <img class="mb-4" src="{!$Resource.Logo_Portal}" alt="" width="100" height="17" />
+      <h1 class="h3 mb-3 font-weight-normal">{!Event__c.Name}</h1>
+      <input type="hidden" name="Id" value="{!$CurrentPage.parameters.ID}"/>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" />
+      <input type="submit" value="Submit" class="btn btn-lg btn-primary btn-block"></input>
+      <a href='https://my.livedifferent.com/private_trips' class="btn btn-lg btn-secondary btn-block">Cancel</a>
+      <p class="mt-5 mb-3 text-muted">Please contact {!IF(Event__c.Event_Organizer__c == null,"Live Different",Event__c.Event_Organizer__r.Name)} if you don't have the password.</p>
+    </form>
+  </apex:outputPanel>
+<apex:outputPanel rendered="{!If(CONTAINS(Event__c.Stage__c,'Published') || CONTAINS(Event__c.Stage__c,'Draft'),false,true)}">
+  <main role="main" class="container">
+
+      <div style='text-align:center'>
+        <h1>{!Event__c.Name}</h1>
+        <p class="lead">This Event is not accepting Registrations.</p>
+      </div>
+
+    </main>
+
+  </apex:outputPanel>
+<!-- End Modals -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="{!URLFOR($Resource.bootstrap, 'magnific-popup.css')}" />
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+
+
+    <!-- Magnific Popup core JS file -->
+    <script src="{!URLFOR($Resource.bootstrap, 'jquery.magnific-popup.js')}"></script>
+    <!-- End Magnifique Scripts -->
+<script>
+$(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        }
+    });
+});
+
+// Tag Manager datalayer
+dataLayer.push({
+  'event': 'Event Pageview',
+  'eventLabel': '{!Event__c.Name}',
+  'eventCategory': '{!Event__c.Trip_Type__c}',
+  'eventType': '{!Event__c.Recordtype.Name}',
+  'eventId': '{!Event__c.Id}',
+  'eventAction': 'View',
+  'eventValue': {!Event__c.Fundraising_Goal__c}
+});
+
+</script>
+<!-- / JAVASCRIPT -->
+<!-- / Sharing Scripts -->
+  </body>
+</html>
+</apex:page>

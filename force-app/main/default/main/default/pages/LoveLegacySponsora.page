@@ -1,0 +1,215 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Project__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+
+.fundraise-inner {
+    padding:35px 12px 10px 12px;
+    position:relative;
+    
+}
+
+.text-black {
+    color:#000 !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+   
+   span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
+     color:#039652 !important;
+   }
+   button.IATS_Action {
+   background:#039652 !important;
+   border:1px solid #039652 !important;
+   }
+  </style>
+</head>          
+
+<body>  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+    <!-- MASTHEAD -->
+    <script>
+    function goBack() {
+    window.history.back();
+}
+    </script>
+    <div class=''>
+    <div class='slds-p-bottom--small slds-p-left--small slds-p-top--small' style='background-color:#000;margin:-10px'><a style='border:2px solid #FFF;padding:5px;color:#FFF;text-decoration:none' onclick="goBack();">Back</a></div>
+    <div class='slds-m-bottom--large slds-container--large slds-container--center' style='padding:50px 12px 10px 12px'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                
+                <div class='slds-text-heading--medium slds-text-align--center text-white'>
+                <div class='slds-m-bottom--medium'><img src='https://my.livedifferent.com/resource/1466709588000/myimages/general/LDlogo_black.png' style='height:40px !important' class='slds-m-right--medium' /><img src='https://my.livedifferent.com/resource/1466709588000/myimages/general/lovelegacyb.png' style='height:80px !important' /></div>
+                    Your contribution will go towards Live Different's #LoveLegacy Sponsorship program
+                </div>
+                <div class="slds-text-body--small slds-text-align--center">Tax receipts will be issued in the first part of the following calendar year.</div>
+          </div>
+          
+        </div>
+     </div>
+</div>
+  
+    
+    
+    <div class='slds-container--small slds-container--center slds-grid slds-wrap slds-m-top--medium slds-m-bottom--medium slds-grid--vertical-align-center'>
+    <div class='slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--medium'>
+    <img src='https://my.livedifferent.com/resource/1466709588000/myimages/custom/llphotobook.jpg'/>
+    </div>
+    <div class='slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2'>Receive a photobook containing images taken by Benjamin Cole as a thank you gift.*</div>
+    </div>
+  <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA5642FC9DA82A9CD9&caid=70150000001Qawz&oprtid=0123000000091zq&HideRecurringEndDate=true&Item2=Personal&Item5=LoveLegacy&Item6=Gala"></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  <apex:outputPanel rendered="{!IF($CurrentPage.parameters.PB = 'true',true,false)}" layout="none">
+  <div class='slds-text-align--center slds-text-body--small slds-container--small slds-container--center'>
+  *In compliance with CRA rules, if the sum of your 2017 monthly contributions is less than $200, a split tax receipt will be issued for the sum of your donations less the $20 value of the photobook.
+  </div>
+  </apex:outputPanel>
+  
+  <!--Modals -->
+
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ */
+
+/**
+ * dataLayer.push({
+ *   'event': 'checkout',
+ *   'ecommerce': {
+ *     'checkout': {
+ *       'actionField': {'step': 1},
+ *       'products': [{
+ *       'name': 'Love Legacy Sponsorship',       // Name or ID is required.
+ *       'id': 'LLS-01',
+ *       'brand': 'Live Different',
+ *       'category': 'Donation/LoveLegacy/Monthly'
+ *      }]
+ *    }
+ *  }
+ * });
+ */
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'Love Legacy Sponsorship',       // Name or ID is required.
+        'id': 'LLS-01',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'category': 'Donation/LoveLegacy/Monthly'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    
+    
+});
+  </script>
+  </html>
+</apex:page>

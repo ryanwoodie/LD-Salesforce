@@ -1,0 +1,47 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:insert name="Google Tag Manager">
+    <c:GTM /> 
+  </apex:insert> 
+  <h1>Congratulations</h1>
+  <script type="text/javascript" src="https://staging.iatspayments.com/AURA/AURA.aspx?PID=PA1B340D0A1B83BA14"></script>
+  <script>
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'products': [{
+          'name': 'Donation',
+          'id':  e.data.transID,
+          'price': e.data.amount,
+          'category': 'Registration Payment',
+          'quantity': 1
+       }]
+     }
+   }
+  });
+});
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'products': [{
+          'name': 'Donation',
+          'id':  e.data.transID,
+          'price': e.data.amount,
+          'category': 'Registration Payment',
+          'quantity': 1
+       }]
+     }
+   }
+  });
+});
+</script>
+  <!-- End Default Content REMOVE THIS -->
+  <script>
+
+
+  </script>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page renderas="pdf" standardController="Contact">
+<html>   
+    <head>
+        <style>
+            @page {
+            size: 3.5in 1.125in;/* width height */
+            margin:1mm 1mm 1mm 1mm;
+            }
+            //@bottom-right {
+                    content: "1a99sid";
+                }
+        </style>
+    </head>
+    <body style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16px;font-weight:bold" >
+            {!Contact.FirstName} {!Contact.LastName}<br />
+            {!Contact.MailingStreet}<br />
+            {!Contact.MailingCity} {!Contact.MailingState}   {!Contact.MailingPostalCode}<br />
+            {!IF(Contact.MailingCountry != 'CA' || Contact.MailingCountry != 'Canada',Contact.MailingCountry,'')}
+    </body>
+    </html>
+   
+</apex:page>

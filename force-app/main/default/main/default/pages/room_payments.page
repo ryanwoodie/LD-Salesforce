@@ -1,0 +1,228 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Registration__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .IATS_AmountSectionTitle {
+  color:#009ae1 !important;
+  }
+  
+  .IATS_PaymentSectionTitle {
+  color:#009ae1 !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#FFF !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+  </style>
+</head>          
+
+<body>  
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert>   
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/{!IF($CurrentPage.parameters.ID==null,"Do",LEFT(Registration__c.Event__r.Location__c,2))}.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                <div class='slds-text-heading--medium text-white' style='font-weight:bold'>
+                    Payment for the remaining room fees
+                </div>
+                
+          </div>
+          
+        </div>
+     </div>
+</div>
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA5449EA10CF124068&Item2=NO%20TAX%20RECEIPT&Item3=Room%20Payment-Building%20Dreams%202016"></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+  <!--Modals -->
+  <div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-1">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <h2 class="slds-text-heading--medium">Donation Policy</h2>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        <ul class='slds-list--dotted'>
+  <li>Live Different Builds is a charitable program. This means that "participants/travelers" are functioning as volunteers, approved by our Board of Directors, to help achieve the charitable purpose of Live Different. The beneficiaries of this charitable program are families and people in-need in our host countries, not those who deliver the program (even though it may be incredibly fun, rewarding and even life-changing to serve others in need).</li>
+<li>Additionally, the humanitarian trip does not have a "personal recreational vacation" component that is more than incidental to the charitable project (eg. if there were multiple days of personal vacation free-time this would be a monetary-type personal benefit and funds raised would not qualify as a gift for income tax purposes).</li>
+<li>Due to the expense and logistics of coordinating a volunteer humanitarian development project, an important qualification is for each volunteer to meet their trip's minimum fundraising goal. Volunteers can solicit tax receiptable donations via their fundraising page to reach the minimum fundraising goal to help pay for their costs in carrying out the project, and such designated contributions are received by Live Different for its charitable purposes. According to charity law, a donation is a voluntary transfer of property without valuable consideration to the donor; donors cannot choose the beneficiaries of their donations, and a charity must have full discretion in deciding how to allocate its funds. Even if related persons or the volunteer make contributions to meet the fundraising goal of the humanitarian trip, the contributions are gifts for income tax purposes because they pass the CRA tests. Therefore Live Different is able to issue an official receipt for income tax purposes. It is the volunteer's obligation to inform donors that all donations are given to the project/charity, and though donations help meet the volunteer's fundraising goal and their costs associated with the charitable project, they are not being used as a direct monetary benefit to the volunteer (eg. monies won't be refunded, they won't be used to cover personal/recreational expenses, etc.)</li>
+<li>This means that ALL donations are absolutely, 100% non-refundable, as it is not legal for a charity to refund a donation. In event of any form of cancellation whatsoever or exceeding a fundraising goal, funds will instead be allocated towards where most needed in the project or in other charitable programs. In the event that a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+</ul>
+
+<br />
+<div class='slds-text-align--center'>
+<button class="slds-button slds-button--brand slds-m-around--x-large" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ */
+
+/**
+ * dataLayer.push({
+ *   'event': 'checkout',
+ *   'ecommerce': {
+ *     'checkout': {
+ *       'actionField': {'step': 1},
+ *       'products': [{
+ *       'name': '{!Registration__c.Name}',       // Name or ID is required.
+ *       'id': '{!Registration__c.Id}',
+ *       'brand': 'Live Different',
+ *       'category': 'Build Donation/{!Registration__c.Event__r.Trip_Type__c}/{!Registration__c.Event__r.Name}'
+ *      }]
+ *    }
+ *  }
+ * });
+ */
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': '{!Registration__c.Name}',       // Name or ID is required.
+        'id': '{!Registration__c.Id}',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'category': 'Build Donation/{!Registration__c.Event__r.Trip_Type__c}/{!Registration__c.Event__r.Name}'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    
+    
+});
+  </script>
+  </html>
+</apex:page>

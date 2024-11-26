@@ -1,0 +1,541 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Registration__c" extensions="cleanText,RegImages">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  
+<head>  
+<apex:outputText rendered="false" value="{!Registration__c.Event__r.Trip_Type__c}" />
+  <script>
+  dataLayer = [{
+  'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,"Guest")),$User.ID,"")}',
+  'ecommerce': {
+    'detail': {
+      'actionField': {'list': 'Designated Donation'},    // 'detail' actions have an optional list property.
+      'products': [{
+        'name': 'Designated Builds Donation',         // Name or ID is required.
+        'id': '{!Registration__c.Id}',
+        'brand': 'Live Different',
+        'category': 'Build Donation/{!Registration__c.Event__r.Trip_Type__c}/{!Registration__c.Event__r.Name}'
+       }]
+     }
+   }
+  }];
+  </script> 
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Payment1__c" jsShorthand="Payments" fields="Id,Name,Amount__c,RecordTypeId,Donor_Name__c,Registration__c,Payment_Date__c,Comments__c,Time_Since__c,CreatedDate,Donation_Privacy__c,Parent_Opp_Status__c"/>
+  </apex:remoteObjects>
+  <title>Volunteer Fundraising -- {!Registration__c.Fundraising_Page_Title__c}</title>
+  <meta property="og:url"  content="https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}" />
+  <meta property="og:type"  content="article" />
+  <meta property="og:title" content="{!Registration__c.Fundraising_Page_Title__c}" />
+  <meta property="og:image" content="{!imgurl}" />
+  <meta property="og:image:type" content="image/jpeg" /> 
+  <meta property="og:image:width" content="2000" /> 
+  <meta property="og:image:height" content="1000" />
+  <meta property='og:description' content='{!Blurb}' />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.clipboard)}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+#progressbar {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 5px; /* (height of inner div) / 2 + padding */
+  padding: 0px;
+}
+
+#progressbar > div {
+   background-color: #00b9f2;
+   width: {!IF((Registration__c.amount_formula__c/Registration__c.Donation_Page_Fund_Goal__c)<1,Registration__c.amount_formula__c/Registration__c.Donation_Page_Fund_Goal__c,1)*100}%; /* Adjust with JavaScript */
+   height: 10px;
+   border-radius: 5px;
+}
+.fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.slds-card-color {
+    background-color:#ededed !important;
+    border:none !important;
+}
+
+.slds-button--max {
+    width:100%;
+}
+
+.slds-text-heading--max {
+    font-size:4em;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar_com {
+    background-color:#4EBEE8;
+    line-height:46px;
+    padding-bottom:2px;
+    text-align:center;
+    color:#fff;
+    font-size:2em;   
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+.button_link {
+   color:#000 !important;
+   border-radius:4px;
+   background-color:#fff;
+   display:inline-block;
+   font-size:10px !important;
+   border:none;
+   }
+   .button_link_div {
+   display: inline-block !important;
+   }
+  </style>
+ 
+</head>        
+ 
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+    <!-- MASTHEAD -->
+    <div id="header-secondary-outer" data-full-width="false" data-permanent-transparent="false" >
+        <div class="container-topnav">
+            <nav class='top-nav'>
+                                
+                                    <ul class="sf-menu">    
+                       <li id="menu-item-2163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2163"><a href="http://store.livedifferent.com">Store</a></li>
+<li id="menu-item-3738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3738"><a href="http://livedifferent.com/contact/">Contact Us</a></li>
+<apex:panelGroup rendered="{!AND(ISPICKVAL($User.UserType,'Guest'), $Site.LoginEnabled)}"><li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="/login">Login to My.LiveDifferent</a></li></apex:panelGroup>
+<apex:panelGroup rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}"><li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="/Volunteer_Dashboard">My Account</a></li>
+<li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="{!$Site.Prefix}/secur/logout.jsp">{!$Label.site.logout}</a></li></apex:panelGroup>
+                    </ul>
+                                
+            </nav>
+        </div>
+    </div>
+  <div class="main-nav-top slds-grid slds-wrap slds-container--x-large slds-container--center slds-p-right--x-large slds-p-left--x-large slds-m-bottom--medium">
+  <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-5 slds-align-middle slds-m-top--large">
+    <a href="/Volunteer_Dashboard"><apex:image url="{!$Resource.Logo_Portal}" style="align: left;" alt="LiveDifferent" width="140" height="33" title="LiveDifferent"/></a>
+    </div>
+    <div id='cssmenu' class='slds-size--1-of-1 slds-medium-size--4-of-5' style='margin-top:25px'>
+    <ul>
+        <li class=''><a href='http://livedifferent.com'>Home</a></li>
+        <li class=''><a href='http://livedifferent.com/builds/'>Builds</a></li>
+        <li><a href='http://livedifferent.com/projects/'>Projects</a></li>
+        <li><a href='http://livedifferent.com/motivational-presentations/'>School Programs</a>
+             <ul>
+               <li><a href='http://livedifferent.com/motivational-presentations/'>Presentations</a></li>
+               <li><a href='http://livedifferent.com/keynotes/'>Keynote Speakers</a></li>
+               <li><a href='http://livedifferent.com/tour-internship/'>Tour Internship</a></li>
+               <li><a href='http://livedifferent.com/band-application/'>Band Application</a></li>
+             </ul>
+        </li>
+        <li><a href='http://livedifferent.com/academy/'>Academy</a></li>
+        <li><a href='http://livedifferent.com/media/'>Media</a>
+            <ul>
+               <li><a href='http://livedifferent.com/moments/'>Moments</a></li>
+               <li><a href='http://livedifferent.com/blog/'>Blog</a></li>
+            </ul>
+        </li>
+        <li><a href='http://livedifferent.com/about-us/'>About Us</a>
+            <ul>
+               <li><a href='http://livedifferent.com/contact/'>Contact Us</a></li>
+               <li><a href='http://livedifferent.com/meet-our-team/'>Meet Our Team</a></li>
+               <li><a href='http://livedifferent.com/partners/'>Partners</a></li>
+               <li><a href='http://livedifferent.com/join-our-team/'>Join Our Team</a></li>
+               </ul>
+        </li>
+    </ul>
+    </div>
+    </div>
+
+    <apex:messages styleClass="slds-notify slds-notify--alert slds-notify-alert--theme-texture slds-m-around--medium"/>
+    <!-- / MASTHEAD -->     
+<div class='fundraise-header slds-m-top--small' style='background-image: url({!imgurl});'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <div class="slds-col slds-col--padded slds-size--1-of-1">
+        <div class='slds-text-heading--large text-white' style='font-weight:bold'>
+        {!IF(Registration__c.Fundraising_Page_Title__c==null,Registration__c.Event__r.Name,Registration__c.Fundraising_Page_Title__c)}
+        </div>
+        <div class='slds-text-heading--medium text-white'>
+        {!Registration__c.Contact_Name__c}
+        </div>
+        <div class='slds-text-heading--label slds-m-top--medium text-white'>
+          Share my page
+          </div>
+          <div class='slds-m-top--x-small'>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}" data-text="I'm going on a LiveDifferent Build, Join me!">Tweet</a>
+          <div class="fb-share-button" data-href="https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}" data-layout="button" data-mobile-iframe="true"></div>
+          <div style='vertical-align:bottom !important' class="g-plusone" data-size="medium" data-href="https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}"></div>
+          <div style='vertical-align:bottom !important' class="button_link_div" ><button class="btn button_link">
+  <svg aria-hidden="true" class="slds-button__icon--small slds-text-body--small slds-button__icon--left">
+    <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/action-sprite/svg/symbols.svg#share_link')}"></use>
+  </svg>Copy Link</button></div>
+          </div>
+          <div>
+    <apex:pageBlock rendered="{!IF($User.ContactId == Registration__c.Contact__r.Id && NOT(ISPICKVAL($User.UserType,'Guest')),true,false)}">
+        <apex:outputLink value="/Registration_Edit?ID={!Registration__c.ID}" styleClass="slds-button slds-button--brand slds-max-small-button--stretch slds-m-top--medium">Edit My Page</apex:outputLink>
+        <apex:outputLink value="/image_upload?regId={!Registration__c.ID}" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch slds-m-top--medium slds-m-left--small">Customize Header Image</apex:outputLink>
+    </apex:pageBlock>
+</div>
+          </div>
+          </div>
+        </div>
+</div>
+<div class="myapp slds-m-top--large slds-container--center slds-container--large">
+    <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <!--SideBar-->
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-3">
+        <div class="slds-m-bottom--large slds-small-show-only">
+                <div class="slds-text-heading--medium slds-m-bottom--medium">
+                Why I want to volunteer with LiveDifferent
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!Registration__c.Fundraising_Text__c}" escape="false"/>
+            
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!IF(Registration__C.Event__r.Tax_Receipt__c == "None","<br />** Please note that donations to this fundraiser are not eligible for a tax receipt. **","")}" escape="false"/>
+                </div>
+            </div>
+         <div class="slds-m-bottom--large slds-x-small-show-only">
+                <div class="slds-text-heading--medium slds-m-bottom--medium">
+                Why I want to volunteer with LiveDifferent
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!Registration__c.Fundraising_Text__c}" escape="false"/>
+                  
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!IF(Registration__C.Event__r.Tax_Receipt__c == "None","<br />** Please note that donations to this fundraiser are not eligible for a tax receipt. **","")}" escape="false"/>
+                </div>
+            </div>
+          <div class="slds-card slds-card-color">
+
+
+    <!-- CARD BODY = TABLE -->
+    <section class="slds-card__body slds-p-around--medium">
+      <div class='slds-m-bottom--medium'>
+      <div class="slds-text-heading--large slds-m-bottom--medium" style="font-weight:bold;">$<apex:outputText value="{0, number, #,##0}">
+       <apex:param value="{!Registration__c.amount_formula__c}" />
+ </apex:outputText></div>
+      <section class="slds-clearfix">
+          <div class="slds-float--left">{!ROUND((Registration__c.amount_formula__c/Registration__c.Donation_Page_Fund_Goal__c)*100,0)}%</div>
+          <div class="slds-float--right">$<apex:outputText value="{0, number, #,##0}">
+       <apex:param value="{!Registration__c.Donation_Page_Fund_Goal__c}" />
+ </apex:outputText></div>
+          </section>
+          <div id="progressbar" class='slds-m-bottom--small'>
+              <div></div>
+          </div>
+          </div>
+          <apex:pageBlock rendered="{!IF(Registration__c.Closed_Lost__c == true || Registration__c.Fundraising_Type__c == 'Closed',false,true)}"><a href='https://my.livedifferent.com/Fundraising_Donation?ID={!Registration__c.Id}&Item5=RG-{!Registration__c.Id}&cortid=012300000000OOG' onClick="dataLayer.push({'event': 'addToCart','ecommerce': {'currencyCode': 'CAD','add': {'products': [{'name': 'Designated Builds Donation','id': '{!Registration__c.Id}','price': '0.00','brand': 'Live Different','category': 'Build Donation/{!Registration__c.Event__r.Trip_Type__c}/{!Registration__c.Event__r.Name}','quantity': 1}]}}});" class='slds-button slds-button--brand slds-button--max slds-m-top--medium'>Donate {!IF(Registration__c.Event__r.ID == 'a0e2J00000CcGTsQAN','One Time','Now')}</a></apex:pageBlock>
+          <apex:pageBlock rendered="{!IF(Registration__c.Closed_Lost__c == true || Registration__c.Fundraising_Type__c == 'Closed',true,false)}"><span class='slds-button slds-button--brand slds-button--max slds-m-top--medium'>Fundraiser Closed</span></apex:pageBlock>
+          <apex:pageBlock rendered="{!IF(Registration__c.Event__r.ID != 'a0e2J00000CcGTsQAN',false,true)}"><a href='https://my.livedifferent.com/Fundraising_Donation_recurring?ID={!Registration__c.Id}&Item5=RG-{!Registration__c.Id}&cortid=012300000000OOG' onClick="dataLayer.push({'event': 'addToCart','ecommerce': {'currencyCode': 'CAD','add': {'products': [{'name': 'Designated Builds Recurring Donation','id': '{!Registration__c.Id}','price': '0.00','brand': 'Live Different','category': 'Build Donation/{!Registration__c.Event__r.Trip_Type__c}/{!Registration__c.Event__r.Name}','quantity': 1}]}}});" class='slds-button slds-button--brand slds-button--max slds-m-top--medium'>Donate Monthly</a></apex:pageBlock>
+          <center><button class="slds-button slds-text-body--small slds-text-align--center" onclick="dataLayer.push({ 'event' :  'Donation Page LD Info',  'eventCategory' :  'Interaction',  'eventAction' :  'View',  'eventLabel' :  'About LD' });" data-aljs="modal" data-aljs-show="modal-1">Who is LiveDifferent?</button></center>
+    </section>
+    <!-- / CARD BODY = SECTION + TABLE -->
+
+    <footer class="slds-card__footer">
+     
+    </footer>
+      </div>
+        <div class="slds-m-top--x-large slds-m-bottom--x-large">
+        <!-- Donation Table -->
+        <div class="slds-text-heading--small slds-m-bottom--xx-small" style="font-weight:bold">Donations</div>
+        <div id='donations'>
+            
+        </div>
+        <!--div class="slds-button slds-button--max slds-button--neutral"See More (modal)/div -->
+        
+            
+        
+  <!-- End Donation Table -->
+        </div>
+      <div class=" slds-m-bottom--x-large videoWrapper">
+      <iframe src="https://player.vimeo.com/video/{!IF(Registration__c.Video_ID__c != '',Registration__c.Video_ID__c,if(Registration__c.Event__r.Location__c == 'Mexico','187345435','79435915'))}?api=1&title=0&byline=0&portrait=0&player_id=vimeo-player-1" id="vimeo-player-1" frameborder="0" data-progress="true" data-seek="true" data-bounce="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+      <script src="{!URLFOR($Resource.vimeo_analytics)}"></script>
+      </div>
+      
+    </div>
+        <!-- End Sidebar -->
+        <!--Main Content-->
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--2-of-3">
+            <div class="slds-m-bottom--large slds-medium-show">
+                <div class="slds-text-heading--medium slds-m-bottom--medium">
+                Why I want to volunteer with LiveDifferent
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!Registration__c.Fundraising_Text__c}" escape="false"/>
+            
+                </div>
+                <div class="slds-text-body--large">
+                <apex:outputText value="{!IF(Registration__C.Event__r.Tax_Receipt__c == "None","<br />** Please note that donations to this fundraiser are not eligible for a tax receipt. **","")}" escape="false"/>
+                </div>
+            </div>
+            
+            
+            <!-- Start Comments -->
+<div class="slds-m-top--x-large slds-m-bottom--larg slds-text-heading--medium">
+Comments
+</div>
+          <div id="comments" class="slds-feed">
+    
+  </div>
+<!-- End Comments -->
+        </div>
+    </div>
+</div>
+   
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+<!--Modals -->
+  <div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-1">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <center><img src='https://my.livedifferent.com/resource/1451505469000/Logo_Portal' width='160px' class='slds-m-top--medium slds-m-bottom--medium' /></center>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        
+        <p>LiveDifferent was established as a Canadian charity in 2000 (BN: 86123 2890 RR0001), and began to operate internationally in 2005. 
+        From the very beginning we have been passionate about making a difference in the lives of the people we encounter through our youth empowerment presentations, our humanitarian build programs, and our leadership development opportunities. 
+        Over the past 16 years we have had the opportunity to speak to over 1.2 million students, to build over 500 homes, schools, and other projects, and to mentor over 4,500 students, interns, and volunteers.</p>
+        <p class='slds-m-top--medium'>Our Builds program provides opportunities to volunteer in Mexico, the Dominican Republic and Haiti. We host trips for Boston Pizza, WestJet and Big Brothers Big Sisters, as well as many other schools and community groups annually.</p>
+
+<br />
+<div class='slds-text-align--center'>
+<button class="slds-button slds-button--brand slds-m-around--x-large" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            </div>
+</div>
+</div>
+</div>
+</div>
+
+<!--Link copied Modal-->
+<div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-2">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <center><div class='slds-text-heading--medium'>Success!</div></center>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        
+        <p class='slds-text-align--center'>The link has been copied to the clipboard!</p>
+        <p class='slds-text-align--center slds-text-body--small'>https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}</p>
+<br />
+<div class='slds-text-align--center'>
+<button class="slds-button slds-button--brand slds-m-around--x-large" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Modals -->
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+</body>    
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+    });
+
+  var payment = new SObjectModel.Payments();
+  var outputDiv = document.getElementById("donations");
+  var regId = '{!Registration__c.Id}';    
+
+  function updateOutputDiv() {    
+
+    payment.retrieve(
+      { where: { 
+      Registration__c: {eq: '{!Registration__c.Id}' },
+      RecordTypeId: {eq: '0123000000091tJ' },
+      Parent_Opp_Status__c: {eq: "Payment Posted and Applied"}
+      },
+      orderby: [{Amount__c: 'DESC'}], limit: 30},
+      function(error, records) {
+        if (error) {
+          outputDiv.innerHTML = 'Sorry, an error has occured';
+          alert(error.message);
+        } else {
+             var html = '&nbsp;';
+             if (records.length == 0) {
+             html = html + '<div class="slds-clearfix slds-text-body--medium slds-m-bottom--xx-small">Be the first to Donate!</div>'; 
+             } else {
+          records.forEach(function(record) {
+              html = html + '<div class="slds-clearfix slds-text-body--medium slds-m-bottom--xx-small"><div class="slds-float--left">' + record.get("Donor_Name__c");
+              html = html + '</div><div class="slds-float--right">$' + record.get("Amount__c") + '</div></div>';
+          });
+          }
+          outputDiv.innerHTML = html;
+        }
+      }
+    );
+  }
+  updateOutputDiv();
+  
+  var CommentDiv = document.getElementById("comments");
+  
+  function updateCommentDiv() {    
+
+    payment.retrieve(
+      { where: { 
+      Registration__c: {eq: '{!Registration__c.Id}'},
+      Donation_Privacy__c: {like: '%Fundraising Page%'},
+      RecordTypeId: {eq: '0123000000091tJ' },
+      Parent_Opp_Status__c: {eq: "Payment Posted and Applied"}
+      },
+      orderby: [{CreatedDate: 'DESC'}], limit: 30},
+      function(error, records) {
+        if (error) {
+          outputDiv.innerHTML = 'Sorry, an error has occured';
+          alert(error.message);
+        } else {
+             var html = '<ul class="slds-feed__list">'
+             if (records.length == 0) {
+             html = html + '<li class="slds-feed__item">Be the first to Comment, Donate now!</li>';
+             } else {
+          records.forEach(function(record) {
+              passed = record.get("Payment_Date__c");
+              comment = record.get("Comments__c");
+              Tsince = moment(passed).fromNow();
+              html = html + '<li class="slds-feed__item"><div class="slds-media slds-comment slds-hint-parent"><div class="slds-media__figure"><div class="slds-avatar slds-avatar--circle slds-avatar--medium">';
+              html = html + '<div class="avatar_com">' + record.get("Donor_Name__c").substr(0,1).toUpperCase() + '</div></div></div><div class="slds-media__body"><div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate"><p class="slds-truncate">' + record.get("Donor_Name__c") + ' - $' + record.get("Amount__c") + '</p>';
+              html = html + '</div><p class="slds-text-body--small"><a href="#void" title="Click for single-item view of this post">' + Tsince + '</a></p><div class="slds-comment__content slds-text-longform">';
+              if(comment != null) {
+                 html = html + comment;
+                 }
+              html = html + '</div></div></div></li>';
+          });
+          }
+          
+              html = html + '</ul>';
+          CommentDiv.innerHTML = html;
+        }
+      }
+    );
+  }
+  updateCommentDiv();
+
+  
+  
+</script>
+<!-- / JAVASCRIPT -->    
+<!-- / Sharing Scripts -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  
+  var clipboard = new Clipboard('.btn', {
+        text: function() {
+            return 'https://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}';
+        }
+    });
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+        $('#modal-2').modal('show');
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+        alert("Oops, something went wrong! Select and copy the link below\nhttps://my.livedifferent.com/fundraising_page?ID={!Registration__c.ID}");
+    });
+  </script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script src="https://apis.google.com/js/platform.js" ></script>
+</html>
+</apex:page>

@@ -1,0 +1,142 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Contact">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Home Page</title>
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS0110, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+</head>    
+
+<body>    
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert> 
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+
+    <!-- MASTHEAD -->
+    <p class="slds-text-heading--label slds-m-bottom--small"><apex:image url="{!$Resource.LDlogo_grey}" width="60" height="49"/></p>
+    <!-- / MASTHEAD -->    
+
+    <!-- PAGE HEADER -->
+<div class="slds-page-header" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+            <use xlink:href="{!URLFOR($Resource.SLDS0110, 'assets/icons/standard-sprite/svg/symbols.svg#user')}"></use>
+          </svg>
+        </div>
+
+        <div class="slds-media__body">
+          <p class="slds-text-heading--label">My Info</p>
+          <h1 class="slds-text-heading--medium"><apex:outputfield value="{!Contact.Name}" styleClass="form-control"/></h1>
+        </div>
+
+      </div>
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+    <!-- / PAGE HEADER / ROW 1 / COLUMN 1 -->
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 2 -->
+    
+    <!-- / PAGE HEADER / ROW 1 / COLUMN 2 -->
+
+  </div>
+  <!-- / PAGE HEADER TOP ROW -->
+
+  <!-- / PAGE HEADER DETAIL ROW -->
+             
+
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+    <!-- / PAGE HEADER -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form >
+  <div class="slds-container--small slds-container--center">
+<fieldset class="slds-form--compound">
+<legend class="slds-form-element__label  slds-text-heading--medium">Contact Info</legend>
+<div class="form-element__group">
+<div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-2"><span class="slds-form-element__helper">Email</span><apex:inputfield value="{!Contact.Email}" styleclass="slds-input"/></label><label class="slds-form-element__control slds-size--1-of-2"><span class="slds-form-element__helper">Phone</span><apex:inputfield value="{!Contact.HomePhone}" styleclass="slds-input"/>
+</label>
+</div>
+</div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--medium">Address</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row">
+      <label class="slds-form-element__control slds-size--1-of-1">
+        <span class="slds-form-element__helper">Street</span>
+        <apex:inputfield value="{!Contact.MailingStreet}" styleclass="slds-input"/>
+      </label>
+    </div>
+    <div class="slds-form-element__row"><label class="slds-form-element__control slds-size--3-of-6"><span class="slds-form-element__helper">City</span><apex:inputfield value="{!Contact.MailingCity}" styleclass="slds-input"/></label><label class="slds-form-element__control slds-size--1-of-6"><span class="slds-form-element__helper">Province</span><apex:inputfield value="{!Contact.MailingState}" styleclass="slds-input"/></label><label class="slds-form-element__control slds-size--2-of-6"><span class="slds-form-element__helper">Postal Code</span><apex:inputfield value="{!Contact.MailingPostalCode}" styleclass="slds-input"/></label>
+</div>
+  </div>
+</fieldset>
+<fieldset class="slds-form--compound slds-m-top--large">
+<legend class="slds-form-element__label  slds-text-heading--medium">Personal Info</legend>
+<div class="form-element__group">
+<div class="slds-form-element__row">
+<label class="slds-form-element__control slds-size--1-of-2"><span class="slds-form-element__helper">Birthdate</span><apex:inputfield value="{!Contact.Birthdate}" styleclass="slds-input"/></label><label class="slds-form-element__control slds-size--1-of-2"><span class="slds-form-element__helper">Gender</span><apex:inputfield value="{!Contact.Male_Female__c}" styleclass="slds-input"/>
+</label>
+</div>
+</div>
+</fieldset>
+<div class="slds-m-top--xx-large">
+<center>
+                                <a href='/Volunteer_Dashboard'><button class="slds-button slds-button--neutral" href='/Volunteer_Dashboard'>Cancel</button></a><button class="slds-button slds-button--neutral">Save</button></center></div>
+                      </div>
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <footer role="contentinfo" class="slds-p-around--large">
+      <!-- LAYOUT GRID -->
+      <div class="slds-grid slds-grid--align-spread">
+        <p class="slds-col">Volunteer Portal</p>
+        <p class="slds-col">&copy; LiveDifferent</p>
+      </div>
+      <!-- / LAYOUT GRID -->
+    </footer>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+
+<!-- JAVASCRIPT -->
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

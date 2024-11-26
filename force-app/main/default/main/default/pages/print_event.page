@@ -1,0 +1,140 @@
+<apex:page renderAs="pdf" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c">
+    <html>
+    <head>
+    <style type='text/css'>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+    
+    .Section {
+    page-break-inside:avoid;
+    }
+
+    h1 {
+    font-weight:bold;
+    font-size:35px;
+    margin-top:20px;
+    margin-bottom:10px;
+    text-align:center;
+    }
+    
+    h2 {
+    font-weight:bold;
+    font-size:27px;
+    margin-top:80px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    margin-bottom:-8px;
+    padding-bottom:8px;
+    color:#000;
+    }
+    
+    h3 {
+    font-weight:bold;
+    font-size:22px;
+    margin-top:50px;
+    margin-bottom:8px;
+    }
+    
+    h4 {
+    font-weight:bold;
+    font-size:18px;
+    margin-top:20px;
+    margin-bottom:4px;
+    }
+
+@page {
+    size: portrait; /*landscape orientation*/
+    /*page numbers in the bottom center of each page in the pdf document*/
+    @bottom-center {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    /*placeholders for other content areas*/
+    @bottom-right {
+        content: "livedifferent.com";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @bottom-left {
+        content: "{!Event__c.Name}";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @top-right {
+        content: "";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @top-center {
+        content: "";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @top-left {
+        content: "";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    
+    
+
+}
+</style>
+</head>
+<body>
+    <div style='text-align:center'><img src='{!$Resource.Logo2020}' width='150px' /></div>
+    <h1>{!Event__c.Name}</h1>
+    <div style='text-align:center;font-size:12px'><div style='margin-left:auto;margin-right:auto;width:500px;text-align:center;line-height:18px'>
+        <apex:outputPanel layout="none" rendered="{!IF(Event__c.Age__c != 'N/A',true,false)}">Ages: {!Event__c.Age__c} &nbsp; &#8226; &nbsp; </apex:outputPanel>Length: {!Event__c.Trip_End_Date__c - Event__c.Trip_Start_Date__c + 1} days <apex:outputPanel layout="none" rendered="{!IF(Event__c.service_hours__c <> 0,true,false)}">&nbsp; &#8226; &nbsp; Service Hours:&nbsp;<apex:outputText value="{0, number}"><apex:param value="{!Event__c.service_hours__c}" /></apex:outputText></apex:outputPanel><br /><apex:outputPanel layout="none" rendered="{!IF(Event__c.Tax_Receipt__c != 'None',true,false)}">Fundraising Goal:</apex:outputPanel> <apex:outputText value="{0, number, $#,##0}"><apex:param value="{!Event__c.Fundraising_Goal__c}" /></apex:outputText> + {!Event__c.Travel__c}
+    <br /><apex:outputText value="{0, date, MMM d','  yyyy}"><apex:param value="{!Event__c.Trip_Start_Date__c}" /></apex:outputText> - <apex:outputText value="{0, date, MMM d','  yyyy}"><apex:param value="{!Event__c.Trip_End_Date__c}" /> </apex:outputText></div></div><div style='float:clear;margin-bottom:30px' />
+    <hr />
+    <div><apex:outputText escape="false" value="{!Event__c.Description__c}" /></div>
+    <div>
+                <div style='page-break-inside:avoid;margin-top:60px'>
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h4 style='border-bottom:2px solid black'>What's Included</h4>
+                        </div>
+                        <div style=''>
+                            <apex:outputText escape="false" value="{!Event__c.Included__c}" styleClass="slds-custom_rt" />
+                        </div>
+                    </div>
+                </div>
+                <div style='page-break-inside:avoid;page-break-after:always'>
+                <div class='card'>
+                    <div class='card-header'>
+                        <h4 style='border-bottom:2px solid black'>What's Not Included</h4>
+                    </div>
+                    <div style=''>
+                        <apex:outputText escape="false" value="{!Event__c.Not_Included__c}" styleClass="slds-custom_rt" />
+                    </div>
+                </div>
+                </div>
+                <div style='clear:both'></div>
+            </div>
+            <apex:outputPanel rendered="{!IF(Event__c.Itinerary__c = NULL,false,true)}" layout="none">
+    <h2>Itinerary</h2>
+    <hr />
+   <div style='' id='itinerary'><apex:outputText escape="false" value="{!Event__c.Itinerary__r.Details__c}" />
+   </div>
+   </apex:outputPanel>
+   <!--h2>Packing List</h2>
+    <hr />
+   <c:Packing_List location="{!Event__c.Location__c}" />
+   <div>
+       <h2>Donations</h2>
+       <hr />
+       <p>Donation Recommendations/best practices </p>
+   
+   </div-->
+       
+   
+   
+    </body>
+    </html>
+    
+</apex:page>

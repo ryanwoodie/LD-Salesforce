@@ -1,0 +1,142 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="EventListConPrv">    
+
+
+<html lang="en">
+  <head>
+     <title>Volunteer Trips | Live Different</title>
+        <script>
+          dataLayer = [{
+            'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+          }];
+        </script>
+      <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+      <!-- End Google Tag Manager -->
+    <meta property="og:title" content="Upcoming Builds" />
+    <meta property="og:url" content="https://my.livedifferent.com/build_list" />
+    <meta property="og:image" content="https://my.livedifferent.com/resource/1458331618000/Fundraising_Headers/Do.jpg" />
+    <meta property="og:description" content="With Live Different Builds, you'll have the opporunity to make a difference as you join community leaders, contractors, and our staff, to build houses or complete other needed projects in the developing world. Volunteer on a Live Different Build and expand your worldview!" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet' />
+    <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="{!URLFOR($Resource.bootstrap, 'bootstrap.css')}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{!URLFOR($Resource.bootstrap, 'EventPage.css')}" rel="stylesheet" />
+    <style>
+
+    .content {
+        font-size:14px;
+        line-height:20px;
+    }
+    
+    .dropdown-toggle::after {
+    display:none
+    }
+    .sf-menu li {
+        list-style:none;
+    }
+    </style>
+  </head>
+  <body>
+<c:SiteHeaderV2 ></c:SiteHeaderV2>
+
+    <main role="main">
+
+      <section class="jumbotron text-left bg-white" >
+        <div class="container">
+          <h1 class="jumbotron-heading display-4">Take your pick.</h1>
+          <h5 class="lead text-muted">And if you need any help deciding which Build to join, we're here for you.</h5>
+          <p>
+            <button class='btn btn-primary' onClick="olark('api.box.expand');">Chat with us</button>
+            <a href="https://livedifferent.com/builds" class="btn btn-secondary my-2">What is a Build?</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album pb-5 bg-white">
+        <div class="container">
+
+          <div class="row">
+          <apex:repeat value="{!events}" var="string" id="theRepeat">
+    <apex:outputPanel rendered="true" layout="none">
+            <a href='https://my.livedifferent.com/event/{!string.C_Url__c}'><div class="col-lg-4 col-md-6 mb-5">
+              <div class="card mb-4 box-shadow">
+                <apex:repeat value="{!string.Attachments}" rendered="{!string.Attachments.size != 0}" var="image">
+                        <img class="card-img-top bg-dark header-bkgnd" src="{!'/servlet/servlet.FileDownload?file=' + image.Id}" alt="Card image cap" />
+                      </apex:repeat>
+                      <apex:outputPanel rendered="{!string.Attachments.size == 0}" layout="none">
+                          <img class="card-img-top bg-dark header-bkgnd" src="/resource/1458331618000/Fundraising_Headers/{!LEFT(string.Location__c,2)}.jpg" alt="Card image cap" />
+                      </apex:outputPanel>
+                <div class="card-img-overlay">
+                <div style='display:inline-block'>
+                    <small class="text-muted align-bottom" style='display:inline-block;margin:5px;text-align:center;width:50px;border: 2px solid #a1a1a1;border-radius:7px;background-color:#fff;overflow:hidden'><div style='font-weight:bold;width:50px;font-size:16px;line-height:16px;padding-bottom:3px;padding-top:3px;background-color:#a1a1a1;color:#FFF'><apex:outputText value="{0,date,MMM}">
+                   <apex:param value="{!string.Trip_Start_Date__c}" />
+         </apex:outputText></div><div style='font-size:22px;line-height:22px;margin-top:5px;color:#a1a1a1'><apex:outputText value="{0,date,dd}">
+                   <apex:param value="{!string.Trip_Start_Date__c}" />
+         </apex:outputText></div></small>
+             <div class='mt-5'>
+             <apex:outputPanel rendered="{!string.Trip_Type__c = 'Internship'}" layout="none"><span class="badge badge-pill badge-internship mr-2">Internship</span></apex:outputPanel><apex:outputPanel rendered="{!string.Outstanding_Registrations__c < 7}" layout="none"><span class="badge badge-pill badge-full mr-2">A Few Spots Left</span></apex:outputPanel>
+             </div>
+         </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h5 class="card-title"><a href='{!string.C_Url__c}' class='text-dark'>{!string.Name}</a></h5>
+                  <h6 class="d-flex justify-content-between align-items-center">
+                    <apex:outputText value="{0, number, $#,##0}"><apex:param value="{!string.Fundraising_Goal__c}" /></apex:outputText> &nbsp;  &#8226; &nbsp; Ages: {!string.Age__c} &nbsp; &#8226; &nbsp; {!string.Location__c}
+                  </h6>
+                </div>
+              </div>
+            </div></a>
+    </apex:outputPanel>
+    </apex:repeat>
+
+          </div>
+          <div class='row '>
+          <div class='col-lg-6 mx-auto'>
+          <div class="card text-center">
+  <h5 class="card-header">Looking to join a private Build?</h5>
+  <div class="card-body">
+    <p class="card-text"></p>
+    <a href="https://my.livedifferent.com/private_trips" class="btn btn-primary">Private Builds</a>
+  </div>
+</div>
+</div>
+          </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="py-5" style='background-color:#252525'>
+    <div class='container'>
+        <c:SiteFooterv2 >
+        </c:SiteFooterv2>
+    </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="{!URLFOR($Resource.bootstrap, 'magnific-popup.css')}" />
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    
+
+    <!-- Magnific Popup core JS file -->
+    <script src="{!URLFOR($Resource.bootstrap, 'jquery.magnific-popup.js')}"></script>
+    <!-- End Magnifique Scripts -->
+  </body>
+</html>
+</apex:page>

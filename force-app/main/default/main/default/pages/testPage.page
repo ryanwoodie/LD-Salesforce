@@ -1,0 +1,7 @@
+<apex:page standardController="Contact">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  {!Contact.How_did_you_hear_about_us__c}
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

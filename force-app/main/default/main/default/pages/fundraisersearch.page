@@ -1,0 +1,205 @@
+<apex:page controller="FundraiserSearchController" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Support a Volunteer | Live Different</title>
+  <meta name="description" content="Donate to a volunteer's fundraiser and be a part of change! Live Different is a registered charity based in Hamilton, ON. "/>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <meta property="og:title" content="Volunteer Fundraising Pages" />
+  <meta property="og:image" content="https://my.livedifferent.com/resource/1458331618000/Fundraising_Headers/Do.jpg" />
+  <meta property="og:description" content="Donate to a volunteer's fundraiser and be a part of change! Live Different is a registered charity based in Hamilton, ON." />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+
+.fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.slds-card-color {
+    background-color:#ededed !important;
+    border:none !important;
+}
+
+.slds-button--max {
+    width:100%;
+}
+
+.slds-text-heading--max {
+    font-size:4em;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar_com {
+    background-color:#4EBEE8;
+    line-height:46px;
+    padding-bottom:2px;
+    text-align:center;
+    color:#fff;
+    font-size:2em;   
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   </style>
+</head>        
+
+   
+
+  
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  
+  <div class="slds">    
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+  <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/Do.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--medium slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <div class="slds-col slds-col--padded slds-size--1-of-1">
+        <div class='slds-text-heading--large text-white' style='font-weight:bold'>Support a Volunteer!
+        </div>
+        </div>
+        </div>
+        </div>
+</div>
+  <apex:pageMessages id="errors" />
+  
+<div class="slds-container--medium slds-container--center">
+  <apex:form styleclass="slds-form--inline">
+  <div class="slds-box slds-m-bottom--large">
+  <div class="slds-m-bottom--x-small">Search for a Volunteer</div><br/>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="name">Volunteer Name</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="name" class="slds-input" onkeyup="doSearch();" />
+    </div>
+  </div>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="email">Event</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="trip" class="slds-input" onkeyup="doSearch();" />
+  </div>
+  </div><div class='slds-text-body--small slds-m-top--medium'>Results limited to 20, filter by name or event to narrow your search.</div>
+  </div>
+<apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,debug,errors">
+          <apex:param name="name" value="" />
+          <apex:param name="trip" value="" />
+      </apex:actionFunction>
+
+    <apex:pageBlock mode="edit" id="results">
+
+        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+  <thead>
+    <tr class="slds-text-heading--label">
+      <th class="slds-is-sortable" scope="col">
+        <div class="slds-truncate">Name
+        </div>
+      </th>
+      <th class="slds-is-sortable" scope="col">
+        <div class="slds-truncate">Event
+        </div>
+      </th>
+      <th class="slds-is-sortable" scope="col">
+        <div class="slds-truncate">Event Date
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <apex:repeat value="{!registrations}" var="reg" id="theRepeat">
+    <tr class="slds-hint-parent">
+      <th class="slds-truncate" scope="row" data-label="Name"><a href='{!reg.Public_Fund_Page__c}'>{!reg.Contact_Name__c}</a></th>
+      <td class="slds-truncate" data-label="Event">{!reg.Event__r.Name}</td>
+      <td class="" data-label="Event Date"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                        <apex:param value="{!reg.Trip_Start_Date__c}" />
+                   </apex:outputText></td>
+    </tr>
+    </apex:repeat>
+  </tbody>
+</table>
+
+  </apex:pageBlock>
+  </apex:form>
+  
+  </div>
+  <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->
+  
+</body>    
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+      function doSearch() {
+        searchServer(
+          document.getElementById("name").value,
+          document.getElementById("trip").value
+          );
+      }
+      </script>
+</html> 
+</apex:page>

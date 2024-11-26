@@ -1,0 +1,49 @@
+<apex:page standardController="Registration__c" showHeader="FALSE" standardStylesheets="false" renderas="pdf">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+<head>
+<style type="text/css" media="print">
+                      .footer {text-align:center;position:fixed;bottom:0px;width:100%}
+                    </style>
+</head>
+<body style='font-family:Helvetica, Arial, sans-serif;font-size:13px'>
+<div class='header' style='margin-bottom:100px'><img src='{!URLFOR($Resource.LD_letterhead)}' width="100%" /></div>
+          <div class="content">
+<p><apex:outputText value="{0, date, MMMMMMMM d, YYYY}"><apex:param value="{!Now()}"/></apex:outputText></p>
+
+
+<p>To Whom It May Concern,</p>
+
+<p>RE: Criminal Record Check for {!Registration__c.Contact_Name__c}, volunteer with LiveDifferent {!IF(Registration__c.RecordType.Name == 'Build','Builds','Academy')} from <apex:outputText value="{0, date, MMMMMMMMM d}"><apex:param value="{!Registration__c.Trip_Start_Date__c}"/></apex:outputText> - <apex:outputText value="{0, date, MMMMMMMMMM d, YYYY}"><apex:param value="{!Registration__c.Trip_End_Date__c}"/></apex:outputText>.</p>
+
+<apex:outputPanel rendered="{!IF(Registration__c.RecordType.Name == 'Build','TRUE','FALSE')}" layout="none" ><p>LiveDifferent Builds is the humanitarian program of LiveDifferent, a registered charity with the government of Canada. Our focus is on generating a movement of <apex:outputPanel rendered="{!IF(Registration__c.Age_During_Event__c < 20,'TRUE','FALSE')}" layout="none" > young</apex:outputPanel> Canadians to challenge themselves and others to consistent acts of love, hope, and change - both large and small.</p></apex:outputPanel>
+
+<apex:outputPanel rendered="{!IF(Registration__c.RecordType.Name == 'Academy','TRUE','FALSE')}" layout="none" ><p>LiveDifferent Academy is a 13 week experiencial program for young adults that provides a cross-cultural experience in Mexico. While in Mexico, they volunteer with local charities, study a social justice curriculum, and help with LiveDifferent's Builds program.</p></apex:outputPanel>
+
+<p>LiveDifferent's Builds program gives each volunteer the opportunity to become an agent of change in Canada and in the global community through humanitarian projects and relief efforts. Since 2005, our projects have been providing housing, schools, and children's homes in communities in Haiti, Dominican Republic, Mexico, and Thailand. Although our primary focus is on sustainable development in those areas, we also provide opportunities for people to get involved in medical clinics, food and clothing distribution, teaching English, and sports camps for children.</p>
+
+<p>We request that all adult volunteers with LiveDifferent Builds provide us with a Criminal Record Check that is no more than two years old. This is an unpaid volunteer position.</p>
+
+<p>If you have any questions about any of our programs, feel free to contact me at tyler@livedifferent.com or 1-866-432-4464 Toll Free.</p>
+
+<p>Sincerely,<br />
+
+</p>
+
+<img src="{!URLFOR($Resource.Tyler_Signature)}" alt="Tyler's Signature" width="25%" />
+
+
+
+<p>Tyler Leighton<br />
+Coordinator of International Programs<br />
+LiveDifferent<br />
+1 866 432 4464</p>
+</div><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+
+<div class="footer">
+                <div style='text-align:center'><p>LiveDifferent Charitable number 861232890RR0001
+</p></div>
+          </div>
+</body>
+</html>
+</apex:page>

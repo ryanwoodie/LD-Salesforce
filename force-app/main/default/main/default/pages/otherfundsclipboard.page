@@ -1,0 +1,31 @@
+<apex:page title="Clipboard Test" standardcontroller="Registration__c">
+<apex:messages />
+    <script language="JavaScript">
+        function ClipBoard(copytextid, holdtextid){
+            copyToClipboard(copytextid);
+        }
+        function copyToClipboard(elementId) {
+          // Create an auxiliary hidden input
+          var aux = document.createElement("input");
+          // Get the text from the element passed into the input
+          aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+          // Append the aux input to the body
+          document.body.appendChild(aux);
+          // Highlight the content
+          aux.select();
+          // Execute the copy command
+          document.execCommand("copy");
+          // Remove the input from the body
+          document.body.removeChild(aux);
+        }    
+    </script>   
+    <apex:pageblock >
+    <apex:form >
+        <apex:outputpanel ID="copytext" STYLE="height:150;width:162;background-color:pink">
+            https://my.livedifferent.com/otherfunds?ID={!Registration__c.ID}TotalAmont=200
+        </apex:outputpanel> 
+        <apex:inputtextarea ID="holdtext" STYLE="display:none;"></apex:inputtextarea>
+        <apex:commandbutton onClick="ClipBoard('{!$Component.copytext}', '{!$Component.holdtext}');" rerender="copytext" value="Copy to Clipboard"/> 
+    </apex:form>
+    </apex:pageblock>
+</apex:page>

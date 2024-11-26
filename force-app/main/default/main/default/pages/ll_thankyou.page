@@ -1,0 +1,151 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Project__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:375px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#FFF !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+   
+   span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
+     color:#009bf2;
+   }
+  </style>
+</head>          
+
+<body>  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/Ht.jpg);'>
+    <div class='slds-m-bottom--large slds-container--large slds-container--center' style='padding:250px 12px 50px 12px'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                <div class='slds-text-heading--large text-white slds-text-align--center' style='font-weight:bold'>
+                      <img src='https://my.livedifferent.com/resource/1465571604000/myimages/general/lovelegacy.png' width='150px' />
+ 
+                </div>
+                <div class='slds-text-heading--medium slds-text-align--center text-white'>
+                    Thank you for helping Benjamin Cole's work in Haiti continue.
+                </div>
+          </div>
+          
+        </div>
+     </div>
+</div>
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+  <!--Modals -->
+
+<!-- End Modals -->
+  </div>
+  </body>
+  </html>
+</apex:page>

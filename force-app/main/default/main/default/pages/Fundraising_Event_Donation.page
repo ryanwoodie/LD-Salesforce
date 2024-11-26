@@ -1,0 +1,304 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+
+.fundraise-inner {
+    padding:15px 12px 50px 12px;
+    position:relative;
+    border-bottom:2px solid #ededed;
+}
+
+.text-black {
+    color:#000 !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+  </style>
+</head>          
+
+<body>  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+  <apex:outputPanel rendered="{!IF($CurrentPage.parameters.hide='TRUE',FALSE,TRUE)}" layout="none">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+  </apex:outputPanel>
+    <!-- MASTHEAD -->
+    <div class='fundraise-header slds-m-top--small' style=''>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-text-align--center">
+                <div class='slds-text-heading--large text-white' style='font-weight:bold'>
+                    Support {!Event__c.Name}'s Fundraiser
+                </div>
+                <div class='slds-text-heading--medium text-black'>
+                   This Build will take place on&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}">
+                        <apex:param value="{!Event__c.Trip_Start_Date__c}" />
+                   </apex:outputText>
+                    
+                </div>
+          </div>
+          
+        </div>
+     </div>
+</div>
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    <button class="slds-button slds-button--brand slds-m-bottom--medium" data-aljs="modal" data-aljs-show="modal-1" onclick="dataLayer.push({'event': 'Donation Policy','eventLabel' : 'view'});">Donation Policy</button>
+    <div class="slds-text-body--small">Tax receipts will be emailed within 7 days for credit card transactions and 21 days for direct withdrawal.<br />Please allow up to 24 hours for donations to appear on this fundraising page.</div>
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID={!IF(Event__c.ID = 'a0e2J00000CcGTsQAN','PA17765310630C9FDB','PA6D38CE847218187F')}"></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+   <!-- FOOTER -->
+   <apex:outputPanel rendered="{!IF($CurrentPage.parameters.hide='TRUE',FALSE,TRUE)}" layout="none">
+    <div id="footer-outer" data-midnight="light" data-using-widget-area="true" style='background-color:#252525;color:#ededed;margin:50px -10px -10px -10px'>
+    
+    
+            
+    <div class="slds-container--large slds-container--center">
+        
+        <div class="container slds-p-top--x-large slds-m-bottom--large">
+            
+            <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                
+                                
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--x-large">
+                      <!-- Footer widget area 1 -->
+                      <div id="text-3" class=""><div class='custom-footer'>How can I Live Different?</div>         <div class="textwidget"><p style="font-size:13px;color:#666">We believe the most important decision a person can make is to choose to live a life of compassion towards others. We exist to inspire people to embrace a lifestyle that cares about people, not stuff.</p>
+</div>
+        </div>              </div><!--/span_3-->
+                
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--x-large">
+                     <!-- Footer widget area 2 -->
+                     <div id="text-2" class="widget widget_text"><div class='custom-footer'>Menu</div>          <div class="textwidget"><div><div style="width:33%;float:left;font-size:13px;color:#777"><p class="flink"><a href="https://my.livedifferent.com/Build_List">Join a Build</a></p>
+<p class="flink"><a href="http://livedifferent.com/academy">Join Academy</a></p>
+<p class="flink"><a href="http://livedifferent.com/motivational-presentations">Book a Presentation</a></p>
+</div>
+<div style="width:33%;float:left;font-size:13px;color:#777">
+<p class="flink"><a href="https://my.livedifferent.com/">My Live Different</a></p>
+<p class="flink"><a href="https://my.livedifferent.com/fundraisersearch">Support a Volunteer</a></p>
+</div>
+<div style="width:33%;float:left;font-size:13px;color:#777">
+<p class="flink"><a href="http://livedifferent.com/contact">Contact Us</a></p>
+<p class="flink"><a href="http://livedifferent.com/about-us">About Us</a></p>
+<p class="flink"><a href="http://livedifferent.com/faq">FAQ's</a></p>
+<p class="flink"><a href="http://livedifferent.com/privacy-policy">Privacy Policy</a></p>
+<p class="flink"><a href="http://livedifferent.com/partners">Partners</a></p>
+</div><div style="clear:both"></div>
+<div style="margin-top:25px">
+<p style="padding-bottom:0px !important;font-size:11px;color:#777"><strong>LiveDifferent</strong>  -  1 (866) 432 4464  -  Suite B3, 15 Wellington St. North  -  Hamilton, ON   L8R 1M7</p>
+</div></div>
+        </div>                   
+                </div><!--/span_3-->
+                
+                                
+                                
+            </div><!--/row-->
+            
+        </div><!--/container-->
+    
+    </div><!--/footer-widgets-->
+    
+    
+    </div>
+    
+        <div class="row" id="copyright" style='border-top: 1px solid #444'>
+            <div class='slds-container--large slds-container--center'>
+            <div class="container">
+                
+                <div class="slds-p-top--large slds-p-bottom--large">
+                <div class=''>
+                    <p style='color:#666;font-size:12px'>© 2016 Live Different. <img src='https://my.livedifferent.com/resource/1465571604000/myimages/general/ssl.png' width='80px' align='right' />
+ </p>
+                                                            </div>    
+                                        
+                </div><!--/span_5-->
+                
+                
+            </div><!--/container-->
+            
+        </div><!--/row-->
+        
+        
+</div><!--/footer-outer-->
+</div>
+    <!-- / FOOTER --> 
+</apex:outputPanel>
+  <!--Modals -->
+  <div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-1">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <h2 class="slds-text-heading--medium">Donation Policy</h2>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        <ul class='slds-list--dotted'>
+  <li>Live Different Builds is a fully charitable program. This means that "participants/travelers" are functioning as volunteers, approved by our Board of Directors, to help achieve the charitable purpose of LiveDifferent. The direct beneficiaries of this charitable program are families and people in-need in our host countries, not those who deliver the program (even though it may be incredibly fun, rewarding and even life-changing to serve others in need).</li>
+<li>The humanitarian trip does not have a "personal recreational vacation" component that is more than incidental to the charitable project (eg. there are not multiple days of vacation free-time during the trip).</li>
+<li>There is a fundraising goal / trip fee for volunteers. Due to the expense and logistics of coordinating a volunteer humanitarian development project, an important qualification is for each volunteer to meet a minimum fundraising goal. Volunteers can solicit tax receiptable donations via their fundraising page to reach the minimum fundraising goal and help pay for the costs in carrying out the project. Such contributions are received by LiveDifferent for its charitable purposes.</li>
+<li>Builds fundraising generally qualifies for a donation receipt. According to the Canada Revenue Agency, a donation is a voluntary transfer of property without valuable consideration (an “advantage”) to the donor; donors cannot choose the beneficiaries of their donations, and a charity must have full discretion in deciding how to allocate its funds. All donations are given to the project/charity, and though donations help meet the volunteer's fundraising goal and the costs associated with the charitable project, they are not being used as a direct monetary benefit to the volunteer (eg. monies won't be refunded, they won't be used to cover personal/recreational expenses, etc.)</li>
+<li>This means that ALL tax-receipted donations are absolutely, 100% non-refundable, as it is not legal for a charity to refund a donation. In the event of any form of cancellation whatsoever or exceeding a fundraising goal, funds will instead be allocated towards where most needed in the project or in other charitable programs. In the event that a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of LiveDifferent.</li>
+<li>“Non-arm’s length” donations will get a split tax receipt for 60% of the donation. 60% (the percentage related to humanitarian project costs) of a donation from immediate relatives (eg. yourself, spouse, grandparents, parents, brothers, sisters, children, and grandchildren) will be tax-deductible, and 40% (percentage related to accommodation, food and travel) will not be tax-deductible. The reason we split receipts for immediate family member donations is because tax-receipting for personal (ie. recreational) travel is something that has often been abused/defrauded by charities or donors, and is of concern to the CRA. Although, as stated above, LiveDifferent Builds are structured to be fully charitable and not recreational travel, it is out of an abundance of caution that we split off any amount that could be misperceived by the CRA (as they lack clear guidance on this matter) as a personal benefit or advantage. This helps to protect both donors and LiveDifferent.</li>
+<li>In the event that a group has indicated they have purchased trip interruption/cancellation insurance, LiveDifferent will not issue tax-receipts to immediate family members until after the end date of the trip has expired. If, after fundraising, a volunteer subsequently receives insurance compensation for a trip cancellation, there is a risk that it could potentially constitute an “advantage” (a monetary benefit resulting from making a donation) to any non-arm’s length donors. This complex scenario can be easily avoided by issuing a tax receipt AFTER any potential advantage (eg. insurance compensation) is negated (due to the Build being completed).</li>
+</ul>
+
+<br />
+<div class='slds-text-align--center'>
+<button class="slds-button slds-button--brand slds-m-around--x-large" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ *
+ *
+ */
+ 
+  dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'actionField': {'step': 1},
+        'products': [{
+        'name': 'Group Fundraising Donation',       // Name or ID is required.
+        'id': '{!Event__c.Id}',
+        'brand': 'Live Different',
+        'category': 'Build Group Donation/{!Event__c.Trip_Type__c}/{!Event__c.Name}'
+       }]
+     }
+   }
+  });
+ 
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'Group Fundraising Donation',       // Name or ID is required.
+        'id': '{!Event__c.Id}',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'quantity': 1,
+        'category': 'Build Group Donation/{!Event__c.Trip_Type__c}/{!Event__c.Name}'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    
+    
+});
+  </script>
+  </html>
+</apex:page>

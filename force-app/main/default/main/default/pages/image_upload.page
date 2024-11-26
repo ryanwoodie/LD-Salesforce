@@ -1,0 +1,188 @@
+<apex:page controller="ImageUploaderController" docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <title>Live Different -- Image Upload Page</title>
+        <!-- Google Tag Manager -->
+        <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KWQ7HM');
+        </script>
+        <!-- End Google Tag Manager -->
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+        <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+        <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+        <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+        <apex:stylesheet value="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css"/>
+        <style>
+            #image-container {
+                max-width: 800px;
+                margin: 20px auto;
+            }
+            #preview {
+                max-width: 100%;
+            }
+            .slds-button.slds-button--neutral.slds_100-p {
+                width: 100% !important;
+            }
+            .slds-custom_rt li {
+                list-style:disc;
+                margin-left:1.5rem;
+            }
+            .fundraise-header {
+                background-size:cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                color:#fff;
+                margin:0px -8px;
+                z-index:1;
+            }
+            .fundraise-header::before {
+                background: linear-gradient(transparent, #000);
+                content: '';
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                opacity: .8;
+                z-index:0;
+            }
+            .fundraise-inner {
+                padding:100px 12px 50px 12px;
+                position:relative;
+            }
+            .text-white {
+                color:#fff !important;
+            }
+            .popover.tour {
+                z-index:1200 !important;
+            }
+            div#___plusone_0 {
+                vertical-align:bottom !important;
+            }
+            .slds-hard-float--left {
+                float:left !important;
+            }
+            .slds-text-heading--custom {
+                font-size:15px !important;
+                line-height:20px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- REQUIRED SLDS WRAPPER -->
+        <div class="slds" id="Inner">
+            <!-- MASTHEAD -->
+            <apex:insert name="header">
+                <c:SiteHeader />
+            </apex:insert>
+
+            <apex:messages styleClass="slds-notify slds-notify--alert slds-notify-alert--theme-texture slds-m-around--medium"/>
+            <!-- / MASTHEAD -->
+
+         <div class='slds-m-top--small'>
+    <div class='slds-m-bottom--large slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1">
+                <div class='slds-text-heading--large' style='font-weight:bold'>
+                    Upload a custom banner image for your fundraising page.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- PAGE CONTENT -->
+            <div class="slds-container--large slds-container--center" role="banner">
+                <div class='slds-p-around_medium'>
+                    <input type="file" id="file-input" accept="image/*" class="slds-file-selector__input"/>
+                    <div id="image-container">
+                        <img id="preview" src=""/>
+                    </div>
+                    <button id="crop-button" class="slds-button slds-button_brand">Upload</button>
+                </div>
+            </div>
+            <!-- / PAGE CONTENT -->
+
+            <!-- FOOTER -->
+            <apex:insert name="footer">
+                <c:SiteFooter />
+            </apex:insert>
+            <!-- / FOOTER -->
+        </div>
+        <!-- / REQUIRED SLDS WRAPPER -->
+        
+        <!-- SCRIPTS -->
+        <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"/>
+        <script>
+let cropper;
+const fileInput = document.getElementById('file-input');
+const preview = document.getElementById('preview');
+const cropButton = document.getElementById('crop-button');
+
+const urlParams = new URLSearchParams(window.location.search);
+const registrationId = urlParams.get('regId');  // Assuming 'regId' is the URL parameter name
+
+fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+        preview.src = event.target.result;
+        if (cropper) {
+            cropper.destroy();
+        }
+        cropper = new Cropper(preview, {
+            aspectRatio: 2 / 1,
+            viewMode: 1,
+        });
+    };
+    reader.readAsDataURL(file);
+});
+
+cropButton.addEventListener('click', () => {
+    const croppedCanvas = cropper.getCroppedCanvas({
+        width: 2000,
+        height: 1000
+    });
+    croppedCanvas.toBlob((blob) => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const base64data = e.target.result.split(',')[1];
+
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ImageUploaderController.uploadImage}',
+                base64data,
+                registrationId,  // Passing the registration ID
+                function(result, event){
+                    if (event.status) {
+                        alert('Image uploaded successfully! Redirecting to your fundraising page. If your browser has cached the previous image, try opening in incognito mode or on another device.');
+                        window.location.href = '/fundraising_page?ID=' + registrationId;
+                    } else {
+                        alert('Error uploading image: ' + event.message);
+                    }
+                },
+                {escape: true}
+            );
+        };
+        reader.readAsDataURL(blob);
+    }, 'image/jpeg', 0.7);  // Adjust the quality parameter (0.7) to control the compression
+});
+</script>
+        <!-- / SCRIPTS -->
+    </body>
+    </html>
+</apex:page>

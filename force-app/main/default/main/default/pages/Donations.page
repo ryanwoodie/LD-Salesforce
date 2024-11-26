@@ -1,0 +1,273 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Registration__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+  
+span.IATS_AmountSectionTitle {
+color:#0092bf !important;
+}
+
+span.IATS_PaymentSectionTitle {
+    color:#0092bf !important;
+}
+
+.fundraise-inner {
+    padding:15px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-black {
+    color:#FFF !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   }
+   
+   span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
+     color:#009bf2 !important;
+   }
+  </style>
+</head>          
+
+<body>  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    <div class='fundraise-header slds-m-top--small' style=''>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-text-align--center">
+                <div class='slds-text-heading--large text-white' style='font-weight:bold'>
+                    Thank You For Your Support
+                </div>
+                
+          </div>
+          
+        </div>
+     </div>
+</div>
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>
+    <div class="slds-text-body--small">Tax receipts will be issued in the first part of the following calendar year.</div>
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA24913C5CE5E8B0E1&HideRecurringEndDate=true&Item2=Individual&Item5=GeneralDonation"></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  <!-- FOOTER -->
+    <div id="footer-outer" data-midnight="light" data-using-widget-area="true" style='background-color:#252525;color:#ededed;margin:50px -10px -10px -10px'>
+    
+    
+            
+    <div class="slds-container--large slds-container--center">
+        
+        <div class="container slds-p-top--x-large slds-m-bottom--large">
+            
+            <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                
+                                
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--x-large">
+                      <!-- Footer widget area 1 -->
+                      <div id="text-3" class=""><div class='custom-footer'>How can I Live Different?</div>         <div class="textwidget"><p style="font-size:13px;color:#666">We believe the most important decision a person can make is to choose to live a life of compassion towards others. We exist to inspire people to embrace a lifestyle that cares about people, not stuff.</p>
+</div>
+        </div>              </div><!--/span_3-->
+                
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--x-large">
+                     <!-- Footer widget area 2 -->
+                     <div id="text-2" class="widget widget_text"><div class='custom-footer'>Menu</div>          <div class="textwidget"><div><div style="width:33%;float:left;font-size:13px;color:#777"><p class="flink"><a href="https://my.livedifferent.com/Build_List">Join a Build</a></p>
+<p class="flink"><a href="http://livedifferent.com/academy">Join Academy</a></p>
+<p class="flink"><a href="http://livedifferent.com/motivational-presentations">Book a Presentation</a></p>
+</div>
+<div style="width:33%;float:left;font-size:13px;color:#777">
+<p class="flink"><a href="https://my.livedifferent.com/">My Live Different</a></p>
+<p class="flink"><a href="https://my.livedifferent.com/fundraisersearch">Support a Volunteer</a></p>
+</div>
+<div style="width:33%;float:left;font-size:13px;color:#777">
+<p class="flink"><a href="http://livedifferent.com/contact">Contact Us</a></p>
+<p class="flink"><a href="http://livedifferent.com/about-us">About Us</a></p>
+<p class="flink"><a href="http://livedifferent.com/faq">FAQ's</a></p>
+<p class="flink"><a href="http://livedifferent.com/privacy-policy">Privacy Policy</a></p>
+<p class="flink"><a href="http://livedifferent.com/partners">Partners</a></p>
+</div><div style="clear:both"></div>
+<div style="margin-top:25px">
+<p style="padding-bottom:0px !important;font-size:11px;color:#777"><strong>LiveDifferent</strong>  -  1 (866) 432 4464  -  Suite B3, 15 Wellington St. North  -  Hamilton, ON   L8R 1M7</p>
+</div></div>
+        </div>                   
+                </div><!--/span_3-->
+                
+                                
+                                
+            </div><!--/row-->
+            
+        </div><!--/container-->
+    
+    </div><!--/footer-widgets-->
+    
+    
+    </div>
+    
+        <div class="row" id="copyright" style='border-top: 1px solid #444'>
+            <div class='slds-container--large slds-container--center'>
+            <div class="container">
+                
+                <div class="slds-p-top--large slds-p-bottom--large">
+                <div class=''>
+                    <p style='color:#666;font-size:12px'>© 2016 Live Different. <img src='https://my.livedifferent.com/resource/1465571604000/myimages/general/ssl.png' width='80px' align='right' />
+ </p>
+                                                            </div>    
+                                        
+                </div><!--/span_5-->
+                
+                
+            </div><!--/container-->
+            
+        </div><!--/row-->
+        
+        
+</div><!--/footer-outer-->
+</div>
+    <!-- / FOOTER --> 
+  <!--Modals -->
+  
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ */
+
+
+  dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'actionField': {'step': 1},
+        'products': [{
+        'name': 'General Donation',       // Name or ID is required.
+        'id': 'LDdonation',
+        'brand': 'Live Different',
+        'category': 'General Donation'
+       }]
+     }
+   }
+  });
+ 
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'General Donation',       // Name or ID is required.
+        'id': 'LDdonation',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'quantity': 1,
+        'category': 'General Donation'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    
+    
+});
+  </script>
+  </html>
+</apex:page>

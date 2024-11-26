@@ -1,0 +1,5 @@
+<apex:page renderas="pdf" standardController="Project__c">
+<apex:composition template="project_profile_pdf">
+</apex:composition>
+    
+</apex:page>

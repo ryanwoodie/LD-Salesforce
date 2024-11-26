@@ -1,0 +1,157 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Contact">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Dashboard</title>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+  <style>
+  .slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+}
+
+.fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+    z-index:-1;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+    z-index:0;
+}
+
+.fundraise-inner {
+    padding:270px 12px 100px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.hp_bg-image {
+    color:#fff;
+    height:100px;
+    padding:30px;
+    text-align:center;
+    font-weight:bold;
+    background-size:cover;
+    border-radius:8px;
+}
+
+.popover.tour {
+   z-index:1200 !important;
+}
+
+.slds-hard-float--left {
+float:left !important;
+}
+
+.slds-text-heading--custom {
+font-size:15px !important;
+line-height:20px !important;
+}
+  </style>
+</head>          
+
+<body>
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert>     
+  <!-- REQUIRED SLDS WRAPPER -->
+  <apex:outputPanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">
+  
+  <div ID="Inner" class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    
+    <!-- / MASTHEAD -->    
+
+    <!-- PAGE HEADER -->
+<div class="slds-page-header slds-container--large slds-container--center slds-m-top--medium" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid slds-wrap slds-max-width--large">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+         
+        </div>
+        
+
+        <div class="slds-media__body">
+          
+          <h1 class="slds-text-heading--medium slds-m-top--large">Hi, {!Contact.FirstName} {!Contact.LastName}</h1>
+        <!-- Address was here -->
+        
+        </div>
+        </div>
+      </div>
+          <div ID="nextBuild" class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+    </div>
+
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+ {!Contact.ID}
+<apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+</div>
+</apex:outputPanel>
+</body>  
+<apex:outputPanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">  
+
+<!-- JAVASCRIPT -->
+
+
+</apex:outputPanel>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

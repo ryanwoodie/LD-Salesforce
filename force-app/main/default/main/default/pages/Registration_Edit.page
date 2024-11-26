@@ -1,0 +1,285 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Registration__c" extensions="saveReg,regsAccess">    
+<apex:outputText value="{!Registration__c.Contact__r.Master_Contact__r.ID}" rendered="false"/>
+<apex:outputText value="{!Registration__c.Contact__r.ID}" rendered="false"/>
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   
+<apex:PageBlock rendered="{!if(access == true,true,false)}"> 
+<head>
+  <title>Live Different Volunteer Portal -- Registration Edit</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+  <style>
+  .popover.tour {
+   z-index:1200 !important;
+}
+
+.tour-style {
+  padding:8px;
+  border-radius: 8px !important;
+  }
+  
+  .cke_editable {
+  font-size:16px !important;
+  padding:8px !important;
+  }
+  .slds-hard-float--left {
+float:left !important;
+}
+
+.slds-text-heading--custom {
+font-size:15px !important;
+line-height:20px !important;
+}
+</style>
+</head>    
+
+<body>    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div ID="Inner" class="slds">    
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+        <!-- / MASTHEAD -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large">
+  <apex:form >
+  <div class="slds-container--small slds-container--center">
+  <legend class="slds-text-heading--medium">Registration Options</legend>
+  <div class="slds-text-heading--label slds-m-bottom--medium">Enter your Insurance info (if applicable) and other info below.</div>
+<apex:outputPanel layout="none" rendered="{!IF(CONTAINS(Registration__c.Event__r.Name,'WestJet'),False,TRUE)}" ><div style='background-color:#fff' ID="requests" class="tour-style"> 
+<fieldset class="slds-form--compound">
+<legend class="slds-form-element__label  slds-text-heading--small">Requests</legend>
+<div class="form-element__group">
+<div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Roommate Request</span><apex:inputField value="{!Registration__c.Room__c}" styleclass="slds-input" /></label><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Teammate Request</span><apex:inputField value="{!Registration__c.Teammate_Request__c}" styleclass="slds-input" type="text" /></label>
+</div>
+</div>
+</fieldset></div></apex:outputPanel>
+<apex:outputPanel rendered="{!if(Registration__c.Fundraising_Type__c == 'Live Different',TRUE,FALSE)}">
+<div style='background-color:#fff' ID="fundraising" class="tour-style">
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--small">Fundraising Page Options</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-1"><span class="slds-form-element__helper">Fundraising Page Title</span><br /><span class="slds-text-body--small">(changing this may make your page inaccessible to people you've already shared it with)</span><apex:inputField value="{!Registration__c.Fundraising_Page_Title__c}" styleclass="slds-input" type="text" /></label>
+</div>
+
+    <div class="slds-form-element__row" id='overfundraising'><label class="slds-form-element__control slds-size--1-of-1"><span class="slds-form-element__helper">Extra Fundraising Amount</span><apex:inputField value="{!Registration__c.ExtraFundraising__c}" styleclass="slds-input" type="auto" /></label>
+</div>  
+<div class="slds-form-element__row" id='fundraisingblurb'><label class="slds-form-element__control slds-size--1-of-1"><span class="slds-form-element__helper">Fundraising Blurb</span><apex:inputField value="{!Registration__c.Fundraising_Text__c}" styleclass="slds-input" type="text" /></label>
+</div>
+</div>
+</fieldset></div>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!if(Registration__c.Travel_Health_Insurance__c == 'Not Included',TRUE,FALSE)}">
+<div style='background-color:#fff' ID="insurance" class="tour-style">
+<fieldset class="slds-form--compound slds-m-top--large">
+  <legend class="slds-form-element__label slds-text-heading--small">Insurance</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Insurance Provider</span><apex:inputField value="{!Registration__c.Insurance_Provider__c}" styleclass="slds-input" type="text" /></label><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Policy Number</span><apex:inputField value="{!Registration__c.Policy__c}" styleclass="slds-input" type="text" /></label>
+</div>  
+<div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Policy Name</span><apex:inputField value="{!Registration__c.Policy_Name__c}" styleclass="slds-input" type="text" /></label><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Provider Phone</span><apex:inputField value="{!Registration__c.Policy_Phone_1__c}" styleclass="slds-input" type="tel" /></label>
+</div>
+<div class="slds-form-element__row"><label class="slds-form-element__control slds-size--1-of-1 slds-medium-size--1-of-2"><span class="slds-form-element__helper">Provider Alternate Phone</span><apex:inputField value="{!Registration__c.Policy_Phone_2__c}" styleclass="slds-input" type="tel" /></label>
+</div>
+</div>
+</fieldset>
+</div>
+</apex:outputPanel>
+<div class="slds-m-top--xx-large slds-button-group slds-grid slds-grid--align-center">
+                               <apex:outputLink value="/apex/Registration?ID={!Registration__c.Id}" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch">Cancel</apex:outputLink><apex:commandButton action="{!saveR}" value="Save" styleClass="slds-button slds-button--neutral slds-max-small-button--stretch" /></div>
+                      </div>
+                        </apex:form>
+
+               
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>    
+</apex:pageBlock>
+<!-- JAVASCRIPT -->
+<script>
+// Instance the tour
+var tour = new Tour({
+  name: "RegEdit_Tour",
+  container:"#Inner",
+  template:"<div class='slds-popover slds-popover--tooltip slds-nubbin--bottom popover tour'><div class='popover-title slds-text-heading--medium slds-text-align--center'></div><div class='popover-content slds-text-align--center slds-popover__body slds-m-bottom--x-small slds-m-top--x-small slds-text-heading--custom'></div><div class='popover-navigation slds-clearfix'><button class='slds-button slds-button--neutral slds-float--left' data-role='prev'>« Prev</button><button class='slds-p-left--large slds-float--left slds-button slds-hard-float--left' style='color:#fff' data-role='end'>End tour</a></button><button class='slds-button slds-button--neutral slds-float--right' data-role='next'>Next »</button></div></div>",
+  steps: [
+  {
+    orphan:true,
+    title: "Registration Details",
+    content: "Use this page to change your Registration Details.",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 0
+  },
+  {
+    element: "#requests",
+    title: "Registration Requests",
+    template:"<div class='slds-popover slds-popover--tooltip popover tour'><div class='popover-title slds-text-heading--medium slds-text-align--center'></div><div class='popover-content slds-text-align--center slds-popover__body slds-m-bottom--large'></div><div class='popover-navigation slds-clearfix'><button class='slds-button slds-button--neutral slds-float--left' data-role='prev'>« Prev</button><button class='slds-button slds-button--neutral slds-float--right' data-role='next'>Next »</button></div><div class='slds-text-align--center slds-m-bottom--small'><a style='color:#fff' data-role='end'>End tour</a></div></div>",
+    content: "Fill in the names of a Team Mate or Room Mate if you have a specific person in mind.",
+    placement: "bottom",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 15
+  },
+  {
+    element: "#fundraising",
+    title: "Fundraising Page Settings",
+    content: "Choose a title for your fundraising page, over fundraising amount, and an introduction paragraph. <br /> *** Please do not change your title after you have shared it online, or the previous link will break.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 15
+  },
+  {
+    element: "#overfundraising",
+    title: "Over Fundraising",
+    content: "Enter the amount you want to 'over fundraise' for your trip. This amount will go towards community development and other projects within the country you volunteer.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 15
+  },
+  {
+    element: "#fundraisingblurb",
+    title: "Fundraising Blurb",
+    content: "Edit your Fundraising Blurb here. Give a brief explanation of what you will be doing, and try to paint a picture of how you think it will affect your life as well.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 15
+  },
+  {
+    element: "#insurance",
+    title: "Insurance Details",
+    content: "This trip does not include insurance. When you have purchased insurance, come back here and enter the details.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 15
+  },
+  {
+    orphan: true,
+    title: "Save or Cancel",
+    content: "When you are done, hit save or cancel. You will return to your registration page.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 0
+  }]});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start(true);
+</script>
+<!-- / JAVASCRIPT -->    
+<apex:PageBlock rendered="{!if(access != true,true,false)}">
+<header>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  </header>
+  <div class="slds">
+  <apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert> 
+    <div role="dialog" class="" id="">
+    <div class="slds-modal__container slds-box">
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">Error</h2>
+        </div>
+                <div class="slds-modal__content">
+        
+            <div>
+                <span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+<div class='slds-grid slds-wrap'>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--1-of-4 slds-text-align--center slds-m-bottom--large'>
+<span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="{!URLFOR($Resource.SLDS0120, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+</div>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--3-of-4 slds-text-align--center'>
+<p>
+                   You don't have permission to access this record
+                   <!-- this parameter needs to be italic in the site.error label -->
+                  
+</p>
+<p>
+<apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                   <apex:param value="mailto:{!$Site.AdminEmailAddress}"/>
+                   <apex:param value="{!$Label.site.email_us}"/>
+                  </apex:outputText>
+</p>
+</div>
+</div>
+        </div>
+        </div>
+        <div class="slds-modal__footer slds-modal__footer">
+        <div class="slds-x-small-buttons slds-text-align--center">
+            <a href='/Volunteer_Dashboard' class="slds-button slds-button--brand">Home</a>
+            </div>
+        </div>
+<apex:messages />
+    </div>
+
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+
+  </div></apex:pageBlock>
+</html>
+</apex:page>

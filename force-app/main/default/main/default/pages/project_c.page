@@ -1,0 +1,81 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="ProjectDonors">      
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+  .proj-outer {
+  background-color:#FFF;
+  padding:20px;
+  height:200px;
+  float:left;
+  width:200px;
+  margin-left:20px;
+  margin-right:20px;
+  margin-bottom:60px;
+  border-radius:8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  }
+  
+  .proj-outer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .proj-inner {
+  text-align:left;
+  }
+  
+  .proj-icon {
+  
+  }
+  
+  .proj-name {
+  display:inline-block;
+  font-size:1.2em;
+  }
+  
+  .proj-amount {
+  display:inline-block;
+  font-size:.6em;
+  }
+  
+  .proj-com {
+  font-size:.9em;
+  }
+  
+  body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 17px;
+   font-weight:bold;
+   color: #676767;
+}
+
+
+  </style>
+</head>        
+<body>
+<div style='text-align:center'>
+   <div style='display:inline-block'>
+        <apex:repeat rendered="true" var="dn" value="{!donors}">
+            <div class='proj-outer'>
+                <div class='proj-inner'>
+                    <span class='proj-icon'>
+                          <span class='proj-name'>{!dn.Donor_Name__c}</span><br />
+                          <span class='proj-amount'>${!dn.Amount__c} -  {!dn.Time_Since__c}</span>
+                    </span>
+                  <p class='proj-com'><apex:outputText value="{!LEFT(dn.Comments__c,190)}"></apex:outputText></p>
+                </div>
+            </div>
+     </apex:repeat>
+     </div>
+   </div>
+</body>    
+
+<!-- JAVASCRIPT -->
+<script>
+
+</script>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

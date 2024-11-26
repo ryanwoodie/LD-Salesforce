@@ -1,0 +1,99 @@
+<apex:page renderAs="pdf" standardController="Tax_Receipt__c" applybodyTag="false">
+<head>
+        <style type="text/css" media="print">
+            <apex:stylesheet value="{!$Resource.receipt_css}"/>
+            <apex:outputPanel layout="none" rendered="{!if($CurrentPage.parameters.preview == 'false',FALSE,TRUE)}">
+                .watermark {
+                    background-repeat: no-repeat;
+                    background-image: url("{!URLFOR($Resource.sampleonly)}");
+                    background-size: 300px 200px;
+                }
+            </apex:outputPanel>
+        </style>
+    </head>
+    <body>
+   <div class='watermark' style='border-bottom:1px dashed #000;padding-bottom:40px;margin-bottom:40px;font-size:13px'>
+    <div style='margin-bottom:10px;margin-top:60px'>
+    <div style="color: #000; font-size: 90%; margin-top: 0px;"><br />
+        <div style="width:270px;float:left;margin-left:20px"><apex:image url="{!URLFOR($Resource.Logo2020)}" style="align: left;" alt="LiveDifferent" width="180" height="50" title="LiveDifferent"/><br />
+        <div  style="width:208px;margin-left:10px" class="smallfont" >Location Receipt Issued:<br />
+PO Box 20047 Brandon South<br />
+Brandon MB R7A 6Y8</div><br />
+             </div>
+             <div style="width:200px;float:left"><strong>Receipt #: {!Tax_Receipt__c.Name} {!IF(Tax_Receipt__c.Version__c != null && Tax_Receipt__c.Version__c > 1,'V','')}<apex:outputText rendered="{!IF(Tax_Receipt__c.Version__c != null && Tax_Receipt__c.Version__c > 1,true,false)}" value="{0,number,#0}">
+<apex:param value="{!Tax_Receipt__c.Version__c}" />
+</apex:outputText></strong></div>
+             
+</div>
+</div><div style="clear:both"></div>
+<div class='smallfont floatright' style='margin-top:15px'>
+Donation received on <apex:outputText value="{0, date, MMMM d',' yyyy}">
+      <apex:param value="{!Tax_Receipt__c.Donation_Received_On__c}" />
+</apex:outputText><br />
+    <div class='smallfont'>Charity BN#: 86123 2890 RR0001<br />
+Date Issued: <apex:outputText value="{0, date, MMMM d',' yyyy}">
+    <apex:param value="{!Today()}" /> 
+</apex:outputText>
+</div><br />
+    <apex:image url="{!URLFOR($Resource.CharlesSig)}" style="align: left;" alt="Charles Roberts" width="100" height="25" title="Signature"/><br />
+    Charles Roberts - Executive Director</div>
+<div class='smallfont' style='font-size:12px'>
+
+<br /><br />
+<div class='address' style='margin-left:20px !important'><br /><br />
+{!Tax_Receipt__c.Donor_Name__c}<br />
+<apex:outputText value="{!Tax_Receipt__c.DonorStreet__c}" escape="false"/><br />
+{!Tax_Receipt__c.DonorCity__c} {!Tax_Receipt__c.Donorprovince__c} {!Tax_Receipt__c.Donor_postal_code__c}</div><br /><br />
+
+</div>
+<br />
+    
+<div style="clear:both;text-align:center">
+<apex:outputPanel rendered="{!IF(Tax_Receipt__c.Gift_In_Kind_Description__c == '',false,true)}" layout="none">Description of donation: {!Tax_Receipt__c.Gift_In_Kind_Description__c}
+<br /></apex:outputPanel>
+
+<apex:outputPanel rendered="{!IF(Tax_Receipt__c.Amount__c == Tax_Receipt__c.Amount_Rollup__c,TRUE,TRUE)}" layout="none">{!IF(Tax_Receipt__c.RecordTypeID != '01250000000J7aeAAC',"Amount","Fair market value")} of Gift:&nbsp;<apex:outputText value="${0,number,#,##0.00}">
+<apex:param value="{!Tax_Receipt__c.Amount_Rollup__c}" />
+</apex:outputText><br />
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!IF(Tax_Receipt__c.Amount__c == Tax_Receipt__c.Amount_Rollup__c,FALSE,TRUE)}" layout="none">Amount of advantage to donor:&nbsp;<apex:outputText value="${0,number,#,##0.00}">
+<apex:param value="{!Tax_Receipt__c.Amount_Rollup__c - Tax_Receipt__c.Amount__c}" />
+</apex:outputText><br/>
+{!IF(Tax_Receipt__c.Advantage_Description__c != '',"Description of advantage: "&Tax_Receipt__c.Advantage_Description__c,'')}<apex:outputPanel rendered="{!Tax_Receipt__c.Advantage_Description__c != ''}"><br /></apex:outputPanel>
+</apex:outputPanel>
+
+
+<strong>{!IF(AND(0==1,0==1),"Fair market value","Eligible amount")} of gift for income tax purposes:&nbsp; <apex:outputText value="${0,number,#,##0.00}">
+<apex:param value="{!Tax_Receipt__c.Amount__c}" />
+</apex:outputText></strong><br />
+<apex:outputPanel rendered="{!Tax_Receipt__c.Receipt_Details__c != ''}">{!Tax_Receipt__c.Receipt_Details__c}<br /></apex:outputPanel>
+<span class="smallfont"><br />Official Donation Receipt for Income Tax Purposes</span><br /><span class="smallfont">Canada Revenue Agency canada.ca/charities-giving<br />
+</span></div>
+
+    </div>
+    
+    <!-- Copy -->
+    
+    <div style='font-size:13px'>
+    <div style='margin-bottom:60px'><apex:image url="{!URLFOR($Resource.Logo2020)}" style="align: left;" alt="LiveDifferent" width="180" height="50" title="LiveDifferent"/></div>
+    <p>Dear {!IF(Tax_Receipt__c.Receipt_Assigned_To__c == 'Account',Tax_Receipt__c.Account__r.Name,Tax_Receipt__c.Contact__r.FirstName)},</p>
+    <p>On behalf of LiveDifferent, I would like to thank you for your contribution of&nbsp;<apex:outputText value="${0, number,#,##0.00}">
+<apex:param value="{!Tax_Receipt__c.Amount__c}" />
+</apex:outputText>.</p>
+
+<p>Since our beginning back in 2000, we’ve been promoting a lifestyle that cares about people. We’re passionate about living lives of compassion and service towards others and are always looking to help connect people with ways of giving back.</p> 
+
+<p>If you’ve got some time, feel free to visit <a href='https://LiveDifferent.com'>LiveDifferent.com</a> to learn about other ways you might be able to get involved in what we do!</p> 
+
+<p>And again, thank you.</p>
+
+<p>
+<br />
+<apex:image url="{!URLFOR($Resource.CharlesSig)}" style="align: left;" alt="Charles Roberts" width="100" height="25" title="Signature"/><br />
+Charles Roberts<br />
+CEO</p>
+
+    </div>
+    </body>
+</apex:page>

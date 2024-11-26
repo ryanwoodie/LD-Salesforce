@@ -1,0 +1,6 @@
+<apex:page StandardController="Registration__c" readonly="true" renderAs="pdf">
+   
+    <apex:include pageName="builds_welcome_letter" />
+    <apex:include pageName="builds_welcome_letter" />
+   
+</apex:page>

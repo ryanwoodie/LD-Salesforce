@@ -1,0 +1,889 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" StandardController="Registration__c" extensions="AttachFile,regsAccess">      
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+<apex:outputText value="{!Registration__c.Contact__r.Master_Contact__r.ID}" rendered="false"/>
+<apex:outputText value="{!Registration__c.Contact__r.ID}" rendered="false"/>
+<apex:PageBlock rendered="{!if(access == true,true,false)}">
+<head>
+  <title>Live Different -- Registration Page</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+  <style>
+  .slds-button.slds-button--neutral.slds_100-p {
+  width: 100% !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+    z-index:1;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+    z-index:0;
+}
+
+.fundraise-inner {
+    padding:100px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.popover.tour {
+   z-index:1200 !important;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   .slds-hard-float--left {
+float:left !important;
+}
+
+.slds-text-heading--custom {
+font-size:15px !important;
+line-height:20px !important;
+}
+</style>
+</head>        
+
+  
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->    
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds" ID="Inner">    
+    <!-- MASTHEAD -->
+    <apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+
+    <apex:messages styleClass="slds-notify slds-notify--alert slds-notify-alert--theme-texture slds-m-around--medium"/>
+<apex:outputPanel rendered="{!if($CurrentPage.parameters.msg == '1',TRUE,FALSE)}">
+<div class="slds-notify slds-notify--alert slds-theme--success slds-theme--alert-texture slds-m-around--medium" role="alert">
+  <span class="slds-assistive-text">Success</span>
+  <h2>
+    <svg aria-hidden="true" class="slds-icon icon-text-email slds-icon--small slds-m-right--x-small">
+      <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+    </svg>Attachment uploaded successfully, your registration status will be updated once we verify the upload</h2>
+</div>
+</apex:outputPanel>
+    <!-- / MASTHEAD --> 
+    
+    <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/{!IF($CurrentPage.parameters.ID==null,"Do",LEFT(Registration__c.Event__r.Location__c,2))}.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <div class="slds-col slds-col--padded slds-size--1-of-1">
+        <div class='slds-text-heading--large text-white' style='font-weight:bold'>
+        {!Registration__c.Name}
+        </div>
+        <div class='slds-text-heading--label slds-m-top--medium text-white' style='display:none'>
+          Invite others to join this Build!
+          </div>
+          <div class='slds-m-top--x-small' style='display:none'>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://my.livedifferent.com{!URLFOR($Page.Event,null,[id=Registration__c.Event__r.Id])}" data-text="I'm going on a Live Different Build, Join me!">Tweet</a>
+          <div class="fb-share-button" data-href="https://my.livedifferent.com{!URLFOR($Page.Event,null,[id=Registration__c.Event__r.Id])}" data-layout="button" data-mobile-iframe="true"></div>
+          <div style='vertical-align:top !important' class="g-plusone" data-size="medium" data-href="https://my.livedifferent.com{!URLFOR($Page.Event,null,[id=Registration__c.Event__r.Id])}"></div>
+          </div>
+          </div>
+          </div>
+        </div>
+</div>   
+    <!-- PAGE HEADER -->
+<div class="slds-container--large slds-container--center" role="banner">
+<div class=''>
+   <div class="slds-media slds-media--center slds-togglevis slds-text-align--center">
+       <div class='slds-media__body slds-text-body--small' ><a href='' class='slds-text-align--center'>Click here for help</a></div>
+   </div>
+   <div id="SHelp" class="shtoggle slds-SHdefault slds-collapsed slds-text-align--center slds-container--small slds-container--center" role="SH" aria-labelledby="Showhelp">
+<div class='slds-text-heading--medium'>Need help?</div>
+<div class='slds-text-body--small'>Call us at (866) 432 4464 or email info@livedifferent.com.</div>
+<button class='slds-m-top--small slds-button' onclick="tour.restart();">Take the tour again</button>
+</div>
+   </div>
+   
+
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid slds-wrap">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--x-large" id="RegDetails">
+
+      <!-- HEADING AREA -->
+      <div class="slds-card slds-m-top--large">
+<table class="slds-table slds-table--bordered">
+  <tbody>
+    <tr class="slds-hint-parent">
+      <th data-label="opportunity-name" role="row" class='slds-truncate'><span class="slds-text-heading--label">Location</span></th>
+      <td class='slds-truncate'><a href="#" class="">{!Registration__c.Location__c}</a></td></tr>
+    <tr><th data-label="activity" class='slds-truncate'><span class="slds-text-heading--label">Start Date</span></th>
+      <td class='slds-truncate'><span class=""><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Registration__c.Trip_Start_Date__c}" />
+         </apex:outputText></span></td></tr>
+      <tr><th data-label="activity" class='slds-truncate'><span class="slds-text-heading--label">End Date</span></th>
+      <td class='slds-truncate'><span class=""><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Registration__c.Trip_End_Date__c}" />
+         </apex:outputText></span></td></tr>
+ <apex:outputPanel rendered="{!IF(Registration__c.RecordType.Name == 'Academy',true,false)}" layout="none">
+ <tr><th data-label="activity" class='slds-truncate'><span class="slds-text-heading--label">Tuition to Date</span></th>
+      <td class='slds-truncate'><span class="">$<apex:outputText value="{0, number, #,##0.00}">
+       <apex:param value="{!Registration__c.Other_Payments__c}" />
+ </apex:outputText></span></td></tr>
+ </apex:outputPanel>
+  </tbody>
+</table>
+</div>
+      
+      </div>
+          <div class="slds-col slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-m-bottom--large" id="RegStatus">
+          <div class="slds-card slds-m-top--large">
+          <div class="slds-card__header slds-grid">
+      <div class="slds-media slds-media--center slds-has-flexi-truncate">
+        <div class="slds-media__figure slds-m-left--medium">
+        <apex:outputPanel rendered="{!if(Registration__c.Quickflag__c == TRUE,TRUE,FALSE)}">
+<span class="slds-icon__container"><svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small"><use xlink:href="/resource/1450498157000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#success"></use></svg><span class="slds-assistive-text">Success Icon</span></span>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!if(Registration__c.Quickflag__c == TRUE,FALSE,TRUE)}">
+<span class="slds-icon__container"><svg aria-hidden="true" class="slds-icon slds-icon-text-warning slds-icon--small"><use xlink:href="/resource/1450498157000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#warning"></use></svg><span class="slds-assistive-text">Warning Icon</span></span>
+</apex:outputPanel>
+        </div>
+        <div class="slds-media__body">
+          <h2 class="slds-text-heading--small slds-truncate">Registration Status</h2>
+        </div>
+      </div>
+      
+    </div>
+<table class="slds-table slds-table--bordered">
+  <tbody>
+    <tr><th data-label="Consent Package"><span class="slds-text-heading--label slds-truncate">Consent Package</span></th>
+      <td><span class=" slds-truncate">{!IF(Registration__c.Consent_Package_Signed__c = TRUE,"Signed and Received","*Not Received*")}</span></td></tr>
+      <apex:outputPanel rendered="{!IF(Registration__c.CPP__c != 'N/A',true,false)}"><tr><th data-label="CPP"><span class="slds-text-heading--label slds-truncate">Child Protection Policy</span></th>
+      <td><span class=" slds-truncate">{!Registration__c.CPP__c}</span></td></tr></apex:outputPanel>
+      <apex:outputPanel rendered="{!IF(Registration__c.Event__r.Group_Flight_Arrangements__c == false,true,false)}" layout="none" ><tr><th data-label="Flight Details"><span class="slds-text-heading--label slds-truncate">Flight Details</span></th>
+      <td><span class=" slds-truncate">{!IF(Registration__c.Flight_Itinerary_Received__c = TRUE,"Received","*Not Received*")}</span></td></tr></apex:outputPanel>
+      <apex:outputPanel rendered="{!IF(Registration__c.CRC__c == 'N/A' || Registration__c.CRC__c == 'Under 18',false,true)}"><tr><th data-label="Criminal Check"><span class="slds-text-heading--label slds-truncate">Criminal Check</span></th>
+      <td><span class=" slds-truncate">{!Registration__c.CRC__c}</span></td></tr></apex:outputPanel>
+  </tbody>
+</table>
+</div>
+   </div>
+    </div>
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+    <!-- / PAGE HEADER -->    
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-m-top--large slds-container--large slds-container--center">
+
+<div class="slds-box slds-theme--shade" id="RegOptions">
+  <div id="editable-content" class="slds-m-bottom--xx-large">
+  <div class='slds-clearfix'>
+  <div class='slds-text-heading--medium slds-float--left slds-m-left--xx-large slds-p-left--small'>My Registration Options</div>
+          
+        </div>
+      <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Insurance Provider</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Insurance_Provider__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Policy Number</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Policy__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Policy Name</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Policy_Name__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 4 -->
+ 
+</div>
+    <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Provider Phone</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Policy_Phone_1__c}</p>
+  </div>
+</div>
+  </div>
+<apex:outputPanel layout="none" rendered="{!IF(OR(CONTAINS(Registration__c.Event__r.Name,'WestJet'),Registration__c.RecordType.Name == 'Academy',Registration__c.RecordType.Name == 'International Tour'),False,TRUE)}">
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Roommate Request</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Room__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-3">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Teammate Request</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Teammate_Request__c}</p>
+  </div>
+</div>
+  </div>
+</apex:outputPanel>
+  <!-- TAB INFO / ROW 2 / COLUMN 4 -->
+
+
+</div>
+<apex:outputPanel rendered="{!IF(Registration__c.Fundraising_Type__c == 'Live Different',True,False)}">
+<div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Fundraising Page Title</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Registration__c.Fundraising_Page_Title__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Extra Fundraising Amount</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">${!Registration__c.ExtraFundraising__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--2-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Fundraising Page Blurb</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText escape="false" value="{!Registration__c.Fundraising_Text__c}" styleClass="" /></p>
+  </div>
+</div>
+  </div>
+
+
+</div></apex:outputPanel>
+  </div><div class='slds-text-align--center'><apex:outputLink value="/apex/Registration_Edit?id={!Registration__c.Id}&saveURL=%2Fapex%2FRegistration%3FID%3D{!Registration__c.Id}" styleClass="slds-button slds-button--neutral">Edit</apex:outputLink></div>
+</div>
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-wrap slds-m-top--large">
+  
+  <apex:outputPanel rendered="{!IF(Registration__c.RecordType.Name == 'Academy',TRUE,FALSE)}" layout="none">
+  <div class="slds-col-pull--padded slds-p-right--medium slds-m-bottom--large slds-size--1-of-1 slds-medium-size--6-of-6 slds-large-size--12-of-12">
+  <div class="slds-card" id="Payments">
+  <div class="slds-text-align--center slds-m-top--medium">Tuition Payment Form</div>
+  <div class="slds-text-align--center slds-m-bottom--medium"><a href='/otherfunds?ID={!Registration__c.ID}' class='slds-button slds-button--brand'>Pay Tuition</a></div>
+  </div>
+  </div>
+  </apex:outputPanel>
+
+<!-- MAIN CARD -->
+<div class="slds-col-pull--padded slds-p-right--medium slds-m-bottom--large slds-size--1-of-1 slds-medium-size--4-of-6 slds-large-size--8-of-12">
+
+  <!-- Event Information -->
+<div class="slds-card slds-p-around--small" id="EventInfo">
+<div><div class='slds-text-heading--small slds-togglevis'><a href=''>Description <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right">
+    <use xlink:href="{!URLFOR($Resource.SLDS0120, '/assets/icons/utility-sprite/svg/symbols.svg#down')}"></use>
+  </svg></a></div>
+<div id="SH1" class="shtoggle slds-SHdefault slds-collapsed slds-m-bottom--large slds-theme--default" role="SH" aria-labelledby="Show1">
+<apex:outputText escape="false" value="{!Registration__c.Event__r.Description__c}" styleClass="slds-custom_rt" />
+</div></div>
+<div><div class='slds-text-heading--small slds-togglevis'><a href=''>What is included <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right">
+    <use xlink:href="{!URLFOR($Resource.SLDS0120, '/assets/icons/utility-sprite/svg/symbols.svg#down')}"></use>
+  </svg></a></div>
+<div id="SH2" class="shtoggle slds-SHdefault slds-collapsed slds-m-bottom--large slds-theme--default" role="SH" aria-labelledby="Show1">
+<apex:outputText escape="false" value="{!Registration__c.Event__r.Included__c}" styleClass="slds-custom_rt" />
+</div></div>
+<div><div class='slds-text-heading--small slds-togglevis'><a href=''>What is not included <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right">
+    <use xlink:href="{!URLFOR($Resource.SLDS0120, '/assets/icons/utility-sprite/svg/symbols.svg#down')}"></use>
+  </svg></a></div>
+<div id="SH3" class=" shtoggle slds-SHdefault slds-collapsed slds-m-bottom--large slds-theme--default" role="SH" aria-labelledby="Show1">
+<apex:outputText escape="false" value="{!Registration__c.Event__r.Not_Included__c}" styleClass="slds-custom_rt" />
+</div></div>
+</div>
+<!-- /Event Information -->
+</div>
+<!-- / MAIN CARD -->
+
+
+<!-- COMPACT CARD -->
+<div class="slds-col slds-wrap slds-size--1-of-2 slds-medium-size--2-of-6 slds-large-size--4-of-12">
+
+  <div class="slds-card" id="TripDocs">
+
+    <header class="slds-card__header">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-log-a-call slds-icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS0110, 'assets/icons/action-sprite/svg/symbols.svg#new_custom18')}"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+        <h3>Trip Forms and Documents</h3>
+          <div class="slds-text-body--small">
+          Please download and complete the following forms.
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="slds-card__body">
+      <div id='tripDocs' class="slds-card__body slds-p-left--x-large">
+      <ul class="slds-list--vertical slds-has-dividers--bottom-space slds-has-selection">
+      <apex:outputPanel rendered="{!IF(AND(Registration__c.Event__r.Custom_Consent_Package__c == false, Registration__c.Consent_Package_Signed__c == false),true,false)}">
+      <li class="slds-list__item">
+    <a href="{!IF(Registration__c.RecordTypeID == '012500000005erPAAQ',URLFOR($Resource.BuildForms, 'consentform-academy.pdf'),URLFOR($Resource.BuildForms, 'consentform.pdf'))}"><div class="slds-media slds-tile">
+      <div class="slds-media__figure">
+        <svg aria-hidden="true" class="slds-icon icon-doctype-zip">
+          <use xlink:href="{!URLFOR($Resource.SLDS0110, '/assets/icons/doctype-sprite/svg/symbols.svg#pdf')}"></use>
+        </svg>
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-tile__title slds-truncate">Consent Package</p>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">Sign and Upload or Email</li>
+        </ul>
+      </div>
+    </div></a>
+  </li>
+      </apex:outputPanel>
+      <apex:outputPanel rendered="{!IF(Registration__c.CRC__c == 'N/A' || Registration__c.CRC__c == 'Under 18',false,true)}">
+     <li class="slds-list__item">
+    <a href="https://my.livedifferent.com/cc_letter?ID={!Registration__c.Id}" target="_blank"><div class="slds-media slds-tile">
+      <div class="slds-media__figure">
+        <svg aria-hidden="true" class="slds-icon icon-doctype-zip">
+          <use xlink:href="{!URLFOR($Resource.SLDS0110, '/assets/icons/doctype-sprite/svg/symbols.svg#pdf')}"></use>
+        </svg>
+      </div>
+      <div class="slds-media__body"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover" data-aljs-placement="top" title="Take this letter to your nearest police department, it will reduce the cost of the Criminal Record Check">
+        <p class="slds-tile__title slds-truncate">Criminal Record Check Letter</p>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">Take this letter to your....</li>
+        </ul></span>
+      </div>
+    </div></a>
+  </li>
+      </apex:outputPanel>
+      <apex:outputPanel rendered="{!IF(OR(Registration__c.CPP__c == 'N/A',Registration__c.CPP__c == 'Received'),false,true)}">
+      <li class="slds-list__item">
+    <a href="{!IF(Registration__c.RecordTypeID == '012500000005erPAAQ',URLFOR($Resource.BuildForms, 'cpp-read.pdf'),URLFOR($Resource.BuildForms, 'cpp-read.pdf'))}"><div class="slds-media slds-tile">
+      <div class="slds-media__figure">
+        <svg aria-hidden="true" class="slds-icon icon-doctype-zip">
+          <use xlink:href="{!URLFOR($Resource.SLDS0110, '/assets/icons/doctype-sprite/svg/symbols.svg#pdf')}"></use>
+        </svg>
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-tile__title slds-truncate">Child Protection Policy</p>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">Full Version - Read Only</li>
+        </ul>
+      </div>
+    </div></a>
+  </li>
+  <li class="slds-list__item">
+    <a href="{!IF(Registration__c.RecordTypeID == '012500000005erPAAQ',URLFOR($Resource.BuildForms, 'cpp-sign.pdf'),URLFOR($Resource.BuildForms, 'cpp-sign.pdf'))}"><div class="slds-media slds-tile">
+      <div class="slds-media__figure">
+        <svg aria-hidden="true" class="slds-icon icon-doctype-zip">
+          <use xlink:href="{!URLFOR($Resource.SLDS0110, '/assets/icons/doctype-sprite/svg/symbols.svg#pdf')}"></use>
+        </svg>
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-tile__title slds-truncate">Child Protection Policy - Signature</p>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">Sign and Upload or Email</li>
+        </ul>
+      </div>
+    </div></a>
+  </li>
+      </apex:outputPanel>
+      
+          <apex:repeat value="{!tripattachments}" var="attached" >
+          <apex:outputPanel rendered="{!IF(BEGINS(attached.name,'PUBLIC_'),true,false)}">
+      <li class="slds-list__item">
+    <a href="/servlet/servlet.FileDownload?file={!attached.Id}"><div class="slds-media slds-tile">
+      <div class="slds-media__figure">
+        <svg aria-hidden="true" class="slds-icon icon-doctype-zip">
+          <use xlink:href="{!URLFOR($Resource.SLDS0110, '/assets/icons/doctype-sprite/svg/symbols.svg#pdf')}"></use>
+        </svg>
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-tile__title slds-truncate">{!MID(attached.name, 8, LEN(attached.name))}</p>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">{!attached.Description}</li>
+        </ul>
+      </div>
+    </div></a>
+  </li>
+      </apex:outputPanel>
+      </apex:repeat>
+      </ul>
+          </div>
+      <!-- LIST WITH ONE ITEM -->
+    </section>
+    <footer class="slds-card__footer">
+    </footer>
+
+  </div>
+<div class="slds-card" id="MyFiles">
+
+    <header class="slds-card__header">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-action-description slds-icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS100, 'assets/icons/action-sprite/svg/symbols.svg#new_custom18')}"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+        <h3>My Uploads</h3>
+          <div class='slds-text-body--small'>
+          Upload your signed forms and documents here.
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="slds-card__body">
+      <div id='myDocs' class="slds-card__body slds-p-left--x-large">
+          <ul>
+          <apex:repeat value="{!myattachments}" var="attached" >
+      <li class="slds-tile slds-hint-parent slds-m-bottom--medium">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p class="slds-tile__title slds-truncate"><apex:outputLink styleClass="actionLink"
+        target="_BLANK"
+        value="/servlet/servlet.FileDownload?file={!attached.Id}"
+        >{!attached.name}</apex:outputLink></p>
+        </div>
+        <div class="slds-tile__detail">
+          <dl class="slds-dl--horizontal slds-text-body--small">
+            <dt class="slds-dl--horizontal__label">
+              <p class="slds-truncate">Modified Date:</p>
+            </dt>
+            <dd class="slds-dl--horizontal__detail slds-tile__meta">
+              <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!attached.LastModifiedDate}" />
+         </apex:outputText></p>
+            </dd>
+            <dt class="slds-dl--horizontal__label">
+              <p class="slds-truncate">Description:</p>
+            </dt>
+            <dd class="slds-dl--horizontal__detail slds-tile__meta">
+              <p class="slds-truncate">{!attached.Description}</p>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      </apex:repeat>
+      </ul>
+          </div>
+      <!-- LIST WITH ONE ITEM -->
+    </section>
+    <footer class="slds-card__footer">
+    <apex:form ><apex:outputLabel >Select your file</apex:outputLabel>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            
+            <apex:inputFile id="myFile" value="{!myDoc.Body}" fileName="{!myDoc.name}" styleClass="slds-button slds-button--neutral slds_100-p"></apex:inputFile>
+        </apex:pageBlockSection>
+        <apex:commandButton id="uploadfile" value="Upload" action="{!upload}" styleClass="slds-button slds-button--neutral slds-m-top--small"/>
+    </apex:pageBlock>
+    </apex:form>
+    </footer>
+
+  </div>
+  <apex:outputPanel rendered="{!IF(Registration__c.Event__r.Group_Flight_Arrangements__c == false,true,false)}" layout="none">
+  <div class="slds-card" id="Flights">
+
+    <header class="slds-card__header">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS100, 'assets/icons/action-sprite/svg/symbols.svg#new_custom20')}"></use>
+          </svg>
+        </div>
+        <h3>My Flights</h3>
+      </div>
+    </header>
+
+    <section class="slds-card__body">
+      <div class="slds-media__body slds-p-left--medium">
+       Please upload a copy of your offical flight itinerary above or email it to {!IF(Registration__c.RecordTypeID == '012500000005erPAAQ','academy','builds')}@livedifferent.com
+        </div>
+      <!-- LIST WITH ONE ITEM -->
+    </section>
+    <footer class="slds-card__footer">
+     
+    </footer>
+
+  </div>
+  </apex:outputPanel>
+</div>
+<!-- / COMPACT CARD -->
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                        </div>
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+<!-- Modals -->
+<div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-1">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <h2 class="slds-text-heading--medium">Donation Policy / Direct Payment</h2>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        <ul class='slds-list--dotted'>
+  <li>Note: for those using CanadaHelps GivingPage, tax receipts will be issued by CanadaHelps and not from Live Different (CanadaHelps disburses the funds raised online to Live Different on a weekly basis). All of the below principles of what a legal charitable donation is apply whether CanadaHelps or Live Different is processing the donation.</li>
+    <li>It is important to understand that Live Different 
+        Builds is a <strong>charitable program</strong>. This means that "participants/travelers" are functioning as volunteers, approved by our Board of Directors, to help achieve the charitable purpose of Live Different. The beneficiaries of this charitable program are families and people in-need in our host countries, not those who deliver the program (even though it may be incredibly fun, rewarding and even life-changing to serve others in need).</li>
+        <li>Additionally, the humanitarian trip does not have a "personal recreational vacation" component that is more than incidental to the charitable project (eg. if there were multiple days of personal vacation free-time this would be a monetary-type personal benefit and funds raised would not qualify as a gift for income tax purposes).</li>
+    <li>Due to the expense and logistics of coordinating a volunteer humanitarian development project, an important qualification is for each volunteer to meet their trip's <strong>minimum fundraising goal</strong>. Volunteers can solicit tax receiptable donations (via CanadaHelps) to reach the minimum fundraising goal to help pay for their costs in carrying out the project, and such designated contributions are received by Live Different (via CanadaHelps) for its charitable purposes. According to charity law, a donation is a voluntary transfer of property without valuable consideration to the donor; donors cannot choose the beneficiaries of their donations, and a charity must have full discretion in deciding how to allocate its funds. Even if related persons or the volunteer make contributions to meet the fundraising goal of the humanitarian trip, the contributions are gifts for income tax purposes because they pass the CRA tests. Therefore, CanadaHelps or Live Different are able to issue an official receipt for income tax purposes. It is the volunteer's obligation to inform donors that all donations are given to the project/charity, and though donations help meet the volunteer's fundraising goal and their costs associated with the charitable project, they are not being used as a direct monetary benefit to the volunteer (eg. monies won't be refunded, they won't be used to cover personal/recreational expenses, etc.)</li>
+    <li><b>This means that ALL donations are absolutely, 100% non-refundable</b> (whether given via CanadaHelps or directly to Live Different), as it is not legal for a charity to refund a donation. In event of any form of cancellation whatsoever or exceeding a fundraising goal, funds will instead be allocated towards where most needed in the project or in other charitable programs. In the event that a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+        <li>If you receive anynonmous cash donations or proceeds from a fundraising sale, it is not legal to claim this as a tax-receiptable donation using your name/address, as you will receive a tax-deductible receipt for a donation that wasn't really from you.</li>
+    <li>Alternately, if you do not wish to give a donation, fundraise, or use CanadaHelps, please contact us to discuss making a non-tax receiptable direct payment that will have the benefit of falling under our refund policy.</li>
+</ul>
+
+<br />
+<span class="slds-text-heading--medium">Refund Policy</span>
+
+<ul class='slds-list--dotted'>
+    <li>This Refund Policy does NOT apply to any monies given via CanadaHelps. <strong>Donations are 100% non-refundable, whether given via CanadaHelps or directly to Live Different.</strong> (It is not legal to refund donations).</li>
+        <li>This Refund Policy only applies to those who have contacted us to arrange direct payment, and have explicitly marked monies as "Payment" on the payment form.</li>
+    <li>Up to 50% of trip payments (not donations) can be refunded up to&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!Registration__c.Event__r.Refund_Deadline_1__c}" /></apex:outputText>.</li>
+    <li>After&nbsp;<apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!Registration__c.Event__r.Refund_Deadline_1__c}" /></apex:outputText>, no refunds will be given except for extreme circumstances such as death or severe illness/injury resulting in the individual being unable to participate. In such cases, up to 80% of trip payments (not donations) may be refunded at Live Different's discretion. Requests for refund must be made in writing and be accompanied by a death certificate or a doctor's note</li>
+    <li>All requests for refund must be forwarded to Live Different in writing.</li>    
+        <li>In the event of failing to meet registration requirements (e.g. not obtaining a valid passport, not meeting minimum fundraising goals, etc), Live Different reserves the right to cancel participation with no refund of payment.</li>
+        <li>Payments cannot be forwarded towards a future Live Different Build or transferred to another volunteer, however, in such an event where a volunteer is unable to participate in the project, fundraising efforts may be taken into account when registering for a future trip, but this is exclusively the decision of Live Different.</li>
+</ul>
+<div class="slds-text-heading--medium slds-m-top--x-large">Make payments directly to your registration here. These payments are refundable and not tax-receiptable.</div>
+        <button class="slds-button slds-button--brand slds-text-align--center" data-aljs="modal" data-aljs-show="modal-2">Non-Tax-Receiptable Payments</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open slds-hide" id="modal-2">
+    <div class="slds-modal__container">
+        <div class="slds-modal__header slds-theme--shade">
+            <h2 class="slds-text-heading--medium">Direct Payment (refundable, without tax receipt)</h2>
+            <button class="slds-button slds-button--icon-inverse slds-modal__close" data-aljs-dismiss="modal">
+                Close
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <div class="slds-modal__content">
+        <div class="slds-p-around--medium">
+        
+        <div class='slds-box slds-m-around--medium'>
+        <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?TID=PA4A117B58F4867368&PROCESSKEY=PAD5388DF3BF2C9F02489729C21B53BF57&FirstName={!Registration__c.Contact__r.FirstName}&LastName={!Registration__c.Contact__r.LastName}&Item5=RG-{!Registration__c.ID}&Item2=NO%20TAX%20RECEIPT&Item6=Name%20and%20Amount%20Privately%20with%20Fundraiser&State={!Registration__c.Contact__r.MailingState}&ZipCode={!Registration__c.Contact__r.MailingPostalCode}&Country={!Registration__c.Contact__r.MailingCountry}&Address={!Registration__c.Contact__r.MailingStreet}&Phone={!Registration__c.Contact__r.HomePhone}&Email={!Registration__c.Contact__r.Email}&TotalDescription=Amount&HideAmountInfo=false&PROCESSOPTION=TRANSACTION&EVENTPOSTBACKURL=https://livedifferent.secure.force.com/IATSAURA&EVENTSTYLESHEET={!URLFOR($Resource.custom_styles)}"></script>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+<!-- End Modals -->
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+</body>    
+
+<!-- JAVASCRIPT -->
+<script>
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+
+$(document).ready(function() {
+    $('body').popoverslds({
+        selector: '[data-aljs="popover"]'
+    });
+});
+    
+  
+  $( "div.slds-togglevis" ).click(function() {
+    $( this ).next().toggleClass( "slds-collapsed slds-expanded slds-box" );
+});
+
+   var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+
+
+// Instance the tour
+var tour = new Tour({
+  container:"#Inner",
+  template:"<div class='slds-popover slds-popover--tooltip slds-nubbin--bottom popover tour'><div class='popover-title slds-text-heading--medium slds-text-align--center'></div><div class='popover-content slds-text-align--center slds-popover__body slds-m-bottom--x-small slds-m-top--x-small slds-text-heading--custom'></div><div class='popover-navigation slds-clearfix'><button class='slds-button slds-button--neutral slds-float--left' data-role='prev'>« Prev</button><button class='slds-p-left--large slds-float--left slds-button slds-hard-float--left' style='color:#fff' data-role='end'>End tour</a></button><button class='slds-button slds-button--neutral slds-float--right' data-role='next'>Next »</button></div></div>",
+  steps: [
+  {
+    orphan:true,
+    title: "Welcome to {!Registration__c.Event__r.Name}",
+    content: "We are glad you've decided to Volunteer with Live Different. We'd like to show you around quickly.",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#RegDetails",
+    title: "Registration Details",
+    content: "A quick glance at the dates, fundraising goal, etc.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#RegStatus",
+    title: "Registration Status",
+    content: "Keep track of your trip status here, remember to get your deposit in along with the required documents.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#RegOptions",
+    title: "Registration Options",
+    content: "You can view your Registration Options here. Click the edit button to change these options as well as your fundraising page options. ",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#Payments",
+    title: "Fundraising Payments",
+    content: "As you fundraise, donations will show up here. You can also find links to a payment form for Direct Payments (within the Policy), and your fundraising page. Don't forget to get your deposit in.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#TripDocs",
+    title: "Trip Forms and Documents",
+    content: "Download and complete these forms. When you are finished, scan and upload them below or email to builds@livedifferent.com.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#MyFiles",
+    title: "My Uploads",
+    content: "Upload your signed documents here!",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#Flights",
+    title: "Flights",
+    content: "When your flights are booked, enter them here so we know your travel plans.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    element: "#EventInfo",
+    title: "Event Details",
+    content: "In case you need a refresher, you can find the event details here.",
+    placement: "top",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  },
+  {
+    orphan:true,
+    title: "Any Questions?",
+    content: "Give us a call at 1(866) 432 4464 or email us at info@livedifferent.com",
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+  }]});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start();
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script src="https://apis.google.com/js/platform.js" ></script>
+<!-- / JAVASCRIPT-->  </apex:PageBlock>  
+
+<apex:PageBlock rendered="{!IF(access != true,true,false)}">
+<header>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  </header>
+  <div class="slds">
+  <apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert> 
+    <div role="dialog" class="" id="">
+    <div class="slds-modal__container slds-box">
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">Error</h2>
+        </div>
+                <div class="slds-modal__content">
+        
+            <div>
+                <span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+<div class='slds-grid slds-wrap'>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--1-of-4 slds-text-align--center slds-m-bottom--large'>
+<span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="{!URLFOR($Resource.SLDS0120, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+</div>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--3-of-4 slds-text-align--center'>
+<p>
+                   You don't have permission to access this record
+                   <!-- this parameter needs to be italic in the site.error label -->
+                  
+</p>
+<p>
+<apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                   <apex:param value="mailto:{!$Site.AdminEmailAddress}"/>
+                   <apex:param value="{!$Label.site.email_us}"/>
+                  </apex:outputText>
+</p>
+</div>
+</div>
+        </div>
+        </div>
+        <div class="slds-modal__footer slds-modal__footer">
+        <div class="slds-x-small-buttons slds-text-align--center">
+            <a href='/Volunteer_Dashboard' class="slds-button slds-button--brand">Home</a>
+            </div>
+        </div>
+<apex:messages />
+    </div>
+
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+
+  </div>
+</apex:PageBlock>
+</html>
+</apex:page>

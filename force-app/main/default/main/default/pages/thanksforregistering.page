@@ -1,0 +1,173 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Event__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Sign up for {!Event__c.Name}</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  input.fcheckbox {
+  width:16px;
+  height:16px;
+  margin-right:10px !important;
+  margin-top:5px !important;
+  }
+  
+  .error {
+  color:#D8000C
+  }
+  
+  .slds-textarea {
+  height:180px !important;
+  }
+  
+  .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+}
+
+.fundraise-inner {
+    padding:315px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#FFF !important;
+}
+
+  
+
+  </style>
+</head>        
+
+   
+
+<body>    
+<apex:outputField value="{!Event__c.Location__c}" rendered="false" />
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <script>
+  dataLayer.push({
+  'eventCategory': 'Builds',
+  'eventAction': 'New Registration',
+  'eventLabel': '{!Event__c.Name}',
+  'eventValue': '{!Event__c.Fundraising_Goal__c}',
+  'currency': 'CAD'
+});
+  </script>
+  
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">{!$User.ContactID}  
+      <apex:messages styleClass="slds-notify slds-notify--alert slds-notify-alert--theme-texture slds-m-around--medium"/>
+
+    <div class='fundraise-header slds-m-top--small' style='background-image: url(/resource/1458331618000/Fundraising_Headers/{!IF($CurrentPage.parameters.ID==null,"Do",LEFT(Event__c.Location__c,2))}.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+            <div class="slds-container--large slds-container--center">
+                <div class='slds-text-heading--small text-white' style='font-weight:bold'>
+            <p>Congratulations! You've registered for</p>
+            <h2 class="slds-text-heading--large">{!Event__c.Name}</h2>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div>
+        <div>
+        
+        <div class="slds-container--small slds-container--center slds-modal__content">
+                <div class='slds-m-bottom--x-large'>
+        <p class='slds-m-top--large slds-m-bottom--large'>You should receive a welcome email containing the following:</p>
+            <p class='slds-text-body--regular'><ul class='slds-list--dotted'><li>A link to your fundraising page</li><li>Any required forms</li></ul>
+            </p>
+            </div>
+            <!--Pull the 'moreinfo' field and make this text conditional -->
+            <div class='slds-m-bottom--small slds-text-heading--medium slds-m-top--x-large'>
+        Next Steps:
+        </div>
+
+            <div class='slds-box'>
+            <p class='slds-m-top--large'>We still need a bit more info from you, please click below to continue and fill out your personal info.</p>
+            <p class='slds-m-top--large'><apex:outputLink value="/Volunteer_Dashboard" styleclass="slds-button slds-button--brand slds-max-small-button--stretch">Continue</apex:outputLink></p>
+            </div>
+            </div>
+    </div>
+
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+    
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER --> 
+</body>    
+
+<!-- JAVASCRIPT -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+    var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+
+
+$(document).ready(function() {
+    $('body').popoverslds({
+        selector: '[data-aljs="popover"]'
+    });
+});
+    
+    </script>    
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

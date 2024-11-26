@@ -1,0 +1,98 @@
+<apex:page controller="CommunitiesSelfRegConfirmController" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" >
+<header>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+<title>Live Different -- Confirm Sign Up</title>
+       <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</header>
+     <body>
+     <!-- Test tag -->
+     <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+     <div class='slds'>
+     <div id="header-secondary-outer" data-full-width="false" data-permanent-transparent="false" >
+        <div class="container-topnav">
+            <nav class='top-nav'>
+                                
+                                    <ul class="sf-menu">    
+                       <li id="menu-item-2163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2163"><a href="http://store.livedifferent.com">Store</a></li>
+<li id="menu-item-3738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3738"><a href="http://livedifferent.com/contact/">Contact Us</a></li>
+<li id="menu-item-4907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4907"><a href="http://livedifferent.com/donate/">Donate</a></li>
+<apex:panelGroup rendered="{!AND(ISPICKVAL($User.UserType,'Guest'), $Site.LoginEnabled)}"><li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="/login">Login to My.LiveDifferent</a></li></apex:panelGroup>
+<apex:panelGroup rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}"><li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="/Volunteer_Dashboard">My Account</a></li>
+<li id="menu-item-2162" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-2162"><a href="{!$Site.Prefix}/secur/logout.jsp">{!$Label.site.logout}</a></li></apex:panelGroup>
+                    </ul>
+                                
+            </nav>
+        </div>
+    </div>
+  <div class="main-nav-top slds-grid slds-wrap slds-container--x-large slds-container--center slds-p-right--x-large slds-p-left--x-large slds-m-bottom--medium">
+  <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-5 slds-align-middle slds-m-top--large">
+    <a href="/Volunteer_Dashboard"><apex:image url="{!$Resource.Logo_Portal}" style="align: left;" alt="Live Different" width="140" height="33" title="Live Different"/></a>
+    </div>
+    <div id='cssmenu' class='slds-size--1-of-1 slds-medium-size--4-of-5' style='margin-top:25px'>
+    <ul>
+        <li class=''><a href='http://livedifferent.com'>Home</a></li>
+        <li class=''><a href='http://livedifferent.com/builds/'>Builds</a></li>
+        <li><a href='http://livedifferent.com/projects/'>Projects</a></li>
+        <li><a href='http://livedifferent.com/motivational-presentations/'>School Programs</a>
+             <ul>
+               <li><a href='http://livedifferent.com/motivational-presentations/'>Presentations</a></li>
+               <li><a href='http://livedifferent.com/keynotes/'>Keynote Speakers</a></li>
+               <li><a href='http://livedifferent.com/tour-internship/'>Tour Internship</a></li>
+               <li><a href='http://livedifferent.com/band-application/'>Band Application</a></li>
+             </ul>
+        </li>
+        <li><a href='http://livedifferent.com/academy/'>Academy</a></li>
+        <li><a href='http://livedifferent.com/media/'>Media</a>
+            <ul>
+               <li><a href='http://livedifferent.com/moments/'>Moments</a></li>
+               <li><a href='http://livedifferent.com/blog/'>Blog</a></li>
+            </ul>
+        </li>
+        <li><a href='http://livedifferent.com/about-us/'>About Us</a>
+            <ul>
+               <li><a href='http://livedifferent.com/contact/'>Contact Us</a></li>
+               <li><a href='http://livedifferent.com/meet-our-team/'>Meet Our Team</a></li>
+               <li><a href='http://livedifferent.com/partners/'>Partners</a></li>
+               <li><a href='http://livedifferent.com/join-our-team/'>Join Our Team</a></li>
+               </ul>
+        </li>
+    </ul>
+    </div>
+    </div>
+  <div class='slds-m-around--x-large' >&nbsp;</div>
+      <div class="slds-box slds-container--small slds-text-align--center slds-theme--shade slds-container--center slds-m-top--x-large">
+      <div class='slds-p-around--x-large'>
+      <div class='slds-text-heading--medium slds-m-bottom--small'>Thank you for creating your account.</div>
+<div class='slds-text-body--regular'>Before you can register for a build, we need to confirm your email address. You should receive an email within a few minutes containing a link to set a password.</div>
+<a class='slds-button slds-m-top--large' href='https://my.livedifferent.com/secur/forgotpassword.jsp'>Resend Password Reset Email</a>
+                  <br/>
+                  <br/>
+                  
+</div>
+</div>
+      <br/>
+      <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+      </div>
+    </body>
+</apex:page>

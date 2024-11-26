@@ -1,0 +1,156 @@
+<apex:page renderAs="PDF" controller="EventProj" applybodyTag="false">
+<head>
+        <style type="text/css" media="print">
+            /*
+    Created by: Greg Hacic
+    Last Update: 5 August 2015 by Greg Hacic
+    Questions?: greg@interactiveties.com
+    
+
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.floatright {
+    float:right;
+    margin-right:30px;
+}
+
+.smallfont {
+    font-size:11px;
+}
+
+
+.address {
+    font-style:italic;
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+@page {
+    size: 8.5in 11in; /* A4 width and height */
+    /*page numbers in the bottom center of each page in the pdf document */
+    @bottom-right {
+        content: "Builds Project Profile";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @bottom-left {
+        content: "{!EventName}";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+ 
+}
+
+@page:first {
+    size: 8.5in 11in; /* A4 width and height */
+    /*page numbers in the bottom center of each page in the pdf document */
+    @bottom-right {
+        content: "";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+    @bottom-left {
+        content: "";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+    }
+ 
+}
+
+                .header {
+                    height:350px;
+                    width:100%;
+                    margin-bottom:10px;
+                    overflow:hidden;
+                }
+               
+                .content {
+                    width:64%;
+                    margin-right:20px;
+                    font-size:12px;
+                    margin-top:20px;
+                }
+                
+                .sidebar {
+                    float:right;
+                }
+                .projecttitle {
+                    
+                    color:#000000;
+                    font-size:25px;
+                    font-weight:bold;
+                    padding-bottom:5px;
+                }
+                .country {
+                    font-size:14px;
+                    font-weight:bold;
+                    padding-top:35px;
+                    margin-bottom:20px;
+                    line-height:20px;
+                }
+               .logo {
+               text-align:center;
+               margin-top:-20px;
+               }
+               .printdiv {
+                   page-break-before:always !important;
+                   margin-top:5px;
+               }
+               .paragraph {
+               line-height:16px;
+               }
+        </style>
+    </head>
+    <body>
+    <div style="">
+    <div style='padding:0px;text-align:left'><div style='height:700px'>&nbsp;</div>
+    <div style='font-size:25px;font-weight:bold;color:#000;padding-top:12px'>{!EventName}</div>
+    <div style=''>Project Profiles</div>
+    <div style='text-align:right;margin-top:120px'><img src='{!URLFOR($Resource.buildslogo_b)}' style='width:130px' /></div>
+    
+    </div>
+    </div>
+        <apex:repeat value="{!EventProj}" var="proj" >
+    <div class='printdiv'>
+    <div>
+        <div class='logo'>
+        <img src='{!URLFOR($Resource.logoblack)}' width="140px" />
+        </div>
+        <div class='header'>
+            <apex:repeat value="{!proj.Attachments}" var="header">
+                <apex:outputPanel rendered="{!IF(header.Name = 'Header.jpg',true,false)}" layout="none">
+                    <img src="{!'/servlet/servlet.FileDownload?file=' + header.Id}" width='100%' />
+                    </apex:outputPanel>
+                </apex:repeat>
+        </div>
+    </div>
+    <div>
+        <div class='sidebar'>
+            <div class='country'>
+            Country: {!proj.Country__c}<br />
+            Community: {!proj.Community__c}
+            </div>
+            <apex:repeat value="{!proj.Attachments}" var="img" >
+                <apex:outputPanel layout="none" rendered="{!IF(img.Name != 'Header.jpg',true,false)}">
+                <div class='thumbs'>
+                      <img src="{!'/servlet/servlet.FileDownload?file=' + img.Id}" width="200" />
+                 </div>
+                    </apex:outputPanel> 
+            </apex:repeat>
+        </div>
+        <div class='content'>
+        <div class='projecttitle'>
+        {!proj.Family_Project_Name__c}
+        </div>
+        <apex:outputText escape="false" value="{!proj.Description__c}" styleClass="paragraph" />
+        </div>
+    </div>
+    <div style='clear:both'></div>
+    </div>
+    </apex:repeat>
+    
+    </body>
+</apex:page>

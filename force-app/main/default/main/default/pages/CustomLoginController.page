@@ -1,0 +1,108 @@
+<apex:page sidebar="false" controller="CustomLoginController" showheader="false" standardStylesheets="false">
+<apex:form >
+<html lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <head>
+      <title>Sign In | Live Different</title>
+        <script>
+          dataLayer = [{
+            'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+          }];
+        </script>
+      <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+      <!-- End Google Tag Manager -->
+    <meta property="og:title" content="Login to your My Live Different Account" />
+    <meta property="og:url" content="https://my.livedifferent.com/SignIn" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="With Live Different Builds, you'll have the opportunity to make a difference as you join community leaders, contractors, and our staff, to build houses or complete other needed projects in the developing world. Volunteer on a Live Different Build and expand your worldview!" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet' />
+    <!-- Bootstrap core CSS -->
+    <apex:stylesheet value="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" />
+    <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+    <!-- Custom styles for this template -->
+    <style>
+    html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+    </style>
+  </head>
+
+  <body class='text-center'>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  
+      <form class="form-signin">
+      <img class="mb-4" src="https://my.livedifferent.com/servlet/servlet.ImageServer?id=01550000001pYZq&oid=00D300000000n3I&lastMod=1447787321000" alt="" width="72" height="72" />
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <apex:inputtext value="{!username}" styleClass="form-control" html-placeholder="Email"/>
+      <label for="inputPassword" class="sr-only">Password</label>
+            <apex:inputsecret value="{!password}" styleClass="form-control" html-placeholder="Password"/>
+            <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+                <apex:commandbutton value="Login" action="{!doLogin}" styleClass="btn btn-lg btn-primary btn-block"/>
+      <p class="mt-5 mb-3 text-muted"><a href='https://my.livedifferent.com/secur/forgotpassword.jsp'>Forgot Your Password?</a></p>
+      <p class="mt-5 mb-3 text-muted"><a href='https://my.livedifferent.com/SignUp'>Create an account</a></p>
+    </form>
+</body>
+</html>
+</apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page sidebar="false" showHeader="false" >
+<html>
+  <head>
+  </head>
+  <body>
+  <chatter:feed entityId="{!$User.Id}"/>
+  </body>
+  </html>
+</apex:page>

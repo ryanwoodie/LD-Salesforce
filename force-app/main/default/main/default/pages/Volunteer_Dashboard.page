@@ -1,0 +1,814 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="CustomerUserID" Action="{!checknewuser}">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>LiveDifferent Volunteer Portal -- Dashboard</title>
+  <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <apex:includeScript value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Scripts, 'bootstrap-tour-standalone.min.css')}" />
+  <style>
+  .slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+}
+
+.fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+    z-index:-1;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+    z-index:0;
+}
+
+.fundraise-inner {
+    padding:270px 12px 100px 12px;
+    position:relative;
+    
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.hp_bg-image {
+    color:#fff;
+    height:100px;
+    padding:30px;
+    text-align:center;
+    font-weight:bold;
+    background-size:cover;
+    border-radius:8px;
+}
+
+.popover.tour {
+   z-index:1200 !important;
+}
+
+.slds-hard-float--left {
+float:left !important;
+}
+
+.slds-text-heading--custom {
+font-size:15px !important;
+line-height:20px !important;
+}
+  </style>
+</head>          
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->    
+  <!-- REQUIRED SLDS WRAPPER -->
+  <apex:outputPanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">
+  
+  <div ID="Inner" class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    
+    <!-- / MASTHEAD -->    
+
+    <!-- PAGE HEADER -->
+<div class="slds-page-header slds-container--large slds-container--center slds-m-top--medium" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid slds-wrap slds-max-width--large">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+         
+        </div>
+        
+
+        <div class="slds-media__body">
+          
+          <h1 class="slds-text-heading--medium slds-m-top--large">Hi, {!Contact.FirstName} {!Contact.LastName}</h1>
+        <!-- Address was here -->
+        
+        </div>
+        </div>
+      </div>
+          <div ID="nextBuild" class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2">
+    </div>
+
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+<!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+    <!-- / PAGE HEADER -->    
+<div class='slds-m-top--medium'>
+   <div class="slds-media slds-media--center slds-togglevis slds-text-align--center">
+       <div class='slds-media__body slds-text-body--small' ><a href='' class='slds-text-align--center'>Click here for help</a></div>
+   </div>
+   <div id="SHelp" class="shtoggle slds-SHdefault slds-collapsed slds-text-align--center slds-container--small slds-container--center" role="SH" aria-labelledby="Showhelp">
+<div class='slds-box slds-m-top--medium'><div class='slds-text-heading--medium'>Need help?</div>
+<div class='slds-text-body--small'>Call us at (866) 432 4464 or email info@livedifferent.com.</div>
+<button class='slds-m-top--small slds-button' onclick="tour.restart();">Take the tour again</button>
+</div>
+</div>
+   </div>
+    <!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp slds-container--large slds-container--center">
+<div class="slds-tabs--default slds-m-top--medium slds-m-bottom--xx-large slds-box slds-theme--neutral" style="background-color:#FFF" id="MyInfo">
+  <ul class="slds-tabs--default__nav" role="tablist">
+    <li class="slds-tabs__item slds-text-heading--label slds-active" title="Tab1" role="presentation"><a href="" role="tab" ID="Tab1" tabindex="0" aria-selected="true" aria-controls="tab-default-1" onclick="selectTab(this);" >Personal Info</a></li>
+    <li class="slds-tabs__item slds-text-heading--label" title="Tab2" role="presentation"><a href="" role="tab" ID="Tab2" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" onclick="selectTab(this);" >Emergency Contact</a></li>
+    <li class="slds-tabs__item slds-text-heading--label" title="Tab3" role="presentation"><a href="" role="tab" ID="Tab3" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" onclick="selectTab(this);" >Medical</a></li>
+  </ul>
+  <div id="tab-default-1" class="slds-tabs__content slds-show" role="tabpanel" aria-labelledby="Tab1">
+      <div class="slds-grid slds-wrap slds-page-header__detail-row">
+      
+        <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Address</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.MailingStreet}<br />{!Contact.MailingCity}, {!Contact.MailingState}   {!Contact.MailingPostalCode}</p>
+  </div>
+</div>
+  </div>
+  
+      <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Birthdate</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Contact.Birthdate}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+
+  <!-- TAB INFO / ROW 1 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Gender</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!IF(ISBLANK(Contact.Male_Female__c),"I am ....",Contact.Male_Female__c)}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Email</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Email}</p>
+  </div>
+</div>
+  </div>
+
+</div>
+    <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Alternate Email</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Email_Alternate__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Mobile</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.MobilePhone}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Home Phone</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.HomePhone}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+
+</div>
+  </div>
+
+</div>
+<!-- / TAB INFO DETAIL ROW -->
+<div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 3 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Passport #</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Passport_Number__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 3 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Full Passport Name</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Passport_Name__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 3 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Passport Expiry</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class=""><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!Contact.Passport_Expiry__c}" />
+         </apex:outputText></p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 3 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  
+  </div>
+</div>
+<center>
+          <apex:outputLink value="/apex/Contact_Edit" styleclass="slds-button slds-button--neutral slds-max-small-button--stretch">Edit</apex:outputLink>
+        </center>
+  </div>
+  <div id="tab-default-2" class="slds-tabs__content slds-hide" role="tabpanel" aria-labelledby="Tab2">
+      <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+
+  <!-- TAB INFO / ROW 1 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Emergency Contact name</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Emergency_Contact__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">EC Relationship</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.E_C_Relationship__c}</p>
+  </div>
+</div>
+  </div>
+
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">EC Email</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.E_C_Email_Address__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">EC Home Phone</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.E_C_Home_Phone__c}</p>
+  </div>
+</div>
+  </div>
+  
+  </div>
+<!-- / TAB INFO DETAIL ROW -->
+<!-- / TAB INFO DETAIL ROW -->
+<div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">EC Work Phone</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.E_C_Work_Phone__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">EC Cell Phone</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.E_C_Cell_Phone__c}</p>
+  </div>
+</div>  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+    <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Parent / Guardian Name</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="">{!Contact.Parent_Name__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Parent / Guardian Email</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Email_parents__c}</p>
+  </div>
+</div>
+  </div>
+
+</div>
+<center>
+          <apex:outputLink value="/apex/ec_edit" styleclass="slds-button slds-button--neutral slds-max-small-button--stretch">Edit</apex:outputLink>
+        </center>
+
+</div>
+<div id="tab-default-3" class="slds-tabs__content slds-hide" role="tabpanel" aria-labelledby="Tab3">
+    <div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 1 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Health Card #</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Health_Card__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Medical Conditions</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Medical_Conditions__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Doctors Permission</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Doctor_s_Permission__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 1 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Allergies</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Allergies__c}</p>
+  </div>
+</div>
+  </div>
+
+</div>
+<!-- / TAB INFO DETAIL ROW -->
+<!-- / TAB INFO DETAIL ROW -->
+<div class="slds-grid slds-wrap slds-page-header__detail-row">
+
+  <!-- TAB INFO / ROW 2 / COLUMN 1 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4 slds-m-bottom--large">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Medical Comments</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Medical_Condition_Comments__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 2 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Dietary Restrictions</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Dietary_Restrictions__c}</p>
+  </div>
+</div>
+  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 3 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+  <div class="slds-tile">
+  <p class="slds-tile__title slds-truncate">Medications</p>
+  <div class="slds-tile__detail slds-text-body--small">
+    <p class="slds-truncate">{!Contact.Medications__c}</p>
+  </div>
+</div>  </div>
+
+  <!-- TAB INFO / ROW 2 / COLUMN 4 -->
+  <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-4">
+    
+  </div>
+
+</div>
+<center>
+          <apex:outputLink value="/apex/medical_edit" styleclass="slds-button slds-button--neutral slds-max-small-button--stretch">Edit</apex:outputLink>
+        </center>
+
+  </div>
+  </div>
+</div>
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-wrap slds-m-top--large slds-container--large slds-container--center">
+
+<!-- MAIN CARD -->
+<div class="slds-col slds-col--pull-padded slds-m-bottom--large slds-size--1-of-1 slds-medium-size--3-of-4 slds-col-padded" id="Registrations">
+
+  <div class="slds-card">
+
+    <header class="slds-card__header slds-grid">
+      <div class="slds-col slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS0120, 'assets/icons/standard-sprite/svg/symbols.svg#event')}"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <h3 class="slds-text-heading--small">Registrations</h3>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- CARD BODY = TABLE -->
+    <section class="slds-card__body">
+      <div id="buildList" class="slds-scrollable--x">
+      <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+          <thead>
+              <tr class="slds-text-heading--label">
+                  <th class="slds-is-sortable" scope="col">Build</th>
+                  <th scope="col">Alerts</th><th scope="col">Start Date</th>
+                  <th scope="col">Amount Fundraised</th>
+                  <th scope="col">Fundraising Goal</th>
+              </tr>
+          </thead>
+          <tbody>
+      <apex:repeat rendered="true" var="rg" value="{!reg}">
+          <tr class="slds-hint-parent">
+              <th data-label="Build" role="row"><apex:outputPanel rendered="{!if(rg.Stage__c == 'Application Received',true,false)}" layout="none">{!rg.Name}</apex:outputPanel><apex:outputPanel rendered="{!if(rg.Stage__c != 'Application Received',true,false)}" layout="none"><a href="/{!IF(rg.RecordType.name == 'International Tour','RegistrationTour','Registration')}?ID={!rg.Id}">{!rg.Name}</a></apex:outputPanel></th>
+              <td class="slds-size--1-of-5" data-label="Alerts"><apex:outputPanel rendered="{!if(rg.Stage__c == 'Application Received',true,false)}">Pending Approval</apex:outputPanel><apex:outputPanel rendered="{!if(rg.Quickflag__c == true && rg.Stage__c != 'Application Received',true,false)}"><span class="slds-icon__container"><svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small"><use xlink:href="/resource/1450498157000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#success"></use></svg><span class="slds-assistive-text">Success Icon</span></span></apex:outputPanel><apex:outputPanel rendered="{!if(rg.Quickflag__c == false && rg.Stage__c != 'Application Received',true,false)}"><span class="slds-show--inline-block slds-p-around--x-small" tabindex="1" data-aljs="popover-slds" data-aljs-placement="top" title="You have some actions to complete for this trip."><svg aria-hidden="true" class="slds-icon slds-icon-text-warning slds-icon--small"><use xlink:href="/resource/1450498157000/SLDS0120/assets/icons/utility-sprite/svg/symbols.svg#warning"></use></svg><span class="slds-assistive-text">Warning Icon</span></span></apex:outputPanel></td>
+              <td class="slds-size--1-of-5" data-label="Start Date"><apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!rg.Trip_Start_Date__c}" /></apex:outputText></td>
+              <td class="slds-size--1-of-5" data-label="Amount Fundraised">${!rg.Amount__c}</td>
+              <td class="slds-size--1-of-5" data-label="Fundraising Goal">${!rg.Fundraising_Goal__c}</td>
+          </tr>
+      </apex:repeat>
+          </tbody>
+          </table>
+      </div>
+    </section>
+    <!-- / CARD BODY = SECTION + TABLE -->
+
+    <footer class="slds-card__footer">
+     
+    </footer>
+  </div>
+<apex:outputLink styleClass="slds-button slds-button--neutral slds-max-small-button--stretch slds-m-top--medium" value="/Build_List">New Registration</apex:outputLink>
+</div>
+<apex:outputPanel rendered="{!if(Event.size != 0,true,false)}" layout="none">
+<div id="" class="slds-col slds-col--pull-padded slds-m-bottom--large slds-size--1-of-1 slds-col-padded">
+        <div class="">
+            <div class="slds-card">
+                <header class="slds-card__header slds-grid">
+                    <div class="slds-col slds-media slds-media--center">
+                        <div class="slds-media__figure">
+                            <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                                <use xlink:href="{!URLFOR($Resource.SLDS0120, 'assets/icons/standard-sprite/svg/symbols.svg#event')}">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="slds-media__body">
+                            <h3 class="slds-text-heading--small">Builds I'm Organizing</h3>
+                        </div>
+                    </div>
+                </header>
+                    <section class="slds-card__body">
+                        <div class="slds-scrollable--x">
+                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <th class="slds-is-sortable" scope="col">Build</th>
+                                        <th scope="col">Registrations</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">Indv. Goal</th>
+                                        <th scope="col">Total Raised</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <apex:repeat rendered="true" value="{!Event}" var="ev">
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="Event Name" role="row"><a href="/vol_list?ID={!ev.Id}">{!ev.Name}</a></th>
+                                        <td class="slds-size--1-of-5" data-label="Registrations">{!ev.Registrations__c}</td>
+                                        <td class="slds-size--1-of-5" data-label="date"><apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!ev.Trip_Start_Date__c}" /></apex:outputText></td>
+                                        <td class="slds-size--1-of-5" data-label="Fundraising Goal">${!ev.Fundraising_Goal__c}</td>
+                                        <td class="slds-size--1-of-5" data-label="Total Raised">${!ev.reg_fundraising_to_date__c}</td>
+                                    </tr>
+                                </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                   </section>
+              </div>
+          </div>
+  </div>
+  </apex:outputPanel>
+  <apex:outputPanel rendered="{!if(childcontact.size > 0,true,false)}" layout="none">
+<div id="" class="slds-col slds-col--pull-padded slds-m-bottom--large slds-size--1-of-1 slds-col-padded">
+        <div class="">
+            <div class="slds-card">
+                <header class="slds-card__header slds-grid">
+                    <div class="slds-col slds-media slds-media--center">
+                        <div class="slds-media__figure">
+                            <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                                <use xlink:href="{!URLFOR($Resource.SLDS0120, 'assets/icons/standard-sprite/svg/symbols.svg#event')}">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="slds-media__body">
+                            <h3 class="slds-text-heading--small">People</h3>
+                        </div>
+                    </div>
+                </header>
+                    <section class="slds-card__body">
+                        <div class="slds-scrollable--x">
+                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <th class="slds-is-sortable" scope="col">Name</th>
+                                        <th scope="col">Birthdate</th>
+                                        <th scope="col">Criminal Check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <apex:repeat rendered="true" value="{!childcontact}" var="ev">
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="Account" role="row"><a href="/sub_contact_info?ID={!ev.Id}&retURL=%2FVolunteer_Dashboard">{!ev.Name}</a></th>
+                                        <td class="slds-size--1-of-5" data-label="Birthdate"><apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!ev.Birthdate}" /></apex:outputText></td>
+                                        <td class="slds-size--1-of-5" data-label="Criminal Check"><apex:outputText value="{0,date,MMM dd, yyyy}"><apex:param value="{!ev.Police_Check__c}" /></apex:outputText></td>
+                                    </tr>
+                                </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                   </section>
+              </div>
+          </div>
+  </div>
+  </apex:outputPanel>
+
+<!-- / MAIN CARD -->
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+<div class="panel-body">
+                       
+                        </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+    <!-- FOOTER -->
+    <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+    <!-- / FOOTER --> 
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+</apex:outputPanel>
+<apex:outputPanel rendered="{!ISPICKVAL($User.UserType,'Guest')}">
+<style>
+.imglink {
+position:relative;
+}
+
+.imglink::before {
+    content: '';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: .2;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    z-index:0;
+}
+
+.imglink:hover::before {
+    opacity: .6;
+}
+
+.linktext {
+z-index:100;
+}
+</style>
+<div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+<div class='fundraise-header' style="background-image: url({!URLFOR($Resource.myimages, '/hp/hp_home.jpg')})">
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <div class="slds-col slds-col--padded slds-size--1-of-1">
+        <div class='slds-text-heading--large text-white slds-text-align--center' style='font-weight:bold'>
+        Welcome to 'My LiveDifferent'
+        </div>
+        <div class='slds-text-heading--medium text-white slds-text-align--center'>
+        Manage your registrations and fundraising efforts here.
+        </div>
+        </div>
+      </div>
+      </div>
+</div>
+<div class='slds-m-top--large slds-m-bottom--large slds-container--small slds-container--center'>
+    <a href='/login'>
+    <div class='hp_bg-image slds-m-bottom--large imglink' style="background-image: url({!URLFOR($Resource.myimages, '/hp/hp_login.png')});width:100%">
+    <div class='slds-text-heading--medium linktext'>Login to your 'My LiveDifferent' Account</div>
+    </div></a>
+    <a href='/Build_List'>
+<div class='hp_bg-image slds-m-bottom--large imglink' style="background-image: url({!URLFOR($Resource.myimages, '/hp/hp_build.png')})">
+    <div class='slds-text-heading--medium linktext'>Join a Build</div>
+    </div></a>
+    <a href='/fundraisersearch'>
+<div class='hp_bg-image slds-m-bottom--large imglink' style="background-image: url({!URLFOR($Resource.myimages, '/hp/hp_build.png')})">
+    <div class='slds-text-heading--medium linktext'>Support a Volunteer</div>
+    </div></a>
+    
+    
+</div>
+<apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+</div>
+</apex:outputPanel>
+</body>  
+<apex:outputPanel rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}">  
+
+<!-- JAVASCRIPT -->
+<script>
+
+  $( "div.slds-togglevis" ).click(function() {
+    $( this ).next().toggleClass( "slds-collapsed slds-expanded" );
+});
+
+
+  
+function selectTab(elmnt) {
+    // slds-active
+    $(elmnt).parent("li").siblings(".slds-active").removeClass("slds-active");
+    $(elmnt).parent("li").addClass("slds-active");
+
+    // tabindex
+    $(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+    $(elmnt).attr("tabindex", 0);
+
+    // aria-selected
+    $(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+    $(elmnt).attr("aria-selected", true);
+
+    // hiding previouly selected tab slds-show/slds-hide
+    $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").addClass("slds-hide");
+    $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").removeClass("slds-show");
+    // displaying newly selected tab (slds-show/slds-hide)
+    $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").addClass("slds-show");
+    $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").removeClass("slds-hide");
+};
+
+var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+
+$(document).ready(function() {
+    $('body').popoverslds({
+        selector: '[data-aljs="popover-slds"]'
+    });
+});
+
+</script>
+<script>
+// Instance the tour
+var tour = new Tour({
+  name:"Dashboard",
+  container:"#Inner",
+  template:"<div class='slds-popover slds-popover--tooltip slds-nubbin--bottom popover tour'><div class='popover-title slds-text-heading--medium slds-text-align--center'></div><div class='popover-content slds-text-align--center slds-popover__body slds-m-bottom--x-small slds-m-top--x-small slds-text-heading--custom'></div><div class='popover-navigation slds-clearfix'><button class='slds-button slds-button--neutral slds-float--left' data-role='prev'>« Prev</button><button class='slds-p-left--large slds-float--left slds-button slds-hard-float--left' style='color:#fff' data-role='end'>End tour</a></button><button class='slds-button slds-button--neutral slds-float--right' data-role='next'>Next »</button></div></div>",
+  steps: [
+  {
+    orphan:true,
+    title: "Welcome!",
+    content: "You're ready to start your journey with Live Different!"
+  },
+  {
+    element: "#MyInfo",
+    title: "Your Information",
+    content: "Edit your personal, Emergency Contact, and Medical info here.",
+    placement: "top"
+  },
+  {
+    element: "#Registrations",
+    title: "Registration List",
+    content: "When you sign up for an event, it will appear here. Click on the event name to continue to your registration page.",
+    placement: "top"
+  }
+],
+    backdrop: true,
+    backdropContainer: 'body',
+    backdropPadding: 5
+});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+
+tour.start();
+</script>
+</apex:outputPanel>
+<!-- / JAVASCRIPT -->    
+
+</html>
+</apex:page>

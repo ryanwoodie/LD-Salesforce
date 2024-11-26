@@ -1,0 +1,147 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" Controller="EventListConPub">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">      
+
+<head>
+  <title>Volunteer Trips | Live Different Builds</title>
+  <meta name="description" content="Join us on a Volunteer Trip and help with meaningful projects abroad. Live Different Builds are about dignity, change, relationship and hope." />
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  .text-white {
+  color:#fff !important;
+  }
+  
+    .fundraise-header {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    margin:0px -8px;
+    z-index:-1;
+}
+
+.fundraise-header::before {   
+    background: linear-gradient(transparent, #000);
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .8;
+    z-index:0;
+}
+
+.fundraise-inner {
+    padding:100px 12px 50px 12px;
+    position:relative;
+    
+}
+
+body {
+    margin: 0px;
+}
+  </style>
+</head>     
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  
+  <div class='slds'>
+  <apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+   <div class='fundraise-header' style='background-image: url(/resource/1458331618000/Fundraising_Headers/Do.jpg);'>
+    <div class='slds-m-bottom--large fundraise-inner slds-container--large slds-container--center'>
+        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+        <div class="slds-col slds-col--padded slds-size--1-of-1 slds-text-align--center">
+        <div class='slds-text-heading--large text-white' style='font-weight:bold'><h1>
+        UPCOMING BUILDS</h1>        </div>
+        <div class='slds-text-body--medium slds-m-top--medium text-white'>
+          These Builds are open to anyone 14 or older (unless accompanied by a parent or guardian)
+          </div>
+          </div>
+        </div>
+</div> 
+</div>
+<div class='slds-container--large slds-container--center'>
+  <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+  <thead>
+    <tr class="slds-text-heading--label">
+      <th class="" scope="col">
+        <span class="slds-truncate">Build Name</span>
+        <button class="slds-button slds-button--icon-bare">
+          <svg aria-hidden="true" class="slds-button__icon slds-button__icon--small">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+          </svg>
+          <span class="slds-assistive-text">Sort</span>
+        </button>
+      </th>
+      <th scope="col">
+        <span class="slds-truncate slds-is-sortable">Start Date</span>
+      </th>
+      <th scope="col">
+        <span class="slds-truncate">Location</span>
+      </th>
+      <th scope="col">
+        <span class="slds-truncate"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody style='background-color:#F5F5F5'>
+    <apex:repeat value="{!events}" var="string" id="theRepeat">
+    <apex:outputPanel rendered="true">
+        <tr class="slds-hint-parent">
+      <th data-label="Build-name" role="row"><a href="/event/{!string.C_Url__c}" class="slds-truncate" target="_top"><apex:outputText value="{!string.name}" id="BuildName"/></a></th>
+      <td data-label="Start Date"><apex:outputText value="{0,date,MMM dd, yyyy}">
+                   <apex:param value="{!string.Trip_Start_Date__c}" />
+         </apex:outputText></td>
+      <td data-label="Location">
+        <span class="slds-truncate"><apex:outputText value="{!string.Location__c}" id="Location"/></span>
+      </td>
+      <td data-label="">
+        <span class=""><a href="/event/{!string.C_Url__c}" class="slds-button slds-button--brand slds-button--small" target="_top">Details</a></span>
+      </td>
+    </tr>
+    </apex:outputPanel>
+    </apex:repeat>
+  </tbody>
+</table>
+<div class='slds-container--small slds-container--center slds-text-align--center slds-box slds-theme--neutral slds-m-top--x-large'>
+<div class=''>If you are joining an existing Private Build, click below</div>
+<a href='/private_trips' class='slds-text-heading--medium slds-m-top--xx-large slds-button slds-button--brand'>Private Builds</a>
+</div>
+</div>
+
+<apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert>
+</div>
+  </body>
+  <script>
+    
+  </script>
+  </html>
+</apex:page>

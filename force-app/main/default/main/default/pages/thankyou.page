@@ -1,0 +1,33 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>Live Different Volunteer Portal -- Thank You!</title>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  <style>
+  </style>
+
+</head>          
+
+<body>    
+<apex:insert name="Google Tag Manager">
+    <c:GTM />
+    
+  </apex:insert>  
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert>
+    <!-- MASTHEAD -->
+    <div class='slds-container--medium slds-container--center slds-m-top--x-large'>
+  <div class='slds-text-heading--large slds-text-align--center'>Thank you for for your donation!</div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+  </div>
+  </body>
+  </html>
+</apex:page>

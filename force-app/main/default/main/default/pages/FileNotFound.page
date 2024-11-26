@@ -1,0 +1,67 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"  title="{!$Label.site.file_not_found}" cache="false">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <header>
+  <apex:insert name="Script">
+    <c:SiteScript />
+  </apex:insert>
+  </header>
+  <div class="slds">
+  <apex:insert name="header">
+    <c:SiteHeader />
+    <hr/>
+  </apex:insert> 
+    <div role="dialog" class="" id="">
+    <div class="slds-modal__container slds-box">
+        <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">Oops!</h2>
+        </div>
+                <div class="slds-modal__content">
+        
+            <div>
+                <span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+<div class='slds-grid slds-wrap'>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--1-of-4 slds-text-align--center slds-m-bottom--large'>
+<span class="slds-icon__container">
+  <svg aria-hidden="true" class="slds-icon slds-icon-text-warning">
+    <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+  </svg>
+  <span class="slds-assistive-text">Warning Icon</span>
+</span>
+</div>
+<div class='slds-col slds-size--1-of-1 slds-medium-size--3-of-4 slds-text-align--center'>
+<p>
+<apex:outputText styleClass="title" value="{!$Label.site.error}">
+                   <apex:param value="{!$Label.site.page_not_found_detail}"/>
+                   <!-- this parameter needs to be italic in the site.error label -->
+                  </apex:outputText>
+</p>
+<p>
+<apex:outputText escape="false" value=" {!$Label.site.get_in_touch}">
+                   <apex:param value="mailto:{!$Site.AdminEmailAddress}"/>
+                   <apex:param value="{!$Label.site.email_us}"/>
+                  </apex:outputText>
+</p>
+</div>
+</div>
+        </div>
+        </div>
+        <div class="slds-modal__footer slds-modal__footer">
+        <div class="slds-x-small-buttons slds-text-align--center">
+            <a href='/apex/Volunteer_Dashboard' class="slds-button slds-button--brand">Home</a>
+            </div>
+        </div>
+<apex:messages />
+    </div>
+
+</div>
+    <!-- / PRIMARY CONTENT WRAPPER --> 
+    
+
+  </div>
+  </html>
+</apex:page>

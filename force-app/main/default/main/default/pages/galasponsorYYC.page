@@ -159,23 +159,8 @@ div#___plusone_0 {
     
     .IATS_PaymentItemDiv label { 
       font-family:effra, Arial, Helvetica, sans-serif !important;
-
-      
 } 
-.IATS_AmountSpan {
-        position: relative;
-    }
-    
-    .IATS_PaymentInputField[type="text"],
-    .IATS_OtherAmount {
-        text-align: right;
-    }
-    
-    .IATS_RadioAmtLabel {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+
   </style>
 </head>          
 
@@ -285,59 +270,6 @@ window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
     
     
 });
-
- // Add this new function for amount formatting
- function formatAmountWithCommas() {
-    function formatNumber(num) {
-      return parseFloat(num).toLocaleString('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      });
-    }
-
-    // Format all amount spans
-    const amountSpans = document.querySelectorAll('.IATS_AmountSpan');
-    amountSpans.forEach(span => {
-      const amount = span.textContent.replace(/[^0-9.]/g, '');
-      if (amount) {
-        span.textContent = formatNumber(amount);
-      }
-    });
-
-    // Format other amount input
-    const otherAmount = document.querySelector('.IATS_OtherAmount');
-    if (otherAmount) {
-      otherAmount.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/[^0-9.]/g, '');
-        if (value) {
-          e.target.value = formatNumber(value);
-        }
-      });
-    }
-
-    // Format total amount when it changes
-    const totalDiv = document.querySelector('.IATS_TotalDiv');
-    if (totalDiv) {
-      const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          if (mutation.type === 'childList') {
-            const amount = totalDiv.textContent.replace(/[^0-9.]/g, '');
-            if (amount) {
-              totalDiv.textContent = totalDiv.textContent.replace(/[\d,]+\.\d+/, formatNumber(amount));
-            }
-          }
-        });
-      });
-
-      observer.observe(totalDiv, { childList: true, subtree: true });
-    }
-  }
-
-  // Wait for IATS form to load then initialize formatting
-  window.addEventListener('IATS_LOADCOMPLETE', formatAmountWithCommas);
-  
-  // Rerun formatting after any form changes
-  window.addEventListener('IATS_AMOUNTCHANGED', formatAmountWithCommas);
   </script>
   </html>
 </apex:page>

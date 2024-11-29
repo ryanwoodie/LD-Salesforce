@@ -1,0 +1,285 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Registration__c">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <title>LiveDifferent — Donate</title>
+    <script>
+  dataLayer = [{
+    'uid' : '{!IF(NOT(ISPICKVAL($User.UserType,'Guest')),$User.ID,"")}'
+  }];
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQ7HM');</script>
+<!-- End Google Tag Manager -->
+   <apex:stylesheet value="{!URLFOR($Resource.SLDS100, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="https://use.typekit.net/ugb5zno.css" />
+  <apex:stylesheet value="{!URLFOR($Resource.custom_styles)}" />
+  <apex:includeScript value="{!URLFOR($Resource.jquery214)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.Menustyle, 'styles.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.Menustyle, 'script.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/moment.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.ALJS20, 'js/jquery.aljs-all.min.js')}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <style>
+  .IATS_Div {
+      margin:0px auto !important;
+  }
+  
+  .slds-custom_rt li {
+  list-style:disc;
+  margin-left:1.5rem;
+  }
+  .slds-button_cwidth {
+  width: 70%;
+  }
+
+.fundraise-inner {
+    padding:15px 12px 50px 12px;
+    position:relative;
+    
+}
+
+.text-black {
+    color:#000 !important;
+}
+
+.slds-footer_ {
+    background-color:#000;
+    margin:-8px;
+    padding:0px 0px;
+    color:#b1b3b6;
+}
+
+.slds-footer_1 {
+    padding:20px 8px;
+    height:100px;
+}
+
+.slds-footer_2 {
+    padding:20px 8px;
+    border-top: 1px solid #686b6d;
+}
+
+div#___plusone_0 {
+   vertical-align:bottom !important;
+   }
+   
+   #IATS_PaymentItemDiv_Item4 {
+   height:70px;
+   }
+   
+   #IATS_PaymentItemDiv_Item6 {
+   height:45px;
+   width:auto;
+   }
+   #IATS_PaymentItemDiv_Item7 {
+   height:45px;
+   width:auto;
+   margin-bottom:40px;
+   }
+   
+   span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
+     color:#000 !important;
+   }
+   
+   button.IATS_Action {
+   background:#000 !important;
+   border:1px solid #000 !important;
+   }
+
+   /* justincode - this pulls in the style sheet with effra */
+   /*@import url("https://use.typekit.net/ugb5zno.css");*/
+     /* justincode - this pulls in the style sheet with effra */
+   /*@import url("https://use.typekit.net/ugb5zno.css");*/
+   /* into the main html page code style tag */
+    
+    
+    /* removes the unwanted 8px margin on everything - might help especially with mobile */
+    body{
+        margin:0px !important;
+    }
+    
+
+    /* fixes the margin on the footer */
+    #footer-outer .slds-container--large, #footer-outer .slds-container--center{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    
+        .IATS_PaymentInputField, .IATS_InputRequired, .IATS_OtherAmount{
+        box-shadow: inset 0 0px 0px 0 rgba(0,0,0,0.45) !important;
+    }    
+    
+    
+    
+    
+    span.IATS_AmountSpan{
+        margin-top:5px !important;
+        margin-left:32px !important;
+    }
+    
+    
+    .IATS_RadioAmtLabel span.IATS_AmountSpan{
+        margin-top:0px !important;
+        margin-left:0px !important;
+    }
+    
+    
+    .IATS_OtherAmtMinimum{
+        font-family:effra, Arial, Helvetica, sans-serif !important;
+        font-weight:400 !important;
+        font-style: normal !important;
+       letter-spacing: 0.025em !important;
+       color: #000000 !important;
+        font-size: 12px !important;
+    }
+    
+    
+    .IATS_TotalDiv{
+        font-family:effra, Arial, Helvetica, sans-serif !important;
+        font-weight:500 !important;
+        font-style: normal !important;
+       letter-spacing: 0.025em !important;
+       /* color: #737373 !important; */
+       color: #000000 !important; 
+    }
+    
+    #IATS_PaymentItemDiv_Comment .IATS_PaymentLabelOnLeft{
+        font-family:effra, Arial, Helvetica, sans-serif !important;
+        /* font-weight:700 !important; */
+        font-style: normal !important;
+       letter-spacing: 0.025em !important;
+       /* color: #737373 !important; */
+       color: #000000 !important;     
+        }
+    
+    #IATS_Payment_AccountTypeDiv .IATS_RadioPaymentLabel{
+        padding-top: 0px !important;
+    }
+    
+    .IATS_PaymentItemDiv label { 
+      font-family:effra, Arial, Helvetica, sans-serif !important;
+} 
+
+      
+     .IATS_InnerDiv {
+     background-color: transparent !important
+     }
+     
+     .IATS_Div {
+     background-color: transparent !important
+     }
+
+  .IATS_SelectItemsSubDiv
+  {
+  display: flex;
+  }
+
+  </style>
+</head>          
+
+<body>  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQ7HM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+<!-- <apex:insert name="header">
+    <c:SiteHeader />
+  </apex:insert> -->
+    <!-- MASTHEAD -->
+    <div class='slds-container--large slds-container--center slds-text-align--center'>
+    <div class='slds-grid slds-wrap'>
+    <div class='slds-col slds-size--1-of-1'>  
+  <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PACCC8680F5FFB1768&HideRecurringEndDate=true&Item5=GeneralDonation&Item2=Individual&HideAmountInfo=false&TotalDescription=Amount&TotalAmount={!If($CurrentPage.parameters.TotalAmount==null,'60',$CurrentPage.parameters.TotalAmount)}&OPID="></script>
+  <div class='slds-m-top--large slds-container--small slds-container--center'>
+  <noscript>This donation form requires Javascript. Please make sure it is enabled in your browser settings or call (866) 432 4464 to process your donation over the phone.</noscript>
+  </div>
+  </div>
+  </div>
+  <!-- End Default Content REMOVE THIS -->
+  </div>
+ <!--  <apex:insert name="footer">
+    <c:SiteFooter />
+  </apex:insert> -->
+  <!--Modals -->
+  
+<!-- End Modals -->
+  </div>
+  </body>
+  <script>
+  
+  
+  var assetsLocation = '{!URLFOR($Resource.SLDS100)}';
+   
+   $.aljsInit({
+            assetsLocation: assetsLocation,
+            scoped: true
+        });
+        
+        $(document).ready(function() {
+    $('[data-aljs="modal"]').modal();
+});
+/**
+ * Google Tag Manager -> Enhanced Ecommerce
+ */
+
+
+  dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'actionField': {'step': 1},
+        'products': [{
+        'name': 'General Donation',       // Name or ID is required.
+        'id': 'LDdonation',
+        'brand': 'Live Different',
+        'category': 'General Donation'
+       }]
+     }
+   }
+  });
+ 
+ 
+  window.addEventListener('IATS_TRANSACTIONSUCCESS', function(e){
+    dataLayer.push({
+    'event': 'purchase',
+    'ecommerce': {
+      'purchase': {
+        'actionField': {
+        'id': e.data.transID,                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'my.livedifferent.com',
+        'revenue': e.data.amount
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'General Donation',       // Name or ID is required.
+        'id': 'LDdonation',
+        'price': e.data.amount,
+        'brand': 'Live Different',
+        'quantity': 1,
+        'category': 'General Donation'
+       }]
+     }
+   }
+  });
+});
+
+window.addEventListener('IATS_TRANSACTIONFAILURE', function(e){
+    // Not sure what to push here
+    dataLayer.push({
+    'event': 'failed transaction',
+    'eventCategory': 'error code'
+  });
+    
+});
+  </script>
+  </html>
+</apex:page>

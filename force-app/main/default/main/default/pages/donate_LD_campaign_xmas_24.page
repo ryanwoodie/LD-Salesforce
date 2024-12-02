@@ -79,9 +79,14 @@ div#___plusone_0 {
    width:auto;
    }
    #IATS_PaymentItemDiv_Item7 {
-   height:45px;
+   /*height:45px;*/
    width:auto;
-   margin-bottom:40px;
+   /*margin-bottom:40px;*/
+   }
+   #IATS_PaymentItemDiv_Item3 {
+   
+   width:auto;
+   padding-bottom:30px;
    }
    
    span.IATS_AmountSectionTitle, span.IATS_PaymentSectionTitle {
@@ -180,6 +185,65 @@ div#___plusone_0 {
   {
   display: flex;
   }
+  .IATS_EventTitle
+  {
+    display:none;
+  }
+
+
+/* Global font styles */
+body, 
+input, 
+select, 
+textarea, 
+button,
+.IATS_Div,
+.IATS_PaymentInputField,
+.IATS_InputRequired,
+.IATS_OtherAmount,
+.IATS_PaymentLabelOnLeft,
+.IATS_RadioAmtLabel,
+.IATS_AmountSectionTitle,
+.IATS_PaymentSectionTitle,
+.IATS_RadioPaymentLabel,
+.IATS_SelectItemsSubDiv,
+.IATS_TotalDiv,
+.IATS_AmountSpan,
+.IATS_OtherAmtMinimum,
+.IATS_PaymentItemDiv,
+.IATS_PaymentItemDiv label,
+.IATS_Action,
+h1, h2, h3, h4, h5, h6,
+p,
+span,
+div {
+    font-family: effra, Arial, Helvetica, sans-serif !important;
+    font-style: normal !important;
+    letter-spacing: 0.025em !important;
+}
+
+/* Specific weight adjustments */
+h1, h2, h3, h4, h5, h6,
+.IATS_AmountSectionTitle,
+.IATS_PaymentSectionTitle {
+    font-weight: 700 !important;
+}
+
+.IATS_TotalDiv,
+.IATS_Action {
+    font-weight: 500 !important;
+}
+
+.IATS_PaymentInputField,
+.IATS_InputRequired,
+.IATS_OtherAmount,
+p,
+span,
+div {
+    font-weight: 400 !important;
+}
+
+
 
   </style>
 </head>          
@@ -196,6 +260,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <c:SiteHeader />
   </apex:insert> -->
     <!-- MASTHEAD -->
+    <div style="max-width:500px; margin:auto; text-align:center; padding: 0 15px;">
+      <div><img src="https://livedifferent.com/wp-content/uploads/2022/12/LD-Logo-2020-RGB_Wide-B-300x83-1.png" style="
+    padding-bottom: 20px;"></img></div>
+    <a href="https://livedifferent.com/get-involved/support/fundraiser/fueling-dreams-empowering-youth-to-build-a-better-future" target="_blank">
+      <h3 style="font-weight: bold; font-size: 18px;">Fueling Dreams: Empowering Youth to Build a Better Future</h3>
+  </a>
+
+          <p style="margin:0;">For every $25 donated, you’ll receive one entry for your chance to win one roundtrip flight for two guests on WestJet! (eg. $100 donation = 4 entries)
+          </p><p></p><strong>*Unlimited entries allowed*</strong><p></p>
+      </div>
     <div class='slds-container--large slds-container--center slds-text-align--center'>
     <div class='slds-grid slds-wrap'>
     <div class='slds-col slds-size--1-of-1'>  

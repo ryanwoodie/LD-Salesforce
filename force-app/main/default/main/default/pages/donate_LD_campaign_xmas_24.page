@@ -243,7 +243,11 @@ div {
     font-weight: 400 !important;
 }
 
-
+label[for^="IATS_PaymentItemInput_"] {
+  width: fit-content;
+  display: inline-block; /* Ensure the label aligns properly with the radio button */
+  white-space: normal; /* Allow text wrapping */
+}
 
   </style>
 </head>          

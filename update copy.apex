@@ -119,3 +119,126 @@ if (!membersToUpdate.isEmpty()) {
 } else {
     System.debug('No CampaignMember records found where Contact.HasOptedOutOfEmail = TRUE.');
 }
+
+
+/// 2024-12-03 16:06 UTC
+
+// Replace with the specific Campaign ID
+Id campaignId = '701ON00000LJ39WYAT';
+
+// Query CampaignMember records for the given Campaign ID where the contact has opted out
+List<CampaignMember> membersToUpdate = [
+    SELECT Id, Status, Contact.HasOptedOutOfEmail, Contact.IsEmailBounced
+    FROM CampaignMember
+    WHERE CampaignId = :campaignId
+      AND Contact.IsEmailBounced = TRUE
+];
+
+// Update the Status to 'Removed' for each matching CampaignMember
+for (CampaignMember member : membersToUpdate) {
+    member.Status = 'Bounce';
+}
+
+// Perform the update
+if (!membersToUpdate.isEmpty()) {
+    update membersToUpdate;
+    System.debug('Updated ' + membersToUpdate.size() + ' CampaignMember records to Status = Bounce.');
+} else {
+    System.debug('No CampaignMember records found where Contact.IsEmailBounced = TRUE.');
+}
+
+
+/// 2024-12-03 6:33 UTC
+
+// Replace with the specific Campaign ID
+Id campaignId = '701ON00000LJ39WYAT';
+
+// Query CampaignMember records for the given Campaign ID where the contact has opted out
+List<CampaignMember> membersToUpdate = [
+    SELECT Id, Status, Contact.HasOptedOutOfEmail, Contact.IsEmailBounced
+    FROM CampaignMember
+    WHERE CampaignId = :campaignId
+      AND Contact.HasOptedOutOfEmail = TRUE
+      AND Status = 'Drip Started'
+];
+
+// Update the Status to 'Removed' for each matching CampaignMember
+for (CampaignMember member : membersToUpdate) {
+    member.Status = 'Unsubscribed';
+}
+
+// Perform the update
+if (!membersToUpdate.isEmpty()) {
+    update membersToUpdate;
+    System.debug('Updated ' + membersToUpdate.size() + ' CampaignMember records to Status = Unsubscribed.');
+} else {
+    System.debug('No CampaignMember records found');
+}
+
+//2024-12-04 12:08PM
+
+// Define the Campaign IDs
+Id alumniCampaignId = '701ON00000LJ39WYAT';
+Id targetCampaignId = '701ON00000LZTxWYAX';
+
+// Step 1: Collect emails from the alumni campaign
+Set<String> alumniEmails = new Set<String>();
+List<CampaignMember> alumniMembers = [
+    SELECT Contact.Email
+    FROM CampaignMember
+    WHERE CampaignId = :alumniCampaignId
+      AND Contact.Email != null
+];
+
+for (CampaignMember member : alumniMembers) {
+    alumniEmails.add(member.Contact.Email);
+}
+
+// Step 2: Find CampaignMembers in the target campaign with matching emails
+List<CampaignMember> targetMembersToUpdate = [
+    SELECT Id, Status, Merge1__c, Contact.Email
+    FROM CampaignMember
+    WHERE CampaignId = :targetCampaignId
+      AND Contact.Email IN :alumniEmails
+];
+
+// Step 3: Update the matching CampaignMembers
+if (!targetMembersToUpdate.isEmpty()) {
+    for (CampaignMember member : targetMembersToUpdate) {
+        member.Status = 'Removed';
+        member.Merge1__c = 'Same Email address as contact in Alumni Campaign';
+    }
+
+    // Perform the update
+    update targetMembersToUpdate;
+
+    System.debug('Updated ' + targetMembersToUpdate.size() + ' CampaignMember records in the target campaign.');
+} else {
+    System.debug('No matching CampaignMember records found in the target campaign.');
+}
+
+//2024-12-04 12:51pm CT
+
+// Replace with the specific Campaign ID
+Id campaignId = '701ON00000LZTxWYAX';
+
+// Query CampaignMember records for the given Campaign ID where the contact has opted out
+List<CampaignMember> membersToUpdate = [
+    SELECT Id, Status, Contact.HasOptedOutOfEmail, Contact.IsEmailBounced
+    FROM CampaignMember
+    WHERE CampaignId = :campaignId
+      AND Contact.HasOptedOutOfEmail = FALSE
+      AND Status = 'added'
+];
+
+// Update the Status to 'Removed' for each matching CampaignMember
+for (CampaignMember member : membersToUpdate) {
+    member.Status = 'Drip Started';
+}
+
+// Perform the update
+if (!membersToUpdate.isEmpty()) {
+    update membersToUpdate;
+    System.debug('Updated ' + membersToUpdate.size() + ' CampaignMember records to Status = Unsubscribed.');
+} else {
+    System.debug('No CampaignMember records found');

@@ -31,28 +31,54 @@ update membersToUpdate; */
 
 // update membersToUnsubscribe;
 
-// Fetch all email templates
-List<EmailTemplate> templates = [
-    SELECT Id, Name, DeveloperName, Subject, Folder.DeveloperName
-    FROM EmailTemplate
+// // Fetch all email templates
+// List<EmailTemplate> templates = [
+//     SELECT Id, Name, DeveloperName, Subject, Folder.DeveloperName
+//     FROM EmailTemplate
+// ];
+
+// Boolean found = false;
+
+// System.debug('Checking templates for subject containing "Registration error in site"...');
+
+// for (EmailTemplate template : templates) {
+//     if (template.Subject != null && template.Subject.contains('Registration error in site')) {
+//         System.debug('Match Found:');
+//         System.debug('Name: ' + template.Name);
+//         System.debug('Developer Name: ' + template.DeveloperName);
+//         System.debug('Subject: ' + template.Subject);
+//         System.debug('Folder: ' + template.Folder.DeveloperName);
+//         System.debug('Template Id: ' + template.Id);
+//         found = true;
+//     }
+// }
+
+// if (!found) {
+//     System.debug('No email templates found with the specified subject.');
+// }
+
+//2024-12-04 12:51pm CT
+
+// Replace with the specific Campaign ID
+Id campaignId = '701ON00000LZTxWYAX';
+
+// Query CampaignMember records for the given Campaign ID where the contact has opted out
+List<CampaignMember> membersToUpdate = [
+    SELECT Id, Status, Contact.HasOptedOutOfEmail, Contact.IsEmailBounced
+    FROM CampaignMember
+    WHERE CampaignId = :campaignId
+      AND Contact.HasOptedOutOfEmail = FALSE
+      AND Status = 'added'
 ];
 
-Boolean found = false;
-
-System.debug('Checking templates for subject containing "Registration error in site"...');
-
-for (EmailTemplate template : templates) {
-    if (template.Subject != null && template.Subject.contains('Registration error in site')) {
-        System.debug('Match Found:');
-        System.debug('Name: ' + template.Name);
-        System.debug('Developer Name: ' + template.DeveloperName);
-        System.debug('Subject: ' + template.Subject);
-        System.debug('Folder: ' + template.Folder.DeveloperName);
-        System.debug('Template Id: ' + template.Id);
-        found = true;
-    }
+// Update the Status to 'Removed' for each matching CampaignMember
+for (CampaignMember member : membersToUpdate) {
+    member.Status = 'Drip Started';
 }
 
-if (!found) {
-    System.debug('No email templates found with the specified subject.');
-}
+// Perform the update
+if (!membersToUpdate.isEmpty()) {
+    update membersToUpdate;
+    System.debug('Updated ' + membersToUpdate.size() + ' CampaignMember records to Status = Unsubscribed.');
+} else {
+    System.debug('No CampaignMember records found');

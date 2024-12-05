@@ -1,3 +1,0 @@
-{!TwilioSF__Message__c.OwnerFirstName} sent a message from {!TwilioSF__Message__c.TwilioSF__From_Number__c}
-
-{!TwilioSF__Message__c.TwilioSF__Body__c}

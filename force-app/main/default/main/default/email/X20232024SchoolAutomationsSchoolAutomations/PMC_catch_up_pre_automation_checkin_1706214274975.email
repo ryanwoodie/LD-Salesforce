@@ -1,6 +1,0 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body style="height: auto; min-height: auto;">&nbsp;<p>Hi {{{Recipient.FirstName}}},</p><p>I wanted to see how things are going with running the Circles Peer Mentorship Curriculum.</p><p>Would you mind reviewing the information that we have on <a href="https://www.tfaforms.com/forms/view/5105548?tfa_14={{{Opportunity.Id}}}&amp;tfa_1={{{Recipient.merge1__c}}})">this form</a> and updating anything that has changed? This will help us to be able to track your usage, and send out leadership certificates and feedback surveys on a timely basis!</p><p>Thanks so much!</p><p>Devina</p></body>
-</html>

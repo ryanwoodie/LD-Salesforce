@@ -1,8 +1,0 @@
-Hi {!Special_Projects__c.Name_From__c},
-
-We have successfully received your donation of {!Opportunity.Amount} towards the following item(s):
-{!Special_Projects__c.Text_1__c}. 
-
-Thank you for making this Christmas special!
-
-Live Different Staff

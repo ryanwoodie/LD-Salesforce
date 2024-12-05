@@ -1,9 +1,0 @@
-Opp ID: https://na3.salesforce.com/{!Opportunity.Id}
-
-From: {!Opportunity.Class__c}
-
-Post LG Comments:
-{!Opportunity.Post_LG_Comments__c}
-
-Interests/Opportunities:
-{!Opportunity.Interest_Opportunities__c}

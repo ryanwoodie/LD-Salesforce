@@ -1,8 +1,0 @@
-Hi!
-
-You recently stayed at {!CampaignMember.FirstName} {!CampaignMember.LastName}'s House.
-
-Please rate this billet.
-
-
-http://www.tfaforms.com/forms/view/259307?tfa_1={!CampaignMember.ContactId}&tfa_2={!CampaignMember.Campaign}&tfa_3={!CampaignMember.FirstName}-{!CampaignMember.LastName}

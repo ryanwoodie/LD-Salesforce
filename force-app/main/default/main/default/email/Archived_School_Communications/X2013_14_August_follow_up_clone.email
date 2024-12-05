@@ -1,9 +1,0 @@
-{!CampaignMember.Status}
-
-Hi {!Blankvalue(Contact.FirstName, Lead.Company)}, 
-
-Just a quick note, I accidentally emailed you the wrong dates this morning in my previous email! Our Live Different teams will be in your area on November 25th-26th, February 17th, and March 3rd-7th. 
-
-In case you missed it, here is a link to an online version of the email: http://livedifferent.com/sites/default/files/campaigns/2013/2013-14_august.html
-
-Thanks!

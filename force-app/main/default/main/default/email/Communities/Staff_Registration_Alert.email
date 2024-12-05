@@ -1,7 +1,0 @@
-{!Registration__c.Contact_Name__c} Signed up for {!Registration__c.Event__c}:
-{!Registration__c.Link}
-
-Fund Type: {!Registration__c.Fundraising_Type__c}
-Extra Fundraising: {!Registration__c.ExtraFundraising__c}
-Fund Title: {!Registration__c.Fundraising_Page_Title__c}
-Fund Blurb: {!Registration__c.Fundraising_Text__c}

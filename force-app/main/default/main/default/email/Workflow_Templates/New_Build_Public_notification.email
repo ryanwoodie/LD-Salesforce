@@ -1,6 +1,0 @@
-Someone Signed up for  Build.
-
-Name: {!Opportunity.TReceipt_Contact_FirstN__c} {!Opportunity.TReceipt_Contact_LastN__c}
-email:  {!Opportunity.TReceipt_Contact_Email__c}
-trip:     {!Opportunity.Class__c}
-Link: {!Opportunity.Link}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>LDA Final Email</name>
+    <style>freeForm</style>
+    <subject>Academy Information</subject>
+    <textOnly>Hello Academy Students,
+
+Wow! Can you believe that in just a little more than three weeks you will be heading down to Mexico? I hope you&apos;re all as excited as we are!
+
+Below are some final information and reminders. Please take the time to read them thoroughly!
+
+1. PASSPORTS
+Please bring a photocopy of your passport with you. This is a precaution just in case your passport goes missing while travelling. Double check before you leave your driveway that you have your passport with you. You must have a valid passport to travel with us to Mexico.
+
+2. ARRIVAL IN SAN DIEGO
+When you land in San Diego, our representatives will be wearing a Live Different t-shirt or holding a Live Different sign. Come find us and we&apos;ll take you back to the Best Western where you will meet the group.
+
+Address of hotel in San Diego:
+Best Western South Bay Inn
+710 E Street
+Chula Vista, California
+91910
+
+3. EMERGENCY CONTACTS
+If your family needs to contact you in case of an emergency while in Mexico, these are the numbers for them to call:
+- Live Different Office (Canada): 1-866-432-4464
+- Sharon: 011 52 1 616 109 8158 (MX Cell), 1 619 228 1563 (US Cell)
+- Steve: 616 113 0068 (MX Cell)
+
+For general inquiries and non-urgent matters, please contact us via email at jenn@livedifferent.com. Emails are checked regularly throughout the day between 9 and 5pm. Someone will be available to answer the emergency phone number 24 hours/day.
+
+4. FINAL PAYMENT:
+- The Charitable Projects portion of your payment is due September 30th. The amount is $3000. (If you don&apos;t want to worry about it while you&apos;re in Mexico, you are welcome to make the payment before you go.)
+- This payment is considered a donation and you can receive a tax receipt for it.
+- You can pay this through your Canada Helps page. (You can also share the link to the page with family and friends so they can donate.)
+- However if you prefer e-transfer or cheque, you can pay via those methods instead. Ask me how!
+
+5. SCHEDULE:
+
+September 14th - Fly to San Diego, CA (Airport Code: SAN)
+September 15th - Drive down to Vicente Guerrero, Baja California, Mexico.
+September 16th - Orientation
+September - December
+December 10/11th - Graduation for our Academy program.
+December 12th - Drive up to San Diego, CA.
+December 13th - All students fly home from San Diego, CA.
+
+6. PHOTOS, BLOGS AND UPDATES:
+
+Please share the link to our Facebook page with your family and friends. We&apos;ll be posting photos of your Academy program so it&apos;s a great way for everyone back home to see what you&apos;re doing!
+https://www.facebook.com/pages/Live-Different/189864944417296?ref=hl
+
+
+If you have ANY questions at all, please don&apos;t hesitate to email or call me.
+
+I&apos;m so excited for you to begin this journey! Have a great time in Mexico everyone!!
+
+Jenn</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

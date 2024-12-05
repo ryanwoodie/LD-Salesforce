@@ -1,0 +1,29 @@
+<messaging:emailTemplate subject="Glad you liked the presentation, could you do me one more favor?" recipientType="Contact" relatedToType="QPRO_Survey__c">
+<messaging:plainTextEmailBody >
+Hi {!relatedTo.Reference_ID__r.name},
+
+We are so glad you that enjoyed {!relatedTo.Speaker__r.name}'s presentation! One of the best ways you can help us to continue the work we do in schools across Canada is to write us a quick reference letter. We would truly appreciate being able to keep a record of how your staff and students received our keynote. Your recommendation means the world to us, and will make a huge difference to other schools who want to know what it's like to experience our keynote speakers.
+
+If possible, could you send a reference letter on your school's letterhead to our office? Our address is listed below. The letter can be either sent by fax, scanned, or by good old fashioned postal service!
+
+Thanks!
+
+{!relatedTo.Owner.name}
+{!relatedTo.Owner.title}
+
+Live Different
+{!relatedTo.Owner.email}
+
+866-432-4464 Toll Free
+905-777-1662 Office
+905-777-8117 Fax
+Suite 400 - 44 Hughson St. North
+Hamilton, ON L8R 1G3
+Canada
+www.livedifferent.com
+
+Live Different is a youth movement challenging ourselves and others to consistent actions of love, hope and change - both large and small. We believe that a changed heart can truly change the world. Live Different
+
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

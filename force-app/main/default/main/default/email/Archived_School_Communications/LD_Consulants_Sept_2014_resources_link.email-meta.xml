@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LD Consulants - Sept 2014 resources link</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>LD Consulants - Sept 2014 resources link</name>
+    <style>none</style>
+    <subject>Live Different resources</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

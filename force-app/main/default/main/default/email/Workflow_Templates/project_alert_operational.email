@@ -1,0 +1,8 @@
+Project #: {!Project__c.Name}
+Project Name:{!Project__c.Family_Project_Name__c}
+Community: {!Project__c.Community__c}
+Trip: {!Project__c.Event__c}
+
+Notes: {!Project__c.Notes__c}
+
+Description: {!Project__c.Description__c}

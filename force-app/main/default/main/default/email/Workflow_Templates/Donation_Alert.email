@@ -1,0 +1,5 @@
+A new donation to the Christmas campaign has been made by {!Opportunity.IATSPayment__First_Name__c} {!Opportunity.IATSPayment__Last_Name__c}! {!Opportunity.IATSPayment__First_Name__c} gave {!Opportunity.Amount}.
+
+Cheers,
+
+Derek

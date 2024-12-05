@@ -1,0 +1,30 @@
+<messaging:emailTemplate subject="{!recipient.Account.Account_nickname__c} School Assembly" recipientType="Contact" relatedToType="Account">
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+                <p>Hi {!recipient.FirstName},</p>
+         <apex:outputText value="{!IF(
+    ISBLANK(recipient.Merge_Long__c),
+    '<p>I just tried reaching out to you at the school, and I wanted to follow up with an email.</p>' &
+    IF(OR(ISNULL(recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c), recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c = 0, recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c = 1),
+        'LiveDifferent has brought its one-hour Motivational Assembly to over <strong>4000 assemblies and 1.7 million students</strong> in Canada.',
+        'LiveDifferent has brought its one-hour Motivational Assembly to ' & 
+        IF(ISBLANK(recipient.Account.School_Board__r.Account_Nickname__c), recipient.Account.School_Board__r.Name, recipient.Account.School_Board__r.Account_Nickname__c) & 
+        ' schools ' & 
+        IF(AND(recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c > 1, recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c < 6), 
+            'a number of times in the past', 
+            '<strong>' & TEXT(ROUND(recipient.Account.School_Board__r.Number_of_past_bookings_in_School_Board__c, 0)) & ' times</strong> in the past.')),recipient.Merge_Long__c)}" escape="false"/>
+
+                <p><strong>Our one-hour Assembly</strong> is a transformative journey designed to motivate, inspire, and empower your students to make a positive impact in their lives and the world around them. Through powerful videos, engaging visuals, and the inclusion of <strong>your own students' voices,</strong> we aim to ignite hope and inspire greatness. Our dynamic speakers will share touching stories of <em>resilience</em> and <em>triumph.</em></p>
+                <p><strong>Our theme for the 23/24 school year is:</strong></p>
+                <ul>
+                    <li><strong>The Power of Possibility:</strong> "Building hope and resilience through self-belief"</li>
+                </ul>
+                <p>Click <a href="https://www.youtube.com/watch?v=gciw2-AiN8A&amp;t=1s" target="_blank"><strong>HERE</strong></a> to view our promo video and get a glimpse of what this experience entails. For more details, visit our website <a href="https://livedifferent.com/programs/circles/school-assemblies/" target="_blank"><strong>HERE</strong></a>.</p>
+                <p>If you have any questions or want to know about our availability in the {!recipient.Account.BillingCity} area, please call me at {!recipient.Owner.Phone} or click <a href="{!recipient.Owner.Calendar_URL__c}" target="_blank"><strong>HERE</strong></a> to schedule a meeting at your convenience.</p>
+                <p>Warm regards,</p>
+                <p>{!recipient.Owner.FirstName} {!recipient.Owner.LastName}</p>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

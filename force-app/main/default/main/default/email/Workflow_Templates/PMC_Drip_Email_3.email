@@ -1,0 +1,41 @@
+<messaging:emailTemplate subject="Implementing the Peer Mentorship Curriculum: It's Easier Than You Think!"
+    recipientType="Contact" relatedToType="CampaignMember">
+    <messaging:htmlEmailBody >
+        <html style="overflow-y: hidden;">
+        <head>
+            <title>Implementing the Peer Mentorship Curriculum: It's Easier Than You Think!</title>
+        </head>
+        <body style="height: auto; min-height: auto;">
+        
+        <p>Hello {!recipient.FirstName},</p>
+
+        <p>Implementing the Circles Peer Mentorship Curriculum is straightforward and rewarding. Here's a quick guide to get you started:</p>
+
+        <ol>
+          <li><strong><a href="https://www.tfaforms.com/forms/view/5133783?tfa_2194={!recipient.Account.Name}&tfa_2260={!recipient.Id}&tfa_2262={!relatedTo.Id}&tfa_152={!recipient.Account.Id}&tfa_1874={!recipient.Account.BillingCity}&tfa_2171={!recipient.Account.BillingState}&tfa_2113={!recipient.Account.BillingState}&tfa_2185={!recipient.Account.BillingState}&tfa_1871={!recipient.Email}&tfa_1868={!recipient.FirstName}&tfa_1869={!recipient.LastName}&tfa_1875={!recipient.Account.BillingCountry}&tfa_2258={!recipient.Title}&tfa_2277=1">Register</a>:</strong> Provide basic information about your group and the number of participants, and access the licensed non-watermarked videos.</li>         
+          <li><strong><a href="https://livedifferent.com/programs/circles/circles-resources/">Train Leaders</a>:</strong> Use our provided resources to prepare your student leaders.</li>
+          <li><strong>Schedule Sessions:</strong> Plan your six curriculum sessions and compassion project.</li>
+          <li><strong>Enjoy the Journey:</strong> Watch as your students grow and make a positive impact!</li>
+        </ol>
+
+        <h2>Support Every Step of the Way</h2>
+
+        <p>Our team is here to support you throughout the implementation process. We offer:</p>
+
+        <ul>
+          <li>Comprehensive Leader's Guide</li>
+          <li>Video tutorials</li>
+          <li>Email support</li>
+        </ul>
+
+        <p>Ready to transform your school or organization? <a href="https://www.tfaforms.com/forms/view/5133783?tfa_2194={!recipient.Account.Name}&tfa_2260={!recipient.Id}&tfa_2262={!relatedTo.Id}&tfa_152={!recipient.Account.Id}&tfa_1874={!recipient.Account.BillingCity}&tfa_2171={!recipient.Account.BillingState}&tfa_2113={!recipient.Account.BillingState}&tfa_2185={!recipient.Account.BillingState}&tfa_1871={!recipient.Email}&tfa_1868={!recipient.FirstName}&tfa_1869={!recipient.LastName}&tfa_1875={!recipient.Account.BillingCountry}&tfa_2258={!recipient.Title}&tfa_2277=1">Register now</a> to get started!</p>
+
+        <p>Best wishes,</p>
+        {!recipient.Owner.FirstName} {!recipient.Owner.LastName}
+        <br></br>
+        LiveDifferent
+
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

@@ -1,0 +1,5 @@
+<p>Hi {!Opportunity.TReceipt_Contact_FirstN__c},</p>
+
+<p>We haven't received your completed survey yet, but we really want to hear your feedback! Please complete it soon :-) <a href='http://www.tfaforms.com/forms/view/320122?tfa_8588153619014={!Opportunity.Id}&tfa_8588153619015={!Opportunity.Contact_SurveyId__c}&tfa_8588153619016={!Opportunity.Class__c}& tfa_8588153619018=1'>Click here to Start</a></p>
+
+<p>Live Different Staff</p>

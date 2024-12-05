@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Academy Update for 2016_Peter</name>
+    <style>none</style>
+    <subject>Want to join us for the Live Different Academy in 2016?</subject>
+    <textOnly>Livedifferent.com
+
+Merry Christmas from all of us here at Live Different!
+
+We hope you are doing well and are finding time to rest, relax and celebrate the holidays with friends and family. Things here at Live Different continue to go strong and we are excited about several Christmas and New Year&apos;s trips that are happening over the break. Several new deserving families will be working together with teams and receiving new safe, warm, and dry homes over this Christmas season.
+
+We hope you still have great memories of your experience with Live Different from this past year! We also hope that you continue to find ways to make life about people and not about stuff, especially during a time of year where &apos;stuff&apos; tends to be the focus.
+
+The reason we are emailing you is because you indicated on a response form that you were interested in learning more about the Live Different Academy program. This program is one that we are really excited about here at Live Different. A group of students just finished their three month stay in Mexico and loved the time they spent learning Spanish, studying social justice issues, serving with local organizations, and growing personally in their understanding of their place in the global context. We are pumped that you have shown interest in the Academy as well and we think it is a valuable experience for anyone who would like to participate.
+
+Our applications are now up for our Fall 2016 Academy - http://livedifferent.com/academy. Perhaps you are interested in checking this program out or maybe you know someone who would really enjoy and benefit from an experience like this? Please spread the word! We would love to see you in Mexico!
+
+You can find out a lot more about the Academy (and read this year&apos;s blogs) by visiting our website - http://livedifferent.com/academy or checking out our Academy Facebook page at LiveDifferentAcademy.
+https://www.facebook.com/Live-Different-Academy-1652102595079064/
+
+If you have any questions or would like more information I would be excited to chat with you more!
+
+Sincerely,
+
+Peter Kranenburg
+
+Live Different Academy Lead
+(866) 432 4464 ext. 214
+peter@livedifferent.com
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

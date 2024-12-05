@@ -1,0 +1,307 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Delivery for Haiti</title>
+   <style type="text/css" media="screen">
+      body {
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+      }
+
+      td.permission {
+         padding: 20px 0 20px 0;
+      }
+
+      td.permission p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #151515;
+      }
+
+      td.permission p a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #a72323;
+      }
+
+      td.header {
+         background-image: url('http://absolute.org/img/header1hope.jpg');
+         background-repeat: no-repeat;
+         background-position: top center;
+         background-color: #b62e2e;
+         height: 193px;
+      }
+
+      td.header h1 {
+         font-family: Georgia, serif;
+         font-size: 30px;
+         font-weight: normal;
+         color: #333333;
+         margin-left: 50px;
+         margin-bottom: 24px;
+      }
+
+      table.content {
+         background-color: #f5f5f5;
+      }
+
+      td.sidebar a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #a72323;
+         text-decoration: none;
+      }
+
+      td.sidebar ul {
+         margin: 0 0 0 24px;
+         padding: 0;
+      }
+
+      td.sidebar ul li,
+      td.sidebar ul li a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #a72323;
+      }
+
+      td.sidebar h3 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #333333;
+         margin: 10px 0 14px 0;
+         padding: 0;
+      }
+
+      td.sidebar h3.buttons {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #333333;
+         margin: 0 0 4px 0;
+         padding: 0;
+      }
+
+      td.sidebar h4 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 13px;
+         font-weight: bold;
+         color: #333333;
+         margin: 0 0 2px 0;
+         padding: 0;
+      }
+
+      td.sidebar p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #505050;
+         margin: 0 0 13px 0;
+         padding: 0;
+      }
+
+      td.sidebar p.buttons {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #505050;
+         margin: 0 0 4px 0;
+         padding: 0;
+      }
+
+      td.border {
+         border-right: 2px solid #e0e0e0;
+      }
+
+      td.mainbar a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #a72323;
+         text-decoration: none;
+      }
+
+      td.mainbar h2 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #a72323;
+         margin: 0 0 4px 0;
+         padding: 0 0 4px 0;
+         border-bottom: 1px solid #cbcbcb;
+      }
+
+      td.mainbar h3 {
+         font-family: Georgia, serif;
+         font-size: 16px;
+         font-weight: normal;
+         color: #333333;
+         margin: 10px 0 14px 0;
+         padding: 0;
+      }
+
+ td.mainbar h4 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 14px;
+         font-weight: bold;
+         color: #333333;
+         margin: 10px 0 14px 0;
+         padding: 0;
+      }
+
+      td.mainbar p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #333333;
+         margin: 0 0 16px 0;
+         padding: 0;
+      }
+      td.mainbar p.quote {
+         font-family: 'Ludica Grande', sans-serif;
+         font-size: 12px;
+         font-weight: bold;
+         color: #333333;
+         margin: 0 0 16px 0;
+         padding: -
+      }
+
+      td.mainbar p.top {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: bold;
+         color: #a72323;
+         margin: 0 0 30px 0;
+         padding: 0;
+      }
+
+      td.mainbar p.top a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: bold;
+         color: #a72323;
+      }
+
+      td.mainbar ul {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #333333;
+         margin: 0 0 20px 24px;
+         padding: 0;
+      }
+
+ td.mainbar ol {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #333333;
+         margin: 0 0 20px 24px;
+         padding: 0;
+      }
+
+      td.footer {
+         padding: 20px 0 20px 0;
+      }
+
+      td.footer p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #151515;
+      }
+   </style>
+
+</head>
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <td align="center">
+         <br /><br />
+         <table width="580" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            </tr>
+            <tr>
+               <td class="header" align="left" valign="bottom">
+                  <img src="http://absolute.org/img/header2.jpg" alt="Absolute delivery of aid to Haiti" width="580" height="193" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <table width="580" height="130" border="0" cellspacing="16" cellpadding="0" class="content">
+                     <tr>
+                        <td class="mainbar" align="left" valign="top" width="580"><h4>Thank you to all who donated to help our friends in Haiti!</h4><br /><p>Your kindness made a difference! Our Haitian friends needed to know that they are not forgotten, and thanks to the kindness and sacrifice of so many of you, we were not only able to help them out right now, but we are able to help them begin to rebuild for a stronger future. Thank you for responding to those who need it most. We are honored to be able to deliver aid and compassion that was made possible by the friends of Absolute! We believe that you can feel proud about reaching out and being involved in an immediate, practical and efficient response that made a tangible impact on the the people that needed it most.</p>
+                           <p>Check out the video by <a href="http://absolute.org/blog/2010/03/01/delivery-of-aid-to-haiti/">clicking here</a></p>
+                           <h2>Timeline</h2>
+                           <p><ul><li>On January 15, we arrived in Port-au-Prince to assist the orphanages we support as well as help out with initial emergency response to help dig out survivors and retrieve possessions. We spent five days helping and assessing the best ways we could be of support. Upon our return, we reached out to Absolute supporters to assist in helping those we are connected with in Port-au-Prince, and each of you responded with compassion and generosity.
+</li><br><li><img src="http://absolute.org/files/2010/03/truck.thumbnail.jpg" align="right">On February 3, We left for Port-au-prince with the first $10,000 raised for Haiti through Absolute. A truck was filled with $8000 worth of aid in Dominican Republic and brought across the border into Haiti, where it was systematically delivered via a network of volunteers on the ground. Over the next four days, with the help of many caring Haitians and the staff at Kay Papa Nou, we were able to deliver the aid to the orphanages and tent cities across Port-au-Prince that we had previously identified.
+</li></ul>
+
+</p>
+                                                  
+<h2>Delivery of the aid</h2><br />
+                           <p><img src="http://absolute.org/files/2010/03/water.thumbnail.jpg" align="right">Our aid supplies were divided into 4 different places: two different tent towns, the orphanage and a displacement camp. Most of the tent towns we visited had not received any other aid at that point, and we were grateful to be able to supply them and bring encouragement.</p>
+                           <p>Aid supplies (approximately)</p>
+<ul><li>200 cases of water</li>
+   <li>400 packs of rice</li>
+   <li>400 bottles of oil</li>
+   <li>400 bags of beans</li>
+   <li>600 bars of soap</li>
+   <li>1000 packs of soup mix</li>
+   <li>900 roles of toilet paper</li>
+   <li>1000 packs of cookies and crackers</li>
+<li>6 cases of milk</li>
+<li>600 packs of pasta</li>
+<li>400 small bags of detergent</li>
+<li>300 cans of sardines</li>
+<li>900 bags of corn mix</li>
+<li>Large tarps</li>
+<li>tents</li>
+<li>6 Large boxes of medical supplies. (donated by Servant's Heart Ministries)</li>
+<li>4 boxes of clothes (donated by Servant's Heart Ministries)</li>
+<li>500 candles</li>
+<li>1 - 2200 Honda generator</li></ul>
+<p>Other Expenses</p>
+<ul>
+<li>$1600 went to pay for orphanage staff, vehicle maintenance, baby supplies and orphanage bills</li>
+<li>$400 went to pay translators, travel expenses, border fees, and other misc. items needed for this project</li>
+</ul>
+</p>
+                           <p>However, this is about more than numbers or lists; this is about real lives with real need being met with compassion and kindness - your donation made that possible. To hear some of the stories of he aid that was delivered, check out our 52 Blog, <a href="http://52.absolute.org/2010/02/14/never-forgotten/">Never Forgotten.</a></p>
+<p>Absolute is now preparing for our May Live Different Build in Haiti. We will be working with participants on the boys' home within Kay Papa Nou orphanage installing doors, building a kitchen and replacing a roof on the children's school. We will also be helping to continue to help them reach more orphans and families that they are currently identifying through their volunteer network.</p>
+<p>Again, thanks for your generous response and in your faith in us to deliver it with effectiveness. Your gift made a difference and your life makes a difference every day!</p>
+
+<p>Christal Earle<br />
+<br />
+Co-founder, Absolute.org<br />
+christal@absolute.org</p>
+<h2>PS.</h2>
+<p><strong>Would you spend $10 a month to feel all warm inside about making a little difference in the world?</strong></p>
+<p>Absolute has a monthly partner program that enables us, as a smaller grassroots charity to be able to do big things. Our monthly partners are normal people who believe in the power of <strong>"exponential philanthropy"</strong>: their money is not only helping us to continue to do what we do in our own nation, but it is enabling responses such as this to be able to be executed with efficiency and accountability. Our monthly partners are not only donors, they truly are partners who work with us to accomplish more together. Each month our monthly partners receive inside updates on what is happening in Absolute and in the areas in which we work, as well as monthly features on our staff, volunteers and partners. If you are interested in finding out more about monthly partnership, please check out the following options:<ul><li><a href="http://www.absolute.org/donate">www.absolute.org/donate</a></li><li>contact our office at 1-866-432-4464</li></ul></p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+         <table width="646" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+               <td><img src="http://absolute.org/img/footer-tailab.jpg" alt="Footer" width="646" height="87" /></td>
+            </tr>
+            <tr>
+               <td align="center" class="footer">
+                  <p><br />Absolute Leadership Development Inc.<br />Suite 400 - 44 Hughson St. North - Hamilton, ON   L8R 1G3<br /> ph +1 866 432 4464</p></td>
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+</body>
+</html>

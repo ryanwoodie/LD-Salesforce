@@ -1,0 +1,2 @@
+Donated from: {!Opportunity.TReceipt_Contact_FirstN__c}
+Donated To: {!Opportunity.IATSPayment__IATS_Item_10__c}

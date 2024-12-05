@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="re: {!recipient.Account.Account_nickname__c} School Assembly" recipientType="Contact" relatedToType="Account">
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+                <p>Hi {!recipient.FirstName},</p>
+                <p>I hope you're having a wonderful week!</p>
+                <p>It's evident that students today are dealing with heightened challenges, including increased instances of depression, addiction, and feelings of disconnection, all amplified by the pandemic's impact.</p>
+                <p>If you're looking for additional ways to support your students, our Assemblies at LiveDifferent are designed to inspire self-belief, enhance resilience, and impart a lasting positive effect.</p>
+                <p>Bringing our program to {!recipient.Account.Account_Nickname__c} could truly make a significant difference this year.</p>
+                <p><strong>An educator from Saskatchewan shared this insightful feedback:</strong></p>
+                <p style="color: #0b5394;"><em>"Engaging teens is a complex task, yet LiveDifferent nails it! Their unique approach in presentations effectively conveys a message of resilience and hope - it's simply phenomenal!"</em></p>
+                <p>I’ve attached our <strong>23/24 Circles Programming PDF</strong> to learn more about what our Assembly theme and our 2 FREE Follow Up Workshops are all about.</p>
+                <p>If you'd like more information or have questions, please feel free to set up a quick call by clicking <a href="{!recipient.Owner.Calendar_URL__c}" target="_blank" rel="noopener"><strong>HERE</strong></a>.</p>
+                <p>Warm regards,</p>
+                <p>{!recipient.Owner.FirstName} {!recipient.Owner.LastName}</p><p>LiveDifferent</p>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

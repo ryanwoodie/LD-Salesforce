@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LDA 2015 - Alumni Contact</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>LDA 2015 - Alumni Contact</name>
+    <style>freeForm</style>
+    <subject>LDA - Meet Emily!</subject>
+    <textOnly>Hello Academy Students!
+
+Thank you to all of you who are working hard to fund raise for the months that you will spend in Mexico working with Live Different! We&apos;re really looking forward to having you along for this awesome experience.
+
+So... you&apos;ve sent in all of your paperwork, paid your deposit and are now well into the fundraising part of this experience. But... you probably still have a lot of questions. How will I cope with being away from home for 14 weeks? What is it like to live with a group of people so closely? What are our living arrangements like?
+
+To help answer these questions for you, let me introduce Emily!
+Emily participated in our Academy program in 2012 and is an awesome example of someone whose life was truly impacted after her time in Mexico... I won&apos;t go into too much detail here, I&apos;ll let her share her story with you.
+
+Emily will be contacting each of you individually to set up a phone call. She is available to answer questions and chat about what you can expect. Even if you don&apos;t have any specific questions for her, she will be happy to tell you about her experience.
+
+You will receive an email or phone call from Emily soon, but feel free to contact her directly via email: emily.mccallum6@gmail.com
+
+Any questions related to payments, paperwork, flights and all of the administrative items can still be forwarded to me :)
+
+PS. Have a friend who is interested in joining the Academy program with you? Space is still available!
+
+Have a great week,
+Jenn</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HH Signup Form Response</name>
+    <style>none</style>
+    <subject>We have received your request</subject>
+    <textOnly>Hey there {!Lead.FirstName}! We have received your request to secure a spot on Live Different Build. Please continue with the registration process as outlined on the trip details page.
+
+Once they are filled out, mail them with your $300 initial fundraising deposit to the address from the trip details page.
+
+If you have any specific questions, please search our FAQ section. If you are unable to find an answer on our site, please feel free to contact us at hh@livedifferent.com
+
+Thanks,
+
+Charles Roberts
+Director of Programs
+Absolute
+905 777 1662
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

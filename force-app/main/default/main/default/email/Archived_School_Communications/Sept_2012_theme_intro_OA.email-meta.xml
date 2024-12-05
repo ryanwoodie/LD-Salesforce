@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Initial email about SGG theme for 2012</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Spring 2013 Theme Intro</name>
+    <style>none</style>
+    <subject>Something&apos;s Gotta Give: What does Equality Look Like at Your School?</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an5]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;padding-right: 20px;padding-left: 20px;"><p><br /> Hi&nbsp;{{{Recipient.FirstName}}},<br /><br /> We wanted to send one final reminder about the opportunity to access LiveDifferent’s Peer Mentorship Curriculum for free.<br /><br /> This valuable program, designed to build community, develop leadership skills, and encourage personal growth, is available at no cost. Don’t miss out on this chance to provide the youth in your school or community with an impactful and transformative experience.<br /><br /><strong>Quick Recap:</strong></p>
+                      <ul>
+                       <li>Six one-hour sessions covering authenticity, empathy, growth mindset, resilience, values, and altruism.</li>
+                       <li>Flexible format adaptable to various schedules and learning environments.</li>
+                       <li>Culminates in a compassion project benefiting the community.</li>
+                      </ul><p>To help you understand the transformative power of this program, check out our short trailer that showcases its key features and benefits: <a href="https://youtu.be/rGaviLF3FO8?si=aJx6toGt_2W4Vgyg">Peer Mentorship Curriculum Trailer</a><br /><br /><br /> Click <strong><a href="https://livedifferent.com/programs/circles/peer-mentorship-curriculum/">HERE</a></strong>&nbsp;to sign up today.<br /><br /> For any questions or further assistance, please reach out to our Community Engagement Manager, Mary Anne, at maryanne@livedifferent.com.<br /><br /> We look forward to supporting you and your students with this exceptional program.<br /><br /> Best regards,<br /><br /> LiveDifferent Team</p></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an1]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an3]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

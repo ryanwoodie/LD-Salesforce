@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi&nbsp;{{{Recipient.FirstName}}},<br />
+<br />
+This is Jenn Quong here, I’m the Director of International Programming for LiveDifferent, and I have an update about the Builds bursary that {student name} applied for:</p>
+
+<ul>
+	<li>Unfortunately, we didn’t draw {student name} specifically for the {school name} bursary.</li>
+	<li>Fortunately, we<strong> presently have a few unclaimed $500 bursaries,</strong> available<strong> </strong>on a first-come, first-served basis for public trips.</li>
+</ul>
+
+<p>Even better: Recognizing the impact of shared experiences, <strong>we're extending the opportunity to claim a $500 bursary</strong> for a friend, parent, or family member to join the Build.</p>
+
+<p>I’m a parent of two teenagers myself, so I understand that, if you have never done a trip like this before, it could seem a bit intimidating!</p>
+
+<p>As a former school principal, however, I know just how life-changing and enriching these Build trips are for youth. I’d love to be able to provide any support or reassurance that you might need to make it a reality. Feel free to grab a time in my <a href="https://calendar.app.google/1b8CD8PCTrH5EPoX7" target="_blank"><span style="color:rgb(17, 85, 204);">calendar</span></a>, or here is my cell phone number: 905-802-7880. I’m happy to answer any questions that either of you might have.And <span style="color:rgb(13, 13, 13);">when you are ready, here's how to proceed:</span></p>
+
+<ul>
+	<li>Choose an upcoming public Build <a href="https://livedifferent.com/programs/builds/all-builds/" target="_blank"><span style="color:rgb(17, 85, 204);">here</span></a>.</li>
+	<li>Register, and then let me know via email or message. I'll ensure your bursary is applied.</li>
+</ul>
+
+<p>Best Regards,</p>
+
+<p>Jenn Quong</p>
+</body>
+</html>

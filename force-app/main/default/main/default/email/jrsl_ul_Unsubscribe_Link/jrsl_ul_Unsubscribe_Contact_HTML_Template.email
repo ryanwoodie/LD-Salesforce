@@ -1,0 +1,16 @@
+Dear {!Contact.FirstName} {!Contact.LastName}, </br>
+
+<a href="https://InsertYourSiteDomainHere/Unsubscribe?recordId={!Contact.Id}&Email={!Contact.Email}">Click here to unsubscribe from all emails from our organization.</a>
+</br>
+Instructions: </br>
+<li>Change ONLY this part of the HTML above:</li>
+InsertYourSiteDomainHere</br>
+to the Site Domain you saved earlier.</br>
+<li>The word "Unsubscribe" is case sensitive!</li>
+<li>Change "our organization" to the name of your organization.</li>
+<li>Make sure you modify the text only version as well.</li>
+<li>Delete the instructions here and add the rest of your email above the link.</li>
+Notes:</br>
+<li>This email template comes with the unmanaged package "Unsubscribe Link" </li>
+<li>This link above launches the flow called Unsubscribe Link. 
+<li>The flow will have an error if an email address includes a special character like +. The package contains a visualforce email template that accommodates special characters.</li>

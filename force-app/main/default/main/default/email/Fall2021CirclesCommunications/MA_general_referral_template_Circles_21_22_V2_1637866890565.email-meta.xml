@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>A general template with MA signature and promo info below</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>MA general / referral template Nov 2021</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Connecting about youth programs</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

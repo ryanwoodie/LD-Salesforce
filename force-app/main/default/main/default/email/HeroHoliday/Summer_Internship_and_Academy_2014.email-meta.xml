@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Live Different Summer Internship</name>
+    <style>freeForm</style>
+    <subject>Join us for a Live Different Summer Internship!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for filling out our Stay Involved Card at the end of your trip to let us know about the ways you&apos;d like to get involved here at Live Different!
+
+You noted that you were interested in our Summer Internships!
+
+The dates for our internships in 2015 are:
+
+Dominican Republic - July 3 - 16, 2015
+Mexico - July 31 - August 13, 2015
+*Is this year too soon to plan for? Contact us to plan for a summer internship in 2016!
+
+Our internship program is highly recommended for people who are looking to develop their international experience and leadership skills. As an intern, you will have the privilege to be a part of the behind-the-scenes work of a humanitarian trip. You will be able to develop your leadership skills by receiving practical, hands-on experience. Our interns are an integral part of what happens during our summer Live Different Trips, building significant connections in both the communities we work in and with other volunteers.
+
+For more information, please check out the following link: http://livedifferent.com/builds/internship
+
+Please feel free to contact us with any other questions.
+
+Thanks,
+
+Live Different Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

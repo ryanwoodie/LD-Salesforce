@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2019/2020 Intro &quot;Own Your Story&quot; General - Open Dates 3 MB</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Presentations_Template</letterhead>
+    <name>General (Editable) Presentations Promo (19/20) Introduction Open Dates 3 MB</name>
+    <style>freeForm</style>
+    <subject>Even more opportunities for YOUR school!</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

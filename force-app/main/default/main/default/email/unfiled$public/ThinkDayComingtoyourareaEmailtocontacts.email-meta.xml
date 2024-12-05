@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Think Day Coming to your area Email to contacts</name>
+    <style>none</style>
+    <subject>Absolute&apos;s Think Day in Newfoundland</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+This is Mandy from Absolute Leadership Development.  We have worked with your school in the past, and I wanted to let you know that our exciting new Think Day program and team is going to be in the area. We will be in in PEI as one of the keynote presentations at the 2008 Canadian Student Leadership Conference, and then at the Newfoundland Student Leadership Conference.  While we are in the area, we have a blocked off some time to visit schools with our new Think Day program.  We have many dates available between October 6th and 22nd if you are interested in booking us this fall.
+
+Think Day is a motivational character development program that provides students with relevant topics and effective presentations. Our unique combination of a 1 hour motivational presentation, workshops, and various other resources result in a student body that is motivated and equipped to make positive choices. By empowering and inspiring students to think past themselves, Think Day brings a perspective of change and hope. Think Day focuses on three character education values each year. This year&apos;s values are:  Honesty, Self-worth, and Purpose.
+
+Also, check out some of our other changes, like Think Global and our switch to a donation based pricing model. We think you&apos;ll be excited! We have an informative brochure of our program available for download here: www.thinkday.org/thinkday.pdf, or check out our website at www.thinkday.org .
+
+Please contact me if you are interested in booking a Think Day at your school. 
+
+
+
+Mandy Rousseau
+School Bookings
+Absolute Leadership Development Inc.
+Suite 400 - 44 Hughson St. N
+Hamilton ON L8L 4Z2
+1-866-432-4464 Toll Free
+www.thinkday.org
+booking@absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

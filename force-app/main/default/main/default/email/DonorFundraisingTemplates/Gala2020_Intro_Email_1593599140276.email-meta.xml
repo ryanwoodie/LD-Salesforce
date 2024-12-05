@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Intro email for donors to our 2020 Gala Fundraiser</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Gala2020 Intro Email</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Please consider supporting our 2020 &apos;With Love&apos; Gala</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>covid 1b prev 3 years contacts</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Youth need support. Live Different can help.</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

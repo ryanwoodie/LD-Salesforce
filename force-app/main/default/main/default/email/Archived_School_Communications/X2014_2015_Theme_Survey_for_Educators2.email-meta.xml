@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2014/2015 Theme Survey REPLY for Educators</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2014/2015 Theme Survey REPLY for Educators</name>
+    <style>none</style>
+    <subject>Results from Live Different 2014-15 presentation theme survey</subject>
+    <textOnly>Livedifferent.com
+
+Dear {!Contact.FirstName},
+
+Thank you SO much for taking the time to respond to our survey and give your feedback about our 2014-15 school presentation. I thought you might be interested to hear how it turned out.
+
+Both the number of responses and the quality of information exceeded our expectations! Out of 500 teachers emailed, we received 100 responses (which is amazing for email), and over 25% were interested in helping further in the future as a &quot;Live Different Consultant&quot;! We are so grateful to have supportive educators across the country who are passionate about seeing students changed for the better.
+
+The qualitative feedback we received around current challenges and issues that students are facing was incredibly valuable. If you are interested, you can see the full results here
+
+Some themes that stood out from the feedback:
+
+Mental health and anxiety were the most frequently mentioned issues.
+Bullying and cyber-bullying were also mentioned frequently, as expected, but interestingly, almost as frequent was the feedback that students are getting over saturated with traditional &quot;anti-bullying&quot; messages and starting to tune it out. It&apos;s obviously still a huge issue facing schools, but perhaps it&apos;s time to start looking at things from different angles and perspectives.
+Isolation/disconnection (in a social media driven digital world) with a lack of face-to-face connection and development of healthy communication skill sets.
+
+In terms of the presentation theme ideas, all 3 options were quite evenly and positively reviewed. This is where the qualitative answers were so helpful. Using them, we were able to adjust the key messages and develop what we believe will be a very impactful framework for our 2014-15 school program.
+
+With your help, this is where we are headed:
+
+Courage to Connect: Life is About People &quot;Unlock your students&apos; courage to grow, to stand, and to care.&quot;
+
+This presentation will help your students discover and embrace their ability to overcome negative mindsets, pressures, and group norms, and start to connect in meaningful ways, caring authentically for those around them. They will discover what true courage means and how to live it out through:
+
+CHARACTER: Life isn&apos;t about keeping up appearance or living up to labels, it&apos;s about learning and growing. How to cultivate a self-concept (ie. growth mindset) that gives us the resiliency to embrace and grow from life&apos;s challenges, and find help along the way.
+CONFIDENCE: Conforming to harmful or superficial social norms can side-track us from the things that really matter. How to recognize and resist negative group pressures and our automatic behaviors in favour of meaningful priorities.
+CONNECTION: In a digital world with so many distractions, real relationship is still what we are wired for. How to start connecting with the people in our lives in caring and authentic ways
+
+&quot;Courage is rightly esteemed the first of human qualities because it is the quality which guarantees all others.&quot; Winston Churchill
+
+Thank you again for your time and advice in helping to improve our program for this year. Please note you should receive another email from us shortly when we start sending out our promotional emails for the 2014-2015 school year, but feel free to respond to this email or call us anytime if you want to get the first choice of dates when booking Live Different for next year!
+
+Kind Regards,
+
+{!User.FirstName} {!User.LastName}
+{!User.Title}
+(866) 432 4464 {!User.Extension}
+{!User.Email}
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+{!User.Email}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

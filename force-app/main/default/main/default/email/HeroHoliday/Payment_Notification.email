@@ -1,0 +1,3 @@
+<p>A donation / payment has been received that has been applied to your fundraising goal! Following are the details:</p>
+<p>{!Payment1__c.Payment_Notification_Info__c}</p>
+<p>Please note that if you receive more than one notification per hour, the donation and amount remaining totals will read the same on all notifications. The totals include all donations processed in the past hour.</p>

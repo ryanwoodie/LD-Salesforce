@@ -1,0 +1,269 @@
+<messaging:emailTemplate subject="{!relatedTo.Contact_Survey__r.Id}|{!relatedTo.Account.Id}|Overdue: Invoice #{!relatedTo.Contract_Number__c} for {!relatedTo.Account.Name}" recipientType="Contact" relatedToType="Opportunity">
+<messaging:htmlEmailBody >
+<table style="max-width: 700px; margin: auto; background-color: #ffffff; box-shadow: 0 0 1px #888888; padding: 20px;">
+    <tr>
+        <td>
+            
+
+            <section style="padding: 20px;">
+                 <p>Dear 
+                    <apex:outputPanel rendered="{!NOT(ISBLANK(relatedTo.Invoice_Contact__c))}" layout="none">
+                        {!relatedTo.Invoice_Contact__r.Name},
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!ISBLANK(relatedTo.Invoice_Contact__c)}" layout="none">
+                        {!relatedTo.Contact_Survey__r.Name},
+                    </apex:outputPanel>
+                </p>
+
+                <p>This is a friendly reminder that your invoice <strong>#{!relatedTo.Contract_Number__c}</strong> (attached) for <strong><apex:outputText value="{0,date,MMMM dd, yyyy}">
+                           <apex:param value="{!relatedTo.Invoice_Date__c}" />
+                        </apex:outputText></strong>, is now past due. We would greatly appreciate your prompt attention to this matter.</p>
+
+                <p style="margin-top: 20px;">Please find the total amount due below:</p>
+                <table style="width: 100%; margin-top: 20px;">
+                    <tr>
+                        <th style="text-align: left; padding-right: 20px;">Total Amount Due:</th>
+                        <td><apex:outputText value="{0, number, currency}">
+<apex:param value="{!relatedTo.Amount_Due__c}" />
+</apex:outputText></td>
+                    </tr>
+                </table>
+
+                <p>Please address this balance by sending your payment at your earliest convenience to avoid any late fees or additional interest.</p>
+
+                <p>If you have any questions or concerns, or if you have already sent your payment, please contact me.</p>
+
+                <p>Thank you for your prompt attention to this matter.</p>
+
+                <p>Sincerely,</p>
+                <p>Derek Boyce<br></br>CFO<br></br>LiveDifferent<br></br>204-720-2340</p>
+                
+            </section>
+
+        
+        </td>
+    </tr>
+</table>
+</messaging:htmlEmailBody>
+<messaging:attachment renderAs="PDF" filename="LD-invoice_{!relatedTo.Contract_Number__c}.pdf">
+    <html>
+<head>
+  <STYLE type="text/css">
+           body {background-color:#fff;font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif}
+           TH {font-size: 11px; font-face: arial;background: #EDEDED; border-width: 0;  text-align: center }
+     </STYLE>
+     </head>
+<table id="invoice" style="font-size: 100%;font: inherit;vertical-align: baseline;position: relative;max-width: 700px;background: #ffffff;-webkit-box-shadow: 0 0 1px #888888;-moz-box-shadow: 0 0 1px #888888;-o-box-shadow: 0 0 1px #888888;box-shadow: 0 0 1px #888888;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;" width='700'>
+<tr>
+    <td>
+    <header id="header">
+        <div class="invoice-intro">
+            <img src='{!$Resource.Logo2020}' width='160px' alt='LiveDifferent' />
+            
+        </div>
+        <div class="floatclear">&nbsp;</div>
+        <table align='center' width='400' style='text-align:left'>
+                    <tr>
+                        <td>
+            <strong>Invoice and Contract #</strong></td>
+                        <td>{!relatedTo.Contract_Number__c}</td>
+                    </tr>
+                    <apex:outputPanel rendered="{!IF(relatedTo.Purchase_Order__c = NULL,FALSE,TRUE)}" layout="none" >
+                    <tr>
+                        <td>
+            <strong>Purchase Order #</strong></td>
+                        <td>{!relatedTo.Purchase_Order__c}</td>
+                    </tr>
+                    </apex:outputPanel>
+                    <tr>
+                        <td><strong>Date of Invoice</strong>
+                        </td>
+                        <td>
+                        <apex:outputText value="{0,date,MMMM dd, yyyy}">
+                           <apex:param value="{!TODAY()}" />
+                        </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Date of Presentation</strong> 
+                        </td>
+                        <td>
+                        <apex:outputText value="{0,date,MMMM dd, yyyy}">
+                           <apex:param value="{!relatedTo.Invoice_Date__c}" />
+                        </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+    </header>
+    <!-- e: invoice header -->
+<table width="690px" cellpadding='20' style='text-align:left;vertical-align:top'>
+    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="invoice-to">
+                                    <h2 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice To:</h2>
+                                    <div class="vcard" id="recipient">
+                                    <apex:outputPanel rendered="{!IF(relatedTo.Account.SchoolBoard_Name__c = 'Toronto District School Board',TRUE,FALSE)}" Layout="none">Toronto District School Board c/o<br /></apex:outputPanel>
+<apex:outputPanel rendered="{!NOT(ISBLANK(relatedTo.Invoice_Contact__c))}" layout="none">
+    {!relatedTo.Invoice_Contact__r.Name}
+    <div class="org">
+        {!relatedTo.Invoice_Contact__r.Account.Name}
+    </div>
+    {!relatedTo.Invoice_Contact__r.Email}
+    <div class="adr">
+        <div class="street-address">
+            {!relatedTo.Invoice_Contact__r.Account.BillingStreet}<br />
+            {!relatedTo.Invoice_Contact__r.Account.BillingCity}, {!relatedTo.Invoice_Contact__r.Account.BillingState} {!relatedTo.Invoice_Contact__r.Account.BillingPostalCode}
+        </div>
+    </div>
+    <div class="tel">
+        {!relatedTo.Invoice_Contact__r.Account.Phone}
+    </div>
+</apex:outputPanel>
+<apex:outputPanel rendered="{!ISBLANK(relatedTo.Invoice_Contact__c)}" layout="none">
+    {!relatedTo.Contact_Survey__r.Name}
+    <div class="org">
+        {!relatedTo.Account.Name}
+    </div>
+    {!relatedTo.survey_Email__c}
+    <div class="adr">
+        <div class="street-address">
+            {!relatedTo.Account.BillingStreet}<br />
+            {!relatedTo.Account.BillingCity}, {!relatedTo.Account.BillingState} {!relatedTo.Account.BillingPostalCode}
+        </div>
+    </div>
+    <div class="tel">
+        {!relatedTo.Account.Phone}
+    </div>
+</apex:outputPanel>
+                                    </div>
+                                    <!-- e: vcard --></div>
+                                <!-- e invoice-to --></td>
+                            <td valign="top">
+                                <div class="invoice-from">
+                                    <h2 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice From:</h2>
+                                    <div class="vcard" id="livedifferent">
+                                        {!$Organization.Name}<br />
+                                        <div class="org">
+                                            info@livedifferent.com</div>
+                                        <div class="adr">
+                                            <div class="street-address">
+                                                {!$Organization.Street}<br />
+                                                {!$Organization.City}, {!$Organization.State}   {!$Organization.PostalCode}</div>
+                                        </div>
+                                        <div class="tel">
+                                            {!$Organization.Phone}</div>
+                                    </div>
+                                    <!-- e: vcard --></div>
+                                <!-- e invoice-from --></td>
+                            <td valign="top">
+                                <div class="invoice-status">
+                                    <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                                        Invoice Status</h3>
+                                    <strong>Invoice is <span style="margin: 0;padding: 8px;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;font-weight: bold;color:{!IF(relatedTo.Amount_Due__c=0,"#FFF","#000")};display: block;background-color:{!IF(relatedTo.Amount_Due__c=0,"#7ab900","#DF2A2A")};">{!IF(relatedTo.Amount_Due__c=0,"Paid","Unpaid")}</span></strong></div>
+                                <!-- e: invoice-status --></td>
+                        </tr>
+                    </tbody>
+</table>
+
+    <section class="invoice-financials">
+        <div class="invoice-items" style="text-align:left;margin:40px 0px">
+                        <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                            Your Invoice</h3>
+                        <table style="margin: 0;padding: 0;border: 0;font-size: 12px;font: inherit;vertical-align: baseline;border-collapse: collapse;border-spacing: 0;width: 100%;text-align:left">
+                            <thead>
+                                <tr>
+                                    <th style="background: #e5e5e5" width="80%">
+                                        Item &amp; Description</th>
+                                    
+                                    <th style="background: #e5e5e5" width="20%">
+                                        Price</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                            </tfoot>
+                            <tbody>
+                            <apex:repeat var="lineitems" value="{!relatedTo.OpportunityLineItems}">
+
+   <tr>
+       <td style='text-align:left'>{!IF(lineitems.Description = "","LiveDifferent Presentation(s)",lineitems.Description)}</td>
+       
+       <td style='text-align:center'><apex:outputText value="{0, number, currency}">
+<apex:param value="{!lineitems.UnitPrice}" />
+</apex:outputText></td>
+   </tr>
+</apex:repeat>
+                            </tbody>
+                        </table>
+                    </div><!-- e: invoice items -->
+
+
+        <div class="invoice-totals">
+                        <h3 style="text-align:left;margin-bottom:3px;padding-bottom:3px;border-bottom: 1px solid #dddddd;">
+                            Totals:</h3>
+                        <table style="text-align:left" width="100%">
+                            <tbody>
+                           
+                                <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Total:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                        <apex:outputText value="{0, number, currency}">
+<apex:param value="{!relatedTo.Amount}" />
+</apex:outputText></td>
+                                </tr>
+                                <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Amount Paid:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                        <apex:outputText value="{0, number, currency}">
+<apex:param value="{!relatedTo.Amount_Paid__c}" />
+</apex:outputText></td>
+                                </tr>
+                                <tr>
+                                    <th width="70%" style='text-align:right'>
+                                        Amount Due:</th>
+                                    <td width="15%">
+                                        &nbsp;</td>
+                                    <td width="15%">
+                                        <apex:outputText value="{0, number, currency}">
+<apex:param value="{!relatedTo.Amount_Due__c}" />
+</apex:outputText></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- e: invoice totals -->
+
+
+        <div class="invoice-notes" style="text-align:left">
+                        <h2>
+                            Notes &amp; Information:</h2>
+                        <p>
+                            <span style='font-size:10px'>Please send cheque to below address, or give directly to the team leader on the day of the Presentation. Make cheques payable to:</span><br />
+{!$Organization.Name}<br />
+{!$Organization.Street}<br />
+{!$Organization.City}, {!$Organization.State}   {!$Organization.PostalCode}</p>
+                    </div><!-- e: invoice-notes -->
+
+    </section><!-- e: invoice financials -->
+
+
+    <footer id="footer">
+        <p style='text-align:center'><a href='http://livedifferent.com'>LiveDifferent</a> is a registered charity: Business #86123 2890 RR0001</p>
+        <apex:outputPanel rendered="{!IF(relatedTo.Account.SchoolBoard_Name__c = 'Toronto District School Board',TRUE,FALSE)}" Layout="none"><p style='text-align:center'>TDSB Approved Vendor #23092</p></apex:outputPanel>
+    </footer>
+
+
+    </td>
+</tr>
+</table>
+</html> 
+</messaging:attachment>
+</messaging:emailTemplate>

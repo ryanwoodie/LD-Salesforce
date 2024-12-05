@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>fundraiser - calendar</name>
+    <style>none</style>
+    <subject>Fundraising Opportunity</subject>
+    <textOnly>Hey {!Contact.FirstName},
+
+It&apos;s Mandy here from Absolute, I hope that you are doing well, and having a great school year so far! I&apos;m excited to inform you that Absolute has released it&apos;s first calendar, entitled &quot;together&quot;. We are offering the use of this calendar as an excellent fund raising tool to the schools that we work with. I thought that I would email and let you know about it in case there are any groups or causes in your school looking for a good fund raising opportunity. The calendars are available at a cost of $10 and retail for $20, so $10 from each sale goes towards your school&apos;s cause. If anyone at your school is interested, we need them to register as a fundraiser as soon as possible.
+
+This fundraiser is zero risk because:
+
+ 1. You will not be left with extra stock. All calendar sales are done as pre-orders, so you are only sent as many as you need.
+
+ 2. You can optionally send people to order directly through our website (using the referral code that we give you), and we will send you $10 for each calendar that you sell.
+
+The registration form is online, along with a preview of the calendar, at http://heroholiday.com/fundraising, and sample calendars are available for a cost of $10. Fund raising orders must be placed by November 29th, 2009.
+
+I hope that this information is of value to you, thank you for your time!
+
+
+Mandy
+
+Mandy Rousseau
+Booking Agent
+Absolute Leadership Development Inc.
+44 Hughson Street North, Suite 400
+Hamilton, ON L8R 1G3
+Canada
+
+www.absolute.org
+
+1-866-432-4464
+Phone 905-777-1662
+Fax 905-777-8117</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

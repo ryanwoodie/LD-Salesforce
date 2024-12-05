@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2017 - Staff Flight</name>
+    <style>freeForm</style>
+    <subject>DR Summer Trip - Staff Flight</subject>
+    <textOnly>Hi everyone,
+
+
+
+Just a reminder that I have booked my flight as the Live Different staff member on your trip to fly from Toronto to Puerto Plata. If you are interested, feel free to match these flights when booking and I can meet you at the airport and connect with you during your travels.
+
+
+
+We hope this helps for those of you who are flying for the first time, or would love to fly with someone else!
+
+
+
+Note that our trip only starts July 8 and end July 17. For the extra nights, it will cost $42 USD per night per person if you are sharing a room, and $60 USD per person per night if you have a private room. I can arrange your extra nights at the resort we will be staying at. All meals are provided in the cost as well. Shuttles will also be arranged for our whole group to travel from the airport to the resort.
+
+Feel free to book any flight you prefer. Please book flights as soon as possible and forward me the itinerary. Let me know if you have questions.
+
+WESTJET Flight Number WS 2506
+CONFIRMED Friday, 07 July
+
+Departure: YYZ TORONTO ON, CANADA
+9:05AM
+TERMINAL 3
+Arrival: POP PUERTO PLATA, DOMINICAN REP
+1:12PM
+
+
+
+
+WESTJET Flight Number WS 2507
+CONFIRMED Tuesday, 18 July
+
+Departure: POP PUERTO PLATA, DOMINICAN REP
+2:05PM
+Arrival: YYZ TORONTO ON, CANADA
+6:20PM
+TERMINAL 3</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

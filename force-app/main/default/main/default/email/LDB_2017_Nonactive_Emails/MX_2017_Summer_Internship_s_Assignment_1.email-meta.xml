@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>MX 2017 - Summer Internship&apos;s Assignment 1</name>
+    <style>freeForm</style>
+    <subject>Live Different: Mexico Summer Internship 2017 - Next Steps</subject>
+    <textOnly>Hi !
+
+I am so excited to inform you that you have been officially accepted into our Summer Internship Program. There is so much potential in each intern to inspire change in the youth that will be on our trips. We know that you will be a great asset to our team this summer and get along great with the other interns we have accepted. Welcome to the Live Different Internship Team!
+
+
+The next steps:
+
+1. Facebook Page
+Please add yourself to the facebook group so that everyone can get better acquainted!
+Here is the link: ______________________
+
+2. $300 Deposit
+Please make your initial $300 deposit for the internship by setting up your Live Different Volunteer page.
+
+You can start fundraising for you trip now!
+
+3. Book Your Flights!
+
+If you haven&apos;t booked your flights yet, please do so within the next couple of weeks.
+
+Airport: San Diego - Airport Code: SAN
+Arrival: July 30th, 2017
+Departure: August 12th, 2017
+
+4. Your First Assignment
+
+All assignments are mandatory and must be completed by the deadline.
+
+#1: Understanding Your Country
+
+Due date: May 30th, 2017
+
+In this assignment I don&apos;t want you guys to have to write an essay, because let&apos;s face it, who enjoys writing forever and ever with proper grammar and sentence structure? This isn&apos;t university! It&apos;s a Live Different Internship! Also, no power points please, we have found that this can take too long to absorb. (Sorry to all the smarties out there!)
+
+The main goal for you as Interns throughout this assignment, is to become a knowledgeable leader. You will be hit with a million questions a day from many volunteers on your trip. As Live Different representatives, we pride ourselves as knowing the facts. We do not want to &quot;pretend&quot; to know our stuff. We also don&apos;t want to integrate into a culture without knowing the basics first.
+
+I would like everyone to either read, look up, watch different resources through social media and online search engines. If you would have access, go into your local library and rent some books. I would like everyone to do something very creative to introduce the country you will be working in. I want you to think of me as a volunteer who has never stepped foot outside of Canada before and educate me, but don&apos;t bore me.
+
+Please include the following:
+- History (why are we working in this country, why does poverty exist?)
+- Clothing (how do they dress, has a lot to do with climate plus cultural beliefs)
+- Religion &amp; Culture (main religion and other religions)
+- Language(s)
+- Import and Export(s)
+- Tourism
+- Government
+- Military &amp; Police
+- Economy
+- Education (how does the school system work? funded by government, private? half days, full days?)
+- Job Opportunities (what are the main jobs in Sosua, Puerto Plata in DR / Zapata, Vicente Guerrero in MX)
+- Different tribes or people that live in the country (ie. Haitian refugees in DR / Wahakan tribe in MX)
+- Socialization, Etiquette, Arts, Sports, and other important information that you would love to learn more about would be amazing!
+
+Get creative, here are some ideas:
+- A very fun artsy chart!
+- A creative timeline using point form, years and pictures/photos
+- A power point presentation
+- A video of yourself with/without friends explaining things in a fun way
+- A poster with lots of fun stuff!
+
+I know that this doesn&apos;t give you a lot of &quot;structure&quot;, but this is for everyone to do their own thing and wow me with something that you are AMAZING at. So choose something that you will excel at, whether it&apos;s video making skills, drawing skills, anything!
+
+If you have questions, please ask. The sooner you start this, the better!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

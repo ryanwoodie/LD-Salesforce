@@ -1,0 +1,18 @@
+Dear {!Contact.FirstName}, 
+
+Thank you so much for you hosting an Absolute Motivational Experience!  Our team had a fantastic time at {!Account.Name} getting to know your amazing students.  
+
+We will be back in your area from ********, and would love the chance to re-connect.  Our Brand New Show is sure to educate, energize and engage.  
+
+Following this will be an email with more info about our very highly recommended presentation. You can also check us out directly on our website at www.absolute.org (the promo email might not get through email filters). Pricing and booking details are also available on the website.  
+
+You can contact me by phone or email to let me know if any of these dates interest you. If not, are there any other dates that you would like to book in advance? Thanks for your time, I will contact you in a couple of days once you have had a chance to look at the information. 
+
+Regards, 
+
+{!User.Name}
+
+Absolute Leadership Development Inc. 
+1-866-432-4464
+{!User.Email}
+www.absolute.org

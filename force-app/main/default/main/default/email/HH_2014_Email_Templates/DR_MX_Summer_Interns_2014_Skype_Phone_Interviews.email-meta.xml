@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR/MX Summer Interns 2014 - Skype/Phone Interviews</name>
+    <style>freeForm</style>
+    <subject>DR/MX Summer Interns 2014 - Skype/Phone Interviews</subject>
+    <textOnly>Hola Applicants!
+
+Hope everyone had an amazing weekend. I just got back from my weekend off and it was freezing in Montreal. One of the nights was -18 degrees and I was definitely feeling like Christmas is just around the corner.
+
+We will be choosing 10 Interns for Dominican Republic and 10 Interns for Mexico after our interviews, and contacting to let you know who will be on our team next summer.
+
+I am very excited to have such a strong team of applicants and have high hopes that next summer is going to rock! I can&apos;t wait for our Dominican and Mexican communities to see what we have in store for them.
+
+I just wanted everyone to know that we will be conducting interviews next week from Monday-Friday. Can you please email me with your choice of a time and date? Remember this is all in Ontario time, so please choose it to reflect your schedule.
+
+All interviews will be around 30 minutes give or take!
+
+December 9-13
+Monday, Tuesday, Wednesday, Thursday and Friday
+8:30am - 2:00pm (some 3:00pm slots available if needed)
+
+
+Please note: The phone interviews will be very casual and you do not have to &quot;prepare&quot; for it. It will be super laid back and just think about it as having a conversation with me. I am nice, I promise!
+
+Here are some main point we will be discussing in our phone interviews:
+
+Summer Schedule
+Internship Responsibilities
+Internship Assignments
+Involvement before, during, and after the summer
+Reviewing: Application and Essay
+Scenario/Situation Assesment
+
+
+If any of the time slots does not work with you, please e-mail me and we can work this out!
+
+Talk to you soon,
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

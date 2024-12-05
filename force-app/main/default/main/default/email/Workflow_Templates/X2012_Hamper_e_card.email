@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charsetutf-8">
+<title>Hampers of Hope Donation</title>
+<meta name="viewport" content="width  762">
+<style type="text/css">
+.HH_link {text-decoration:none}
+.HH_link:hover {text-decoration:underline}
+</style>
+<style media="only screen and (max-device-width: 480px)" type="text/css
+">
+* {line-height: normal !important;}
+</style>
+</head>
+<body style="background-color:#FFF;margin:0;padding:0;font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px">
+<table  width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto">
+<tr>
+<td style="padding: 30px 20px 40px 20px; background-color:#FFFFFF;">
+<!--TOP/MAIN-->
+<table width="700" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto">
+<tr>
+<td align="right" valign="top" style="padding:7px 19px;"><div style="font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans
+-serif; color:#b2b2b2;font-size:10px;line-height:15px;"><a href="http://livedifferent.com/christmas-hampers-2012" class="HH_link" style="color:#b2b2b2;font-family: Luci
+da Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;whi
+te-space:nowrap">Go to Hampers of Hope Main page</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="http://livedifferent.com" class="HH_link" style="color:#b2b2b2;font-fam
+ily: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size
+:10px;white-space:nowrap">Livedifferent.com</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a
+ style="color:#b2b2b2;font-family: Lucida Grande, Arial, Helvetica, Geneva, 
+Verdana, sans-serif;font-size:10px;white-space:nowrap;text-decoration:none"
+>1-866-432-4464</a></div></td>
+</tr>
+<tr>
+<td width="700" style="-webkit-border-top-left-radius: 10px; -web
+kit-border-top-right-radius: 10px; background-color:#ffffff" bgcolor="#FF
+FFFF">
+<table width="700" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto">
+<tr>
+<td>
+    <img src="http://absolute.org/img/hoh/hoh_01.jpg" width="700" height="172" border="0" style="margin:0;display:block" alt="Merry Christmas" />
+</td>
+</tr>
+<tr>
+    <td>
+        <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tr><td width="17"><img src="http://absolute.org/img/hoh/hoh_02.jpg" width="17" height="887" border="0" style="margin:0;display:block" alt="" /></td>
+    <td valign="top"><table width="668" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+        <td><p style="font-family:arial,gill sans,sans-serif;font-size:30px;margin:20px;">To: {!Special_Projects__c.Name_To__c}<br />From: {!Special_Projects__c.Name_From__c}</p><p style="font-family:arial,gill sans,sans-serif;font-size:30px;margin:20px;">Together with {!Special_Projects__c.Name_From__c}'s gift of {!Opportunity.Amount}, you
+are part of bringing hope through our Hampers of Hope Christmas
+giving.</p> <p style="font-family:arial,gill sans,sans-serif;font-size:20px;margin:20px;">This year, the gift you are receiving is going to continue to give
+hope!</p></td>
+    </tr>
+    <tr>
+        <td><p style="font-family:arial,gill sans,sans-serif;font-size:18px;margin:20px;">{!Special_Projects__c.Message_1__c}</p>
+            
+            <p style="font-family:arial,gill sans,sans-serif;font-size:10px;margin:40px;">Connect with a deserving family in need this Christmas, and give the ultimate gift: Hope! Over the past year we have had the privilege of working alongside and building homes for many incredible families in Mexico and Dominican Republic. We are doing a special Christmas project so that we can reconnect with these families, send them personal Christmas greetings from you and other donors along with a gift hamper full of food and supplies. Work is slow for many families this time of year and these hampers will be a huge blessing for them. After Christmas, we will send a report back to everyone who has given to update them on how the family is doing. In addition to the hampers for families, we are going to give to some of the schools we have built for and throwing a community party and feeding hundreds.</p>
+
+<p style="font-family:arial,gill sans,sans-serif;font-size:10px;margin:40px;">These families are representative of a greater need and the type of work that Absolute is doing to change lives. Our goal is to raise enough money to not only ensure a special Christmas for ALL these families, but to also have extra funds that can be used where most needed as there are many other people that Absolute has yet to reach.</p>
+        </td>
+    </tr>
+    </table>
+    </td>
+    <td width="15"><img src="http://absolute.org/img/hoh/hoh_04.jpg" width="15" height="887" border="0" style="margin:0;display:block" alt=""/></td>
+            </tr>
+            <tr>
+                <td><img src="http://absolute.org/img/hoh/hoh_05.jpg" width="17" height="141" border="0" style="margin:0;display:block" alt="" />
+                </td>
+                <td bgcolor="9f2121" style="color:#FFFFFF;"><p style="margin:20px;font-size:10px;">Live Different<br />Suite 400, 44 Hughson St. North<br />Hamilton, ON   L8R 1G3<br />(866) 432 4464<br />info@livedifferent.com</p>
+                </td>
+                <td><img src="http://absolute.org/img/hoh/hoh_06.jpg" width="15" height="141" border="0" style="margin:0;display:block" alt="" />
+                </td>
+            </tr>
+        </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

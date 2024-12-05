@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> As you continue to plan for a&nbsp;return to classes&nbsp;in the fall, I wanted to reiterate just how effective and versatile LiveDifferent Circles programming has been for schools like yours. Even throughout the pandemic, the flexibility of </span></span><b><a href="https://livedifferent.com/circles/"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Circles</span></span></a></b> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">has allowed us to inspire thousands of students while&nbsp;working seamlessly&nbsp;within each school's ever-changing learning environment - from in-person to virtual platforms and a combination of both. And next year we're adding even more versatility, helping schools to engage with their students through <b>online or in-person assemblies, weekly discussion-based sessions on key lifestyle values, and more!</b><br /> <br /> What a great way to welcome students back! And the best part is, it's not just boring stuff to sit through. Students actually love it!</span></span><br /> <br /> <a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-05-31 at 10.18.40 AM" src="{[devName:Screen_Shot_20210531_at_101840_AM]}" style="max-width: 697.128px; width: 620.087px; height: 332.986px;" title="Screen Shot 2021-05-31 at 10.18.40 AM" /></a><br /> <br /> <span style="font-size:18px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#006666;">"<i>The LiveDifferent (Circles) online assemblies were perfect for the current times we live in. The presentations on "Resilience" and "Empathy" were both exactly what our students needed at this point in the year and the format kept them active and engaged.</i>"</span></span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"> - </span></span><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Principal in Saskatchewan</b></span></span><br /> <br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Circles can be an exciting and meaningful&nbsp;way to kick-off the year or an in-depth,&nbsp;practical learning opportunity&nbsp;to help students grow through important conversations. That's why I wanted to touch base&nbsp;before the end of the school year, while you're&nbsp;still putting plans in&nbsp;place. Let me know where you're at in that process and if you have any questions at all about what Circles might look like at your school&nbsp;in 2021/2022.<br /> <br /> Thanks so much for all you do&nbsp;{{{Recipient.FirstName}}}.&nbsp;I look forward to hearing from you soon!</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span></span><br /> <br /> <br /> <img alt="Screen Shot 2021-06-08 at 11.00.08 AM" src="{[devName:Screen_Shot_20210608_at_110008_AM]}" style="max-width: 1363.84px; width: 374.965px; height: 252.986px;" title="Screen Shot 2021-06-08 at 11.00.08 AM" /><br /> &nbsp;</p>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

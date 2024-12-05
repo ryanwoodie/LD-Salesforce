@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LDA 2015 - Final Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>LDA 2015 - Final Email</name>
+    <style>freeForm</style>
+    <subject>Academy Information</subject>
+    <textOnly>Hello LDA Students!
+
+Can you believe that in just a few short weeks you will be in Mexico?! I hope you are all just as excited as we are for your Academy experience. If you&apos;ve volunteered with us before, we&apos;re so glad to have you back. If this is your first time, we&apos;re so excited for you to learn, make friends and do great work with us!
+
+Before you take off, we have some important information and reminders. (There is a lot of important information below. Please take the time to read it thoroughly!)
+
+1. PASSPORTS
+
+Please bring a photocopy of your passport with you. This is a precaution just in case your passport goes missing while travelling.
+Double check before you leave your driveway that you have your passport with you as you must have a valid passport to travel with us to Mexico.
+
+2. ARRIVAL IN SAN DIEGO
+When you land in San Diego, our staff will be wearing a Live Different t-shirt or holding a Live Different sign. Come find us and we&apos;ll take you back to the Best Western.
+
+Address of hotel in San Diego:
+Best Western South Bay Inn
+710 E Street
+Chula Vista, California
+91910
+
+3. EMERGENCY CONTACTS
+If your family needs to contact you in case of an emergency while in Mexico, these are the numbers for them to call:
+
+Live Different Office (Canada): 1-866-432-4464 (Toll Free, 24/7)
+
+Peter Kranenburg:
+011-52-1-616-21-2883 (Mexico cell)
+701-215-1405 (US cell)
+*Contact Peter first
+
+Andrew Bernardi:
+011-52-1-616-107-9365 (Mexico cell)
+
+Dawn Bernardi:
+011-52-1-616-118-2050 (Mexico cell)
+
+For general inquiries and non-urgent matters, please contact us via email:
+jenn@livedifferent.com (Hamilton office)
+peter@livedifferent.com (Mexico office)
+
+4. PHONE AND INTERNET ACCESS
+
+There is wifi available where you will be staying. This is your easiest and most cost effective way of contact with friends and family back home.
+You can access wifi through your phone, or if you&apos;d like, you can bring a lap top or Ipad. (A lap top may be useful when doing research for the curriculum part of the program. But it is not a requirement that you have one.)
+Keep in mind that Live Different is not responsible for lost or stolen items. There is a safe available for smaller valuable items, but not for larger items such as laptops.
+
+There is a house phone available, but for very limited use only.
+If your cell phone is unlocked, we can help you buy a sim card once there if you want a Mexican phone number.
+
+5. MONEY/CURRENCY
+
+It is recommended that you bring USD cash. About $300 is a good amount.
+You can bring a debit card as a back up. Check with your bank that you will be able to use it in Mexico.
+The cash you bring will be spent on things like souvenirs and snacks, if you choose to purchase these types of items.
+
+
+&quot;Like&quot; us on Facebook!
+Tell your family and friends to &quot;like&quot; Live Different on Facebook. We will be posting photos and updates of what you guys are up to!
+
+Thank you for taking the time to read through all of this very important information. If you have any questions, please feel free to send me an email or give me a call in our office at 1 866 432 4464.
+
+Thank you,
+Jenn Digiandomenico</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

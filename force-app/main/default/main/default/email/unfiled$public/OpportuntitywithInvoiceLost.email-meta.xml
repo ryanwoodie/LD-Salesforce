@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Updates user that opportunity with an invoice is closed lost</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportuntity with Invoice Lost</name>
+    <style>none</style>
+    <subject>Opportunity with invoice closed/lost: {!Opportunity.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

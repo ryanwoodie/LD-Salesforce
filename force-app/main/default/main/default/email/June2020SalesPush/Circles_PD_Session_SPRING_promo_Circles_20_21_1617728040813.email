@@ -1,0 +1,45 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p><span style="font-size:14px;"><span style="color:#000000"><span style="font-family:Times"><span style="font-family:Arial, Helvetica, sans-serif">Hi&nbsp;{{{Recipient.FirstName}}}!</span><br />
+<br />
+<span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><font face="Arial, Helvetica, sans-serif"><span style="white-space:pre-wrap">How has everything been going this spring at</span></font><font face="Arial, Helvetica, sans-serif">&nbsp;</font></span></span><span style="font-family:Arial, Helvetica, sans-serif">{{{Recipient.merge1__c}}}</span><span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial">? I wanted to keep you in the loop regarding our FREE online professional development session for school staff and wondered if we could potentially support yours.</span></span></span></span></span></span><br />
+<br />
+<span style="color:#000000"><span style="font-family:Times"><span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222">Here is some really great feedback we got from Omar (Vice Principal at Streetsville Secondary School) about his staff’s recent Circles PD session:</span></span></span></span></span></span></span><br />
+<br />
+<span style="color:#000000"><span style="font-family:Times"><span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial">"<span style="font-style:italic">...It was truly an eye-opening experience. Our team shared their personal narratives which has had a positive impact in how we see each other. The experience has brought us closer together and came at a great time, in the middle of a busy year in the Covid-era. Much appreciation to the LiveDifferent team who facilitated our discussions masterfully.</span>”</span></span></span></span></span></span><br />
+<br />
+<span style="color:#000000"><span style="font-family:Times"><span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial">We love helping people build meaningful connections! Does that sound like something we could support your staff with? Let me know what questions you have and we can get the ball rolling. (Also, here is the website link for more info: </span></span></span></span><a href="https://livedifferent.com/circles/circles-pd-day/"><span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="text-decoration-line:none">https://livedifferent.com/circles/circles-pd-day/</span></span></span></span></span></span></a>&nbsp;<span style="font-variant-numeric:normal"><span style="font-variant-east-asian:normal"><span style="white-space:pre-wrap"><span style="font-family:Arial">)</span></span></span></span></span></span><br />
+<br />
+<span style="color:#000000"><span style="font-family:Times"><span style="font-family:Arial, Helvetica, sans-serif">Thanks so much {{{Recipient.FirstName}}}.</span></span></span><br />
+<br />
+<span style="color:#000000"><span style="font-family:Times"><span style="font-family:Arial, Helvetica, sans-serif">{{{Sender.FirstName}}}</span></span></span></span><br />
+<br />
+____________________<br />
+<br />
+Dave Hamilton<br />
+Manager of School Partnerships<br />
+<b>LiveDifferent</b><br />
+<br />
+1-866-432-4464 Toll free<br />
+905-777-1662 Office<br />
+905-777-8117 Fax<br />
+dave.h@livedifferent.com<br />
+<br />
+www.livedifferent.com<br />
+"Life is about people"</p>
+
+<div id="" style="left: 7.98828px; top: 238.242px;">&nbsp;</div>
+
+<div id="" style="left: 7.98828px; top: 238.242px;">&nbsp;</div>
+
+<div id="" style="left: 7.98828px; top: 181.992px;">&nbsp;</div>
+
+<div id="" style="left: 7.98828px; top: 181.992px;">&nbsp;</div>
+
+<div id="" style="left: 7.98828px; top: 181.992px;">&nbsp;</div>
+
+<div id="" style="left: 7.98828px; top: 181.992px;">&nbsp;</div>
+
+</body></html>

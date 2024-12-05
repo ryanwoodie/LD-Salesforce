@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>HH 2014 - New Year&apos;s Trip - WestJet Code</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>HH 2014 - New Year&apos;s Trip - WestJet Code</name>
+    <style>freeForm</style>
+    <subject>Live Different: WestJet Discount Code - Book Your Flights!</subject>
+    <textOnly>Hey Everyone!
+
+I just wanted to send our an email to let all of you know that WestJet has officially given Live Different volunteers a way to save on flights when travelling for a Live Different Build trip.
+
+Please read all of the information carefully before booking!
+
+WestJet Discount
+There is a potential 10% discount on flights depending on where you are travelling from and to as well as availability. The sooner you call, the better the discounts are.
+
+How to Received a Discount
+We have a discount code for any flights booked through WestJet! The convention code is only for individual flights. When you use it, you have to call the WestJet Groups Department at 1-888-493-7853 and give them the convention code: CC7946.
+
+On the phone: &quot;Hi there, I am hoping to book an individual flight using the convention code: CC7946 to go on a Live Different Build trip.&quot;
+
+Forwarding the Itinerary
+Please call as soon as possible to book your flights if you wish to receive a discount. Once you have your flights booked, please forward me your flight itinerary!
+
+Extra Nights
+If you are arriving a day early or staying a day later because of flight availability, you are welcome to stay at the resort and I can book you for an extra night. It is $42 USD per night (all inclusive) for a shared room and $60 USD per night (all inclusive) for a private room.
+
+If you have questions, please let me know.
+
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Live Different</title>
+                                                                                                                                                                                                                                                                                                                                                                                                        
+<style type="text/css">
+	.ReadMsgBody {width: 100%; background-color: #ffffff;}
+	.ExternalClass {width: 100%; background-color: #ffffff;}
+	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Arial, Helvetica, sans-serif}
+	table {border-collapse: collapse;}
+	
+	@media only screen and (max-width: 640px)  {
+					body[yahoo] .deviceWidth {width:440px!important; padding:0;}
+					body[yahoo] .deviceWidthinner {width:420px!important; padding:0;}	
+					body[yahoo] .center {text-align: center!important;}
+					body[yahoo] .highlight {font-size:13px!important;}
+					body[yahoo] .dot {width:7px!important}
+			}
+			
+	@media only screen and (max-width: 479px) {
+					body[yahoo] .deviceWidth {width:280px!important; padding:0;}
+					body[yahoo] .deviceWidthinner {width:260px!important; padding:0;}
+					body[yahoo] .center {text-align: center!important;}
+					body[yahoo] .dot {display:none;}
+					body[yahoo] .htext {display:block;text-align:center;margin-left:40px}
+			}
+
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial, Helvetica, sans-serif">
+
+<!-- Wrapper -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
+		
+			<!-- Start Header-->
+			<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+				<tr>
+					<td width="100%" bgcolor="#ffffff">
+
+                          
+			    <!-- Start Intro -->
+			    <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" style='border-bottom:1px solid #000;margin-bottom:20px'>
+                                <tr>
+                                    <td style="padding:10px 20px;font-size:14px" class="">
+			<p> Hi {!Account.SP_First_Name__c},</p>
+			<p>Thank you so much for taking the time to speak with me today!  Following is some of the information about our presentation that I said I would send, and here is a quick introduction video: <a href='https://youtu.be/mGWCT8IS1Oo' style='decoration:none'>click here to view</a></p>
+
+<p>If you would be so kind as to give a brief reply, just so I know you received my email successfully, it would be greatly appreciated! And if you have any questions at all, I'll be happy to help.</p>
+
+<p>Thanks so much {!Account.SP_First_Name__c}.  I look forward to speaking with you soon!</p>
+
+<p>Kindest Regards,</p>
+{!User.FirstName} {!User.LastName}<br />
+School Liaison<br />
+
+<img src="http://livedifferent.com/sites/files/{!User.first_name_lowercase__c}.png" /><br />
+
+<p><img src="http://livedifferent.com/sites/default/files/images/general/esiglogo.jpg" /></p>
+
+<p>Live Different<br />
+Suite B3 - 15 Wellington St. North<br />
+Hamilton, ON L8R 1M7<br />
+Canada</p>
+
+<p>1-866-432-4464&nbsp;Toll free<br />
+905-777-1662&nbsp;Office<br />
+<a href="mailto:{!User.first_name_lowercase__c}@livedifferent.com" target="_blank">{!User.first_name_lowercase__c}@livedifferent.com</a><br />
+<a href="http://www.livedifferent.com/" target="_blank">www.livedifferent.com</a></p>
+                                    </td>
+                                </tr>
+                            </table>
+			    <!--end intro -->
+			<!-- One Column -->
+			<table width="580"  class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFF"  style='border-bottom: 1px solid #000'>
+				<tr>
+					<td valign="top" style="padding:0" bgcolor="#ffffff">
+<p style='text-align:center'><a href='http://livedifferent.com/sites/default/files/email/2015/browser.html' style='text-align:center;font-size:12px;text-decoration:none;color:#000'>Click here to view this email in your browser</a></p>
+						<img  class="deviceWidth" src="http://livedifferent.com/sites/default/files/email/2015/OYS_lc.jpg" alt="" border="0" style="display: block; border-radius: 4px;" />						
+					</td>
+				</tr>
+                <tr>
+                    <td style="font-size: 13px; color: #959595; font-weight: normal; text-align: left; font-family: Arial, Helvetica, sans-serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px" bgcolor="#FFFFFF">
+                        
+                        <table>
+                            <tr>
+                                <td valign="middle" style="padding:0 10px 10px 0;text-align:center"><a href="#" style="text-decoration: none; color: #272727; color: #272727; font-size:17.5px; font-weight: bold; font-family:Arial, sans-serif " class='highlight'><span class='htext'>Hour-long School Presentation</span> <img src='http://livedifferent.com/sites/default/files/email/leads2014_jun/dot.png' style='width:9px' class='dot' /> <span class='htext'>Empowering Life Stories</span>  <span class='htext'>Inspiring Videos</span> <img src='http://livedifferent.com/sites/default/files/email/leads2014_jun/dot.png' style='width:9px' class='dot' /><span class='htext'> Live Band</span> <img src='http://livedifferent.com/sites/default/files/email/leads2014_jun/dot.png' style='width:9px' class='dot' /> <span class='htext'> Grades 7 & up</span></a>
+                                </td>
+                            </tr>
+                        </table>
+
+						This is the character development presentation that students, parents, and teachers will thank you for bringing to your school! You'll capture your students' attention and transform them with a message that matters.                    </td>
+                </tr>              
+			</table><!-- End One Column -->
+
+
+<div style="height:15px">&nbsp;</div><!-- spacer -->
+
+
+            <!-- 2 Column Images & Text Side by SIde -->
+	    <p style='font-size:16px;font-weight:bold;text-align:center'>Trusted by Canadian schools for over 16 years</p>
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="2columns" style='border-bottom: 1px solid #000'>
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <!-- start of left column -->
+                                    <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="270" height="160" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/2015/1.1.png" alt="" border="0" width="270" height="160" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-conteent="2colcontent1">
+                                                                        We've presented to over 1.1 Million students in over 2,300 schools from coast to coast.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of left column -->
+                                    <!-- start of right column -->
+                                    <table width="290" align="right" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="270" height="160" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/98.png" alt="" border="0" width="270" height="160" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-content="2colcontent2">
+                                                                        After experiencing a Live Different presentation, 98% of educators rank it better than most presentations they have had in their school.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of right column -->
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="10"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table><!-- End 2 Column Images & Text Side by SIde -->
+
+<div style="height:15px">&nbsp;</div><!-- spacer -->
+
+<p style='text-align:center;font-size:16px;font-weight:bold'>What makes our presentations different?</p>
+
+            <!-- 4 main selling points -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="2columns" >
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <!-- start of left column -->
+                                    <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/roots.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-conteent="2colcontent1">
+                                                                        Most programs lecture on outward behaviors/symptoms (which research shows can be counter-productive). Our positive approach cuts through to root causes and mindsets, igniting change from within.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of left column -->
+                                    <!-- start of right column -->
+                                    <table width="290" align="right" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/personal_story.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-content="2colcontent2">
+                                                                        The true impact of our presentation comes from the power of the personal story. Young people, sharing their stories of hope, connect with students like nothing else.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of right column -->
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="10"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="2columns" style='border-bottom: 1px solid #000'>
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <!-- start of left column -->
+                                    <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/upbeat.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-conteent="2colcontent1">
+                                                                        Our upbeat, high energy concert-style presentation keeps students fully engaged and tuned-in to a message that will change their life.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of left column -->
+                                    <!-- start of right column -->
+                                    <table width="290" align="right" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/discussion.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-content="2colcontent2">
+                                                                        Our messaging will spark meaningful discussions across your student body, inspiring students that need help to reach out.
+
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of right column -->
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="10"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table><!-- End 4 main selling points -->
+
+<div style="height:15px">&nbsp;</div><!-- spacer -->
+
+            <!-- Blog Headlines -->
+	    <p style='text-align:center;font-size:16px;font-weight:bold'>What others are saying</p>
+            <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+
+                <tr>
+                    <td valign="top">
+                        <table>
+                            <tr>
+                                <td style="color:#fff;font-size:12px;font-weight:bold;text-align:center;-webkit-text-size-adjust:none;padding:4px 8px;"><img src='http://livedifferent.com/sites/default/files/email/leads2014_jun/james.png' /></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="font-size:11px;color:#656565;text-align:left;padding-left:8px;" valign="middle">
+                        <div style="font-size:14px;color:#000000;text-align:left;text-decoration:none;">"I'm not sure how the presentation could be improved- it was absolutely amazing! I heard comments like 'That's the best presentation I have seen in my entire teaching career' from a veteran teacher, and students were raving about it for days. It was very worthwhile and inspirational."</div>
+                         Jo'ann Obrien, St James Regional High School
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+<tr>
+                    <td valign="top">
+                        <table>
+                            <tr>
+                                <td style="color:#fff;font-size:12px;text-align:center;-webkit-text-size-adjust:none;padding:4px 8px;"><img src='http://livedifferent.com/sites/default/files/email/leads2014_jun/pratt.png' /></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="font-size:11px;color:#656565;text-align:left;padding-left:8px;" valign="middle">
+                        <div style="font-size:14px;color:#000000;text-align:left;text-decoration:none;">"In my 17 years in education this is the best loved student assembly I have ever been to. Students were literally hugging me in thanks for bringing LIVE DIFFERENT in."</div>
+                         Lorna Cameron, E.W. Pratt High School
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr><tr>
+                    <td valign="top">
+                        <table>
+                            <tr>
+                                <td style="color:#fff;font-size:12px;font-weight:bold;text-align:center;-webkit-text-size-adjust:none;padding:4px 8px;"><img src='http://livedifferent.com/sites/files/may2015/swcss.png' style='width:70px' /></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="font-size:11px;color:#656565;text-align:left;padding-left:8px;" valign="middle">
+                        <div style="font-size:14px;color:#000000;text-align:left;text-decoration:none;">"Finally a presentation that gets it right.  The perfect mix of a meaningful message presented in a fun and entertaining way.  I'm looking forward to having them back next year!"
+</div>
+                        Gary Watson, Sir Winston Churchill Secondary School 
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+            </table>
+            <!-- end blog headlines -->
+
+
+<div style="height:35px;border-top: 1px solid #000">&nbsp;</div><!-- spacer -->
+
+<!-- 3 Start of Columns -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="2columns" >
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="deviceWidth">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <!-- start of left column -->
+                                    <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/leads2014_jun/affordable.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-conteent="2colcontent1">
+									As a charity, we make our presentation accessible to every school with donation-based pricing. Your donation will not only help bring this life-changing program to your school, but to other students across the country.
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of left column -->
+                                    <!-- start of right column -->
+                                    <table width="290" align="right" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                       <tbody>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="20"></td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->
+                                                <table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                                                   <tbody>
+                                                      <!-- image -->
+                                                      <tr>
+                                                         <td width="290" height="193" align="center" class="deviceWidth">
+                                                            <img src="http://livedifferent.com/sites/default/files/email/2015/2015theme.png" alt="" border="0" width="290" height="193" style="display:block; border:none; outline:none; text-decoration:none;" class="colimg2">
+                                                         </td>
+                                                      </tr>
+                                                      <!-- Content -->
+                                                      <tr>
+                                                         <td>
+                                                            <table width="270" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidthinner">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="100%" height="20"></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; line-height:24px; color: #666666; text-align:center;" st-content="2colcontent2">
+                                                                        Our 2015/16 presentation will help your students shift from being passive spectators of their life stories to being the authors of them - creating a sense of identity, ownership, and hope for the future.
+                                                                     </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                     <td width="100%" height="20" style='text-align:center;font-size:12px'><a href='http://livedifferent.com/motivational-presentations' style='text-align:center'>More Info</a></td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of Content -->
+                                                      <!-- end of content -->
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of right column -->
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="10"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<p style='font-size:18px;font-weight:bold;text-align:center;line-height:17px;margin-top:40px'>Call now to book your presentation!</p>
+<p style='font-size:22px;font-weight:bold;text-align:center;margin-bottom:40px'>(866) 432 4464 ext. {!User.Extension}</p>
+<p style='text-align:center'><a href='http://www.tfaforms.com/375008' style='padding:20px;background-color:#00b9f2;color:#FFF;border-radius:5px'>Book Now!</a></p>
+<div style="height:35px">&nbsp;</div><!-- spacer -->
+			<!-- 4 Columns -->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+				<tr>
+					<td bgcolor="#363636" style="padding:30px 0">
+                        <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                            <tr>
+                                <td>                    
+                                        <table width="45%" cellpadding="0" cellspacing="0"  border="0" align="left" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; color:#999; font-family: Arial, sans-serif; padding-bottom:20px" class="center">
+
+                               
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                        
+                                        <table width="40%" cellpadding="0" cellspacing="0"  border="0" align="right" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; font-weight: normal; font-family: Arial, Helvetica, sans-serif; line-height: 26px; vertical-align: top; text-align:right" class="center">
+
+                                                    <a href="http://twitter.com/livediff"><img src="http://www.emailonacid.com/images/emails/5_13/footer_twitter.gif" width="42" height="42" alt="Twitter" title="Twitter" border="0" /></a>
+
+                                                    <a href="http://vimeo.com/user21264651"><img src="http://www.emailonacid.com/images/emails/5_13/footer_vm.gif" width="42" height="42" alt="Vimeo" title="Vimeo" border="0" /></a>
+
+                                                    <a href="http://facebook.com/livediff"><img src="http://www.emailonacid.com/images/emails/5_13/footer_fb.gif" width="42" height="42" alt="Facebook" title="Facebook" border="0" /></a>
+						    <a href="http://youtube.com/livedifferent"><img src="http://livedifferent.com/sites/default/files/email/yt_icon.gif" width="42" height="42" alt="Youtube" title="RSS Feed" border="0" /></a>
+                                                    <br />
+
+                                                    <a href="#"><img src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo-w.png" alt="" border="0" style="padding-top: 5px;" /></a>
+						    <br/>
+                                                    <div style='line-height:14px'>Suite B3, 15 Wellington St. North<br/>
+                                                    Hamilton, ON   L8R 1M7<br />
+						    (905) 777 1662<br />
+						    <a href='mailto:presentations@livedifferent.com' style="text-decoration: none; color: #848484; font-weight: normal;">presentations@livedifferent.com</a>
+						    </div>
+                                                </td>
+                                            </tr>
+                                        </table>   
+                        
+                        		</td>
+                        	</tr>
+                        </table>                                                              		
+                    </td>
+                </tr>
+            </table><!-- End 4 Columns -->
+						
+		</td>
+	</tr>
+</table> <!-- End Wrapper -->
+
+</body>
+</html>

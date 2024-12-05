@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Holiday Fundraiser</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Holiday Fundraiser</name>
+    <style>freeForm</style>
+    <subject>How to Fundraise through the Holidays!</subject>
+    <textOnly>To all of our Live Different volunteers,
+
+As the holidays are approaching, here are some great ways to utilize the holidays to help with your fundraising efforts.
+
+1. Everyone is in the mood to give:
+Christmas is a great opportunity to ask for friends and family to donate towards your upcoming trip instead of purchasing a gift for you. Grandparents, parents, and older siblings are great people to ask.
+
+2. There are many reasons for a party:
+Host a Christmas party and have some information on the side about your upcoming trip. It is a great way to create awareness about your trip and for people to donate towards your trip. At your party you can sell 50/50 raffle tickets where half the proceeds go towards your trip and the other half to the winner of the ticket. Have some fun games where people have to buy their way into the game, such as competitive Jenga, where all proceeds go to your trip. Lots of ways at a party to make it fun and help your cause.
+
+3. Christmas movie night:
+Have a bunch of people over to watch Christmas movies. In between the movies you can play a few short Live Different Builds Trips from our youtube page. You might have some friends who want to donate to your trip or join you.
+
+4. Bottle drive:
+Along with parties, come empty bottles. Ask a few friends to drive around town on Saturday and Sunday mornings to collect empty bottles.
+
+5. Christmas cookies:
+Bake a bunch of Christmas treats and wrap them up and drop them off at a bunch of people&apos;s homes with some information about your trip. Even if they can&apos;t donate towards your trip, you are still spreading Christmas cheer.
+
+6. Groups:
+Are you involved in any of the following groups: school club, sports team, faith community, after school program, or a dance team? You can think of ways that these groups of people can help you out with an event. These friends of yours with have other groups of friends if you are selling raffle tickets, participate in the bottle drive, a silent auction, or any other event you choose!
+
+Remember that what you are choosing to do is self-less and the ultimate gift to others. Don&apos;t be scared to ask others to help you on your journey to volunteer your time to create change in a community that needs you.
+
+Please let me know if you have any other questions. I would love to support you and hear all about your fundraising ideas!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

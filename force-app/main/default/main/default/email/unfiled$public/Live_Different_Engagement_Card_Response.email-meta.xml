@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>2016 Live Different Engagement Card Response (All Responses - Editable)</name>
+    <style>freeForm</style>
+    <subject>Check out the ways you can stay involved with Live Different!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for filling out our survey at the end of your Live Different Build! You&apos;ve given us valuable feedback that will make a real difference!
+
+At the end of your survey, you let us know about the ways you&apos;d like to stay involved with Live Different. The info that you were interested in is listed below, so check it out, and let us know if we can answer any questions, or help you as you continue to find ways to Live Different!
+
+Thanks,
+
+The Live Different Team
+
+
+
+
+
+
+
+
+
+
+It&apos;s no surprise that most of our volunteers head home wanting to plan their next Build trip ASAP! Maybe you want to travel to a different host country, or perhaps go back to visit the same community you first worked with?
+
+We also have a Build trip that&apos;s been designed with returning volunteers in mind. This option gives you two weeks to travel, learn, and build in both Haiti and the Dominican Republic, and you can bring a friend or family member along so you can show them what a Live Different Build is like!
+
+For more info on all of our upcoming trips, and to register, click here.
+
+
+
+
+
+
+
+As a Builds Intern, you&apos;ll have the unique opportunity of being a part of the behind-the-scenes work of a Live Different Build, and to develop your leadership skills by receiving practical, hands-on experience in an international setting.
+
+Space is limited to only 10 interns per country, so apply soon! For more information, and to apply, click here.
+
+
+
+
+The Live Different Academy is a 13 week program in Mexico. Our students learn Spanish, complete a building project, volunteer in the community, study social justice, and spend &apos;A Week-in-the-Life&apos; of a Mexican migrant worker; learning first-hand about what life is like for many who live in the communities we serve.
+
+For more information, and to apply, click here.
+
+
+
+
+
+
+
+
+
+
+A Live Different Private Build can be organized for your friends, family, school, workplace, church, or community group. We&apos;ll work with you to plan out the best destination, schedule, project, and excursions that work for your group!
+
+
+
+See what a trip might look like for your group:
+
+Here is a video of one of our trips with the Boston Pizza Foundation.
+
+
+
+For more info, and to contact us to start planning, click here.
+
+
+
+
+
+
+
+
+
+Live Different Tour Internships are an intense and exciting hands-on way to gain experience working for a non-profit, and to make a difference in the lives of young people all across Canada. Our tour interns help us complete both the on-stage and behind-the-scenes work that help us pull off life-changing motivational productions every day!
+
+For more information, and to apply, click here.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

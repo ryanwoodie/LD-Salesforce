@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>Hi! </p>
+
+<p>You recently stayed at {!CampaignMember.FirstName} {!CampaignMember.LastName}'s House. </p>
+
+<p><a href='http://www.tfaforms.com/forms/view/259307?tfa_1={!CampaignMember.ContactId}&tfa_2={!CampaignMember.Campaign}&tfa_3={!CampaignMember.FirstName}-{!CampaignMember.LastName}'>Please rate this billet.</a> </p>
+
+</body>
+</html>

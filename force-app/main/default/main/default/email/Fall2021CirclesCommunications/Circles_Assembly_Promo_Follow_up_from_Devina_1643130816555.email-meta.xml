@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Circles Assembly Promo - Follow-up from Devina</name>
+    <pageDevName>Circles_Assembly_Promo_Follow_up_from_Devina</pageDevName>
+    <style>none</style>
+    <subject>Following up about a virtual assembly</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

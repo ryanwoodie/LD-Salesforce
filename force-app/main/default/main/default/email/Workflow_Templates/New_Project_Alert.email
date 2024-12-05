@@ -1,0 +1,7 @@
+Below is the info / links for the new project:
+
+{!Project__c.Name}
+Country: {!Project__c.country__c}
+Notes: {!Project__c.Notes__c}
+
+{!Project__c.Link}

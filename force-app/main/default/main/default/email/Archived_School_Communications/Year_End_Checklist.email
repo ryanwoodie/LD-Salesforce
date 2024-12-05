@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Live Different Newsletter</title>
+                                                                                                                                                                                                                                                                                                                                                                                                        
+<style type="text/css">
+	.ReadMsgBody {width: 100%; background-color: #ffffff;}
+	.ExternalClass {width: 100%; background-color: #ffffff;}
+	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Arial, Helvetica, sans-serif}
+	table {border-collapse: collapse;}
+	
+	@media only screen and (max-width: 640px)  {
+					body[yahoo] .deviceWidth {width:440px!important; padding:0;}
+					body[yahoo] .deviceWidthinner {width:420px!important; padding:0;}	
+					body[yahoo] .center {text-align: center!important;}
+					body[yahoo] .highlight {font-size:13px!important;}
+					body[yahoo] .dot {width:7px!important}
+			}
+			
+	@media only screen and (max-width: 479px) {
+					body[yahoo] .deviceWidth {width:280px!important; padding:0;}
+					body[yahoo] .deviceWidthinner {width:260px!important; padding:0;}
+					body[yahoo] .center {text-align: center!important;}
+					body[yahoo] .dot {display:none;}
+					body[yahoo] .htext {display:block;text-align:center;margin-left:40px}
+			}
+
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial, Helvetica, sans-serif">
+
+<!-- Wrapper -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
+		
+			<!-- Start Header-->
+			<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+				<tr>
+					<td width="100%" bgcolor="#ffffff">
+
+                            <!-- Logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
+                                <tr>
+                                    <td style="padding:10px 20px" class="center">
+                                        <a href="http://livedifferent.com"><img src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo.png" alt="" border="0" /></a>
+                                    </td>
+                                </tr>
+                            </table><!-- End Logo -->
+			    <!-- Start Intro -->
+			    <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" style='margin-bottom:20px'>
+                                <tr>
+                                    <td style="padding:10px 20px;font-size:14px" class="">
+			<p> Hi {!Contact.FirstName},</p>
+			<p>We know these last couple of weeks are probably quite busy for you, so we at Live Different just wanted 
+to say thanks so much for all you do and we hope you have a fantastic summer break!</p>
+
+<p style='font-size:20px;text-align:center;margin-bottom:0px;margin-top:50px'>A Teacher's Summer Checklist...</p>
+
+                                    </td>
+                                </tr>
+                            </table>
+			    <!--end intro -->
+
+
+   <!-- 2 Column Images & Text Side by SIde -->
+            <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#fff" style="border-collapse: collapse;">
+                <tr>
+                    <td style="padding:10px 0">
+                            <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td valign="top" align="center" class="center" style="padding-top:0px">
+                                            <a href="#"><img width="267" src="http://livedifferent.com/sites/default/files/email/2016/dive.jpg" alt="" border="0" style="border-radius: 4px; width: 267px; display: block;" class="deviceWidth"></a>
+                                    </td>
+                                </tr>
+                            </table>                       
+                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="font-size: 12px; color: #959595; font-weight: normal; text-align: left; font-family: Georgia, Times, serif; line-height: 24px; vertical-align: top; padding:30px 8px 10px 8px">
+
+                                        <table style="border-collapse: collapse;">
+                                            <tr>
+                                                <td valign="top" style="padding:0 10px 10px 5px">
+                                                    <img src="http://livedifferent.com/sites/default/files/email/2016/check.png" alt="" border="0" align="left">
+                                                </td>
+                                                <td valign="middle" style="padding:15px 10px 10px 0"><a href="#" style="text-decoration: none; font-size: 16px; color: #000; font-weight: bold; font-family:Arial, sans-serif ">Enjoy the great outdoors</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        
+                                    </td>
+                                </tr>
+                            </table>  
+                         
+                    </td>
+                </tr>           
+            </table><!-- End 2 Column Images & Text Side by SIde -->
+
+<!-- 2 Column Images & Text Side by SIde -->
+            <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#fff" style="border-collapse: collapse;">
+                <tr>
+                    <td style="padding:10px 0">
+                            <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td valign="top" align="center" class="center" style="padding-top:20px">
+                                            <a href="#"><img width="267" src="http://livedifferent.com/sites/default/files/email/2016/sleep.jpg" alt="" border="0" style="border-radius: 4px; width: 267px; display: block;" class="deviceWidth"></a>
+                                    </td>
+                                </tr>
+                            </table>                       
+                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="font-size: 12px; color: #959595; font-weight: normal; text-align: left; font-family: Georgia, Times, serif; line-height: 24px; vertical-align: top; padding:30px 8px 10px 8px">
+
+                                        <table style="border-collapse: collapse;">
+                                            <tr>
+                                                <td valign="top" style="padding:0 10px 10px 5px">
+                                                    <img src="http://livedifferent.com/sites/default/files/email/2016/check.png" alt="" border="0" align="left">
+                                                </td>
+                                                <td valign="middle" style="padding:15px 10px 10px 0"><a href="#" style="text-decoration: none; font-size: 16px; color: #000; font-weight: bold; font-family:Arial, sans-serif ">Catch up on some sleep</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                       
+                                    </td>
+                                </tr>
+                            </table>  
+                         
+                    </td>
+                </tr>           
+            </table><!-- End 2 Column Images & Text Side by SIde -->
+
+<!-- 2 Column Images & Text Side by SIde -->
+            <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#fff" style="border-collapse: collapse;">
+                <tr>
+                    <td style="padding:10px 0">
+                            <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td valign="top" align="center" class="center" style="padding-top:20px">
+                                            <a href="#"><img width="267" src="http://livedifferent.com/sites/default/files/email/2016/band.jpg" alt="" border="0" style="border-radius: 4px; width: 267px; display: block;" class="deviceWidth"></a>
+                                    </td>
+                                </tr>
+                            </table>                       
+                            <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="font-size: 12px; color: #959595; font-weight: normal; text-align: left; font-family: Georgia, Times, serif; line-height: 24px; vertical-align: top; padding:30px 8px 10px 8px">
+
+                                        <table style="border-collapse: collapse;">
+                                            <tr>
+                                                <td valign="top" style="padding:0 10px 10px 5px">
+                                                    <img src="http://livedifferent.com/sites/default/files/email/2016/check.png" alt="" border="0" align="left">
+                                                </td>
+                                                <td valign="middle" style="padding:15px 10px 10px 0"><a href="#" style="text-decoration: none; font-size: 16px; color: #000; font-weight: bold; font-family:Arial, sans-serif ">See my favourite band live</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                      
+                                    </td>
+                                </tr>
+                            </table>  
+                         
+                    </td>
+                </tr>           
+            </table><!-- End 2 Column Images & Text Side by SIde -->
+
+<table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth" style='margin-bottom:20px'>
+                                <tr>
+                                    <td style="padding:10px 20px;font-size:14px" class="">
+			<p> But before you rush out, make sure you take a peek at what we have in store for your students in 
+2016/2017 <a href='https://youtu.be/NLFhDKn8IDc'>(https://youtu.be/NLFhDKn8IDc)</a> and don't hesitate to secure a date while they're still available!  (They're going quickly!)</p>
+
+<p>Thanks again.  We can't wait to see you next year!</p><br /><br />
+<p>Dave Hamilton<br />
+School Liason<br />
+<br />
+Live Different<br />
+(866) 432 4464<br />
+dave@livedifferent.com<br />
+</p>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+
+			<!-- 4 Columns -->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style='padding:10px'>
+				<tr>
+					<td bgcolor="#363636" style="padding:30px 0">
+                        <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                            <tr>
+                                <td>                    
+                                        <table width="45%" cellpadding="0" cellspacing="0"  border="0" align="left" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; color:#999; font-family: Arial, sans-serif; padding-bottom:20px" class="center">
+
+                                                <p style='color:#FFF'>If you no longer wish to receive these emails, please reply with 'unsubscribe' in the subject line.
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                        
+                                        <table width="40%" cellpadding="0" cellspacing="0"  border="0" align="right" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; font-weight: normal; font-family: Arial, Helvetica, sans-serif; line-height: 26px; vertical-align: top; text-align:right" class="center">
+
+                                                    <a href="http://twitter.com/livediff"><img src="http://www.emailonacid.com/images/emails/5_13/footer_twitter.gif" width="42" height="42" alt="Twitter" title="Twitter" border="0" /></a>
+
+                                                    <a href="http://vimeo.com/user21264651"><img src="http://www.emailonacid.com/images/emails/5_13/footer_vm.gif" width="42" height="42" alt="Vimeo" title="Vimeo" border="0" /></a>
+
+                                                    <a href="http://facebook.com/livediff"><img src="http://www.emailonacid.com/images/emails/5_13/footer_fb.gif" width="42" height="42" alt="Facebook" title="Facebook" border="0" /></a>
+						    <a href="http://youtube.com/livedifferent"><img src="http://livedifferent.com/sites/default/files/email/yt_icon.gif" width="42" height="42" alt="Youtube" title="RSS Feed" border="0" /></a>
+                                                    <br />
+
+                                                    <a href="#"><img src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo-w.png" alt="" border="0" style="padding-top: 5px;" /></a>
+						    <br/>
+                                                    <div style='line-height:14px'>Suite B3, 15 Wellington St. North<br/>
+                                                    Hamilton, ON   L8R 1M7<br />
+						    (905) 777 1662<br />
+						    <a href='mailto:presentations@livedifferent.com' style="text-decoration: none; color: #848484; font-weight: normal;">presentations@livedifferent.com</a>
+						    </div>
+                                                </td>
+                                            </tr>
+                                        </table>   
+                        
+                        		</td>
+                        	</tr>
+                        </table>                                                              		
+                    </td>
+                </tr>
+            </table><!-- End 4 Columns -->
+						
+		</td>
+	</tr>
+</table> <!-- End Wrapper -->
+
+</body>
+</html>

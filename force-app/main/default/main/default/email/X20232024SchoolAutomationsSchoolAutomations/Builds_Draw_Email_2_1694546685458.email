@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p><span style="color: #222222;">Hi there,</span></p>
+
+<p><span style="color: #222222;">We just did the draw for {{{Recipient.Company}}} today, and I gotta be honest, your entry didn't come up for that sweet $500 for a Build... Bummer, right? But guess what? There's a really great way you can still make it happen and get on that LiveDifferent Build! 🚀💰 Did you know you can totally raise all the funds you need?</span></p>
+
+<p><span style="color: #222222;">There are so many ways to fundraise! Click </span><a href="https://livedifferent.com/programs/builds/fundraising-ideas/" rel="noopener" target="_blank">HERE</a><span style="color: #222222;"> to check out some ideas.</span></p>
+
+<p><span style="color: #222222;">…But first, if you had to pick, would you jet off to the </span><a href="https://livedifferent.com/programs/builds/where-we-build/dominican-republic/" rel="noopener" target="_blank">Dominican Republic</a><span style="color: #222222;"> or </span><a href="https://livedifferent.com/programs/builds/where-we-build/mexico/" rel="noopener" target="_blank">Mexico</a><span style="color: #222222;">? Tough choice, right? Well, we have Builds coming up in both of those countries!</span></p>
+
+<p><span style="color: #222222;">If you have any questions, check out the links and I hope to see you on a Build one day!</span></p>
+
+<p><span style="color: #222222;">Stay Curious,</span></p>
+
+<p><span style="color: #222222;">{{{Recipient.OwnerName_F__c}}}</span></p>
+</body>
+</html>

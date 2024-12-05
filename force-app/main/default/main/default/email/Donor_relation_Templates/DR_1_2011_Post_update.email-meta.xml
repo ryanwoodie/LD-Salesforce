@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DR_1-2011_Post-update</name>
+    <style>none</style>
+    <subject>Update from Live Different Build in Dominican Republic</subject>
+    <textOnly>You are receiving this email because you have donated toward a participant on this trip, and we wanted to update you on a project that they are completing this summer.
+
+ 
+ 
+Hello {!Contact.FirstName}
+ 
+
+Another Live Different Build group has come and gone, and we&apos;d just like to say again how thankful we are for your donation towards our programs and participants!
+
+By now, the people you supported may have shared some stories with you about their time with us, but if you haven&apos;t had the chance to hear from them yet, we encourage you to find some time to spend with them to learn about their experience. Undoubtedly, they have done things that have impacted them deeply and met people that have changed the way they view life, and they will be excited to share all of that with you!
+
+http://on.fb.me/pOXdO9
+
+The results of a Live Different Build are long-lasting, both in the lives of our participants, and in the lives of those we work with around the world. On this past trip, our teams were able to complete four houses, which means that twenty-five people now have a safe and secure place to call home! You can click on the link above to see a video of a house dedication last week, as well as the heartfelt thanks from a mother of of one of these deserving families. It is through your support that we were able to accomplish all of this!
+
+There are so many more families like this that are in need, and we are more than willing to do what we can to help them - and we&apos;d like to give you the opportunity to help us do that! This summer, many more Live Different Build teams will be working alongside communities to reshape their future, and we hope to complete a total of 8 houses and 4 medical clinics in the Dominican Republic this year! Is that something you&apos;d be interested in supporting? If so, please click the &apos;donate now&apos; button below.
+
+absolute.org/donate
+
+To find out more about Live Different Build, please check out www.heroholiday.com. To find out more about what Absolute&apos;s other programs, please check out www.absolute.org. We&apos;d also like to keep in touch with you with updates on our programs, and opportunities for you to engage with us in the future. If you&apos;d prefer not to receive these updates, please email me at cindy@absolute.org with unsubscribe as the subject line.
+
+
+If you have any questions at all, please feel free to either call our office at 1-866-432-4464 or email me at cindy@absolute.org - we would really love to hear from you!
+
+
+Thanks for all that you have done and continue to do in your support of change!
+
+Sincerely,
+
+Cindy Stover
+
+Community Engagement Coordinator
+
+www.absolute.org
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

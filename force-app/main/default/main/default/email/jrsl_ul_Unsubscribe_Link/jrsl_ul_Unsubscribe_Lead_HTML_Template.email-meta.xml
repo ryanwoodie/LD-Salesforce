@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>template from unmanaged package &quot;Unsubscribe&quot;. works with Contacts. Does not account for special characters in email addresses. use visualforce template for that.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Unsubscribe Lead HTML Template</name>
+    <style>none</style>
+    <subject>Sample Contact Classic HTML Email Template</subject>
+    <textOnly>Dear {!Contact.FirstName} {!Contact.LastName},
+
+Go here to unsubscribe from all emails from our organization.
+https://{!jrsl_ul_Unsubscribe_Link__mdt.jrsl_ul_Site_Domain__c}/Unsubscribe?recordId={!Contact.Id}&amp;Email={!Contact.Email}
+
+Instructions: 
+Change &quot;our organization&quot; to the name of your organization.
+Make sure you modify the text only version as well.
+Delete the instructions here and add the rest of your email above the link.
+Notes:
+This email template comes with the unmanaged package &quot;Unsubscribe Link.&quot; 
+The link will launch the Unsubscribe Link flow.
+The flow will have an error if an email address includes a special character like +. The package contains a visualforce email template that accommodates special characters. Better yet, use lightning templates and the Unsubscribe Link formula fields.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

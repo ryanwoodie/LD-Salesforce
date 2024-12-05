@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>aug 2014 email sent to contacts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aug 2014 email blast1</name>
+    <style>none</style>
+    <subject>Remaining dates for 2014/2015 Live Different presentations</subject>
+    <textOnly>Livedifferent.com
+
+Hello {!Contact.FirstName},
+
+I hope you&apos;ve had a wonderful summer, welcome to the new school year! You may recall receiving some information from us back in June regarding our motivational presentation. I thought I&apos;d take this opportunity to reconnect and find out if your school is interested in reserving one of our few remaining dates.
+
+We&apos;re extremely excited about our theme for 2014/2015, which is &quot;Courage To Connect: Life Is About People&quot;, and how it is going to positively impact the lives of students all across Canada. This presentation is jam packed with energizing live music, meaningful personal stories, entertaining video spots, and so much more. Here is an example of one of the videos we use during the presentation:
+
+
+http://youtu.be/bb6geilIYM0
+
+We would love to partner with you to bring this encouraging and motivational message to your students. As a charity, we have no set fee. Instead, we offer our presentation to your school on the basis of a donation.
+
+Please contact me if you have any questions, or would like to book a presentation.
+
+Thanks so much and I look forward to hearing from you soon!
+
+All the best,
+
+{!User.FirstName} {!User.LastName}
+{!User.Title}
+(866) 432 4464 {!User.Extension}
+{!User.Email}
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+{!User.Email}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

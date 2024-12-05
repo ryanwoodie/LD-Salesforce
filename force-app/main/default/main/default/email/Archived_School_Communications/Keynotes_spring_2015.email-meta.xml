@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Blast for Keynote Options - Spring 2015</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Keynotes_spring_2015</name>
+    <style>none</style>
+    <subject>Check out our new Keynote Speakers! Topics include bullying, kindness, authenticity, and more!</subject>
+    <textOnly>NEW KEYNOTES FOR 2015
+
+From restorative justice and bullying, to authenticity and kindness,
+Live Different has a Keynote Speaker that is perfect for your school!
+
+MEET THE SPEAKERS
+
+Live Different&apos;s Keynotes inspire audiences to recognize their purpose in life and to have the courage to overcome obstacles that may be keeping them from achieving their goals, all while providing them with the tools they can use to start to make change today!
+
+
+RESONATE: The stories we tell ourselves
+
+Christal specializes in inspiring her listeners to believe in something bigger than what they can see right now, starting with how they view themselves and the world around them.
+
+http://livedifferent.com/keynotes/christal-earle
+
+
+KINDNESS changes everything
+
+Johnny brings an incredible amount of passion, energy, and humour. In addition, his vulnerability in sharing his personal story reaches to the core of what many students are experiencing themselves.
+
+http://livedifferent.com/keynotes/johnny-henderson
+
+
+RESTORATIVE JUSTICE and bullying
+
+Coming from a 34 year career of policing, Perry has a unique and innovative perspective on bullying and Restorative Justice issues, which arises from both personal and professional experience.
+
+http://livedifferent.com/keynotes/perry-mason
+
+What others are saying
+&quot;What has stood out for me the most about Constable Mason is his ability to relate well to youth and their families, frontline service providers, and the academic community. He is devoted to reducing bullying and restorative justice in a way that I have yet to see from any other police officer. I suspect it also has to do with the fact that Constable Mason is conscientious, caring, intelligent, and interpersonally skilled.&quot;
+Tracy Vaillancourt Canada Research Chair, Children&apos;s Mental Health and Violence Prevention
+&quot;I have personally seen the incredible impact that Johnny has made in his communication. His communications are always creative, engaging and full of humour. He is a pleasure to have and we look to book him every year as he connects so well with the audience. I would and have recommended Johnny to any organization that is looking for a passionate, talented and committed communicator for this next generation.&quot;
+Alex Smethurst, Youth Worker, St. Catharines, ON
+&quot;Christal consistently receives rave reviews from those in her workshops and has the ability to connect with everyone in the room. Not only is she phenomenal at giving a workshop presentation she is also amazing to work with.&quot;
+Angela Cacciavillani, Ontario Student Leadership Conference Coordinator
+
+LEARN MORE ON OUR WEBSITE
+http://livedifferent.com/keynotes
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+bookings@livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

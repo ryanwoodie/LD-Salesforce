@@ -1,0 +1,5 @@
+Hey!
+
+{!IATSPayment__IATS_Customer_Code__c.IATSPayment__Payer_First_Name__c} {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Payer_Last_Name__c} has signed up to be a recurring donor!
+
+{!Opportunity.Link}

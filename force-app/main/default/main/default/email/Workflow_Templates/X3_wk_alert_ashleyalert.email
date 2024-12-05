@@ -1,0 +1,3 @@
+An alert was triggered for {!Registration__c.Contact__c}
+{!Registration__c.Name}
+{!Registration__c.Link}

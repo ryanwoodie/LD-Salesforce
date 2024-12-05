@@ -1,0 +1,12 @@
+Hello,<br><br>
+
+{!BP_Store_Invite__c.Invitee_Full_Name__c} at {!BP_Store_Invite__c.BP_Store__c} has accepted our invitation to attend a Think Day presentation.<br><br>
+
+Here are some notes (if any):<br>
+<strong>{!BP_Store_Invite__c.Notes__c}</strong><br>
+
+<br>The presentation is at:<br><br>{!BP_Store_Invite__c.Presentation_Time__c} on {!BP_Store_Invite__c.Date__c}<br><br>and the school&#39;s address is:<br><br>{!Account.Name}<br>{!Account.BillingAddress}<br><br>
+
+Warm Regards,<br>{!User.Name}<br>{!User.Title}<br><br>Absolute Leadership Development Inc.<br>Suite 400 - 44 Hughson St. North<br>Hamilton, ON  L8R 1G3<br>Canada<br><br>905-777-1662 Office<br>905-777-8117 Fax<br><a href="http://www.absolute.org" target="_blank">www.absolute.org</a><br>
+
+<a href="http://www.heroholiday.com" target="_blank">www.heroholiday.com</a><br>

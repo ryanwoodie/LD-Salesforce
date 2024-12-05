@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:With_love_email_header]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;">Dear friends,&nbsp;<br /><br /> It’s practically here! We are one day away from welcoming you to the With Love Gala. We’re so looking forward to connecting with you and making a difference for youth in Canada and Haiti.<br /><br /> I want to ensure you have all the necessary information to make your experience as enjoyable and memorable as possible. Here are some key details and some considerations for your convenience:&nbsp;<br /><br /><strong>Date</strong>: Thursday, October 3<br /><strong>Time:</strong> Cocktail Reception: 6:00 p.m.<br /><strong>Venue</strong>: Canadian Museum of Human Rights<br /><strong>Main Entrance</strong>: 85 Israel Asper Way<br /><br /><strong>Parking and Entrance Doors:</strong><br /> There is ample paid parking right outside of the museum. Please enter through the main entrance doors.<br /><br /><strong>Merchandise:</strong><br /> This year, we're offering a limited amount of items to purchase. Necklaces and bracelets by Hilary Druxman plus new hats, shirts, bandanas and belt bags!&nbsp;<br /><br /><strong>After-party:</strong><br /> Get ready for a live DJ, specialty cocktails, a mac and cheese bar, and a poutine bar! The fun continues late into the night from 10 pm - 12 am. The after-party is brought to you by Tito’s Vodka and Marcia Bergen Group.&nbsp;<br /><br /><strong>IMPORTANT: Dietary Restrictions</strong><br /> We will be enjoying a delicious chicken breast wellington with brie cheese and cranberry sauce served with potato pave and Chef’s seasonal vegetables.<br /><br /> At this point, if you have not submitted your dietary restrictions, you must let your server know right away when you are seated at your table so the caterers can accommodate the meal request.<br /><br /> We can't wait to share this special evening with you in support of youth here in Canada and in Haiti. If you have any questions or require assistance during the event, our friendly staff will be available to help.<br /><br /> Thank you for being a part of this remarkable evening – we look forward to seeing you there!<br /><br /><br /> Sincerely,&nbsp;<br /><br /> Joy Yu<br /> Gratitude and Engagement Specialist&nbsp;<br /> LiveDifferent<br /><br /> Phone:&nbsp;&nbsp;905-746-0698<br /> Email: joy@livedifferent.com<br /><br /> &nbsp;</td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:With_love_email_footerv3]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

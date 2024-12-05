@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sept 2015 Contacts promotional email - responsive L2</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sept2015-contacts promo2</name>
+    <style>none</style>
+    <subject>Check out this year&apos;s theme video and a list of dates for your area.</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

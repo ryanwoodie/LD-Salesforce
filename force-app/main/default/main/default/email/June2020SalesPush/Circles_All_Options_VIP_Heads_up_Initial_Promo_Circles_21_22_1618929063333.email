@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> How is everything going? I know you're hard at work making sure this unique year ends off as well as it possibly can, and although we weren't able to partner up for some exciting programming this year, I wanted to check in. We've got some pretty incredible&nbsp;things planned for supporting schools in 2021/2022, so before I send&nbsp;out all the information to everyone else, I figured I'd give you guys a&nbsp;heads-up. A little&nbsp;advantage for our VIP's. :)<br /> <br /> Whether or not you have any idea of when you'd&nbsp;like something meaningful&nbsp;for your students in the fall,&nbsp;we can make sure there's room for you with the accessibility of our new programming, <b>Circles</b>. Just let us know that you're interested and&nbsp;what of our available 1-hour online assemblies, weekly discussion-based sessions, or even a professional development opportunity for your staff might be a nice fit.&nbsp;Does that sound like a plan? If you have a second, take a peak at the video I've included to get a sense of how&nbsp;we're making it easier for educators to keep&nbsp;students connected and inspired.<br /> <br /> <a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-03-17 at 11.44.21 AM" src="{[devName:Screen_Shot_20210317_at_114421_AM]}" style="max-width: 697.128px; width: 525px; height: 272.135px;" title="Screen Shot 2021-03-17 at 11.44.21 AM" /></a><br /> <br /> Pretty awesome, right? Whether you're looking to invest specifically in your student leaders, make your incoming students feel more welcome, or simply strengthen&nbsp;the connection within your school culture in general, we really want to help you make it happen. If we need to circle back a little later, no worries, but let me know what you think and what questions pop to mind&nbsp;{{{Recipient.FirstName}}}.<br /> &nbsp;<br /> Thanks so much for all you do.&nbsp;I look forward to hearing from you soon!</span></p>
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span><br /> ____________________<br /> <br /> Dave Hamilton<br /> Manager of School Partnerships<br /> <b>LiveDifferent</b><br /> <br /> 1-866-432-4464 Toll free<br /> 905-777-1662 Office<br /> 905-777-8117 Fax<br /> dave.h@livedifferent.com<br /> <br /> www.livedifferent.com<br /> "Life is about people"</p>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

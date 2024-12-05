@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>sent to LD consultants and 16/17 contacts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Mar 2017 LD consultants survey</name>
+    <style>none</style>
+    <subject>Live Different Consultant 2017/18 program advice</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I hope that 2017 has been going well for you so far! It&apos;s been a while since I have been in touch (it has been a busy year as we have launched a 3rd road team, focused on serving Indigenous communities). I am reaching out to you as you are on our list of educators who are willing to be a Live Different Consultant. We are looking for your advice as we plan our 2017/18 school programming. Over the past 3 years, our teacher consultants have provided ideas and advice that has resulted in important improvements to our program. Thank you so much for your continued help; you are making a real difference in students&apos; lives by contributing in this way.
+
+Here is the survey link:
+
+https://docs.google.com/forms/d/e/1FAIpQLSfG_GoCI87xuG7BDNCTvI7KDYnMAgBAMkoPrUugjkTu8MyzJw/viewform?usp=pp_url&amp;entry.105534526=True&amp;entry.1840663298={!Contact.Name}&amp;entry.116583257={!Account.Name}&amp;entry.103038865={!Contact.Id}
+
+If you prefer to give your feedback conversationally, I would be happy to chat with you and can be reached anytime at the numbers below.
+
+Thanks in advance,
+
+Ryan Wood
+
+
+Ryan Wood
+Director of Canadian Programs
+
+
+Live Different
+Suite B3 - 15 Wellington St. North
+Hamilton, ON L8R 1M7
+Canada
+
+
+905-929-1662 Cell
+905-777-1662 Office
+905-777-8117 Fax
+ryan@livedifferent.com
+
+www.livedifferent.com
+
+Live Different is a movement challenging ourselves and others to a lifestyle of caring for people, not stuff. Live Different</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

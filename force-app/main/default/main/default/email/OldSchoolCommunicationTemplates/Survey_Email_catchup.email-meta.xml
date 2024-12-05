@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Think Day follow up survey Sent on date other than 1 week post TD</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Survey Email Catchup</name>
+    <style>none</style>
+    <subject>Thank You, {!Opportunity.Survey_Name__c}, for hosting Think Day!</subject>
+    <textOnly>Hi {!Opportunity.Survey_Name__c},
+
+
+
+It is hard to believe that your Think Day has already taken place! We hope the experience went smoothly for you and that you have already seen positive results in the lives of your students. I wanted to ask a small favour of you. At Absolute, we strive to take any opportunity to improve on what we do in order to make our services more enjoyable for you, and more effective for the students. There is a link below that will take you to an online survey. It will take no more than a minute or two of your time, but you will be helping us out greatly.
+
+
+Click on this link to take the survey.
+
+http://www.questionpro.com/akira/TakeSurvey?id=1055538&amp;custom1=QPRO_Survey__c&amp;custom2={!QPRO_Survey__c.Id}&amp;custom3={!Opportunity.Id}&amp;custom4={!Account.Id}&amp;custom5=Post%Think%Day
+
+
+In the event that you plan to facilitate follow-up workshops, please find a workshop guide and lesson plans along with resources at the following link. www.thinkday.org/think-day-resources
+
+
+If you have any further questions, please do not hesitate to contact me.
+
+
+
+Thanks again!
+
+
+
+Mandy
+
+
+
+Booking Co-ordinator
+Absolute
+mandy@absolute.org
+(866) 432 4464
+www.absolute.org
+www.thinkday.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

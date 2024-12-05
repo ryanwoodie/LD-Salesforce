@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!-- Facebook sharing information tags -->
+        
+        
+        <title>Get involved with Live Different this year!</title>
+		
+	<style type="text/css">
+		#outlook a{
+			padding:0;
+		}
+		body{
+			width:100% !important;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		body{
+			-webkit-text-size-adjust:none;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:0;
+			height:auto;
+			line-height:100%;
+			outline:none;
+			text-decoration:none;
+		}
+		table td{
+			border-collapse:collapse;
+		}
+		#backgroundTable{
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+		}
+		body{
+			background-color:#F1F1F1;
+		}
+		h1,.h1{
+			color:#642F02;
+			display:block;
+			font-family:"Myriad Pro";
+			font-size:65px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h2,.h2{
+			color:#A64B00;
+			display:block;
+			font-family:Courier;
+			font-size:22px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h3,.h3{
+			color:#101010;
+			display:block;
+			font-family:Helvetica;
+			font-size:20px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h4,.h4{
+			color:#101010;
+			display:block;
+			font-family:Helvetica;
+			font-size:16px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		#templatePreheader{
+			background-color:#101010;
+		}
+		.preheaderContent div{
+			color:#FFFFFF;
+			font-family:Helvetica;
+			font-size:10px;
+			line-height:125%;
+			text-align:left;
+		}
+		.preheaderContent div a:link,.preheaderContent div a:visited,.preheaderContent div a .yshortcuts {
+			color:#FFFFFF;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateHeader{
+			background-color:#FF7400;
+		}
+		.headerContent{
+			color:#642F02;
+			font-family:"Myriad Pro";
+			font-size:30px;
+			font-weight:bold;
+			line-height:100%;
+			text-align:left;
+			vertical-align:top;
+		}
+		.headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts {
+			color:#505050;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#headerImage{
+			height:auto;
+			max-width:600px !important;
+		}
+		.bodyContent{
+			background-color:#FFFFFF;
+		}
+		.bodyContent div{
+			color:#505050;
+			font-family:Helvetica;
+			font-size:14px;
+			line-height:150%;
+			text-align:left;
+		}
+		.bodyContent div a:link,.bodyContent div a:visited,.bodyContent div a .yshortcuts {
+			color:#505050;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.bodyContent img{
+			display:inline;
+			height:auto;
+		}
+		.leftColumnContent{
+			background-color:#FFFFFF;
+		}
+		.leftColumnContent div{
+			color:#505050;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:left;
+		}
+		.leftColumnContent div a:link,.leftColumnContent div a:visited,.leftColumnContent div a .yshortcuts {
+			color:#505050;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.leftColumnContent img{
+			display:inline;
+			height:auto;
+		}
+		.centerColumnContent{
+			background-color:#FFFFFF;
+		}
+		.centerColumnContent div{
+			color:#505050;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:left;
+		}
+		.centerColumnContent div a:link,.centerColumnContent div a:visited,.centerColumnContent div a .yshortcuts {
+			color:#505050;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.centerColumnContent img{
+			display:inline;
+			height:auto;
+		}
+		.rightColumnContent{
+			background-color:#FFFFFF;
+		}
+		.rightColumnContent div{
+			color:#505050;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:left;
+		}
+		.rightColumnContent div a:link,.rightColumnContent div a:visited,.rightColumnContent div a .yshortcuts {
+			color:#505050;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.rightColumnContent img{
+			display:inline;
+			height:auto;
+		}
+		#templateFooter{
+			background-color:#5CCCCC;
+		}
+		.footerContent div{
+			color:#101010;
+			font-family:Helvetica;
+			font-size:10px;
+			line-height:125%;
+			text-align:left;
+		}
+		.footerContent div a:link,.footerContent div a:visited,.footerContent div a .yshortcuts {
+			color:#101010;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.footerContent img{
+			display:inline;
+		}
+		#monkeyRewards img{
+			max-width:190px;
+		}
+</style></head>
+    <body background="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/i6_bgpattern.png" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color: #F1F1F1;width: 100% !important;">
+    	<center>
+        	<table background="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/i6_bgpattern.png" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="margin: 0;padding: 0;height: 100% !important;width: 100% !important;">
+            	<tr>
+                	<td align="center" valign="top" style="height: 100% !important;margin: 0 !important;padding: 0 !important;width: 100% !important;border-collapse: collapse;">
+                        <!-- // Begin Template Preheader \\ -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader" style="background-color: #101010;">
+                            <tr>
+                                <td align="center" valign="top" class="preheaderContent" style="border-collapse: collapse;">
+                                
+                                	<!-- // Begin Module: Standard Preheader \ -->
+                                    <table border="0" cellpadding="10" cellspacing="0" width="600">
+                                    	<tr>
+                                        	<td valign="top" style="border-collapse: collapse;">
+                                            	<div style="color: #FFFFFF;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"><span style="font-family:arial,helvetica neue,helvetica,sans-serif"><span style="font-size:14px">Here are some great ways you can get involved with Live Different this year!</span></span></div>
+                                            </td>
+                                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+											<td valign="top" width="190" style="border-collapse: collapse;">
+                                            	<div style="color: #FFFFFF;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"><div style="text-align: right;color: #FFFFFF;font-family: Helvetica;font-size: 10px;line-height: 125%;"><em><span style="font-size:12px"><a href="http://store.livedifferent.com/" style="color: #FFFFFF;font-weight: normal;text-decoration: underline;">Store</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://livedifferent.com/" style="color: #FFFFFF;font-weight: normal;text-decoration: underline;">LiveDifferent.com</a></span></em></div>
+</div>
+                                            </td>
+											<!-- *|END:IF|* -->
+                                        </tr>
+                                    </table>
+                                	<!-- // End Module: Standard Preheader \ -->
+                                
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // End Template Preheader \\ -->
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Header \\ -->
+                                	<table border="0" cellpadding="20" cellspacing="0" width="600">
+                                        <tr>
+                                            <td valign="top" id="templateHeader" class="headerContent" style="padding-bottom: 10px;border-collapse: collapse;color: #642F02;font-family: &quot;Myriad Pro&quot;;font-size: 30px;font-weight: bold;line-height: 100%;text-align: left;vertical-align: top;background-color: #FF7400;"><h1 style="text-align: center;color: #642F02;display: block;font-family: &quot;Myriad Pro&quot;;font-size: 65px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;"><span style="color:rgb(0, 0, 0); font-family:georgia,times,times new roman,serif; font-size:64px; text-align:left">Join us in 2014!</span></h1>
+
+<h2 style="color: #A64B00;display: block;font-family: Courier;font-size: 22px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">&nbsp;</h2>
+</td>
+                                        </tr>
+                                        <tr>
+                                        	<td align="center" valign="top" style="padding: 0;border-collapse: collapse;">
+                                            	<img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/i6_endcap.png" style="display: block;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" height="21" width="600">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Header \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Body \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="580" id="templateBody">
+                                    	<tr>
+                                        	<td align="center" colspan="3" valign="top" style="border-collapse: collapse;">
+                                            
+                                                <!-- // Begin Module: Standard Content \\ -->
+                                                <table border="0" cellpadding="20" cellspacing="0" width="580">
+                                                    <tr>
+                                                    	<td valign="top" width="260" class="bodyContent" style="padding-right: 0;border-collapse: collapse;background-color: #FFFFFF;">
+                                                        	<img src="http://gallery.mailchimp.com/cd8288039ec0f26e381965a0c/images/40ec987c-2652-417e-9741-205cd63e8797.jpg" alt="" border="0" style="height: 346px;width: 260px;margin: 0;padding: 0;border: 0;line-height: 100%;outline: none;text-decoration: none;display: inline;" width="260" height="346">
+                                                        </td>
+                                                        <td valign="top" class="bodyContent" style="border-collapse: collapse;background-color: #FFFFFF;">
+                                                            <div style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><h3 style="color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">You can experience what it means to Live Different!</h3>
+We know how life-changing it can be for those who volunteer as a young person...or for those who are young at heart!&nbsp;<br>
+<br>
+Working with local communities to build homes or to visit schools makes a huge difference, not only for those we serve, but also in our own lives as we gain a new perspective about the world - we become changed in the process!<br>
+<br>
+<strong>It&#39;s not too late to get involved in our programs this year, so check out the options below!</strong></div>
+														</td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Content \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    	<tr>
+                                        	<td valign="top" width="180" class="leftColumnContent" style="padding-bottom: 20px;padding-left: 20px;border-collapse: collapse;background-color: #FFFFFF;">
+                                            
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="repeat_1" mc:repeatindex="0" mc:hideable="hideable_repeat_1_1" mchideable="hideable_repeat_1_1">
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                            <a href="http://livedifferent.com/hero-holiday" target="_blank"><img src="http://gallery.mailchimp.com/cd8288039ec0f26e381965a0c/images/d95ff423-2fcb-45a6-a6d7-ad68e66f9adf.jpg" alt="" border="0" style="height: 106px;width: 160px;margin: 0;padding: 0;border: 0;line-height: 100%;outline: none;text-decoration: none;display: inline;" width="160" height="106"></a>
+                                                            <div style="color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: left;"><h3 style="text-align: center;color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;">Live Different Build 2014&nbsp;</h3>
+
+<div style="text-align: justify;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;">The deadline to register for our <strong>Summer Live Different Build trips</strong> in Mexico and Dominican Republic is <strong>May 31st</strong>,&nbsp;so if you&#39;ve been thinking about joining us on a trip in the summer of 2014, <a href="http://livedifferent.com/hero-holiday" target="_blank" style="color: #505050;font-weight: normal;text-decoration: underline;">visit our website and register asap!</a><br>
+<br>
+Our <strong>New Year&#39;s trips</strong> in Mexico&nbsp;and Dominican Republic are also a great option to give back during the holiday season. <a href="http://livedifferent.com/hero-holiday" target="_blank" style="color: #505050;font-weight: normal;text-decoration: underline;">Check these trips out on our website</a>, and be sure to register for them by <strong>Sept 15th!</strong></div>
+<br>
+<br>
+<br>
+<br>
+&nbsp;</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+                                            
+                                            </td>
+                                        	<td valign="top" width="180" class="centerColumnContent" style="padding-bottom: 20px;border-collapse: collapse;background-color: #FFFFFF;">
+                                            
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="repeat_2" mc:repeatindex="0" mc:hideable="hideable_repeat_2_1" mchideable="hideable_repeat_2_1">
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                            <a href="http://livedifferent.com/tour-internship" target="_blank"><img src="http://gallery.mailchimp.com/cd8288039ec0f26e381965a0c/images/f981e008-59fd-477f-b926-e9a75f7d5321.jpg" alt="" border="0" style="height: 106px;width: 160px;margin: 0;padding: 0;border: 0;line-height: 100%;outline: none;text-decoration: none;display: inline;" width="160" height="106"></a>
+                                                            <div style="color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: left;"><h3 class="null" style="text-align: center;color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;">Tour Internships&nbsp;</h3>
+
+<p style="text-align: justify;">We&#39;re looking for tour interns for our&nbsp;2014/2015 tours who have some specific skills to fill the positions of:</p>
+
+<p style="text-align: left;">? <u><strong>Logistics</strong></u> - driving, maintenance, mapping, &nbsp;(experience with&nbsp;large vehicles is an asset!)<br>
+&nbsp;</p>
+
+<div style="margin: 0px;padding: 0px;list-style: none outside none;font-size: 10pt;line-height: 13pt;color: #505050;font-family: Helvetica;text-align: left;">
+<div style="text-align: left;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;"><span style="font-size:12px; line-height:18px">? <u><strong>Sound Tech</strong></u> - sound &amp; media production &nbsp;(experience&nbsp;with A/V equipment is an asset!)</span></div>
+&nbsp;
+
+<div style="text-align: justify;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;"><span style="font-size:12px; line-height:18px">The application deadline is </span><strong style="font-size:12px; line-height:18px">July 1st,</strong><span style="font-size:12px; line-height:18px"> so </span><a href="http://livedifferent.com/tour-internship" style="font-size: 12px;line-height: 18px;color: #505050;font-weight: normal;text-decoration: underline;" target="_blank">visit our website to apply soon!</a></div>
+</div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+                                            
+                                            </td>
+                                        	<td valign="top" width="180" class="rightColumnContent" style="padding-bottom: 20px;padding-right: 20px;border-collapse: collapse;background-color: #FFFFFF;">
+                                            
+                                                <!-- // Begin Module: Top Image with Content \\ -->
+                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="repeat_3" mc:repeatindex="0" mc:hideable="hideable_repeat_3_1" mchideable="hideable_repeat_3_1">
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                            <a href="http://livedifferent.com/academy" target="_blank"><img src="http://gallery.mailchimp.com/cd8288039ec0f26e381965a0c/images/89ae8fa9-fbb7-496c-b9a8-c2554161d3df.jpg" alt="" border="0" style="height: 106px;width: 160px;margin: 0;padding: 0;border: 0;line-height: 100%;outline: none;text-decoration: none;display: inline;" width="160" height="106"></a>
+                                                            <div style="color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: left;"><h3 style="text-align: center;color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;"><span style="font-family:arial,helvetica neue,helvetica,sans-serif">Live Different Academy</span></h3>
+
+<div style="text-align: justify;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;">LDA takes your passion to learn and to change the world and crams it all into a 14 week&nbsp;experience that will challenge and shape you like nothing else! While&nbsp;living, studying, and working in Mexico, you&#39;ll take part in:<br>
+&nbsp;</div>
+
+<div style="text-align: left;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;">?&nbsp;Leadership opportunities<br>
+<span style="text-align:justify">? Community volunteering<br>
+? Spanish classes<br>
+? Social justice classes<br>
+? Building projects<br>
+? <a href="https://www.facebook.com/media/set/?set=a.631310880272698.1073741883.189864944417296&type=3" target="_blank" style="color: #505050;font-weight: normal;text-decoration: underline;">A &#39;Week in the Life&#39;</a><br>
+<br>
+<a href="http://livedifferent.com/academy" target="_blank" style="color: #505050;font-weight: normal;text-decoration: underline;">Apply by <strong>May 31st</strong> for our Fall 2014 session!</a></span><br>
+&nbsp;</div>
+
+<div style="text-align: justify;color: #505050;font-family: Helvetica;font-size: 12px;line-height: 150%;"><br>
+<br>
+<br>
+<br>
+&nbsp;</div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Top Image with Content \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Body \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Footer \\ -->
+                                	<table border="0" cellpadding="10" cellspacing="0" width="580" id="templateFooter" style="background-color: #363636;">
+                                    	
+                                    	<tr>
+                                        	<td align="center" valign="top" class="footerContent" style="border-collapse: collapse;">
+                                            
+                                                <!-- // Begin Module: Standard Footer \\ -->
+                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td colspan="2" valign="middle" style="padding-bottom: 0;border-collapse: collapse;">
+                                                            <div style="color: #101010;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"><div style="color: #101010;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;">&nbsp;</div>
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="border-collapse: collapse;">
+			<div style="color: #101010;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"><a href="http://twitter.com/livediff" style="color: #101010;font-weight: normal;text-decoration: underline;"><img alt="Twitter" border="0" src="http://livedifferent.com/sites/default/files/newsletter/footer_twitter.gif" title="Twitter" style="border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;"></a>&nbsp;<a href="http://vimeo.com/user21264651" style="color: #101010;font-weight: normal;text-decoration: underline;"><img alt="Vimeo" border="0" src="http://livedifferent.com/sites/default/files/newsletter/footer_vm.gif" title="Vimeo" style="border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;"></a>&nbsp;<a href="http://facebook.com/livediff" style="color: #101010;font-weight: normal;text-decoration: underline;"><img alt="Facebook" border="0" src="http://livedifferent.com/sites/default/files/newsletter/footer_fb.gif" title="Facebook" style="border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;"></a>&nbsp;<a href="http://youtube.com/livedifferent" style="color: #101010;font-weight: normal;text-decoration: underline;"><img alt="Youtube" border="0" src="http://livedifferent.com/sites/default/files/email/yt_icon.gif" title="RSS Feed" style="border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;"></a>&nbsp;<br>
+			<a href="http://livedifferent.com/" style="color: #FFF;font-weight: normal;text-decoration: underline;"><img alt="" border="0" src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo-w.png" style="border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;"></a>&nbsp;</div>
+
+			<div style="color: #FFF;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;">Suite B3, 15 Wellington St. North<br>
+			Hamilton, ON L8R 1M7<br>
+			(905) 777 1662<br>
+			<a href="mailto:info@livedifferent.com" style="color: #FFF;font-weight: normal;text-decoration: underline;">info@livedifferent.com</a></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top" width="350" style="border-collapse: collapse;">
+                                                            <div style="color: #101010;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"></div>
+                                                        </td>
+                                                 
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" valign="middle" style="padding-top: 0;padding-bottom: 20px;border-collapse: collapse;">
+                                                            <div style="color: #101010;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;"></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Footer \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Footer \\ -->
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </center>
+                <center>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                    <tr>
+                        <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                <tr>
+                                    <td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                        
+                                        <br />
+                                        <br />
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <style type="text/css">
+                    @media only screen and (max-width: 480px){
+                        table[id="canspamBar"] td{font-size:14px !important;}
+                        table[id="canspamBar"] td a{display:block !important; margin-top:10px !important;}
+                    }
+                </style>
+            </center></body>
+</html>

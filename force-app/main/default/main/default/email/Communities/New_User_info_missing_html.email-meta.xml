@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>New User info missing - html day 1</name>
+    <style>none</style>
+    <subject>Your Live Different Builds Registration is not complete.</subject>
+    <textOnly>Don&apos;t stop now, your almost Registered!
+
+We need a bit more information from you...
+
+
+Oops! You missed a step!
+
+We need some more information from you before we can accept your registration.
+
+Please login in to your &apos;My Live Different&apos; Account and complete the process.
+
+
+
+Question? Contact us at (866) 432 4464 or info@livedifferent.com
+
+Never believe that a few caring people can&apos;t change the world. For, indeed, that&apos;s all who ever have.
+-Margaret Mead
+
+
+
+LiveDifferent
+PO Box 20047 Brandon South, Brandon, MB   R7A 6Y8
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

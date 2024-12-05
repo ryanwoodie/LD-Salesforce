@@ -1,0 +1,10 @@
+A new flight record was created for {!Flight__c.Registration__c}.
+Flight #{!Flight__c.Name}
+{!Flight__c.Arrival_or_Departure__c}
+{!Flight__c.Date_Time__c}
+Shuttle: {!Flight__c.Shuttle_Required__c}
+Terminal: {!Flight__c.Terminal__c}
+
+Comments: {!Flight__c.Additional_Comments__c}
+
+Link: {!Flight__c.Link}

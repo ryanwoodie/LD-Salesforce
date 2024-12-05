@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>HH 2014 - WestJet Code</name>
+    <style>freeForm</style>
+    <subject>Live Different: Book Your Flights!</subject>
+    <textOnly>Hi Volunteers!
+
+As summer is quickly approaching, I encourage you to book your flights as soon as possible. Just a few reminders...
+
+Airport
+You will be flying into San Diego
+Airport code is: SAN
+August 6, 2014 - August 15, 2014
+
+Official Airline of Live Different: WestJet!
+WestJet has given Live Different volunteers a way to save 10% on flights when travelling for a Live Different Build. Call the WestJet Groups Department at 1-888-493-7853 and give them the convention code: CC7946.
+
+On the phone: &quot;Hi there, I am hoping to book an individual flight using the convention code CC7946 to go on a Live Different Build trip.&quot;
+
+Forwarding the Itinerary
+Once you have booked your flights, please forward me your flight itinerary. We need to know when you are arriving and departing so that we can arrange airport shuttles.
+
+If you have any questions, please let me know. I&apos;m here to help!
+
+
+Jenn Digiandomenico
+Program Administrator
+Live Different</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,6 @@
+A school presentation is 10 days old that has a pledged donation of 0.00 and needs to be reminded.
+
+Presentation: {!Opportunity.Link}
+
+Contact name: {!Opportunity.Contact_Survey__c}
+Contact e-mail: {!Opportunity.survey_Email__c}

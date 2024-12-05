@@ -1,6 +1,0 @@
-<messaging:emailTemplate subject="You're Registered!" recipientType="Contact" relatedToType="Registration__c">
-<messaging:plainTextEmailBody >
-Congratulations!
-This is your new Visualforce Email Template.
-</messaging:plainTextEmailBody>
-</messaging:emailTemplate>

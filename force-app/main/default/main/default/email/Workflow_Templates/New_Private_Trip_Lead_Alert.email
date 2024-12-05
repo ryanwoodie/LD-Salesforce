@@ -1,7 +1,0 @@
-Below is the info / links for the new lead:
-
-{!Opportunity.Account}
-Contact:  {!Opportunity.Contact_Survey__c}
-Source: {!Opportunity.Opportunity_result_of__c}
-
-Link: {!Opportunity.Link}

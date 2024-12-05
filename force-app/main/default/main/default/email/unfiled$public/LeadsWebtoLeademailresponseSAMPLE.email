@@ -1,5 +1,0 @@
-Dear {!NullValue(Lead.Name, "")},  
-
-Thank you for your interest in {!Organization.Name}  Please feel free to explore our website and contact us if there is anything else that we can help you with!
-
-Sincerely,  The Team at {!Organization.Name}

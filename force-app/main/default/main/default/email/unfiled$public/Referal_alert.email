@@ -1,6 +1,0 @@
-Name: {!QPRO_Survey__c.contact_name__c} 
-Email: {!QPRO_Survey__c.survey_email__c}
-
-Gave the following list of references:
-
-{!QPRO_Survey__c.Referals__c}

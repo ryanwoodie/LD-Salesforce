@@ -1,0 +1,38 @@
+Dear {!Lead.FirstName},  
+
+Hello, this is Cindy Stover and I am contacting you on behalf of Absolute Leadership Development. We are a not-for-profit, student-empowerment organization that speaks to hundreds of schools across Canada through motivational assemblies that incorporate Catholic Values. 
+
+We truly believe in the potential of your students and would like to partner with you in motivating them. We are taking bookings in the {!Lead.City} area for ***********, and would like to provide {!Lead.Company} with this incredible motivational experience. 
+
+
+Marymount Academy, a Catholic School in Sudbury, Ontario, referenced the following regarding our Absolute Motivational Experience: "Not only was your performance relevant and enjoyable, but it was also extremely empowering and motivating, encouraging all participants to take a stand and get involved in helping our society. The Absolute performance truly had a large positive impact on the students and staff of Marymount Academy". 
+
+The students of todayâ€™s generation truly are the leaders of tomorrow. When you help to shape the vision of our youth, you help to shape the vision of our nation. As the leadership of your student body, you are able to provide them with the motivation and encouragement they need to rise up and make a difference in their lives and in the lives of others. 
+
+Our professional motivational team is comprised of young adults from across Canada. To date, we have spoken to over 600,000 students nationwide, with this number increasing daily. 
+
+Our one-hour presentation consists of: 
+â€¢ Personal stories students are able to relate to 
+â€¢ Truth about key topics (bullying, self-image, social responsibility, etc.) 
+â€¢ Inspirational messages to motivate your students 
+â€¢ Live performing artists 
+â€¢ Crowd interaction 
+â€¢ Concert style atmosphere 
+
+Following this will be an email with more info about our very highly recommended presentation. You can also check us out directly on our website at www.absolute.org. Pricing and booking details are also available on the website. 
+
+Let me know if any of the above dates interest you. If not, are there any other dates that you like to book in advance? Thanks for your time, and I look forward to hearing from you! 
+
+Sincerely, 
+
+{!Contact.OwnerFullName} 
+Booking & Logistics 
+Absolute Leadership Development Inc. 
+448 Ferguson Ave. N. 
+Hamilton, ON 
+L8L 4Z2 
+
+www.absolute.org 
+email: {!Contact.OwnerEmail} 
+Toll-Free: 1-866-432-4464 
+Fax: 905-777-8117

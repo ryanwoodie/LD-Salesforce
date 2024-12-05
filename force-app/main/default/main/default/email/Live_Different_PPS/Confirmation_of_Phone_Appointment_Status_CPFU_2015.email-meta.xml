@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different_PPS</letterhead>
+    <name>Confirmation of Phone Appointment (Status CPFU)_2015</name>
+    <style>freeForm</style>
+    <subject>Confirming your call with Live Different</subject>
+    <textOnly>Live Different
+We are about seeing change.
+We are about building hope.
+We are about embracing a lifestyle of caring for people, not &quot;stuff&quot;.
+We believe that together, we really can make a difference!
+
+
+
+Hi {!Lead.FirstName},
+
+
+Thank you for taking the time to speak with us today.  This email serves
+to confirm your call with Live Different on {!Lead.PPS_Client_Phone_Follow_Up_Day_Date_Time__c}.
+To make the best use of our time on the call, please take a few minutes
+to review some additional information about Live Different.
+
+
+Live Different was established as a Canadian non-profit organization
+in 2000, and began operating internationally in 2005. From the very
+beginning we have been passionate about making a difference in the
+lives of the people we encounter through our youth empowerment
+presentations, our humanitarian build programs, and our leadership
+development opportunities.
+
+
+In addition to an engaging concert-style motivational assembly, Live
+Different offers supplementary class-room workshops, keynote speakers,
+as well as youth programs and resources that inspire students to take
+immediate action to make a positive difference in their world.
+
+
+Over the past 15 years we have had the opportunity to speak to over
+1 million students – in 2200 schools – to build over 350 homes, schools,
+and other projects, and to mentor over 5,000 students, interns, and volunteers.
+
+
+Here’s what just a few school Principals had to say about Live Different:
+
+&quot;I&apos;m not sure how the presentation could be improved- it was absolutely
+amazing! I heard comments like &apos;That&apos;s the best presentation I have seen
+in my entire teaching career&apos; from a veteran teacher, and students were
+raving about it for days. It was very worthwhile and inspirational.&quot;
+
+Jo&apos;ann Obrien, St James Regional High School
+
+
+&quot;In my 17 years in education this is the best loved student assembly I
+have ever been to. Students were literally hugging me in thanks for
+bringing LIVE DIFFERENT in.&quot;
+
+Lorna Cameron, E.W. Pratt High School
+
+
+&quot;The Live Different presentation was a powerful experience for both
+staff and students. The message of Kindness was empowering and the
+connection they made with the audience was phenomenal and students
+remained actively engaged throughout. Students loved their slide
+presentation and the live music performed by their band. We look
+forward to having them back again.&quot;
+
+Mary Jacquart, Georges P. Vanier Junior High School
+
+
+See what our Motivational Presentations look like. (video)
+https://www.youtube.com/watch?v=mGWCT8IS1Oo
+
+
+Your cost:  Live Different has taken significant measures to ensure as
+many students as possible can be reached with this exciting program.
+By operating on a donation-based pricing model, it gives all schools
+the opportunity to partner with us.
+
+
+This is the character development presentation that students, parents,
+and teachers will thank you for bringing to your school! You&apos;ll capture
+your students&apos; attention and transform them with a message that matters.
+
+
+I look forward to speaking with you.
+
+
+
+
+Dave Hamilton
+Live Different
+
+877-432-4464 ext. 222
+dave@livedifferent.com
+www.livedifferent.com
+
+
+Live Different | Suite B3 - 15 Wellington St. N | Hamilton, ON | L8R1M7
+
+
+
+If you no longer wish to receive these emails, please reply to this email
+with &quot;unsubscribe&quot; in the Subject header.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

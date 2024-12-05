@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Auto Response to Team Buy Voucher Redemption form ---Delete after June 2011</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Team Buy Template</name>
+    <style>none</style>
+    <subject>Thank you for contacting us</subject>
+    <textOnly>Hey there! We have received your request to redeem your voucher and you will hear from us in the next 2 businiess days with the information and options for your trip. The deadline is fast approaching, so please do not hesitate to contact us if you have any questions.
+
+Thanks
+
+Charles Roberts
+Director of Programs, Absolute
+905 777 1662
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

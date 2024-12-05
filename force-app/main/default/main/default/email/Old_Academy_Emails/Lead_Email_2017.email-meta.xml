@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Lead Email - 2017</name>
+    <style>freeForm</style>
+    <subject>Some information about Academy!  Feel free to ask me anything.</subject>
+    <textOnly>Hey {!Lead.FirstName},
+
+Thank you so much for letting us know about your interest in our Academy Program. Academy is a fantastic opportunity for anyone who is passionate about learning, has a desire for personal growth, and values being of service to others.  Come and experience this opportunity to spend a semester with us and to Live Different!
+
+Here is some basic information about the Academy Program for you to consider:
+
+Meet us in San Diego and enjoy 13 weeks in Mexico studying social justice and international development, learning Spanish, volunteering with local community organizations, participating in our &quot;Week in the Life&quot; experience, learning first hand about the challenges facing migrant workers, and complete a Live Different Builds Project.  On top of all this, you will even find time to explore volcanoes, check out some beaches, and try authentic Mexican cuisine!
+
+The total cost of the Academy is a combination of tuition fees and charitable project costs.  Since the charitable project cost is completely tax receiptable, you have the opportunity to fundraise this amount!
+
+The Academy fees include: Course text and other materials, Spanish lessons, meals, accommodations, transportation to and from San Diego Airport, all transportation while in Mexico, Build Project facilitation and materials, excursions, laundry facilities, and access to wifi.
+
+The Academy fees do not include: flights to and from San Diego, extra excursions, extra meals/snacks, souvenirs, or emergency medical insurance.
+
+Questions: Feel free to learn about this years tuition and charitable project costs and ask me anything by replying to this email
+
+Learn More: Check out the Live Different Academy at https://livedifferent.com/academy
+
+
+We are really excited to be leading another semester of Academy and I sure hope you consider joining us.  Please don&apos;t wait too long to register, as this program is capped at 15.  Feel free to share this information and any inquiries from students, caregivers, or educators are always welcome!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

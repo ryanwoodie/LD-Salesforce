@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>MX 2017 - Summer Leads - Staff Flight</name>
+    <style>freeForm</style>
+    <subject>Mexico Summer Build - Fly down with a staff member!</subject>
+    <textOnly>Hi everyone,
+
+For those of you who have been inquiring as well as would like to have peace of mind. We have booked our flight for our Live Different staff member to fly from Toronto and Vancouver to San Diego for your upcoming trip. If you are interested, feel free to match these flights when booking and our staff member can meet you at the airport and connect with you during your travels. We hope this helps!
+
+
+WESTJET Flight Number WS 703
+CONFIRMED Tuesday, 01 August
+
+Departure: YYZ TORONTO ON, CANADA
+8:20AM
+TERMINAL 3
+Arrival: YVR VANCOUVER BC, CANADA
+10:25AM
+MAIN TERMINAL
+
+
+WESTJET Flight Number WS 1762
+CONFIRMED Tuesday, 01 August
+
+Departure: YVR VANCOUVER BC, CANADA
+12:15PM
+MAIN TERMINAL
+Arrival: SAN SAN DIEGO, CA
+3:06PM
+TERMINAL 2
+
+
+WESTJET Flight Number WS 1763
+CONFIRMED Thursday, 10 August
+
+Departure: SAN SAN DIEGO, CA
+3:55PM
+TERMINAL 2
+Arrival: YVR VANCOUVER BC, CANADA
+6:51PM
+MAIN TERMINAL
+
+
+WESTJET Flight Number WS 724
+CONFIRMED Thursday, 10 August -
+Friday, 11 August
+
+Departure: YVR VANCOUVER BC, CANADA
+10:45PM
+MAIN TERMINAL
+Arrival: YYZ TORONTO ON, CANADA
+6:14AM +1 day
+TERMINAL 3</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

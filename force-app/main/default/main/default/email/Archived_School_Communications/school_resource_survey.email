@@ -1,0 +1,18 @@
+<p>Hi {!Contact.FirstName}, </p>
+
+<p>We are excited for our visit to your school on {!Opportunity.Invoice_Date_Text__c} ! Here is our school resources folder which will have all of the additional resources we’ve created to assist you in extending the impact of our presentation on your students.  </p>
+
+<p>You can find it here: <a href="http://www.livedifferent.com/schoolresources" target="_blank">http://www.livedifferent.com/schoolresources</a>  </p>
+
+<p>I’ve also attached a PDF version of the resources, in case you are unable to open the link in your browser. You will want to read the "overview of resources/activities" document first.  </p>
+
+<p>To help us best prepare resources for your school, I’d ask that you take a moment and fill out this short form:  </p>
+
+<p>{!Opportunity.School_Resource_Survey_Link__c}  </p>
+
+<p>I'm happy to answer any questions you may have.  </p>
+
+<p>Thank you, have a fantastic day!  </p>
+
+<p>{!User.FirstName} {!User.LastName}  </p>
+{!User.Title}

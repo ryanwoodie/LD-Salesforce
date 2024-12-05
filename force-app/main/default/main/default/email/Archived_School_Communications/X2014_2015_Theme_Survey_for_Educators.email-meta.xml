@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2014/2015 Theme Survey for Educators</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2014/2015 Theme Survey for Educators</name>
+    <style>none</style>
+    <subject>Your advice for next year&apos;s Live Different presentation?</subject>
+    <textOnly>Livedifferent.com
+
+Dear {!Contact.FirstName},
+
+Here at Live Different we are in the midst of planning our motivational presentation for the 2014-15 school year. We&apos;re hoping you might be able to provide some advice and feedback on what topic you think would be most impactful for schools across Canada.
+
+This year, our theme &quot;Kindness Changes Everything&quot; was well received and we are realizing more and more just how important it is to listen to, and involve, the educators that we work with. We are mindful of the demands on your time and email volume you experience in contacting you in this matter, but feel it is an important step to make sure that our school program and it&apos;s messages are meeting your school&apos;s needs and having as much of a positive impact on your students as possible.
+
+The following simple online form has 3 presentation topic possibilities that we are considering for the upcoming school year. If you could take a minute or two to give your rating of each (since we know how much you love grading things ;-), it would be a huge help to us!
+
+Additionally, the form asks if you might be interested in being more involved by becoming a &quot;Live Different Consultant&quot; who is available to occasionally provide advice and feedback to help us continually improve upon what we do. If this is something that you happen to be interested in contributing to, please feel free to indicate your interest!
+
+Following is the link to the form. I thank you very much in advance for lending us a few minutes of your time and helping out our charitable cause in this way.
+
+
+Click to Start
+
+
+Kind Regards,
+
+{!User.FirstName} {!User.LastName}
+{!User.Title}
+(866) 432 4464 {!User.Extension}
+{!User.Email}
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+{!User.Email}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

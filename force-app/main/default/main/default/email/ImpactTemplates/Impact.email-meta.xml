@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Impact</name>
+    <style>none</style>
+    <subject>Impact Application</subject>
+    <textOnly>Hi {!Lead.FirstName}, 
+
+Thank you so much for your interest in Impact School of Leadership. Here is the link to download the 2006/2007 application: http://absoluteontheweb.com/impact/Impact0607.pdf. In the meantime, if you have any questions, please do not hestitate to contact us at impact@absoluteontheweb.com. We are looking forward to the possibly of having you join our Impact class!
+
+Christal Earle,
+Director of Staff and Leadership Development
+Absolute Leadership Development
+Toll-Free: 1-866-432-4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

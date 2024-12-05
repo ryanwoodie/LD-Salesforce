@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DR_2-2011 Donor Appeal</name>
+    <style>none</style>
+    <subject>Update from Live Different Build in Dominican Republic</subject>
+    <textOnly>You are receiving this email because you have donated toward a participant on this trip, and we wanted to update you on a project that they are completing this summer.
+ 
+
+ 
+ Hello {!Contact.FirstName}
+ 
+
+On behalf of Absolute&apos;s Live Different Build participants, I would like to extend a huge thank you for your donation to this program! Your financial partnership with us is appreciated. Not only will it make a significant impact on the experience of the participant you supported, but it is also a vital contribution to our much needed projects that run throughout the developing world.
+
+While you are reading this, our team is busy experiencing Live Different Build and realizing how each of them can play a part in making the world a better place! You can follow along by clicking on the links below to view the student blog posts on our website or to see our Facebook updates.
+
+www.facebook.com/absolute.org
+(no account required)
+
+
+
+One update I can give you from the trip right now is about one of the families that we&apos;re building a house for this week. When we first met Jennifer and Juan, their house was in horrible shape. It was almost literally falling down around them and had almost no roof left. When it rained, they had to cover their two kids underneath them on the bed because they would get soaking wet and get sick. They were so happy when they found out that Live Different Build planned to build a new house for their family! Jennifer is even at the worksite every day helping the team and working hard alongside of them. She is so excited for her new house and when one of our leaders asked her what was one thing she was looking forward to, she said that she was excited to be able to have a nice home where she could now invite people to come and sit inside and visit with her family. 
+
+While Dominican Republic can seem like it&apos;s a world away, you can still be a part of effecting change for this family too! We&apos;ve decided to raise money to cover the extra costs of furnishing this house completely, something that is not included in the budget for the participant&apos;s regular trip fees. To give you an idea of what your donation could do, here are some of the items we&apos;d like to provide for this family:
+
+A donation of $50 is enough to purchase groceries or cleaning supplies to start the family off in their new home.
+
+A donation of $100 is enough to buy a new bed for the family.
+
+A donation of $200 is enough to provide a stove equipped with propane.
+
+A donation of $500 is enough to pay for a new fridge.
+
+A donation of $1000 is enough to outfit the home with safe windows and doors, or to cover the cost of a quality paint job for the interior and exterior of the home.
+
+If this is something that you&apos;d be interested in contributing to, please click on the &apos;donate now&apos; link below. (Any contributions that exceed the goal for this project will be put towards our general Live Different Build building fund).
+www.absolute.org/donate
+
+
+To find out more about Live Different Build, where we work, and how our trips are structured, please check out www.heroholiday.com. To find out more about Absolute&apos;s other programs, please check out www.absolute.org.
+
+Thanks again for helping to provide this opportunity to our Live Different Build participants. I encourage you to get in touch with the person you supported when they return to share first-hand in their life-changing experience! 
+
+If you have any questions at all, please feel free to either call our office at 1-866-432-4464 or email me at cindy@absolute.org.
+
+Sincerely,
+
+Cindy Stover
+
+Community Engagement Coordinator
+
+www.absolute.org
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

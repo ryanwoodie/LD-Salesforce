@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Circles (Online Assemblies) SPRING &quot;FINAL/ONT/LOCKDOWN&quot; promo - Circles 20/21</name>
+    <style>none</style>
+    <subject>Have a meaningful impact this spring (In-class or at-home learning)</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

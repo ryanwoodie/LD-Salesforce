@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May 2017 video promo for Love Legacy Presentation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2017/18 LOVE LEGACY Pres Video (editable)</name>
+    <style>none</style>
+    <subject>Pssst! Here&apos;s what we&apos;re supporting your school with next year...</subject>
+    <textOnly>Live Different Newsletter
+
+Hi {!Contact.FirstName}!
+
+Live Different has just announced the presentation it will be supporting hundreds of schools and thousands of students with coast to coast in 2017/2018 and we couldn&apos;t be more excited to give YOU a sneak peak! Next year is shaping up to be Live Different&apos;s most impactful yet, so if the explanation video below interests you at all or you have any questions about how we help schools to engage with and inspire their students, don&apos;t hesitate to ask. There are only so many dates still available for schools to reserve their 2017/2018 presentation and we&apos;d love for one of them to go to yours!
+
+CHECK IT OUT...
+
+https://youtu.be/4EcnhY2AzVI
+
+Thanks so much.  I look forward to hearing from you soon!
+
+Dave Hamilton
+Manager of School Partnerships
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+(905) 777 1662
+presentations@livedifferent.com
+
+
+*If you no longer wish to receive these emails, please reply with &apos;unsubscribe&apos; in the subject line.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

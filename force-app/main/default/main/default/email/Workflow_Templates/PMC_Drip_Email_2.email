@@ -1,0 +1,37 @@
+<messaging:emailTemplate subject="Real Stories, Real Impact"
+    recipientType="Contact" relatedToType="CampaignMember">
+    <messaging:htmlEmailBody >
+        <html style="overflow-y: hidden;">
+        <head>
+            <title>Real Stories, Real Impact</title>
+        </head>
+        <body style="height: auto; min-height: auto;">
+
+        <p>Hello {!recipient.FirstName},</p>
+
+        <p>I hope you enjoyed the preview of our Peer Mentorship Curriculum. We are excited to share some inspiring stories from schools that have successfully implemented the program.</p>
+
+        <h2>Hear from Educators and Students</h2>
+
+        <p>See what educators and students have to say about the transformative power of the Peer Mentorship Curriculum by<a href="https://www.youtube.com/watch?v=yYUKsC6q_5A" target="_blank"> watching our testimonial video here</a>.</p>
+
+        <h2>Key Benefits of the Curriculum:</h2>
+
+        <ul>
+          <li>Improved school climate</li>
+          <li>Enhanced leadership skills</li>
+          <li>Increased student engagement</li>
+          <li>Stronger peer relationships</li>
+          <li>Positive community impact</li>
+        </ul>
+
+        <p>Ready to make a difference in your school or organization? <a href="https://www.tfaforms.com/forms/view/5133783?tfa_2194={!recipient.Account.Name}&tfa_2260={!recipient.Id}&tfa_2262={!relatedTo.Id}&tfa_152={!recipient.Account.Id}&tfa_1874={!recipient.Account.BillingCity}&tfa_2171={!recipient.Account.BillingState}&tfa_2113={!recipient.Account.BillingState}&tfa_2185={!recipient.Account.BillingState}&tfa_1871={!recipient.Email}&tfa_1868={!recipient.FirstName}&tfa_1869={!recipient.LastName}&tfa_1875={!recipient.Account.BillingCountry}&tfa_2258={!recipient.Title}&tfa_2277=1">Get started now</a>!</p>
+
+        <p>Warm regards,</p>
+        <p>{!recipient.Owner.FirstName} {!recipient.Owner.LastName}</p><br></br>
+        LiveDifferent
+       
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

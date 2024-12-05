@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Love Legacy Update Kitchen Video</name>
+    <style>none</style>
+    <subject>Follow up from our &apos;attempted&apos; live stream from Haiti</subject>
+    <textOnly>Hi {!Contact.FirstName},
+Thanks for your patience with us last week. Unfortunately, the live stream on Monday the 16th from our school in Haiti didn&apos;t work out quite as well as we had hoped. As it turns out, the cell service is really poor in the immediate area where the school is located. Our backup plan was to shoot a small video to give you an update.  In this video, Jasmine speaks with Frantzo and Brett, updating us on where things are at currently with the school. Please know we haven&apos;t given up yet and would love to do a live stream once the cellular service is improved in the area.
+
+You can watch the video here: https://youtu.be/QbaaLVXZgfE
+
+One request, please don&apos;t share the video publicly. It is meant as an update for friends and family of #LoveLegacy supporters.
+
+There is lots to tell about the school! We will be sharing stories and images of the students, staff and community over the coming months. Thanks for supporting Love Legacy!
+
+
+Ashley Smart
+Director of Marketing and Media
+Live Different
+
+The night is long, but our dreams are longer.
+-Haitian Proverb
+
+
+
+Live Different
+Suite B3 - 15 Wellington Street North, Hamilton, ON   L8R 1M7
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

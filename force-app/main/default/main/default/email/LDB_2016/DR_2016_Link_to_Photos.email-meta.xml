@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DR 2016 - Link to Photos</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2016 - Link to Photos</name>
+    <style>freeForm</style>
+    <subject>Link to Your Trip Photos</subject>
+    <textOnly>Hi Everyone,
+
+Here is the link to your trip photos: http://media.livedifferent.com/?c=336&amp;k=fb515b4337
+
+How did your trip go? I hope everyone had a great time making new friends, meeting the families, and creating some change in the community. I loved seeing all of your photos and sad that I couldn&apos;t meet some of you in person. But really happy with everyone&apos;s work ethic! Our staff has said nothing but great things!
+
+Have an awesome rest of your summer!
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to current accounts that have had our assembly in the last three years exluding present bookings</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sept_2011 current accounts mandy email</name>
+    <style>none</style>
+    <subject>Challenge your students to live different with our 2011-12 presentation</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

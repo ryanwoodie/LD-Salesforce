@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Info on private trips for interested schools</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Private Trip - Info for schools</name>
+    <style>freeForm</style>
+    <subject>Plan a Live Different Build Trip for your school!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Thanks for having our Live Different Presentation at your school this fall. Our team had an awesome time speaking to your students, and interacting with them during their visit.
+
+
+
+When our team filled out their report, they noted noted that you&apos;d mentioned that your school may be interested in planning a Live Different trip. That&apos;s great to hear!
+
+I&apos;ve included some info below on how you can get started, but I wanted to find out from you whether this something you&apos;d be facilitating, or if there is another person at your school who we should be contacting directly who would be in charge of planning this sort of trip?
+
+
+
+Please feel free to reply with any questions you may have, or with more information. You can contact myself, or our Live Different International Programs Director, Andrew Arnal - andrewarnal@livedifferent.com
+
+
+
+Thanks,
+
+
+
+Cindy Stover
+
+Community Engagement Coordinator
+Live Different
+
+
+
+
+
+Plan your own Live Different Builds Private Trip!
+
+
+
+Who: Any volunteer can plan a trip, we just need a minimum of 10-15 people to join you! (Volunteers must be a minimum 14 years of age, or accompanied by a parent or guardian.)
+
+
+What:  Our current project efforts are located in several small communities that have been deeply entrenched in poverty and exploitation. To date, &apos;we&apos; (groups just like yours!) have built almost 200 houses and have also partnered with other NGO&apos;s to help build schools, community centres, and medical clinics.
+
+
+
+Where: Dominican Republic, Mexico, Haiti, or Thailand.
+
+
+When: We can work with you to plan a private trip at any time of year that works for your group! However, our schedules fill up fast, especially during summers and spring breaks, so contact us early!
+
+
+Why: Many of our volunteers go home from a Live Different Trip and find out that the people who hear their stories want to get involved too. This is a chance for you to help the people you&apos;re close to have the same life-changing experience you had!
+
+
+
+How: Contact us to start planning! We&apos;ll work with you to pick the best destination, schedule, project, and excursions that work for your group! All of the project fees, accommodations, meals, and travel costs must be fundraised by every volunteer, but the great part of doing it as a group is that you can fundraise together!
+
+
+
+See what a trip might look like for you:
+
+Here is a video of one of our trips happening in Haiti: http://www.youtube.com/watch?v=-cC7_iEk97I</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

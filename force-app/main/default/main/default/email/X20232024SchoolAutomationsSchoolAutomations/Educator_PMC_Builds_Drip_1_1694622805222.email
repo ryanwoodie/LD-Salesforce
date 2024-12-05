@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Explore the Benefits of Our Programs: Builds &amp; Peer Mentorship</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>Thank you for completing our Educator Survey. I noticed you're interested in both our <a href="https://livedifferent.com/programs/builds/" rel="noopener" style="color: #0000ff;" target="_blank"><strong>Builds</strong></a> and <a href="https://livedifferent.com/programs/circles/peer-mentorship-curriculum/" rel="noopener" style="color: #ff0000;" target="_blank"><strong>Peer Mentorship Curriculum</strong></a> programs.</p>
+
+<h3>Builds&nbsp;are 9-day service learning experiences that offer transformative benefits for students such as:</h3>
+
+<ul>
+	<li>Enhancing global awareness</li>
+	<li>Fostering meaningful relationships</li>
+	<li>Boosting positive school culture</li>
+	<li>Deepening gratitude and self-awareness</li>
+</ul>
+
+<h3>Opportunities in our Circles Peer Mentorship Curriculum:</h3>
+
+<ul>
+	<li>Community-building within the school</li>
+	<li>Leadership and personal development</li>
+	<li>Six one-hour sessions focused on key skills</li>
+	<li>Organizing and completing a compassion project</li>
+</ul>
+
+<p>Learn more about <a href="https://livedifferent.com/programs/builds/" rel="noopener" target="_blank"><strong>Builds</strong></a> and watch our trailer for the <a href="https://www.youtube.com/watch?v=rGaviLF3FO8&amp;list=PLz0RxTH437Ps54CtMZ9PQMXawnLp_xoSk" rel="noopener" target="_blank"><strong>Peer Mentorship Curriculum</strong></a>.</p>
+
+<p>Ready to discuss how these programs can be tailored for your school? Click <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32vbIRnIwpAPiclLfRo-n4JdrF1OKbx9GYDdMLoVllWAlFjrUDcDvxU8Zz_5eAQwajnE8B1UGB" rel="noopener" target="_blank">HERE</a> to schedule a call.</p>
+
+<p>Looking forward to connecting soon!</p>
+
+<p>Warm regards,</p>
+
+<p>{{{Recipient.OwnerName_F__c}}}</p>
+</body>
+</html>

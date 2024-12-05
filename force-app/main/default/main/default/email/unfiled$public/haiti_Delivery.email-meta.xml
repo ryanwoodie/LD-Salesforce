@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email detailing the Feb 2, 2010 delivery of aid to haiti</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>haiti Delivery</name>
+    <style>none</style>
+    <subject>Thank you, {!Contact.FirstName}, for your donation to help our friends in Haiti!</subject>
+    <textOnly>Thank you to all who donated to help our friends in Haiti!Your kindness made a difference! Our Haitian friends needed to know that they are not forgotten, and thanks to the kindness and sacrifice of so many of you, we were not only able to help them out right now, but we are able to help them begin to rebuild for a stronger future. Thank you for responding to those who need it most. We are honored to be able to deliver aid and compassion that was made possible by the friends of Absolute! We believe that you can feel proud about reaching out and being involved in an immediate, practical and efficient response that made a tangible impact on the the people that needed it most.
+
+ Check out the video at http://absolute.org/blog/2010/03/01/delivery-of-aid-to-haiti/
+
+Timeline
+On January 15, we arrived in Port-au-Prince to assist the orphanages we support as well as help out with initial emergency response to help dig out survivors and retrieve possessions. We spent five days helping and assessing the best ways we could be of support. Upon our return, we reached out to Absolute supporters to assist in helping those we are connected with in Port-au-Prince, and each of you responded with compassion and generosity.
+
+On February 3, We left for Port-au-prince with the first $10,000 raised for Haiti through Absolute. A truck was filled with $8000 worth of aid in Dominican Republic and brought across the border into Haiti, where it was systematically delivered via a network of volunteers on the ground. Over the next four days, with the help of many caring Haitians and the staff at Kay Papa Nou, we were able to deliver the aid to the orphanages and tent cities across Port-au-Prince that we had previously identified.
+
+
+
+ 
+Delivery of the aid
+ Our aid supplies were divided into 4 different places: two different tent towns, the orphanage and a displacement camp. Most of the tent towns we visited had not received any other aid at that point, and we were grateful to be able to supply them and bring encouragement.
+
+Aid supplies (approximately)
+200 cases of water
+400 packs of rice
+400 bottles of oil
+400 bags of beans
+600 bars of soap
+1000 packs of soup mix
+900 roles of toilet paper
+1000 packs of cookies and crackers
+6 cases of milk
+600 packs of pasta
+400 small bags of detergent
+300 cans of sardines
+900 bags of corn mix
+Large tarps
+tents
+6 Large boxes of medical supplies. (donated by Servant&apos;s Heart Ministries)
+4 boxes of clothes (donated by Servant&apos;s Heart Ministries)
+500 candles
+1 - 2200 Honda generator
+
+Other Expenses
+$1600 went to pay for orphanage staff, vehicle maintenance, baby supplies and orphanage bills
+$400 went to pay translators, travel expenses, border fees, and other misc. items needed for this project
+
+
+However, this is about more than numbers or lists; this is about real lives with real need being met with compassion and kindness - your donation made that possible. To hear some of the stories of he aid that was delivered, check out our 52 Blog, http://52.absolute.org/2010/02/14/never-forgotten/
+
+Absolute is now preparing for our May Live Different Build in Haiti. We will be working with participants on the boys&apos; home within Kay Papa Nou orphanage installing doors, building a kitchen and replacing a roof on the children&apos;s school. We will also be helping to continue to help them reach more orphans and families that they are currently identifying through their volunteer network.
+ 
+Again, thanks for your generous response and in your faith in us to deliver it with effectiveness. Your gift made a difference and your life makes a difference every day!
+
+Christal Earle
+
+Co-founder, Absolute.org
+christal@absolute.org
+
+
+PS.
+Would you spend $10 a month to feel all warm inside about making a little difference in the world?
+
+Absolute has a monthly partner program that enables us, as a smaller grassroots charity to be able to do big things. Our monthly partners are normal people who believe in the power of &quot;exponential philanthropy&quot;: their money is not only helping us to continue to do what we do in our own nation, but it is enabling responses such as this to be able to be executed with efficiency and accountability. Our monthly partners are not only donors, they truly are partners who work with us to accomplish more together. Each month our monthly partners receive inside updates on what is happening in Absolute and in the areas in which we work, as well as monthly features on our staff, volunteers and partners. If you are interested in finding out more about monthly partnership, please check out the following options: www.absolute.org/donate, or contact our office at 1-866-432-4464.
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute Leadership Development Inc.Suite 400 - 44 Hughson St. North - Hamilton, ON L8R 1G3 ph +1 866 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

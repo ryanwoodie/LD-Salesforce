@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert sent to the Corey when new donations come in</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Corey Fundraiser Donation Alert</name>
+    <style>none</style>
+    <subject>General Donation has been made</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

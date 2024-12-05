@@ -1,0 +1,12 @@
+A phone follow up appt has been booked with {!Lead.Company}, on {!Lead.PPS_Client_Phone_Follow_Up_Day_Date_Time__c}.
+
+Here are the details...
+{!Lead.Company}
+{!Lead.Name} - {!Lead.Title}
+{!Lead.Phone}
+{!Lead.Email}
+
+{!Lead.Address}
+{!Lead.County__c}
+
+link: {!Lead.Link}

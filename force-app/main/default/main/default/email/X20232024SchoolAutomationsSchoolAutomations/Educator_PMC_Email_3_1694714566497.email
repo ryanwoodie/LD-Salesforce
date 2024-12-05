@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>What Other Principals Are Saying About Peer Mentorship</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>As the school year progresses, it's a perfect time to consider our Peer Mentorship Curriculum. We offer tailored plans to suit your school's unique needs.</p>
+
+<h3>Feedback from a Principal:</h3>
+
+<p><em>"This has been one of the most powerful sessions I've ever witnessed."</em></p>
+
+<p>Would you like to discuss how the Peer Mentorship Curriculum could benefit your school? <a href="https://calendly.com/livedifferent/discovery-call" rel="noopener" target="_blank">Schedule a Call</a>.</p>
+
+<p>Looking forward to connecting!</p>
+
+<p>Warm regards,</p>
+
+<p>{{{Recipient.OwnerName_F__c}}}</p>
+</body>
+</html>

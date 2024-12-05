@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Discover Transformative Experiences: Builds and Peer Mentorship</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>The school year is in full swing, but it's never too late to consider implementing our Builds or Peer Mentorship Curriculum programs. Our team is here to assist you every step of the way.</p>
+
+<h3>What Students and Principals Are Saying:</h3>
+
+<p>A recent Builds student participant shared:</p>
+
+<p><em style="color: #1c4587;">"My week with LiveDifferent was the best experience of my life. Witnessing the positive impact on the community was incredibly meaningful."</em></p>
+
+<p>A principal,&nbsp;after seeing his students participate in our Peer Mentorship Curriculum training:</p>
+
+<p><em style="color: #1c4587;">"This has been one of the most powerful sessions I've ever witnessed."</em></p>
+
+<h3>Stay Informed with Builds Info Webinars:</h3>
+
+<p>Our Director of International Programs, Jenn, hosts biweekly <em><strong>Builds Info Webinars</strong></em>. <a href="https://calendly.com/livedifferent-circles/builds-info-session?month=2023-09&amp;date=2023-10-26" rel="noopener" target="_blank">Click HERE to choose a webinar date</a>.</p>
+
+<p>Interested in a one-on-one discussion? <a href="https://calendly.com/livedifferent/discovery-call" rel="noopener" target="_blank">Click HERE to schedule a call</a> to explore how Builds or Peer Mentorship could be a fit for your school.</p>
+
+<p>Looking forward to connecting!</p>
+
+<p>Warm regards,</p>
+
+<p>{{{Recipient.OwnerName_F__c}}}</p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2011 year end campaign</name>
+    <style>none</style>
+    <subject>Your last chance to support us in 2011</subject>
+    <textOnly>This is your last chance to support us in 2011!
+
+
+Here at Live Different, we have a saying that we believe we can all live out each and every day: &quot;A changed heart can change the world.&quot; We have seen it happen this past year on so many levels:
+
+In the fall of 2011 we visited 120 schools with our Live Different presentations, performed 148 assemblies and led 45 Live Global workshops!
+
+Through our Live Different Builds we have built 34 houses, 1 school in Mexico, finished 2 Classrooms in Haiti, and even built a community latrine facility in Dominican Republic!
+
+Beyond the numbers and feedback, we have seen the power of hope in action as we speak to Canadian students and call them to begin to &quot;Live Different&quot;. We have experienced the cycle of change over and over again as students meet one of our teams in the high schools, join us on Live Different Build and, most of all, realize that they can&apos;t go back to life as normal. But it doesn&apos;t end there! Many families in severe need have been given a safe, clean home as we have worked alongside them through Live Different Build.
+
+2011 is just about to become history - but we still need your help! Please consider supporting us as we continue into 2012 stronger than ever through one of the following options:
+
+
+
+ 
+ 
+ 
+ 
+ 
+Teacher&apos;s Salary - $150
+Help pay a teacher&apos;s salary for one month at the Haiti School
+ 
+Emergency Fund - $500
+Donate to our Emergency Relief Fund in Mexico or Dominican Republic
+ 
+Water Cistern - $750
+A Water Cistern for the Haiti School that will provide clean water for 250 children
+ 
+Live Different Presentation - $1000
+Sponsor a Live Different Presentation in a Canadian High School!
+ 
+Foundation - $1,500
+Lay a foundation for a new house for a Live Different Build family
+ 
+Home - $6,000
+Build a new house for a Live Different Build family
+ 
+
+
+Click here to go to our year end project donation page
+http://livedifferent.com/last-chance-support-us-2011
+
+
+
+****
+Or, have you considered becoming a monthly philanthropist? By donating a monthly, manageable amount such as $20, $50, or $100 you will continue to provide a consistent base of support for our projects throughout 2012. Call us toll-free at (866) 432 4464 to find out more.
+
+
+
+
+
+Live Different (formerly Absolute.org)
+Suite 400 44 Hughson St. North
+Hamilton, ON L8R 1G3
+
+(866) 432 4464
+www.livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>27.0</apiVersion>
+    <available>true</available>
+    <description>BiWeekly Updates sent to volunteers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BiWeekly Updates Vol Email</name>
+    <style>none</style>
+    <subject>You&apos;ve been registered for !</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

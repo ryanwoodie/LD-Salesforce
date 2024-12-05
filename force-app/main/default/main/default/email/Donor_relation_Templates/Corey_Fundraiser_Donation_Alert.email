@@ -1,0 +1,10 @@
+Great news!
+
+A donation to your fundraiser has been made in the amount of {!Opportunity.Amount} by {!Opportunity.IATSPayment__First_Name__c} {!Opportunity.IATSPayment__Last_Name__c}
+
+
+
+
+Yours Truly,
+
+Live Different

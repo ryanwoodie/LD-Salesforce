@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Internship Lead Email - 2017</name>
+    <style>freeForm</style>
+    <subject>You had questions about Live Different Tour Internships? Ask me anything!</subject>
+    <textOnly>Hey {!Lead.FirstName},
+
+Hey! Thanks so much for showing interest in the Live Different tour internship when the team was in your community.
+
+My name is Jon Plett and I am the road team manager for Live Different. I would love to answer any questions you have or chat about the opportunity.  We are still looking for people to join us for the spring tour, especially for our Northern Team that works with Indigenous communities all over Canada. There are some awesome opportunities available and we would love to know if you are interested.
+
+If you want you want more info, check out http://livedifferent.com/tour-internship/
+
+or Email me back, I&apos;d love to answer any questions you have.
+
+Look forward to hearing from you!
+-Jon Plett
+
+--
+Road Team Manager
+(866) 432 4464</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

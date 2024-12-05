@@ -1,0 +1,29 @@
+<html>
+<body>
+<div style='font-family:arial;font-size:12px'>
+<p>Hi {!CampaignMember.FirstName},<br /><br />
+Thank you for the huge investment you made in Live Different by billeting one of our road teams as they travelled through your area! At all times we want to show respect and appreciation for our billets, and to encourage them to become further engaged in our message and our programs. It would help us greatly if you would fill out the following form and help us to evaluate the impression that our teams are leaving with our billets across the country. </p><p><a href='http://www.tfaforms.com/forms/view/257812?tfa_19={!CampaignMember.ContactId}&tfa_26={!CampaignMember.Campaign}'>Click to start survey</a></p>
+<br /><br />
+<p>Thanks!</p>
+<p>
+Cindy Stover<br />
+Community Engagement Coordinator <br />
+<br />
+
+<img src='http://livedifferent.com/sites/default/files/images/general/esiglogo.jpg' width='80px' alt='Live Different'><br />
+(formerly known as Absolute)<br />
+Suite 400 - 44 Hughson St. North<br />
+Hamilton, ON  L8R 1G3<br />
+<br />
+(866) 432-4464 Toll Free<br />
+(905) 777-1662 Phone<br />
+(905) 777-8117 Fax<br />
+cindy@livedifferent.com<br />
+<br />
+www.livedifferent.com<br />
+<br />
+Live Different is a youth movement challenging ourselves and others to consistent actions of love, hope and change - both large and small. We believe that a changed heart can change the world.
+</p>
+</div>
+</body>
+</html>

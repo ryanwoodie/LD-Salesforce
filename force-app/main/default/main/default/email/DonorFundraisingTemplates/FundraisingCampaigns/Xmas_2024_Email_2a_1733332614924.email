@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:Email_Banner_2]}" alt="Fueling Dreams: Empower Youth to Build a Better Future. Westjet + LiveDifferent" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   <tbody>
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;"><p>Dear {{{Recipient.FirstName}}},</p><p>At <strong>LiveDifferent</strong>, we’re dedicated to inspiring and empowering youth to live a lifestyle of compassion and kindness. One of the most impactful ways we do this is through our <strong>Humanitarian Builds trips</strong>. Each year, young Canadians travel to communities in Mexico and the Dominican Republic, working side-by-side with local families to build safe, dignified homes.</p><p>We believe every young person deserves equal access to opportunities that fuel their personal growth and future success. That’s why we created the <strong>Youth Scholarship Fund</strong>—providing youth from diverse backgrounds with <strong>$500 bursaries</strong> to help them join a Build and experience the transformation that comes from serving others.</p><p>We want to share a story that highlights the impact of these opportunities:</p>
+                      <blockquote>
+                       <p>When Jordan Schwartz joined his first LiveDifferent Build as a high school student, he had no idea it would change his life.</p>
+                       <p><em>“The culture shock was significant, but I realized how connected we are through shared values like family and community. That trip taught me empathy, teamwork, and the power of giving back—it was genuinely life-changing,”</em> Jordan shared.</p>
+                       <p>Today, Jordan supports the outh Scholarship Fund to help more students experience the transformation he did. <em>“Just a small boost can help a student start their journey and inspire others to join.”</em></p>
+                      </blockquote><p>This holiday season, you can help fuel dreams for youth like Jordan. <strong>Every $25 donation supports the Youth Scholarship Fund</strong> and <strong>you’ll receive one entry for your chance to win one roundtrip flight for two guests on WestJet!</strong></p><p>And we also have incredible gifts for additional giving levels:</p></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:FDemail_graphic_gifts_1]}" alt="$100 donation gets Bandana. A $250 gift gets LiveDifferent bracelet. A $500 gets a Hiliary Druxman LiveDifferent necklace." width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   <tbody>
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;"><br /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="border: 0; width: 100%; border-collapse: collapse; mso-table-lspace:0pt;mso-table-rspace:0pt;" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <div style="word-break:break-word; border: 0; mso-border-alt: 0; text-align:center; ">
+                       <div style="display: inline-block; border: 0; mso-border-alt: 0; ">
+                        <a style="direction:ltr;display:block;text-align:center;margin:0; font-family:Arial, Helvetica, sans-serif; font-size:24px; padding-top: 10px;padding-right: 20px;padding-bottom: 10px;padding-left: 20px; color:#ffffff;font-weight:normal;font-style:normal;text-decoration:none;border:0;background-color:#F8C049;border-radius:20px;mso-padding-alt:0;" href="https://livedifferent.com/get-involved/support/fundraiser/fueling-dreams-empowering-youth-to-build-a-better-future/" target="_blank"><!--[if mso]><i style="background-color:#F8C049; letter-spacing: 20px; mso-text-raise: 10px; mso-font-width: -100%;">&nbsp;</i><![endif]--><span>Donate Today</span><!--[if mso]><i style="background-color:#F8C049; letter-spacing: 20px; mso-text-raise: -10px; mso-font-width: -100%;">&nbsp;</i><![endif]--></a>
+                       </div>
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   <tbody>
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;"><p>You can also read Jordan’s full story on our <a href="https://www.livedifferent.com/blog"><strong>blog</strong></a> or watch his interview <a href="https://youtu.be/OUNI3vw9Ebw"><strong>here</strong></a>.</p><p>Together, let’s empower youth to build a better future.</p><p>With gratitude,<br /><strong>The LiveDifferent Team</strong></p></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   <tbody>
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;">
+                      <div style="text-align: center;">
+                       <a href="https://livediff.typeform.com/to/UIHqrJoF#email={{{Recipient.Email}}} ">Unsubscribe</a>
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

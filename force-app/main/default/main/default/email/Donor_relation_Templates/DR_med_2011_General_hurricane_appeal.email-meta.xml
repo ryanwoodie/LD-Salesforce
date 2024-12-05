@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DR_med-2011 General hurricane appeal</name>
+    <style>none</style>
+    <subject>Update from Live Different Build in Dominican Republic</subject>
+    <textOnly>Hello {!Contact.FirstName}
+ 
+As some of you may know, Hurricane Irene hit the coast of the Dominican Republic early yesterday morning (August 23rd). While all of our team members stayed safe and sound in the resort, which is a strong cinder block structure built to withstand hurricanes, they couldn&apos;t help but think of many of the families in the community of Aguas Negras/Neuvo Renacir where they&apos;d been working. These families live in conditions that are difficult at the best of times, and during hurricane season, many of them lose or sustain serious damage to their homes. When our team headed over to the village in the afternoon to see how they could help, some of the houses they had seen just three days ago were half gone. 
+
+
+
+Margalina, a mother of one of the families who lost their home, had lived in that &apos;ocean view&apos; house with husband, and two children for the past three years. Whenever it rained their house and belongings would all get wet and ruined. She said that after the storm started, a cousin came and took the family to stay in his home during the hurricane, as it was further away from the water. They did not sleep the entire night because of the noise and fear for their home. Now that their house has been destroyed and all their belongings damaged, Margalina seemed like she was in shock, and yet said that the family plans to fix and clean the house and move back in when it is ready.
+
+Live Different Build is committed to the community of Aguas Negras/Nuevo Renacir, and while we are happy to say that all of the homes we built this summer are still standing safe and strong after Hurricane Irene, there are so many other families in this village who constantly live at risk of devastation by natural disasters such as this. The silly thing is that itâ€™s entirely preventable. If families have homes that are well-built, with proper materials, and are located far enough away from shore, they would be able to avoid all but the most extreme catastrophes.
+
+Live Different Build is determined to give the people of Aguas Negras/Neuvo Renacir that chance! Right now, weâ€™re going to do what we can to meet the immediate needs of this community as they clean up and salvage what is left. But we will continue to build homes for deserving families in this town so that they wonâ€™t have to face the next hurricane in fear, and we need your help to do it! Please consider supporting our future building projects in this community by clicking the &apos;donate&apos; button below, or think about attending a Live Different Build trip yourself! You can bring hope, love, and change to this community!
+
+www.absolute.org/donate
+
+For more info, you can visit out website (www.absolute.org) or follow along on our facebook (www.facebook.com/absolute.org). If you have any questions at all, please feel free to either call our office at 1-866-432-4464 or email me at cindy@absolute.org.
+
+Sincerely,
+
+Cindy Stover
+
+Community Engagement Coordinator
+
+www.absolute.org
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

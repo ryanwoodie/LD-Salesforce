@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HH WF 3 day post trip Adult</name>
+    <style>none</style>
+    <subject>Does home seem different now?</subject>
+    <textOnly>Live Different |  Email Us  | 1-866-432-4464
+
+
+
+
+Hey there {!Contact}!
+
+We hope that by the time you receive this email you are home safe and sound and you have caught up on your sleep! First of all, thanks for joining us on a Live Different Build because you were a valuable part of what we accomplished together. We completed what we set out to do and in our own way, helped to bring love, hope, and change to people who needed it most.
+
+Everyone can go through very different emotions and thoughts in the aftermath of an experience such as your Live Different Build - we know this very well. Your Live Different Build experience can be a great catalyst for continued change and life resolve. There may have been moments, experiences, or people that gave you a vision of what you would like to do in the future as a result of your Live Different Build, and we are here to remind you to not let go of that inspiration!
+
+There are endless ways you can begin to integrate your experience into life at home, but we want to let you know about a few that we all believe in. There are many great advocacy and action organizations that you can add your voice and resources to. One of the best ways to do that is through child sponsorship and/or monthly partnership. Live Different has a monthly partnership program that enables us to continue to do what we do best through our programs in both Canada and internationally.
+
+Don&apos;t forget the 30 second, 2 minute, and 10 minute versions of your stories that we talked about in your final debriefing. You may find these very useful in the near future as everyone will stop you and ask about that &apos;little trip you just took&apos;. It will help you process it and even help you not to get too frustrated with people who will just never &apos;get&apos; it. We were all there at one time and the only thing that separates us now is the experience; keeping that at the forefront may help you to suspend judgment when you get frustrated or disappointed with someone&apos;s response.
+
+Also, please consider joining us on another Live Different Build location in the future, as every trip is different, and will impact you deeply, both through new and familiar experiences. We would love to see your face again!
+
+And finally, we are still here! We want to be a resource and source of encouragement as you move forward. Please feel free to contact us at any time with questions, ideas, follow up, or even some feedback you may have that you didn&apos;t get a chance to share with us on your trip.
+
+We hope to see you soon!
+
+Monthly Partner
+Private Live Different Builds
+
+Do you have a heart for youth, and like what we are doing? Consider becoming a monthly partner with Live Different! We&apos;ll keep you updated on the difference your contribution is making each month.
+
+Click here
+
+Imagine what it would be like with a group of 10 or more people you know, working together to make a difference? Our private trips are a great life experience and opportunity for groups to bond, and allow you all to spend your &apos;holiday&apos; doing something meaningful together.
+
+Click here for more info
+
+Live Different
+15 Wellington St. North, Suite B3
+Hamilton, ON   L8R 1M7
+www.livedifferent.com
+info@livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

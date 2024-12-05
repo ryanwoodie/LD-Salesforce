@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Feb 2017 Interest Email</name>
+    <style>none</style>
+    <subject>We still have room in the Live Different Academy this September!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

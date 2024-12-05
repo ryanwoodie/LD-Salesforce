@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up email - sent after call/convo with potential donor</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 Trades Centre Email f/u info after call</name>
+    <style>none</style>
+    <subject>Thanks for chatting today! Here&apos;s info on supporting Live Different&apos;s Trades Centre in Mexico!</subject>
+    <textOnly>Live Different
+
+Livedifferent.com
+
+
+Dear {!Contact.FirstName},
+
+Thank you for taking the time to chat with me today, and for your interest in supporting our Trades Learning Centre in Mexico! Thanks to generous donors just like you, we&apos;re already halfway to our fundraising goal to build this project!
+
+You can help us reach that goal by making a donation or committing to your own fundraising goal to build the Trades Learning Centre. Your support will make a direct impact, as the valuable skills that local people learn through this centre will lead to better paying jobs and a brighter future for their entire families.
+
+DONATE OR FUNDRAISE
+
+Thank you for your generosity and commitment to making this project a reality! Please contact us with any questions you might have, or to share your fundraising goal with us! We&apos;re excited to help you get started!
+
+Sincerely,
+
+The Live Different Team
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+{!NullValue(Opportunity.OwnerEmail, &quot;builds@livedifferent.com&quot;)}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

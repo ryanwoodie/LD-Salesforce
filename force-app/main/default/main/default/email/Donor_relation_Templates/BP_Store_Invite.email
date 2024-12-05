@@ -1,0 +1,17 @@
+Hi {!BP_Store_Invite__c.Invitee_Full_Name__c},<br><br>This is Joy Yu here from LiveDifferent.com! First of all, I would like to offer our sincere thanks for how you and your restaurant have had an incredible impact on our cause through your support of the Boston Pizza Foundation! Boston Pizza Foundation&#39;s involvement with our Live Different program this year will directly result in 100,000 students hearing a life-changing message of hope and this would not have happened without you and the Foundation.<br>
+<br>Secondly, we greatly value the involvement of our partners in the work that we do, and would like to give you the opportunity to see first-hand the impact you are having. We are going be in the {!Account.BillingCity} area on {!BP_Store_Invite__c.Date__c} bringing a Live Different motivational assembly to {!Account.Name}, starting at {!BP_Store_Invite__c.Presentation_Time__c}. We would like to invite you to join us at the school for this event! Following are some options on how you can participate if you are interested:<br>
+<br>    1. Attend and watch the 1 hour presentation, which will include a verbal thank you to you and your BP store for your support of our cause through the BPF. <br>
+<br>   2. Yourself, a representative, or a staff member that is a student at the school, can also give out a few gift certificates from your store to the teacher volunteers of our crowd interaction segment. This will include an introduction and thank you for your store&#39;s support of our cause through the BPF.<br>
+
+<br>   * Please note that more than one store can be involved, so even if another store is closer to the school, you are still more than welcome to attend.<br>
+
+<br>Please RSVP by emailing to this email to let us know if you are planning on attending, what level of involvement you would like to have, and how many people are coming, as we will need to inform the school in advance. If you have any questions about this event, please contact me.<br>
+
+<br>The presentation is at:<br><br>{!BP_Store_Invite__c.Presentation_Time__c} on {!BP_Store_Invite__c.Date__c}<br><br>and the school&#39;s address is:<br><br>{!Account.Name}<br>{!Account.BillingAddress}<br>
+
+<br>Also, you might be interested in this video http://vimeo.com/52965149. Boston Pizza staff/owners joined us the last two summers in the Dominican Republic to build a total of six homes (1 being a duplex) for seven families in need on our Live Different Build humanitarian trip during the month of August! Another Boston Pizza trip is happening August 3rd-12th, this upcoming summer! For information about this trip please feel visit: http://livedifferent.com/dominican-republic. Click on "details" and the username is "bostonpizza" and the password is "dominican".<br>
+
+<br>Thanks for your consideration on this. We look forward to the opportunity to meet you!<br>
+
+<br>Warm Regards,<br>Joy Yu<br>Live Different<br>Suite B3 - 15 Wellington St. North<br>Hamilton, ON  L8R 1M7<br>Canada<br><br>905-777-1662 Office<br>905-777-8117 Fax<br><a href="http://www.livedifferent.com" target="_blank">www.livedifferent.com</a><br>
+<br>

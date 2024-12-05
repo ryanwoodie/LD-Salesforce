@@ -1,0 +1,22 @@
+<p>Hello {!Opportunity.TReceipt_Contact_FirstN__c},</p>
+
+<p>Following is your bi-weekly Live Different Build registration update.</p>
+
+<p>{!Opportunity.HH_status__c} </p>
+
+<p>{!Opportunity.HH_status_2__c} </p>
+
+<p>Please note that donations/payments entered through our online donation form URL are not applied instantly to your fundraising totals. We must first receive the funds, and following this it may take 7 to 10 days to process and apply the funds towards your fundraising goal.</p>
+
+<p>If you have any questions, or need any assistance with your Live Different Build registration or fundraising, please feel free to contact us - we are happy to help!</p>
+
+<p>Sincerely,</p>
+
+<br clear="all"></span>The Live Different Team</font><br><br><div><img src="http://livedifferent.com/sites/default/files/images/general/esiglogo.jpg"><br>
+</div><div><div>Live Different </div><div>(Absolute Leadership Development Inc.)<br>Suite 400 - 44 Hughson St. NORTH<br>Hamilton, ON  L8R 1G3<br>Canada<br><br><a value="+19057771662">905-777-1662</a> Office<br>
+<a value="+19057778117">905-777-8117</a> Fax<br>
+<a href="mailto:hh@livedifferent.com" target="_blank">hh@livedifferent.com</a><br><br><a href="http://www.livedifferent.com/" target="_blank">www.livedifferent.com</a></div><div><span style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:17px;background-color:rgb(255, 255, 255)"><br>
+</span></div><div><span style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:17px;background-color:rgb(255, 255, 255)">Live
+Different is a youth movement challenging ourselves and others to
+consistent actions of love, hope and change - both large and small. We
+believe that a changed heart can truly change the world. <b>Live Different</b></span></div>

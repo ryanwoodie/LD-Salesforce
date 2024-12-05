@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Let's Work Together to Build Student Leaders!</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>Hope your week is going well. Have you had an opportunity to view our Circles Peer Mentorship <a href="https://www.youtube.com/watch?v=rGaviLF3FO8">video</a>?</p>
+
+<h3>What Circles Peer Mentorship Offers:</h3>
+
+<p>Each one-hour session tackles essential topics such as authenticity and resilience, combining video content and discussion led by student leaders.</p>
+
+<p><a href="https://vimeo.com/showcase/7626839" rel="noopener" target="_blank">Preview Our Circles Content</a><br />
+<strong>Password:</strong> ldcircles_free.preview</p>
+
+<p>Interested in integrating this program into your school? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32vbIRnIwpAPiclLfRo-n4JdrF1OKbx9GYDdMLoVllWAlFjrUDcDvxU8Zz_5eAQwajnE8B1UGB" rel="noopener" target="_blank">Schedule a Call</a>.</p>
+
+<p>Looking forward to your response!</p>
+
+<p>Warm regards,</p>
+
+<p>{{{Recipient.OwnerName_F__c}}}</p>
+
+<p>P.S. A student leader from BC shared: <em>"The group absolutely loved their time participating in Circles. It was an amazing leadership growth opportunity for me!"</em></p>
+</body>
+</html>

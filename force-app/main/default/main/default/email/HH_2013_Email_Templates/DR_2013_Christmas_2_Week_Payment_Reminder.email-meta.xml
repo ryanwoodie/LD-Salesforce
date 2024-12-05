@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2013 - Christmas 2 Week Payment Reminder</name>
+    <style>freeForm</style>
+    <subject>DR Christmas Public Trip 2013 - Two Week Payment Reminder</subject>
+    <textOnly>Hello friends!
+
+
+
+I hope that your long weekend was full of delicious turkey and spending the holidays with your loved ones!
+
+
+
+Final payment deadline is coming up in two weeks on October 31st:
+
+Use your Canada Helps Page for making, entering and requesting donations or payments related to your trip. You can share (email, Facebook, etc.) your Canada Helps Page with any potential donors so they can donate online to your Live Different Build project (to help meet your fundraising goal).
+
+Family Profiles:
+
+We will be choosing the families we will be building for mid-November. I will email everyone with the names, ages, and information about the families once we have put this together.
+
+Haiti Video:
+
+If you haven&apos;t checked out our new video yet, here is the link to our Live Different Build video in Haiti: http://www.youtube.com/watch?v=-cC7_iEk97I&amp;feature=youtu.be
+
+Booking your flights:
+
+If you haven&apos;t already checked out your trip page, please do so this week  so you can become familiar with our trip itinerary and start booking your flights to Puerto Plata, DR: http://livedifferent.com/hero-holiday/trips/christmas-public-trip
+
+Airport: Puerto Plata, Dominican Republic - Airport Code: POP
+Arrival: December 27th, 2013
+Departure: January 5th, 2014
+
+GIFTS!
+
+Live Different is trying to get away from the &quot;gift give away&quot; attitude within the communities that we are working in. We are finding that it has the potential to create unhealthy relationships and we desire to build relationships that are best for us as an organization, the community, and our volunteers. We ask that you come with only ONE checked bag (if possible). You are welcome to bring items for the family you are building for if you have extra room or some of the following items listed below. Please only bring items on this list and help us continue our work in the communities in a health manner. Thank you for honouring this request. We will provide more details on this point during our time together in Dominican Republic.
+
+new bed sheets
+new towels (all sizes)
+curtains
+new table cloths
+kitchen supplies - tupperware containers, cooking utensils, serving items, anything that you personally find helpful in the kitchen
+bubbles
+water guns
+baby items
+school supplies (notebooks and pens)
+
+
+
+Through our extensive experience working with groups, we have found that the best way to help your family is to pool extra donated money together in Dominican Republic, to buy the larger items for their house. With this money, based on the family&apos;s need, we have been able to purchase things such as groceries, beds, table &amp; chairs, stove, fridge, and other much needed items. In doing this, we help assist the family into a new and healthy future. We also help support the local economy!
+
+Please e-mail me back with more questions or concerns you may have. I look forward to answering them for you!
+
+
+
+
+Sincerley,
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

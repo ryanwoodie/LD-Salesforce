@@ -1,0 +1,17 @@
+Lead Info:
+{!Lead.RecordTypeId}
+{!Lead.Link}
+Name: {!Lead.Name}
+Age: {!Lead.Age_Number__c}
+Contest: {!Lead.Contest__c}
+
+Interest in...
+Builds - {!Lead.Build_Interest_indv__c}
+Tour Internship - {!Lead.Tour_Internship__c}
+Academy - {!Lead.Academy__c}
+Internship - {!Lead.Internship__c}
+Private Build - {!Lead.Private_Build__c}
+
+Submitted by:
+{!Lead.CreatedBy}
+{!Lead.Lead_Submitted_By__c}

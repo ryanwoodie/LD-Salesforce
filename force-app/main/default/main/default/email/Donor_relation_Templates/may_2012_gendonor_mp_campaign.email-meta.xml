@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>may_2012-gendonor mp campaign</name>
+    <style>none</style>
+    <subject>Live Different needs your help</subject>
+    <textOnly>Hi there, This is Christal Earle, the co-founder of Live Different. On behalf of all of the lives that been changed through Live Different, I would like to thank you for your generosity and support. We may not have met in person, but right now I am asking for your help.
+
+Live Different exists because of our financial donors. Monthly financial partnership is the most effective way for us to continue to do what we do. Would you consider becoming a monthly partner and supporting us with one of the following amounts?
+
+
+$30 per month can provide a dry, safe roof on a deserving family&apos;s new home Donate $30 per month: https://fs17.formsite.com/livedifferent/form13/fill?3=30
+$60 per month can help bring a message of purpose and hope to Canadian high school students with our Live Different Presentation Donate $60 per month: https://fs17.formsite.com/livedifferent/form13/fill?3=60
+$100 per month can provide a poured concrete floor in a deserving family&apos;s new home Donate $100 per month: https://fs17.formsite.com/livedifferent/form13/fill?3=100
+
+
+
+Hailee&apos;s story is proof that hope and change happen one life at a time.
+
+Hailee&apos;s life is always a reminder to me of what Live Different is all about.
+Hailee has 603 friends on Facebook, a quirky sense of humour, and a smile that lights up her face. She is currently one of our Live Different Academy students, and for us, her story embodies why we continue to do what we do, each and every day.
+
+We came to her high school in Williams Lake, B.C. As she listened to our team share their stories, she was challenged to start to think past where she was at, and that wasn&apos;t always easy. Right from the beginning, Hailee&apos;s life had been unpredictable. Her mom found out she was pregnant only a couple of hours before giving birth to her at the age of 16. She had been sexually assaulted and had no idea that we was pregnant until Hailee appeared. Life for their small family unit was full of many challenges, not the least of them was adjusting to how to be a family in the first place. Although her family fell into the &apos;working poor&apos; category in Canada, Hailee was determined that she was going to begin to navigate her own course. She knew she needed out of the cycle, but she couldn&apos;t do it on her own. And then one day Live Different showed up at her high school. When she heard about Live Different Build and talked to our team, she knew she had to be a part of what was going on. She began to work tirelessly to raise the money to join us for a Live Different Build in Mexico, and she made it happen. That trip brought about a transformation in her. Like every other Live Different Build volunteer we have worked with, the experience shaped her life and ultimately the future that she will become a part of. She returned home to the same challenges in her family and home life, but the difference now was that she had changed. She never looked back.
+
+This past fall, as part of our Academy program in Mexico, Hailee helped to build more homes for families that were in desperate need of help and compassion. This semester she has been on the road with our road teams, speaking to thousands of high school students who are not so different from her, inspiring them to live differently and to embrace hope for themselves and their world. She is one of our shining lights in Live Different, and she is a reminder, every day, of how important it is to continue to move this vision forward. History is waiting on it.
+
+We have the privilege to reach out to students like Hailee every single day. The &apos;Hailees&apos; of the world are important for many reasons. They are often hiding in the crowd as we speak in their schools, they are often quietly experiencing change as they join us on Live Different Build, and they return to their worlds empowered to continue to make a difference. Every single person that has joined us on Live Different Build has told us on our feedback forms that their lives are impacted by what they experience. This is essential, because they hold the keys to the future that we will all share. Investing in them today is a necessity.
+
+In Live Different, we believe that the goal in all that we do is to see lives changed by hope. We wouldn&apos;t have been able to reach Hailee with our message and to connect her with the trip that changed everything for her without the help of our donors. In fact, the truth is that we wouldn&apos;t be able to continue to do what we do without your help. You change everything for the &apos;Hailees&apos; in our world.
+
+&quot;What you do today is important because you&apos;re exchanging a day of your life for it.&quot; ~ Hailee
+
+Thank you for considering partnering with us, and for your continued support of Live Different!
+
+Live Different
+Suite 400, 44 Hughson St. North
+Hamilton, ON    L8R 1G3
+Canada
+
+(866) 432 4464
+info@livedifferent.com
+www.livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

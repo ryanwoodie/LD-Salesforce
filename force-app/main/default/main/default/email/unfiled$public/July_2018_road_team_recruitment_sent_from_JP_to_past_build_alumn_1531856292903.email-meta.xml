@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>July 2018, road team recruitment sent from JP to past build alumni 17.5 to 18yr</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Travel across Canada this fall with Live Different</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

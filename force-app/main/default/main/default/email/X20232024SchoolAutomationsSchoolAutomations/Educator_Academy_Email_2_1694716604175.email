@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;">
+<head>
+	<title>Learn about the benefits of our Gap Year Program!</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>I hope your week is going well! Following up on your interest in our Academy program, would you be interested in a quick chat about it?</p>
+
+<p>You are welcome to schedule one <a href="https://calendly.com/tyler-livediff/meeting" target="_blank"><strong>HERE</strong></a>.</p>
+
+<p>Did you know our Academy program offers scholarships, courses in international development &amp; social justice, Spanish lessons, and travel opportunities to multiple countries?</p>
+
+<p>Here&#39;s what a recent participant had to say:</p>
+
+<blockquote><em>&quot;It is important to know that this experience will change you. You may not notice it when it&rsquo;s happening but you will return home a different person. You can&rsquo;t go through an experience like this without letting it alter your way of thinking and viewing the world.&quot;</em></blockquote>
+
+<p>Feel free to reach out with any questions. Looking forward to connecting!</p>
+
+<p>Warm regards,</p>
+
+<p>Tyler</p>
+</body>
+</html>

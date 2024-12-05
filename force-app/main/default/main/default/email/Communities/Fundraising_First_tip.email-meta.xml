@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>27.0</apiVersion>
+    <available>true</available>
+    <description>Fundraising Tips sent to Registrant after initial page is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Fundraising_First tip</name>
+    <style>none</style>
+    <subject>You&apos;ve been registered for !</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

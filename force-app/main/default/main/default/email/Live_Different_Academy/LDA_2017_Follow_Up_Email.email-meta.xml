@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To volunteers - before reference check</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>LDA 2017 - Follow Up Email</name>
+    <style>freeForm</style>
+    <subject>Live Different Academy: Follow Up</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+My name is Jennifer, I am the Program Administrator for the Academy, I am very excited to know you will be joining us for this 13 week journey! I have just sent out the reference forms to your references. Please let them know to fill them out as soon as possible.
+
+
+
+After they have filled out the forms and your references check out, I will be sending you an acceptance email with all of the next steps.
+
+Have a great week!
+
+Please feel free to call or email me to answer any questions that you or your parents may have. I am always available to you at the contact information below. Please do not be shy in calling or emailing; if you don&apos;t know, just ask. I&apos;m here to help!
+
+Sincerely,
+
+Jennifer Quong
+
+Program Administrator
+jennifer.quong@livedifferent.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

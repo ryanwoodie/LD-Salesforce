@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" /> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" /> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
+    
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+    
+    <!-- CSS Reset -->
+    <style type="text/css">
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* What is does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+        
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+                
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            Margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto; 
+        }
+        
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+        
+        /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+        
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration: underline !important;
+        }
+      
+    </style>
+    
+    <!-- Progressive Enhancements -->
+    <style>
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #0078bd !important;
+            border-color: #0078bd !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid,
+            .fluid-centered {
+                max-width: 100% !important;
+                height: auto !important;
+                Margin-left: auto !important;
+                Margin-right: auto !important;
+            }
+            /* And center justify these ones. */
+            .fluid-centered {
+                Margin-left: auto !important;
+                Margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+        
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                Margin-left: auto !important;
+                Margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+                
+        }
+
+    </style>
+
+</head>
+<body bgcolor="#fff" width="100%" style="Margin: 0;">
+<table bgcolor="#fff" cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="border-collapse:collapse;"><tr><td valign="top">
+    <center style="width: 100%;">
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+         Nous avons récemment envoyé une carte de remerciement à chacun d'entre vous et nous voulions nous assurer que vous l'avez tous bien reçu.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!-- Email Header : BEGIN -->
+        <table align="center" width="600" class="email-container">
+            <tr><td style='padding-top:20px'>&nbsp;</td></tr>
+        </table>
+        <!-- Email Header : END -->
+        
+        <!-- Email Body : BEGIN -->
+        <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="600" class="email-container">
+
+            <!-- 1 Column Text : BEGIN -->
+
+            <tr>
+                <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+   
+<p>Au nom de Live Different - MERCI!</p>
+
+<p>Au cours des neuf dernières années de notre partenariat, j'ai eu la chance de connaitre plusieurs d'entre vous et j’espère aussi pouvoir faire de nouvelles connaissances dans les jours à venir!  Ca été tout un honneur pour nous tous à Live Different d’avoir pu assister à de nombreuses réunions et déjeuners-conférences dans vos bureaux, de même qu’en République Dominicaine lors d'un voyage Builds, et d’avoir ainsi pu connaître un grand nombre de gens faisant parti de la famille Boston Pizza.</p>
+
+<p>Nous sommes ainsi de fiers ambassadeurs du groupe Boston Pizza et sommes fiers de pouvoir  représenter chacun de vous dans vos communautés locales respectives. De par votre soutien, c’est en voyageant dans les écoles partout au Canada qu’il nous fait grand plaisir de promouvoir, de par nos présentations de motivation, la culture généreuse et solidaire, qui fait foi de l’image de marque de commerce de Boston Pizza.</p>
+
+<p>Nous avons récemment envoyé une carte de remerciement à chacun d'entre vous et nous voulions nous assurer que vous l'avez tous bien reçu. Encore une fois merci pour tout ce que vous avez fait et continuez de faire afin de soutenir l’équipe de Live Different !</p>
+ 
+<p>De plus, si vous n'avez pas encore visionné cette nouvelle vidéo, veuillez la consulter et la partager avec votre famille et vos amis. Cette vidéo met en valeur tout le travail effectué par l'équipe de direction de Boston Pizza, en partenariat avec nous afin d’aider une communauté de République Dominicaine qui sont dans le besoin.</p>
+ 
+<p>Encore une fois merci. J'ai hâte de voir certain de vous à la conférence de Boston Pizza ayant lieu à Orlando.</p>
+ 
+<p>Si vous avez des questions ou commentaires, n'hésitez pas à me contacter au numéro ci-dessus.</p>
+
+<p>Cordialement,</p>  
+
+<br />
+<div id="preview-name" style="padding-bottom: 5px; color: #565656; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Charles Roberts</div>
+<div>
+<img src='https://livedifferent.com/sites/files/charles.png' width='75px' />
+</div>
+<div>
+<p>Office: (866) 432 4464<br />
+Cell: (204) 730-2045<br />
+charles@livedifferent.com<br />
+</p>
+</div>
+                    
+                   
+                </td>
+
+            </tr>
+            <!-- 1 Column Text : BEGIN -->
+
+           
+         
+
+
+        </table>
+        <!-- Email Body : END -->
+          
+        <!-- Email Footer : BEGIN -->
+        <table align="center" width="600" class="email-container">
+            <tr>
+                <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #888888;">
+                    <br /><br />
+                    Live Different<br /><span class="mobile-link--footer">Suite B3 - 15 Wellington Street North, Hamilton, ON   L8R 1M7</span><br /><span class="mobile-link--footer">(866) 432 4464</span>
+                    <br /><img src="https://my.livedifferent.com/resource/1465571604000/myimages/general/heart.png" width="30" height="27" alt="alt_text" border="0" /><br /> 
+                   
+                </td>
+            </tr>
+        </table>
+        <!-- Email Footer : END -->
+
+    </center>
+</td></tr></table>
+</body>
+</html>

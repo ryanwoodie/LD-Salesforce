@@ -1,0 +1,564 @@
+<html>
+ <head>
+  <meta />
+  <meta content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>[test] WPG Gala Email #1 - Insert Subject Line</title> 
+  <style type="text/css">p{
+			margin:10px 0;
+			padding:0;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		h1,h2,h3,h4,h5,h6{
+			display:block;
+			margin:0;
+			padding:0;
+		}
+		img,a img{
+			border:0;
+			height:auto;
+			outline:none;
+			text-decoration:none;
+		}
+		body,#bodyTable,#bodyCell{
+			height:100%;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		.mcnPreviewText{
+			display:none !important;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		table{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		p,a,li,td,blockquote{
+			mso-line-height-rule:exactly;
+		}
+		a[href^=tel],a[href^=sms]{
+			color:inherit;
+			cursor:default;
+			text-decoration:none;
+		}
+		p,a,li,td,body,table,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
+			line-height:100%;
+		}
+		a[x-apple-data-detectors]{
+			color:inherit !important;
+			text-decoration:none !important;
+			font-size:inherit !important;
+			font-family:inherit !important;
+			font-weight:inherit !important;
+			line-height:inherit !important;
+		}
+		#bodyCell{
+			padding:10px;
+		}
+		.templateContainer{
+			max-width:600px !important;
+		}
+		a.mcnButton{
+			display:block;
+		}
+		.mcnImage,.mcnRetinaImage{
+			vertical-align:bottom;
+		}
+		.mcnTextContent{
+			word-break:break-word;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		.mcnDividerBlock{
+			table-layout:fixed !important;
+		}
+		body,#bodyTable{
+			background-color:#ffffff;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+		}
+		#bodyCell{
+			border-top:0;
+		}
+		.templateContainer{
+			border:0;
+		}
+		h1{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:26px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h2{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:22px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h3{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:20px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h4{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:18px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		#templateHeader{
+			border-top:0;
+			border-bottom:0;
+		}
+		#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{
+			color:#007C89;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateBody{
+			border-top:0;
+			border-bottom:0;
+		}
+		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
+			color:#202020;
+			font-family:'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templateBody .mcnTextContent a,#templateBody .mcnTextContent p a{
+			color:#d02638;
+			font-weight:bold;
+			text-decoration:underline;
+		}
+		#templateFooter{
+			border-top:0;
+			border-bottom:0;
+		}
+		#templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templateFooter .mcnTextContent a,#templateFooter .mcnTextContent p a{
+			color:#202020;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+	@media only screen and (min-width:768px){
+		.templateContainer{
+			width:600px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body,table,td,p,a,li,blockquote{
+			-webkit-text-size-adjust:none !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body{
+			width:100% !important;
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#bodyCell{
+			padding-top:10px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnRetinaImage{
+			max-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImage{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardRightImageContentContainer{
+			max-width:100% !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnBoxedTextContentContainer{
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupContent{
+			padding:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
+			padding-top:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardBottomImageContent{
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockInner{
+			padding-top:0 !important;
+			padding-bottom:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockOuter{
+			padding-top:9px !important;
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnTextContent,.mcnBoxedTextContentColumn{
+			padding-right:18px !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+			padding-right:18px !important;
+			padding-bottom:0 !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcpreview-image-uploader{
+			display:none !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h1{
+			font-size:22px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h2{
+			font-size:20px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h3{
+			font-size:18px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h4{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		table.mcnBoxedTextContentContainer td.mcnTextContent,td.mcnBoxedTextContentContainer td.mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td#templateHeader td.mcnTextContent,td#templateHeader td.mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td#templateBody td.mcnTextContent,td#templateBody td.mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		td#templateFooter td.mcnTextContent,td#templateFooter td.mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}
+	
+  </style> 
+ </head> 
+ <body style="background: none center center / cover no-repeat rgb(255, 255, 255); height: auto; margin: 0px; padding: 0px; width: 100%; text-size-adjust: 100%; min-height: auto;">
+  <center> 
+   <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" id="bodyTable" style="background:#ffffff none no-repeat center/cover;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #ffffff;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;" width="100%"> 
+    <tbody> 
+     <tr> 
+      <td align="left" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 10px;width: 100%;border-top: 0;" valign="top"> 
+       <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;" width="100%"> 
+        <tbody> 
+         <tr> 
+          <td id="templateHeader" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-top: 0;border-bottom: 0;" valign="top"> 
+           <table border="0" cellpadding="0" cellspacing="0" class="mcnImageBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"> 
+            <tbody class="mcnImageBlockOuter"> 
+             <tr> 
+              <td class="mcnImageBlockInner" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top"> 
+               <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"> 
+                <tbody> 
+                 <tr> 
+                  <td class="mcnImageContent" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top"><img align="center" alt="" class="mcnImage" src="https://mcusercontent.com/cd8288039ec0f26e381965a0c/images/0f8da85a-a9b4-431f-b592-a26d6a078e26.png" style="max-width: 1121px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="564" /></td> 
+                 </tr> 
+                </tbody> 
+               </table> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+         <tr> 
+          <td id="templateBody" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-top: 0;border-bottom: 0;" valign="top"> 
+           <table border="0" cellpadding="0" cellspacing="0" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"> 
+            <tbody class="mcnTextBlockOuter"> 
+             <tr> 
+              <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top"> 
+               <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"> 
+                <tbody> 
+                 <tr> 
+                  <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 16px;line-height: 150%;text-align: left;" valign="top"><span style="font-family:arial,helvetica neue,helvetica,sans-serif">Dear {{{Recipient.FirstName}}},<br /> <br /> As you may have expected, due to the COVID-19 pandemic, we will be cancelling the With Love Gala that was planned for Oct 2, 2020. We recognize that this year has been challenging for you, as it has been for us as well, and we also acknowledge that there are still more challenges that lie ahead.<br /> <br /> Previously, many of you had already made sponsorship commitments for this year’s gala, and I know most of you usually have a dollar amount in mind that you plan on donating during the evening. If you are able, <a href="https://my.livedifferent.com/galadonationwpg?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #d02638;font-weight: bold;text-decoration: underline;" target="_blank">would you still consider donating at least 50% of that amount</a>? If you are unable to contribute due to current circumstances, that is totally understandable. And if you have the opportunity to give more than 50%, that would be amazing as we could definitely use your support.<br /> <br /> This has been an especially challenging year for Live Different and we are expecting that, as a result of this pandemic, our most significant financial struggles are still ahead of us this coming fall and winter.<br /> <br /> What has your generosity helped to accomplish this past year and what will your donations be going towards in this coming year?<br /> <br /> Due to the countless unknowns around what school in Canada will look like this coming September, we have reinvented our Canadian programming so we may be able to continue reaching and impacting students in schools and Indigenous communities across our nation. Despite the challenges of operating internationally at this time, the work we are doing in Haiti is continuing. For a more detailed update about the work you are contributing to, <u><em><a href="https://livedifferent.com/with-love-gala/winnipeg?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro#updates" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #d02638;font-weight: bold;text-decoration: underline;" target="_blank"><span style="color:#000000">check out this link</span></a></em></u>. None of this would be happening without your generous support. Thank you very much.<br /> <br /> Finally, one of the new items that we were looking forward to introducing at the With Love Gala this October was the <em>Kurtis Derksen Memorial Award</em>. Stay tuned for more information next week as we announce the details associated with this award!<br /> <br /> <a href="https://my.livedifferent.com/galadonationwpg?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #d02638;font-weight: bold;text-decoration: underline;" target="_blank">Once again, thank you for the time and consideration you put towards making a donation and continuing to journey with us.</a> As always, our commitment is to maximize every single dollar to fully benefit the students we care for, both here in Canada as well as in Haiti.<br /> <br /> With my deepest gratitude and highest respect,</span><br /> &nbsp;</td> 
+                 </tr> 
+                </tbody> 
+               </table> </td> 
+             </tr> 
+            </tbody> 
+           </table> 
+           <table border="0" cellpadding="0" cellspacing="0" id="zs-output-sig" style="font-family: Arial,Helvetica,sans-serif;line-height: 0px;font-size: 1px;padding: 0px;border-spacing: 0px;margin: 0px;border-collapse: collapse;width: 500px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+            <tbody> 
+             <tr> 
+              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+               <table border="0" cellpadding="0" cellspacing="0" style="font-family: Arial,Helvetica,sans-serif;line-height: 0px;font-size: 1px;padding: 0px;border-spacing: 0px;margin: 0px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                <tbody> 
+                 <tr> 
+                  <td style="vertical-align: top;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="50"> 
+                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                    <tbody> 
+                     <tr> 
+                      <td style="border-collapse: collapse;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img alt="" border="0" height="50" src="https://livedifferent.com/wp-content/uploads/2020/06/Charles-Roberts-Circle.png" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="50" /></td> 
+                     </tr> 
+                    </tbody> 
+                   </table> </td> 
+                  <td style="border-collapse: collapse;padding-right: 10px;width: 10px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="10">&nbsp;</td> 
+                  <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                    <tbody> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 2px;height: 3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                             <tr> 
+                              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span style="font-family:Roboto Condensed, Helvetica, sans-serif;font-size:20.0px;font-style:normal;line-height:19px;font-style:normal;letter-spacing: 0.01em;font-weight:bold;color:#212121; display:inline;">Charles Roberts</span></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span style="font-family:Roboto Condensed, Helvetica, sans-serif;font-size:13.0px;font-style:normal;line-height:19px;font-weight:400,normal;color:#212121; display:inline;">Chief Executive Officer</span></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 3px;height: 12px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Arial, Helvetica, sans-serif;font-size: 13.0px;line-height: 17px;font-style: normal;font-weight: normal;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span style="font-weight:700;display:inline;">M</span> <span>204 730 2045&nbsp;</span></td> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Arial, Helvetica, sans-serif;font-size: 13.0px;line-height: 17px;font-style: normal;font-weight: normal;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span style="font-weight:700;display:inline;">W</span> <span><a href="https://livedifferent.com?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro" rel="nofollow" style="text-decoration: none !important;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" target="_blank">livedifferent.com</a></span></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 12px;height: 3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="line-height: 0px;font-size: 1px;padding: 0px;border-spacing: 0px;margin: 0px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img alt="instagram" border="0" height="13" src="https://livedifferent.com/wp-content/uploads/2019/06/ld-sig-logo-v2_1_black-04-lrg-charcoal.png" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="80" /></td> 
+                              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 2px;height: 1px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Arial, Helvetica, sans-serif;font-size: 13.0px;line-height: 17px;font-style: normal;font-weight: normal;color: #212121;display: inline;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Arial, Helvetica, sans-serif;font-size: 13.0px;line-height: 17px;font-style: normal;font-weight: normal;color: #212121;display: inline;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 3px;height: 12px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Helvetica, Arial, sans-serif;font-size: 13.0px;font-style: normal;line-height: 17px;font-weight: normal;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span>Stay in the know! </span></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Helvetica, Arial, sans-serif;font-size: 13.0px;font-style: normal;line-height: 17px;font-weight: normal;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span><a href="https://mc.livedifferent.com/news-signup?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro" style="color: #212121 !important;}: ;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" target="_blank">Sign up for our</a> </span></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;font-family: Roboto Condensed, Helvetica, Arial, sans-serif;font-size: 13.0px;font-style: normal;line-height: 17px;font-weight: normal;color: #212121;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="https://mc.livedifferent.com/news-signup?utm_source=SF&amp;utm_medium=email&amp;utm_campaign=Gala2020&amp;utm_content=Intro" style="color: #212121 !important;}: ;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" target="_blank">weekly newsletter.</a></td> 
+                             </tr> 
+                             <tr> 
+                              <td style="border-collapse: collapse;padding-bottom: 12px;height: 3px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                     <tr> 
+                      <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                        <tbody> 
+                         <tr> 
+                          <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 
+                            <tbody> 
+                             <tr> 
+                             </tr> 
+                            </tbody> 
+                           </table> </td> 
+                         </tr> 
+                        </tbody> 
+                       </table> </td> 
+                     </tr> 
+                    </tbody> 
+                   </table> </td> 
+                 </tr> 
+                </tbody> 
+               </table> </td> 
+             </tr> 
+             <tr> 
+              <td style="border-collapse: collapse;padding-bottom: 8px;height: 8px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">&nbsp;</td> 
+             </tr> 
+            </tbody> 
+           </table> 
+           <table border="0" cellpadding="0" cellspacing="0" class="mcnCodeBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"> 
+            <tbody class="mcnTextBlockOuter"> 
+             <tr> 
+              <td class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">&nbsp;</td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+        </tbody> 
+       </table> </td> 
+     </tr> 
+     <tr> 
+      <td id="templateFooter" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-top: 0;border-bottom: 0;" valign="top">&nbsp;</td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </center>
+ </body>
+</html>

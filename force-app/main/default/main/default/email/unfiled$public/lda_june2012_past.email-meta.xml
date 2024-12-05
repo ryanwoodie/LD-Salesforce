@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>lda_june2012-past participants</name>
+    <style>none</style>
+    <subject>What are your plans for this summer / fall?</subject>
+    <textOnly>Are you graduating this year?
+
+
+Consider joining Live Different Academy, and spend 9 months traveling and learning with us!
+
+&quot;The Live Different Academy has given me hope for the future and faith in the power of my generation to change the world.&quot; - Paisley, LDA Student 2012
+
+
+
+
+
+
+Still want to go on a Live Different Build this summer?
+
+
+You&apos;ve got two weeks left to register for Live Different Build Mexico in August!
+
+&quot;Everything about this trip is truly life changing. I love Mexico and I think Live Different Build is something everyone should see and be a part of at least once!&quot; - Tya, HH Volunteer
+
+Live Different
+Suite 400, 44 Hughson St. North
+Hamilton, ON    L8R 1G3
+Canada
+
+(866) 432 4464
+info@livedifferent.com
+www.livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

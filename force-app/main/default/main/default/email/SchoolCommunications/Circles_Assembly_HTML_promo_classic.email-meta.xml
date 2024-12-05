@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Fall 2021 Circles assembly HTML promo</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Circles Assembly HTML promo (classic)</name>
+    <style>none</style>
+    <subject>&quot;LiveDifferent has mastered online assemblies... student engagement was through the roof!“</subject>
+    <textOnly>https://livedifferent.com/circles/online-assemblies/
+
+Can you throw a school-wide assembly online? Absolutely.
+
+“LiveDifferent has mastered online assemblies! They have figured out how to provide the feel of an in-person assembly via a virtual presentation. The student engagement was through the roof!“
+
+Guidance Counsellor, Grant Park High School, Winnipeg MB
+
+Reserve your livestream/online assembly for 2021/22!
+
+LiveDifferent is one of Canada’s leading motivational presenters, speaking to over 1.6 million students over the past 20 years.
+
+
+We are now offering our innovative online “Circles” assemblies, livestreamed to middle/high schools (grades 6-12).
+
+A Circles Assembly includes:
+
+Live host/presenter
+School-wide student interaction
+Impactful personal stories
+Live panel of student leaders
+Dynamic video content
+
+Topics to choose from:
+
+Authenticity
+Empathy
+Growth Mindset
+Resilience
+Altruism (Kindness)
+Values and Priorities
+
+Cost: $500 (unlimited classrooms/students per event)
+
+Learn more about Circles assemblies
+
+Questions? Book a 15 min discovery call
+
+LiveDifferent is a registered charity organization #861232890 RR0001. 100% of proceeds from school assemblies and youth programs will be used to help support our charitable mission to empower and engage youth in a lifestyle of compassion and service.
+
+
+Unsubscribe or update communication preferences here. https://www.tfaforms.com/4947696
+
+
+Know any other educators who might be interested? Feel free to forward and share this with them!
+
+https://livedifferent.com/circles/online-assemblies/</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

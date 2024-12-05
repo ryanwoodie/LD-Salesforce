@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Info on private trips</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>Private Trip - General Inquiry/Info</name>
+    <style>freeForm</style>
+    <subject>Plan your own Live Different Private Trip!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Thanks for filling out our evaluation at the end of your trip about the ways you can get involved here at Live Different!
+
+
+
+You noted that you were interested in planning your own private Live Different trip for your friends, family, school, workplace, or community group. That&apos;s awesome! We&apos;ve included some info below on how you can do that!
+
+
+
+Who: Any volunteer can plan a trip, we just need a minimum of 10-15 people to join you! (Volunteers must be a minimum 14 years of age, or accompanied by a parent or guardian.)
+
+
+What:  Our current project efforts are located in several small communities that have been deeply entrenched in poverty and exploitation. To date, &apos;we&apos; (groups just like yours!) have built almost 200 houses and have also partnered with other NGO&apos;s to help build schools, community centres, and medical clinics.
+
+
+
+Where: Dominican Republic, Mexico, Haiti, or Thailand.
+
+
+When: We can work with you to plan a private trip at any time of year that works for your group! However, our schedules fill up fast, especially during summers and spring breaks, so contact us early!
+
+
+Why: Many of our volunteers go home from a Live Different Trip and find out that the people who hear their stories want to get involved too. This is a chance for you to help the people you&apos;re close to have the same life-changing experience you had!
+
+
+
+How: Contact us to start planning! We&apos;ll work with you to pick the best destination, schedule, project, and excursions that work for your group! All of the project fees, accommodations, meals, and travel costs must be fundraised by every volunteer, but the great part of doing it as a group is that you can fundraise together!
+
+
+
+See what a trip might look like for you:
+
+Here is a video of one of our trips happening in Haiti: http://www.youtube.com/watch?v=-cC7_iEk97I
+
+
+
+Please e-mail us back with any questions you may have, or to get started planning a trip!
+
+
+
+Thanks,
+
+
+
+Live Different Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+                                                                                                                                                                                                                                                                                                                                                                                                       
+<style type="text/css">
+	.ReadMsgBody {width: 100%; background-color: #ffffff;}
+	.ExternalClass {width: 100%; background-color: #ffffff;}
+	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Arial, Helvetica, sans-serif}
+	table {border-collapse: collapse;}
+	
+	@media only screen and (max-width: 640px)  {
+					body[yahoo] .deviceWidth {width:440px!important; padding:0;}	
+					body[yahoo] .center {text-align: center!important;}	 
+			}
+			
+	@media only screen and (max-width: 479px) {
+					body[yahoo] .deviceWidth {width:280px!important; padding:0;}	
+					body[yahoo] .center {text-align: center!important;}	 
+			}
+
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial, Helvetica, sans-serif">
+
+<!-- Wrapper -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
+		
+			<!-- Start Header-->
+			<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+				<tr>
+					<td width="100%" bgcolor="#ffffff">
+
+                            <!-- Logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
+                                <tr>
+                                    <td style="padding:10px 20px" class="center">
+                                        <a href="http://livedifferent.com"><img src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo.png" alt="" border="0" /></a>
+                                    </td>
+                                </tr>
+                            </table><!-- End Logo -->
+                            
+                            <!-- Nav -->
+                            <table border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth">
+                                <tr>
+                                    <td class="center" style="font-size: 13px; color: #272727; font-weight: light; text-align: right; font-family: Arial, Helvetica, sans-serif; line-height: 20px; vertical-align: middle; padding:10px 20px; font-style:italic">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <a href="http://livedifferent.com/" style="text-decoration: none; color: #3b3b3b;">Livedifferent.com</a>
+                                    </td>
+                                </tr>
+                            </table><!-- End Nav -->
+
+					</td>
+				</tr>
+			</table><!-- End Header -->
+			
+			         <table width="580"  class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff">
+                <tr>
+                    <td style="font-size: 13px; color: #000; font-weight: normal; text-align: left; font-family: Arial, Helvetica, sans-serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px" bgcolor="#ffffff">
+                        
+<p>Hello {!Contact.FirstName},</p>
+
+<p>I hope you've had a wonderful summer, welcome to the new school year! You may recall receiving some information from us back in June regarding our motivational presentation. I thought I'd take this opportunity to reconnect and find out if your school is interested in reserving one of our few remaining dates.</p>
+
+<p>We're extremely excited about our theme for 2014/2015, which is "Courage To Connect: Life Is About People", and how it is going to positively impact the lives of students all across Canada. This presentation is jam packed with energizing live music, meaningful personal stories, entertaining video spots, and so much more. Here is an example of one of the videos we use during the presentation:</p>
+
+<p style="text-align: center">
+<a href="http://youtu.be/bb6geilIYM0"><img src="https://c.na3.content.force.com/servlet/servlet.ImageServer?id=01550000001eVby&oid=00D300000000n3I&lastMod=1409069854000" /></a><br>
+
+<a href="http://youtu.be/bb6geilIYM0">http://youtu.be/bb6geilIYM0</a></p>		
+
+<p>We would love to partner with you to bring this encouraging and motivational message to your students. As a charity, we have no set fee. Instead, we offer our presentation to your school on the basis of a donation.</p>
+
+<p>Please contact me if you have any questions, or would like to book a presentation.</p>
+
+<p>Thanks so much and I look forward to hearing from you soon!</p>
+
+<p>All the best,</p>
+<p style='line-height:14px'>{!User.FirstName} {!User.LastName}<br />
+{!User.Title}<br />
+(866) 432 4464 {!User.Extension} <br />
+<a href='mailto:{!User.Email}'>{!User.Email}</a><br /></p>
+                    </td>
+                </tr>              
+			</table>
+
+<div style="height:35px">&nbsp;</div><!-- spacer -->
+
+
+			<!-- 4 Columns -->
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+				<tr>
+					<td bgcolor="#363636" style="padding:30px 0">
+                        <table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                            <tr>
+                                <td>                    
+                                        <table width="45%" cellpadding="0" cellspacing="0"  border="0" align="left" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; color:#999; font-family: Arial, sans-serif; padding-bottom:20px" class="center">
+
+                                                    <span style="text-decoration: none; color: #848484; font-weight: normal;">Suite B3, 15 Wellington St. North</span><br/>
+						    <span style="text-decoration: none; color: #848484; font-weight: normal;">Hamilton, ON   L8R 1M7</span><br/>
+						    <span style="text-decoration: none; color: #848484; font-weight: normal;">1 (866) 432 4464</span><br/>
+                                                    <a href="mailto:{!User.Email}" style="text-decoration: none; color: #848484; font-weight: normal;">{!User.Email}</a>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                        
+                                        <table width="40%" cellpadding="0" cellspacing="0"  border="0" align="right" class="deviceWidth">
+                                            <tr>
+                                                <td valign="top" style="font-size: 11px; color: #f1f1f1; font-weight: normal; font-family: Arial, Helvetica, sans-serif; line-height: 26px; vertical-align: top; text-align:right" class="center">
+
+                                                   
+                                                    <br />
+
+                                                    <a href="http://livedifferent.com/keynote-speakers"><img src="http://livedifferent.com/sites/default/files/campaigns/ch_mar2014/ld_logo-w.png" alt="" border="0" style="padding-top: 5px;" /></a><br/>
+                                                    
+                                                </td>
+                                            </tr>
+                                        </table>   
+                        
+                        		</td>
+                        	</tr>
+                        </table>                                                              		
+                    </td>
+                </tr>
+            </table><!-- End 4 Columns -->
+						
+		</td>
+	</tr>
+</table> <!-- End Wrapper -->
+
+</body>
+</html>

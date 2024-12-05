@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC announcement - email #1</name>
+    <pageDevName>PMC_announcement</pageDevName>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Exciting News: Free Access to Our Peer Mentorship Curriculum!</subject>
+    <textOnly>Hi {{{Recipient.FirstName}}},
+
+We are thrilled to announce that, for the first time ever, LiveDifferent is offering our Circles Peer Mentorship Curriculum for FREE! &lt; https://livedifferent.com/programs/circles/peer-mentorship-curriculum/ &gt; 
+
+This program provides invaluable benefits to youth. We thank those who invested in their students as early adopters of this program and helped open the doors for more impact across the country.
+
+Educators and youth workers have shared incredible feedback about the positive impact our Peer Mentorship Curriculum has had:
+
+“Be ready for students to be vulnerable and open up about their lives. Circles is a great opportunity to have conversations that matter.”
+
+- Educator in Alberta
+
+Inspired by their stories, we want to ensure as many young people as possible can access this life-changing program.
+
+Whether you’re already familiar with our curriculum or know of a school, youth organization, or community that could benefit, this is a fantastic opportunity.
+
+Our Peer Mentorship Curriculum is designed to build authentic community and develop leadership and personal skills in youth. Participants engage in six one-hour sessions focused on authenticity, empathy, growth mindset, resilience, values, and altruism. The program culminates in a compassion project chosen by the students to benefit their community or a community abroad.
+
+Interested in getting started? Would like to learn more?
+
+Follow this LINK &lt; https://livedifferent.com/programs/circles/peer-mentorship-curriculum/ &gt; .
+
+Warm regards,
+
+The LiveDifferent team
+
+Not relevant? Remove your email/unsubscribe here &lt; https://livediff.typeform.com/to/UIHqrJoF#email={{{Recipient.Email}}}  &gt;</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

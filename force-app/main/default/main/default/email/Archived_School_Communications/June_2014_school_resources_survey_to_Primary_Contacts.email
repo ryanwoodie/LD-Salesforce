@@ -1,0 +1,20 @@
+Hi {!Contact.FirstName},
+
+Recently, we sent the following survey to our educator consultants who volunteer to advise our school program, as over the summer we are hoping to develop some helpful resources to compliment our presentation. I thought it might be a good idea to share this with you also, since you have Live Different booked at {!Account.Name} for the upcoming school year and may wish to contribute.
+
+It's totally optional, but on the chance that you are looking for a little homework before embarking on summer break :-) , we would welcome your advice on the survey.
+
+Here is the link: http://www.tfaforms.com/forms/view/336187?tfa_270={!Contact.Id} 
+
+Thank you so much for your time and consideration on this.
+
+Happy Summer,
+
+{!User.FirstName} {!User.LastName} 
+(866) 432 4464 {!User.Extension} 
+{!User.Email} 
+
+Live Different 
+Suite B3, 15 Wellington St. North 
+Hamilton, ON L8R 1M7 
+1 (866) 432 4464

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>LDA Fall 2014 - Secure your spot!</name>
+    <style>freeForm</style>
+    <subject>LDA Fall 2014 - Secure your spot!</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+This is just a reminder that I have not received your $300 deposit through Canada Helps yet to secure your spot for the Live Different Academy.
+
+The directions to make a Canada Helps Giving Page can be found under the tab on the website that you registered: http://livedifferent.com/academy
+
+If you have any questions in regards to this, please let me know!
+
+Talk to you soon,
+
+Joy</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

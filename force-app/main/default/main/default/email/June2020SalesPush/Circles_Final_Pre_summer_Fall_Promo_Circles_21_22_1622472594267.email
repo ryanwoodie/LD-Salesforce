@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> Although this year hasn't been ideal for anyone, we've still been able to connect with thousands of students through a&nbsp;variety of online assemblies, discussion-based activities, and compassion projects. Thankfully, the flexibility of our Circles programming has allowed us to work seamlessly within each school's ever-changing learning environment - from in-person to virtual platforms and a combination of both. By focusing on meaningful discussions around <b>Empathy, Altruism, Resilience, Growth, Values, and Authenticity</b>, we've been able to help students feel connected to each other and understand their potential for positive change.<br /> <br /> "<i>The LiveDifferent (Circles) online assemblies were perfect for the current times we live in. The presentations on "Resilience" and "Empathy" were both exactly what our students needed at this point in the year and the format kept them active and engaged.</i>" - </span></span><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Principal in Saskatchewan</b></span></span><br /> <br /> <a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-05-31 at 10.18.40 AM" src="{[devName:Screen_Shot_20210531_at_101840_AM]}" style="max-width: 697.128px; width: 620.087px; height: 332.986px;" title="Screen Shot 2021-05-31 at 10.18.40 AM" /></a><br /> <br /> <b><a href="https://livedifferent.com/circles/"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Circles</span></span></a></b>&nbsp;<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">is</span></span>&nbsp;<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">having a big impact in the lives of students and I wanted to touch base before the end of the school year while educators are planning for an&nbsp;exciting&nbsp;fall. Whether you're looking for online assemblies, weekly discussion-based programming, or just want to know more about what's available to you, <u><b>PLEASE RESPOND TO THIS EMAIL.</b></u>&nbsp;I'm curious to know where you're at in that planning ahead process and how LiveDifferent can support you in that.<br /> <br /> Thanks so much for all you do&nbsp;{{{Recipient.FirstName}}}.&nbsp;I look forward to hearing from you soon!</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span></span><br /> <br /> <br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dave Hamilton<br /> Manager of School Partnerships<br /> <b>LiveDifferent</b><br /> <br /> 1-866-432-4464 Toll free<br /> 905-777-1662 Office<br /> 905-777-8117 Fax<br /> dave.h@livedifferent.com<br /> <br /> www.livedifferent.com<br /> "Life is about people"</span></span></p>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

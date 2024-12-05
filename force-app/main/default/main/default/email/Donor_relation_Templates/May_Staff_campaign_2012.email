@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charsetutf-8">
+<title>Title Text Here</title>
+<meta name="viewport" content="width  762">
+<style type="text/css">
+.HH_link {text-decoration:none}
+.HH_link:hover {text-decoration:underline}
+</style>
+<style media="only screen and (max-device-width: 480px)" type="text/css
+">
+* {line-height: normal !important;}
+</style>
+</head>
+<br />
+<br><br>
+<body bgcolor="#d9d9d9" style="margin:0;padding:0;font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px">
+    <table  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td style="padding: 30px 20px 40px 20px; background-color:#d9d9d9;">
+                <!--TOP/MAIN-->
+                <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                        <td align="right" valign="top" style="padding:7px 19px;">
+                            <div style="font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif; color:#db5024;font-size:10px;line-height:15px;">
+                                <a href="http://livedifferent.com" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap">
+                                    Livedifferent.com</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+                                    <a href="mailto:info@livedifferent.com" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap">
+                                        Email Us
+                                    </a> &nbsp; &nbsp; | &nbsp; &nbsp;
+                                    <a style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap;text-decoration:none">1-866-432-4464
+                                    </a></div></td>
+                    </tr>
+                    <tr>
+                        <td width="700" style="-webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; background-color:#ffffff" bgcolor="#FFFFFF">
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td>
+                                        <!--Header Image-->
+                                        <a href="http://livedifferent.com">
+                                            <img src="http://livedifferent.com/sites/default/files/misc/email_header.jpg" alt="Live Different - Live Different Build" width="700" height="190" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td style="font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:12px">
+                                        <div style="padding:0px 20px 20px 20px;font-size:13px">
+                                            <br />
+                                            <br />
+                                            <p><span style='font-style:italic;font-size:15px;'>Dear {!Contact.FirstName},
+
+ <p>On behalf of our staff, volunteers, and the thousands of lives that will be affected by our programs this year, we would like to say a huge THANK YOU for your donation. We are grateful for your support and hope that you will stay engaged in Live Different in the future!</p>
+
+ <br />
+
+<a href="https://www.youtube.com/watch?v=UpQXSZUCavc">
+<img src="http://livedifferent.com/sites/default/files/resize/articles/photo-blog/Custom%20Email%20Template%20%201%20-%20HTML%20Thanks%20for%20Donation%21%20%20One-time%20%20~%20salesforce.com%20-%20Enterprise%20Edition-580x325.png">
+</a>
+
+ <br />
+ <br />
+ <p> Your donation helps us to spark pivotal life change in those we encounter through our strategically linked programs: </p>
+
+ <p> <a href="http://livedifferent.com/presentations-overview" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:13px;white-space:nowrap">
+Live Different Presentations</a> - High school motivational assemblies that reach thousands of students each year with a message of hope, purpose, and perspective. This program also encompasses our Road Team Internships, which are exciting, hands-on opportunities to gain experience working with a non-profit, and to make a difference in the lives of young people all across Canada. </p>
+
+ <p> <a href="http://livedifferent.com/builds" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:13px;white-space:nowrap">
+Live Different Builds</a> - International humanitarian trips where volunteers are given the opportunity to make a difference in the developing world as we build houses, schools, and other much needed projects.</p>
+
+ <p> <a href="http://livedifferent.com/academy" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:13px;white-space:nowrap">
+Live Different Academy</a> - A 4-month post-secondary program where our students are hosted at our Live Different base in Mexico, working in the community and experiencing social justice first-hand. Students are transformed in their thinking, their actions, and their focus for the future. </p>
+
+ <p>Live Different believes in open, transparent communication with our donors and partners and we welcome your input, questions, or comments. Please feel free to either call our office at 1-866-432-4464 or email me at  <a href="mailto:cindy@livedifferent.com" class="HH_link" style="color:#db5024;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:12px;white-space:nowrap">
+                                       cindy@livedifferent.com. 
+                                    </a>  </p>
+ 
+<p style='font-weight:bold'>Thank you for partnering with us, and for your continued support of Live Different!</p>
+
+<p style='font-weight:bold'> Cindy Stover, Community Engagement Coordinator </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td width="20" bgcolor="#FFFFFF">
+                                    </td>
+                                    <td width="660" bgcolor="#FFFFFF">
+                                    </td>
+                                    <td width="20" bgcolor="#FFFFFF">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <img src="http://livedifferent.com/sites/default/files/misc/greyfooter.jpg" alt="" width="700" height="20" border="0" style="display:block;margin:0">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--BEGIN FOOTER-->
+    <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td style="font-size:10px">
+                <div style="padding:50px 20px 20px 20px;color:#000">
+                    <p>
+                        Live Different<br />
+                        Suite 3, 15 Wellington St. N.<br />
+                        Hamilton, ON    L8R 1M7<br />
+                        Canada<br />
+                        <br />
+                        (866) 432 4464<br />
+                        <a href="mailto:info@livedifferent.com" style="color:#db5024">info@livedifferent.com</a><br />
+                        <a href="http://livedifferent.com" style="color:#db5024">www.livedifferent.com</a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

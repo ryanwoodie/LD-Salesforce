@@ -1,0 +1,17 @@
+Hi {!Contact.FirstName},
+
+I'm just checking in to see if you received my last email regarding our motivational presentation for your students. We'd love to visit your school in 2015/2016 and there's no better time to reserve the date that works best for you than now.
+
+Our theme for 2015/2016 is "Own Your Story: Become an author of hope" and you can learn about the presentation here:
+http://livedifferent.com/motivational-presentations
+
+Thanks so much.  I look forward to hearing from you soon!
+
+{!User.FirstName} {!User.LastName} 
+(866) 432 4464 {!User.Extension} 
+{!User.Email} 
+
+Live Different 
+Suite B3, 15 Wellington St. North 
+Hamilton, ON L8R 1M7 
+1 (866) 432 4464

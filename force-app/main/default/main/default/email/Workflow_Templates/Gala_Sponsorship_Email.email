@@ -1,0 +1,7 @@
+There's a new sponsorship or ticket sale for the 2024 Gala.
+
+{!Account.Name} has given {!Opportunity.Amount}.
+
+Click to see the opportunity in Salesforce: {!Opportunity.Link}
+
+Derek

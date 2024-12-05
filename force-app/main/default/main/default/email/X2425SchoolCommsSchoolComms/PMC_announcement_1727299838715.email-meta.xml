@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC announcement - email #3</name>
+    <pageDevName>PMC_announcement1</pageDevName>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Final reminder to claim the free Peer Mentorship Curriculum!</subject>
+    <textOnly>Hi {{{Recipient.FirstName}}},
+
+We wanted to send one final reminder about the opportunity to access LiveDifferent’s Peer Mentorship Curriculum for free.
+
+This valuable program, designed to build community, develop leadership skills, and encourage personal growth, is available at no cost. Don’t miss out on this chance to provide the youth in your school or community with an impactful and transformative experience.
+
+Quick Recap:
+
+ - Six one-hour sessions covering authenticity, empathy, growth mindset, resilience, values, and altruism.
+ - Flexible format adaptable to various schedules and learning environments.
+ - Culminates in a compassion project benefiting the community.
+
+To help you understand the transformative power of this program, check out our short trailer that showcases its key features and benefits: Peer Mentorship Curriculum Trailer &lt; https://youtu.be/rGaviLF3FO8?si=aJx6toGt_2W4Vgyg &gt; 
+
+Click HERE &lt; https://livedifferent.com/programs/circles/peer-mentorship-curriculum/ &gt; to sign up today.
+
+For any questions or further assistance, please reach out to our Community Engagement Manager, Mary Anne, at maryanne@livedifferent.com.
+
+We look forward to supporting you and your students with this exceptional program.
+
+Best regards,
+
+LiveDifferent Team</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

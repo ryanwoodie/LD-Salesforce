@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>for Donor List</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Xmas 2024 Email 2a</name>
+    <pageDevName>Xmas_2024_Email_2a</pageDevName>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Let’s Fuel Dreams Together</subject>
+    <textOnly>[Image alt text: Fueling Dreams: Empower Youth to Build a Better Future. Westjet + LiveDifferent] 
+
+Dear {{{Recipient.FirstName}}},
+
+At LiveDifferent, we’re dedicated to inspiring and empowering youth to live a lifestyle of compassion and kindness. One of the most impactful ways we do this is through our Humanitarian Builds trips. Each year, young Canadians travel to communities in Mexico and the Dominican Republic, working side-by-side with local families to build safe, dignified homes.
+
+We believe every young person deserves equal access to opportunities that fuel their personal growth and future success. That’s why we created the Youth Scholarship Fund—providing youth from diverse backgrounds with $500 bursariesto help them join a Build and experience the transformation that comes from serving others.
+
+We want to share a story that highlights the impact of these opportunities:
+
+When Jordan Schwartz joined his first LiveDifferent Build as a high school student, he had no idea it would change his life.
+
+“The culture shock was significant, but I realized how connected we are through shared values like family and community. That trip taught me empathy, teamwork, and the power of giving back—it was genuinely life-changing,”Jordan shared.
+
+Today, Jordan supports the outh Scholarship Fund to help more students experience the transformation he did. “Just a small boost can help a student start their journey and inspire others to join.”
+
+This holiday season, you can help fuel dreams for youth like Jordan. Every $25 donation supports the Youth Scholarship Fundand you’ll receive one entry for your chance to win one roundtrip flight for two guests on WestJet!
+
+And we also have incredible gifts for additional giving levels:
+
+[Image alt text: $100 donation gets Bandana. A $250 gift gets LiveDifferent bracelet. A $500 gets a Hiliary Druxman LiveDifferent necklace.]
+
+Donate Today &lt; https://livedifferent.com/get-involved/support/fundraiser/fueling-dreams-empowering-youth-to-build-a-better-future/ &gt; 
+
+You can also read Jordan’s full story on our blog &lt; https://www.livedifferent.com/blog &gt; or watch his interview here &lt; https://youtu.be/OUNI3vw9Ebw &gt; .
+
+Together, let’s empower youth to build a better future.
+
+With gratitude,
+
+The LiveDifferent Team
+
+Unsubscribe &lt; https://livediff.typeform.com/to/UIHqrJoF#email={{{Recipient.Email}}}  &gt;</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

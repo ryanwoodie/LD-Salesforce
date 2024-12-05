@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2012GD_not too late</name>
+    <style>none</style>
+    <subject>2012 is almost over, and we need your help!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR/MX Summer Interns 2014 - November Update</name>
+    <style>freeForm</style>
+    <subject>DR/MX Summer Interns 2014 - November Update</subject>
+    <textOnly>Hey Applicants!!!
+
+
+
+I am so excited for our interviews to come up in December and for us to announce our DR and MX teams in January! I am looking forward to working with each and every one of you to complete fun projects before our summer together.
+
+
+
+For those of you who love hearing our Live Different stories, watch as we give our DR translator a surprise house: http://www.youtube.com/watch?v=vx2TDeGREpk&amp;feature=c4-overview&amp;list=UUqazG9exyrqudtllYKKSQ9Q
+
+
+
+A few things to update you about. There are only 2 weeks left to apply to be an intern and a few of you guys have not submitted the following. If you are unsure if you have done any of the following 3 steps just respond to this email and I will look over it for you.
+
+
+
+1) Send in your Consent Forms (scan and email it to me):
+
+http://livedifferent.com/sites/default/files/pdf/consentform-1.pdfhttp://livedifferent.com/content/internship
+
+
+
+2) Fill out our application survey:
+
+https://docs.google.com/a/absoluteontheweb.com/spreadsheet/viewform?formkey=dGtpYlVhb0hFRkF4VG9VUm1rcjFwcWc6MQ#gid=0
+
+
+
+3) Write a short essay about yourself and why you would be a great fit for our internship program using the following criteria:
+
+Maximum: 1 Page
+Single-spaced
+Font size: 12
+Font style: Times New Roman
+Include: First and Last Name at the top of the page
+Please send me an e-mail with a word document attached to it.
+
+** You must complete all 3 steps before your application will be processed. **
+
+Other important information:
+
+In a few weeks, I will set up individual phone/skype interviews with each applicant for December.
+$300 deposit will be due within a week of acceptance in January of 2014.
+Please remember, you can select which country you would like to do your Internship in (Dominican or Mexico), but at the end, we will be making the decision with our Live Different Build team to see where you will be placed.
+
+Photos and Videos:
+
+Here are some photos and videos from our past Live Different Build trips if you would like to use them for your fundraising needs: https://www.dropbox.com/sh/3wke2n7mm37rg7e/E0VsZOT3q8
+
+
+
+Please let me know if you have any questions while filling out the online registration, the application form, or when writing your short essay.
+
+
+
+Sincerely,
+
+
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Survey to school contacts about biggest issues / ideas for themes</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Issue Survey 2015 Spring_general</name>
+    <style>none</style>
+    <subject>We need your help! What does your school need more of?</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+Here at Live Different, we are currently putting together our school presentation programming for the 2015/2016 year, and we would like to offer you the opportunity to give some input into what sort of issues and initiatives would be the most relevant to your students.
+
+If you&apos;re interested in providing some advice, suggestions, and ideas, please click on the button below to be taken to a short questionnaire.
+
+Thank you so much for feedback, we take it to heart, and it really does help us improve the charitable student empowerment work that we do here at Live Different!
+
+
+
+Take me to the questionnaire!
+http://www.tfaforms.com/forms/view/365975?tfa_3={!Contact.Id}
+
+
+
+All the best,
+
+{!User.FirstName} {!User.LastName}
+{!User.Title}
+(866) 432 4464   ext# {!User.Extension}
+{!User.Email}
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+1 (866) 432 4464
+{!User.Email}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

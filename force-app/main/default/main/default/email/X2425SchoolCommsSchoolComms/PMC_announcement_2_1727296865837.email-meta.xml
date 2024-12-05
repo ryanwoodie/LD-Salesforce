@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC announcement - email #2</name>
+    <pageDevName>PMC_announcement_2</pageDevName>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Reminder to access the free Peer Mentorship Curriculum!</subject>
+    <textOnly>Hi {{{Recipient.FirstName}}},
+
+We wanted to follow up on our exciting news about LiveDifferent’s Peer Mentorship Curriculum now being offered for FREE! 
+
+[Image alt text: Neil Patrick Harris Mind Blown GIF] &lt; http://tumblr.com/ &gt; 
+
+Key Benefits of the Program:
+
+ - Build Authentic Community: Foster strong connections and a sense of belonging among students.
+ - Develop Leadership Skills: Empower students with the tools and confidence to lead.
+ - Encourage Personal Growth: Promote critical personal development areas such as empathy, resilience, and values.
+ - Compassion Project: Culminates in a student-led project that benefits their community or a community abroad, reinforcing the importance of altruism and social responsibility.
+
+Program Details:
+
+ - Sessions: Six one-hour sessions covering authenticity, empathy, growth mindset, resilience, values, and altruism.
+ - Format: Flexible to fit your schedule and adaptable to various learning environments.
+ - Materials: All training, videos, guides and follow-up resources are provided on our easy-to-navigate resource page
+
+If you’re interested in taking advantage of this opportunity, click HERE &lt; https://livedifferent.com/programs/circles/peer-mentorship-curriculum/ &gt; to get started. 
+
+If you have any questions or need further information, please don’t hesitate to contact our Community Engagement Manager, Mary Anne Roy, at maryanne@livedifferent.com. She’s ready to assist you and ensure a seamless experience.
+
+Thank you for your dedication to your students’ growth and development.
+
+We look forward to supporting you with this exceptional program.
+
+Warm regards,
+
+LiveDifferent Team</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

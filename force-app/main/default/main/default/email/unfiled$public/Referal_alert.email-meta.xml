@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Referal alert</name>
+    <style>none</style>
+    <subject>{!QPRO_Survey__c.contact_name__c} gave references in their Think Day Survey</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

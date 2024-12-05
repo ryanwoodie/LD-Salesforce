@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> I hope everything's going well. Did you have a chance to consider how we might be able to support you guys with our Circles programming in the fall? Everyone's focused on ending this year off as well as possible and that's why we're looking ahead FOR schools to ensure they&nbsp;have engaging and effective programming available to them once school if back in session. Click the video clip below to get a better idea of all the online assemblies, weekly discussion-based sessions, and more that's accessible and already having a big impact across the country.<br /> <br /> <a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-03-17 at 11.44.21 AM" src="{[devName:Screen_Shot_20210317_at_114421_AM]}" style="max-width: 697.128px; width: 525px; height: 272.135px;" title="Screen Shot 2021-03-17 at 11.44.21 AM" /></a><br /> <br /> If you need to reconnect in a little while, that's completely fine, but since schedules tend to fill up quickly and information will be going out to all schools very shortly, I just want to make sure yours is taken care of. Let me know what you think about </span><a href="https://livedifferent.com/circles/"><span style="font-family:Arial,Helvetica,sans-serif;">Circles</span></a> <span style="font-family:Arial,Helvetica,sans-serif;"> and if you have any questions at all.&nbsp;I'll be happy to help set the course for an awesome 2021/2022!<br /> &nbsp;<br /> Thanks so much for all you do.&nbsp;I look forward to hearing from you soon!</span></p>
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span><br /> ____________________<br /> <br /> Dave Hamilton<br /> Manager of School Partnerships<br /> <b>LiveDifferent</b><br /> <br /> 1-866-432-4464 Toll free<br /> 905-777-1662 Office<br /> 905-777-8117 Fax<br /> dave.h@livedifferent.com<br /> <br /> www.livedifferent.com<br /> "Life is about people"</p>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

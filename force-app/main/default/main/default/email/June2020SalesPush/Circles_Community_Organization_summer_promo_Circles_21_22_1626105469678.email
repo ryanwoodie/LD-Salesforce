@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> I hope you're doing well. The past year and a half, with all its various challenges,&nbsp;saw&nbsp;LiveDifferent develop our engaging and inspiring youth initiatives to an even greater level of impact&nbsp;and accessibility.&nbsp;These unique times have been especially difficult for young people, but&nbsp;by focusing our online assemblies and weekly discussion-based programming&nbsp;on meaningful topics like&nbsp;<b>Empathy, Altruism, Resilience, Growth, Values, and Authenticity</b>, we've been able to help students across Canada feel connected to each other, understanding their potential for positive change.<br /> <br /> The feedback from educators&nbsp;regarding our new </span></span><a href="https://livedifferent.com/circles/"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Circles</b></span></span></a>&nbsp;<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">p</span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">rogramming has been overwhelming, and that's why I thought we might be able to support YOUR organization as well!</span></span><br /> <br /> <a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-07-12 at 11.17.59 AM" src="{[devName:Screen_Shot_20210712_at_111759_AM]}" style="max-width: 696.667px; width: 620.083px; height: 332.979px;" title="Screen Shot 2021-07-12 at 11.17.59 AM" /></a><br /> <br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#cc3366;">"<i>The LiveDifferent online assemblies were perfect for the current times we live in. The presentations on "Resilience" and "Empathy" were both exactly what our students needed at this point in the year and the format kept them active and engaged.</i>"</span> - </span></span><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Principal in Saskatchewan</b></span></span><br /> <br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">One of the best parts about Circles is that it can pretty much take whatever shape you need it to. From weekly discussion-based programming to 1-hour&nbsp;online sessions, facilitation opportunities for young leaders, professional development sessions&nbsp;for staff, compassion projects, and even the potential for a larger event where LiveDifferent leads a Circles day in-person, we can likely cater things to meet your specific needs.<br /> <br /> Does that sound like something you and your youth could benefit from? Is there a specific contact person that I should connect with in particular? Let me know what you think, what questions you might have, and if there's anything I can do to help make Circles an option for ______________.</span></span><br /> <br /> <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Thanks so much for all you do&nbsp;{{{Recipient.FirstName}}}.&nbsp;I look forward to hearing from you soon!</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span></span><br /> <br /> <br /> <img alt="Screen Shot 2021-07-20 at 2.27.46 PM" src="{[devName:Screen_Shot_20210720_at_22746_PM]}" style="max-width: 1666.93px; width: 385px; height: 276px;" title="Screen Shot 2021-07-20 at 2.27.46 PM" /><br /> &nbsp;</p>
+  <div id="" style="left: 7.98828px; top: 238.242px;"><a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><img alt="Screen Shot 2021-05-31 at 10.18.40 AM" src="{[devName:Screen_Shot_20210531_at_101840_AM]}" style="max-width: 697.128px; width: 387px; height: 208px;" title="Screen Shot 2021-05-31 at 10.18.40 AM" /></a>
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 8px; top: 779.625px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 8px; top: 779.625px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

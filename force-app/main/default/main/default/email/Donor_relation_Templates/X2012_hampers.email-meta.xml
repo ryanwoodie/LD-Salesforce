@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2012 hampers</name>
+    <style>none</style>
+    <subject>Connect with the families you helped on your Live Different Build!</subject>
+    <textOnly>Make this Christmas special for a deserving family
+
+As the holiday season nears, and winter weather moves in, the places you visited on Live Different Build this summer can seem like they&apos;re a million miles away. Yet, one thing we&apos;ve learned is that the friendships and experiences that you built on your Live Different Build will last a lifetime, and that you won&apos;t soon forgot the families that you grew to love this year - and they won&apos;t have forgotten you either!
+
+This Christmas, your generosity can help us to deliver hampers of supplies, gifts, and hope to the families and communities that we have built for through our Live Different Build programs. There are many types of gifts, which in turn make unique and meaningful gifts for your friends and family - or, you can add them to your own Christmas Wish List! We also encourage you to join with others from your family, school, or Live Different Build group, to raise funds together to donate towards a larger item like a new home in one of the same communities you worked in this year!
+
+If you donate by December 19th, you can send a personal message to the family you&apos;re helping! Please consider joining your voice to ours as we reach out this Christmas!
+
+ 
+http://livedifferent.com/christmas-hampers-2012
+
+
+ 
+ 
+ 
+
+
+
+
+
+Live Different (formerly Absolute.org)
+Suite 400 44 Hughson St. North
+Hamilton, ON L8R 1G3
+
+(866) 432 4464
+www.livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

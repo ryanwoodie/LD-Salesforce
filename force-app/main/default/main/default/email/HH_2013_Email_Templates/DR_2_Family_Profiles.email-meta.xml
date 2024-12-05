@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2013 - Week 2 Family Profiles</name>
+    <style>freeForm</style>
+    <subject>DR #2 - Family Profiles</subject>
+    <textOnly>Hey everyone!
+
+If you haven&apos;t already been an eager beaver and checked out the projects link on your trip page, than please click the following link:
+
+http://livedifferent.com/hero-holiday/trips/public-trip-2-dr-2013
+
+The 3 families we will be building for are under &quot;projects&quot;. Please let me know if you have any questions.
+
+As of right now, we have not decided who will be on which team, or have we decided which family anyone is specifically building for.
+
+We will let you know closer to the date.
+
+Thanks!
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

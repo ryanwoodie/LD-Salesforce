@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>OLD COPY Email 1 sent from Sales Process, where we have verified the best contact and spoken with them</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SP Email 1B - Verified, Talked with Contact OLD COPY</name>
+    <style>none</style>
+    <subject>Youth development at {!Account.Name}</subject>
+    <textOnly>Live Different
+
+Hi {!Account.SP_First_Name__c},
+
+I hope you&apos;re doing well and having a great school year.  It is my understanding that you are a good person to speak with concerning youth development initiatives (character ed, mental health, bullying prevention, etc.) at {!Account.Name}.
+
+I was hoping to learn a bit more about what your insights, goals and needs are in this area, and find out if the presentation/assembly that Live Different supports schools with might be something that would aide in your efforts to improve your students&apos; wellbeing. If you haven&apos;t heard of Live Different before, we are one of the most established and trusted non-profit youth development organizations in Canada. In fact, we are considered by many educators to offer the best motivational and character education presentation in Canada.
+
+If you would be so kind as to give a brief reply, just so I know you received my email successfully, it would be greatly appreciated! I&apos;ll also try to call you in a couple of days and hopefully connect then!
+
+Attached to this email, I have included some details about our program, and here is a quick introduction video that might interest you: click here to view
+
+Thanks so much {!Account.SP_First_Name__c}.  I look forward to connecting with you soon!
+
+Kindest Regards,
+
+{!User.FirstName} {!User.LastName}
+School Liaison
+
+
+Live Different
+Suite B3 - 15 Wellington St. North
+Hamilton, ON L8R 1M7
+Canada
+
+1-866-432-4464 Toll free
+905-777-1662 Office
+{!User.first_name_lowercase__c}@livedifferent.com
+www.livedifferent.com
+
+Click here to view this email in your browser
+
+Hour-long School Presentation  Empowering Life Stories Inspiring Videos  Live Band   Grades 6 to 12
+
+This is the character development presentation that students, parents, and teachers will thank you for bringing to your school! You&apos;ll capture your students&apos; attention and transform them with a message that matters.
+
+Trusted by Canadian schools for over 16 years
+
+We&apos;ve presented to over 1.1 Million students in over 2,300 school from coast to coast.
+
+After experiencing a Live Different presentation, 98% of educators rank it better than most presentations they have had in their school.
+
+What makes our presentations different?
+
+Most programs lecture on outward behaviors/symptoms (which research shows can be counter-productive). Our positive approach cuts through to root causes and mindsets, igniting change from within.
+
+The true impact of our presentation comes from the power of the personal story. Young people, sharing their stories of hope, connect with students like nothing else.
+
+Our upbeat, high energy concert-style presentation keeps students fully engaged and tuned-in to a message that will change their life.
+
+Our messaging will spark meaningful discussions across your student body, inspiring students who need help to reach out.
+
+What others are saying
+
+&quot;I&apos;m not sure how the presentation could be improved- it was absolutely amazing! I heard comments like &apos;That&apos;s the best presentation I have seen in my entire teaching career&apos; from a veteran teacher, and students were raving about it for days. It was very worthwhile and inspirational.&quot;
+Jo&apos;ann Obrien, St James Regional High School
+
+&quot;In my 17 years in education this is the best loved student assembly I have ever been to. Students were literally hugging me in thanks for bringing LIVE DIFFERENT in.&quot;
+Lorna Cameron, E.W. Pratt High School
+
+&quot;Finally a presentation that gets it right.  The perfect mix of a meaningful message presented in a fun and entertaining way.  I&apos;m looking forward to having them back next year!&quot;
+Gary Watson, Sir Winston Churchill Secondary School
+
+As a charity, we make our presentation accessible to every school with donation-based pricing. Your donation will not only help bring this life-changing program to your school, but to other students across the country.
+
+Our 2015/16 presentation will help your students shift from being passive spectators of their life stories to being the authors of them - creating a sense of identity, ownership, and hope for the future.
+More Info
+
+Call now to book your presentation!
+
+(866) 432 4464 ext. {!User.Extension}
+
+Book Now!
+
+
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+(905) 777 1662
+presentations@livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

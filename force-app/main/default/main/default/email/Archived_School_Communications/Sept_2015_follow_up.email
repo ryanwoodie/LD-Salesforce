@@ -1,0 +1,22 @@
+Hi {!Contact.FirstName},
+
+I hope the new school year is off to a great start. I'm following up from an email I sent last week, regarding the possibility of our motivational team visiting your school this year. Dates are starting to be grabbed up quickly, but we'd love the opportunity to spend some time with your students.  
+
+In case you missed it, here is information regarding the theme:
+http://livedifferent.com/sept2015promo.html
+
+Here are some possible dates:
+{!Account.Merge_Field__c}
+
+
+If you have any questions, I'll be happy to help!
+
+Have a great day,
+
+{!User.FirstName} {!User.LastName} 
+(866) 432 4464   Ext. {!User.Extension} 
+{!User.Email} 
+
+Live Different 
+Suite B3, 15 Wellington St. North 
+Hamilton, ON L8R 1M7

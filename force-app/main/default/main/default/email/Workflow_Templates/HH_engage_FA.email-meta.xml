@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Formassembly engagement for Hero Holiday</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HH_enagage_FA</name>
+    <style>none</style>
+    <subject>Here are a few ways you can get involved with Live Different</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

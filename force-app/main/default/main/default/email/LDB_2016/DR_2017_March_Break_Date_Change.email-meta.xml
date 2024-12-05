@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DR 2017 - March Break - Date Change</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2017 - March Break - Date Change</name>
+    <style>freeForm</style>
+    <subject>DR 2017 - March Break - Confirmation of Date Change</subject>
+    <textOnly>Hello Live Different Build Volunteers,
+
+Thank you so much for all of your willingness to have the date of our March Spring Break trip moved up one day. We are happy this worked out for everyone. The new trip dates will be March 11-20.
+
+Please book your flights to Puerto Plata, Dominican Republic:
+Arrival: March 11
+Departure: March 20
+
+If you have any questions, please email me back. Have a great start to your weekend.
+
+
+Joy Yu
+Program Administrator</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

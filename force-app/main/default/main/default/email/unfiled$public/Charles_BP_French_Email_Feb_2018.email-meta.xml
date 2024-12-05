@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Charles BP French Email Feb 2018</name>
+    <style>none</style>
+    <subject>Merci de soutenir Live Different et les Boston Pizza Foundation Future Prospects</subject>
+    <textOnly>Au nom de Live Different - MERCI!
+
+Au cours des neuf dernières années de notre partenariat, j&apos;ai eu la chance de connaitre plusieurs d&apos;entre vous et j’espère aussi pouvoir faire de nouvelles connaissances dans les jours à venir!  Ca été tout un honneur pour nous tous à Live Different d’avoir pu assister à de nombreuses réunions et déjeuners-conférences dans vos bureaux, de même qu’en République Dominicaine lors d&apos;un voyage Builds, et d’avoir ainsi pu connaître un grand nombre de gens faisant parti de la famille Boston Pizza.
+
+Nous sommes ainsi de fiers ambassadeurs du groupe Boston Pizza et sommes fiers de pouvoir  représenter chacun de vous dans vos communautés locales respectives. De par votre soutien, c’est en voyageant dans les écoles partout au Canada qu’il nous fait grand plaisir de promouvoir, de par nos présentations de motivation, la culture généreuse et solidaire, qui fait foi de l’image de marque de commerce de Boston Pizza.
+
+Nous avons récemment envoyé une carte de remerciement à chacun d&apos;entre vous et nous voulions nous assurer que vous l&apos;avez tous bien reçu. Encore une fois merci pour tout ce que vous avez fait et continuez de faire afin de soutenir l’équipe de Live Different !
+
+De plus, si vous n&apos;avez pas encore visionné cette nouvelle vidéo, veuillez la consulter et la partager avec votre famille et vos amis. Cette vidéo met en valeur tout le travail effectué par l&apos;équipe de direction de Boston Pizza, en partenariat avec nous afin d’aider une communauté de République Dominicaine qui sont dans le besoin.
+
+Encore une fois merci. J&apos;ai hâte de voir certain de vous à la conférence de Boston Pizza ayant lieu à Orlando.
+
+Si vous avez des questions ou commentaires, n&apos;hésitez pas à me contacter au numéro ci-dessus.
+
+Cordialement,
+
+
+Charles Roberts
+
+Office: (866) 432 4464
+Cell: (204) 730-2045
+charles@livedifferent.com
+
+
+
+Live Different
+Suite B3 - 15 Wellington Street North, Hamilton, ON   L8R 1M7
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Circles (All Options) VIP/Heads-up Initial Promo - Circles 21/22</name>
+    <style>none</style>
+    <subject>Checking in to see how you&apos;re doing</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

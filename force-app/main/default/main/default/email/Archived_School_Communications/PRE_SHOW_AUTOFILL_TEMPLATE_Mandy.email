@@ -1,0 +1,58 @@
+<messaging:emailTemplate subject="Final Details for the Live Different Presentation at your school" recipientType="Contact" relatedToType="Opportunity">
+<messaging:plainTextEmailBody >
+Hi {!relatedTo.Contact_Survey__r.FirstName }, 
+
+Our Live Different presentation team is excited to be visiting your school on {!relatedTo.Invoice_Date_Text__c}! Below are the main details for the day’s events. Please take a few moments to fill in any blanks and confirm existing information.  
+ 
+- Venue Address:   {!relatedTo.Account.BillingStreet} {!relatedTo.Account.BillingCity}, {!relatedTo.Account.BillingState}
+
+- Our team will arrive and begin setting up at: 
+
+- Presentation(s) start at:    {!relatedTo.Live_Different_Presentation_Times__c} 
+
+- Number of students attending:    {!relatedTo.Think_Fast_of_participants__c} 
+
+- Student grades:    {!relatedTo.Grade_Levels__c} 
+
+- Venue location:    {!relatedTo.Account.Venue_Type__c} 
+
+- Our notes say that the loading into the venue has {!relatedTo.Account.Venue_Load_In__c} and has the following description:  {!relatedTo.Account.Venue_Load_In_Description__c}  
+ 
+- Our notes indicate that you have {!relatedTo.Account.Electrical_Power_at_Venue__c} to the team. Please be prepared to show one of our team members where they can find the 220V plug-in or outline the separate breakers for them when they arrive. (Manually adjusted)
+
+ 
+QUESTIONS FOR YOU: (Please answer all that you can)
+
+- Will you be the team’s main contact for the day?: 
+
+- What time will students be loading into the venue?: 
+
+- How will the students be seated? (chairs/bleachers/floor/etc): 
+
+- Do you have time set aside following the presentation for student/team interaction?: 
+
+- On the contract, you indicated that your school would be making their donation on the day of the presentation. Do you know what that amount will be at this time, and do you require an invoice for it?: 
+
+REMINDERS: 
+
+- We require drinking water for approximately 8 team members. This can be bottles or fill station. 
+
+- If our 40ft bus needs to be moved after unloading equipment, please direct the team where to park. 
+
+- Please ensure that the venue can be darkened as much as possible. (Our video and lighting is viewed best in a dark environment.) 
+
+- The presentation is roughly one hour in length, with an hour and a half for set-up/sound check and about one hour for tear-down/clean up. Please keep this in mind when reserving the venue and planning student load-in/load-out times. 
+ 
+On the contract, you noted that your school would be able to provide lunch for the team. There will be 7 team members to provide for (insert allergies here) and we thank you so much for supporting the team in this way. 
+
+Finally, the band that is touring with us this semester is "Jitensha" from Montreal/"Everglow" from St.John's. Feel free to let students know in advance that they can meet, hangout with, and help support the band at their merchandise table following the presentation. 
+
+
+If you have any questions, please feel free to contact me by phone or email. I’ll be happy to help in any way that I can. And if you need to contact the team’s leader, they can be reached at (Chelsea) 902-298-9900/ (Steve) 306-631-5539. 
+
+Thank you!
+
+
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

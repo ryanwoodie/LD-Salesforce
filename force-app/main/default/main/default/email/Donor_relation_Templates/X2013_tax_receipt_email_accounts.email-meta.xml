@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2014 Tax Receipt Email for Accounts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2014 tax receipt email accounts</name>
+    <style>none</style>
+    <subject>2014 Official Donation Receipt for {!Account.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

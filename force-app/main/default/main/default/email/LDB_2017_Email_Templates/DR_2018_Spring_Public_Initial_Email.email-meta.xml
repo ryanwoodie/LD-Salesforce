@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2018 - March Break Initial Email</name>
+    <style>freeForm</style>
+    <subject>Live Different Builds: Dominican Republic Spring 2018</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+
+My name is Jennifer and I am an Administrator for our trips. We&apos;re looking forward to meeting you in person and having you along on this trip as we work together to make a difference!
+
+
+I hope you were able to figure out what your next steps are from the last email we sent you. If you have questions about the forms, fundraising page, or flight information, don&apos;t hesitate to ask.
+
+
+Flight dates:
+
+Airport: Puerto Plata, Dominican Republic - Airport Code: POP
+Arrival: March 11, 2018 
+Departure: March 20, 2018 
+
+
+
+Some helpful information:
+
+Upon arrival:
+- When you arrive at the Puerto Plata Airport, our staff will be at the gate wearing a Live Different t-shirt and holding a Live Different sign. - - You will then be taken to Sosua by the Sea Resort in Sosua (10 minutes away from the airport) to meet the team and get settled in.
+
+Accommodations:
+- While in the Dominican Republic, we stay at a small and clean resort called Sosua  by the Sea. It is located 10 minutes away from the Puerto Plata Airport  in a town called Sosua.
+- The rooms can fit up to 4 people in a room with 2-3 beds. There is a private pool and beach that is  accessible for all volunteers.
+- There is a buffet-style dining hall that  we are able to transform into an event hall for all of our evening  activities. The hotel has security guards that monitor the resort at all  times to ensure our safety.
+- Shower towels, beach towels, a safe with a key, and bedding are all provided by the resort.
+
+Transportation:
+We hire bus drivers for transportation and they arrive every morning at the resort to take us to the communities we will be working in. The drivers are experienced drivers whom we have been working with since 2005. They have experience driving in Dominican Republic as well as the legal documents to drive these registered vehicles.
+
+Communities We Work In:
+Since 2006, we have developed very strong relationships with the communities of Arroyo Seco and Nuevo Renacer and that we work in. The communities knows Live Different very well and we feel very safe at all times while working on our building sites.
+
+Work Site Safety:
+We require all volunteers to bring closed toed shoes, a hat/bandana, waterbottle, sunglasses, sunscreen, and leather work gloves. This ensures that volunteers are as equipped for handling equipment on the job sites.
+
+Vaccinations and Medications:
+We do not require that any of our volunteers receive any vaccinations or medications to go to any of the countries that we work in. But, we do suggest that every volunteer visit their family doctor or local medical clinic and decide on your own about taking any medications or vaccinations prior to the trip.
+
+Contact during a trip between volunteers and Canada:
+- There is wifi available at the resort and a wifi code can be purchased at the front desk.
+- Due to the fact that we will be using internet in a developing country, it will be hard for volunteers to receive a well enough connection to skype with their family members, but they can indeed use Facebook and e-mail.
+- All of our  staff have cell phones on them at all times. We will be emailing everyone all of the emergency contact information before the trip starts.
+
+Resources:
+Here are some photos, videos, and documents from our past Live Different Builds if you would like to use them for your fundraising needs or simply to share with friends and family about what your journey looked like ahead: http://livedifferent.com/resources
+
+Media:
+There are photos, blogs and videos from our past trips as well as our most recent trips, it&apos;s a great resource to help you prepare for your trip: http://livedifferent.com/media
+
+Sincerely,
+
+Jennifer Quong
+Program Administrator</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

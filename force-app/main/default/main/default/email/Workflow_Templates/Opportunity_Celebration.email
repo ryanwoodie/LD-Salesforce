@@ -1,0 +1,11 @@
+{!Opportunity.Name}
+
+{!Opportunity.Contact_Survey__c}
+
+{!Opportunity.OwnerFullName}
+
+{!Opportunity.LeadSource}
+
+{!Opportunity.Opportunity_result_of__c}
+
+{!Opportunity.Description}

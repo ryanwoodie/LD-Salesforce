@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Html dropped registration email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Dropped Reg 1 Day</name>
+    <style>none</style>
+    <subject>Having trouble deciding which Build to join?</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

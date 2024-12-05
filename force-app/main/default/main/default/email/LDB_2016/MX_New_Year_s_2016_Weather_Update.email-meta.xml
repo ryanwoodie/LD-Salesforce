@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>MX New Year&apos;s 2016 - Weather Update</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>MX New Year&apos;s 2016 - Weather Update</name>
+    <style>freeForm</style>
+    <subject>MX New Year&apos;s Trip - Weather Update</subject>
+    <textOnly>Hello all!
+
+I just wanted to send you a quick little update from our staff who live in Mexico. They have informed me that there has been some rainy days and would like you guys to bring a light rain jacket and maybe prepare for some waterproof footwear. Of course it is hard to predict the weather in the rural part of Mexico where we will be, so please pack accordingly!
+
+Extra socks will be nice for changing throughout the day if you do not have waterproof footwear. If you have questions please let me know.
+
+Merry Christmas everyone! Have a joyous weekend.
+
+Joy and the Live Different Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

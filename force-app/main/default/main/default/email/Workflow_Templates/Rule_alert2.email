@@ -1,0 +1,5 @@
+This is an alert that a email has been triggered for 2 days after {!Opportunity.Invoice_Date__c} 
+
+Will be sent to {!Opportunity.Contact_Survey__c}
+
+Record was modified by: {!Opportunity.LastModifiedBy}

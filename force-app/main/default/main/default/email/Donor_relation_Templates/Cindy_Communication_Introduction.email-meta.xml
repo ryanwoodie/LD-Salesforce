@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Cindy Communication Introduction</name>
+    <style>none</style>
+    <subject>Introducing you to a new way to engage with Absolute!</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Hi there! My name is Cindy Stover and I&apos;m delighted to let you know that I&apos;ve stepped into a brand new position here at Absolute as the Community Engagement Coordinator!
+
+Because we consider you to be a valuable part of the Absolute community, I will be dedicated to communicating with you and ensuring that you are aware of all the new and exciting things happening in our programs. We want to do what it takes for you to be able to engage and partner with us at whatever level is most relevant to your own interests. That might be something as simple as signing you up to receive our inspiring newsletters, helping you get more information about going on a Live Different Build, or even introducing you to ways that you can invest in our programs, increasing their effectiveness as we impact a generation of Canadian youth to live differently!
+
+So, don&apos;t be surprised if you receive a phone call or email from me over the summer, as I&apos;d love the opportunity to chat and find out what your connection is to Absolute, what initiatives you&apos;re passionate about, and to basically get to know you more.
+
+In order to make sure that I can reach you, could you please reply to this email with your current contact information and the best time for me to call you?
+
+If you have any questions or would like more information about anything we do, please feel free to contact me any time by calling 1-866-432-4464, or sending an email to cindy@absolute.org
+
+I look forward to getting to know you better!
+
+Sincerely,
+
+Cindy Stover
+Community Engagement Coordinator
+Absolute Leadership Development Inc.
+cindy@absolute.org
+1 (866) 432 4464 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ (866) 432 4464
+ cindy@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

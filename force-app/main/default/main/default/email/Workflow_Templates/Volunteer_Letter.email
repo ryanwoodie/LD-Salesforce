@@ -1,0 +1,39 @@
+<messaging:emailTemplate subject="Here is a letter confirming your hours of volunteer service" recipientType="Contact" relatedToType="Registration__c">
+
+<messaging:htmlEmailBody >
+
+</messaging:htmlEmailBody>
+<messaging:attachment renderAs="PDF" filename="Volunteer-{!relatedTo.Contact__r.Name}.pdf">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+<head>
+</head>
+<body style='font-family:Helvetica, Arial, sans-serif'>
+<div style='margin-bottom:100px'><img src='{!URLFOR($Resource.LD_letterhead)}' width="100%" /></div>
+<p><apex:outputText value="{0, date, MMMM d, YYYY}"><apex:param value="{!Now()}"/></apex:outputText></p>
+
+
+<p>To Whom It May Concern:</p>
+
+<p>This is a letter of confirmation that {!relatedTo.Contact__r.Name} completed {!IF(relatedTo.Trip_Type__c == "Internship","60","40")} hours of service to our organization. We had the pleasure of having {!IF(relatedTo.Contact__r.Male_Female__c == "Male","him","her")} as a volunteer with our Live Different Builds program to {!IF(relatedTo.Event__r.Location__c=="Dominican Republic","the ","")}{!relatedTo.Event__r.Location__c} from <apex:outputText value="{0, date, MMM d}"><apex:param value="{!relatedTo.Trip_Start_Date__c}"/></apex:outputText> - <apex:outputText value="{0, date, MMM d, YYYY}"><apex:param value="{!relatedTo.Trip_End_Date__c}"/></apex:outputText>. Live Different Builds is the humanitarian program of Live Different, a registered charity with the government of Canada. Our focus is on generating a movement of young Canadians to challenge themselves and others to consistent acts of love, hope, and change - both large and small.</p>
+
+<p>Live Different's Builds program gives each of our volunteers the opportunity to become an agent of change in Canada and in the global community through humanitarian projects and relief efforts. Since 2005, our projects have been providing housing, schools, and children's homes in communities in Haiti, Dominican Republic, Mexico, and Thailand. In addition to our building projects, we also provide opportunities for our volunteers to be involved in medical clinics, food and clothing distribution, teaching English, and sports camps for children.</p>
+
+<p>{!relatedTo.Contact__r.FirstName} met all expectations and requirements to participate in the Live Different Builds program while with us, and rose to the challenge of working with individuals and families living in desperate circumstances, exemplifying what we feel to be true leadership.</p>
+
+<p>If you have any questions about {!relatedTo.Contact__r.FirstName}s volunteering or the Live Different Builds program please feel free to email me at {!relatedTo.Event__r.Owner.Email}.</p>
+
+<p>Sincerely,<br />
+<img src="{!URLFOR($Resource.signatures, 'Diane.svg')}" width="180px" />
+</p>
+
+
+
+<p>{!relatedTo.Event__r.Owner.Name}<br />
+{!relatedTo.Event__r.Owner.Title}<br />
+Live Different<br />
+1 866 432 4464</p>
+
+</body>
+</html>
+</messaging:attachment>
+</messaging:emailTemplate>

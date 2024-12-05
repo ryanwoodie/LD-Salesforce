@@ -1,0 +1,9 @@
+A survey was filled out by {!QPRO_Survey__c.Reference_ID__c}   that listed the following references:
+
+{!QPRO_Survey__c.Referals__c}
+
+To see the original record, go to
+https://na3.salesforce.com/{!QPRO_Survey__c.Id}
+
+
+;-) Shley

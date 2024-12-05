@@ -1,0 +1,11 @@
+An IATS {!IATSPayment__IATS_Customer_Code__c.Designation__c} recurring donation under the name {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Payer_First_Name__c} {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Payer_Last_Name__c} has been changed to the status of {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Recurring_Payment_Status__c}.
+
+This record is related to the opportunity '{!IATSPayment__IATS_Customer_Code__c.IATSPayment__Opportunity__c}'.
+
+The payments were {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Recurring_Payment_Schedule_Type__c} in the amount of {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Recurring_Payment_Amount__c},.
+
+Total contributions from this payment to date are {!IATSPayment__IATS_Customer_Code__c.IATSPayment__Total_Amount_of_Approved_Transactions__c}.
+
+
+
+Link: https://livedifferent.my.salesforce.com/{!IATSPayment__IATS_Customer_Code__c.IATSPayment__ContactId__c}

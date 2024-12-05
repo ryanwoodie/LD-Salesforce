@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>TH 2014 - One Week Payment Reminder</name>
+    <style>freeForm</style>
+    <subject>Thailand 2014 - One Week Left!!!</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+
+
+I hope you have had an awesome week and that you are getting ready for a fun-filled weekend!
+
+
+
+This is just a reminder for the following:
+
+
+
+Payment Deadline:
+
+There is one week left to fundraise for your trip so share your Canada Helps page and finish off all of your fundraising plans.
+
+
+$300 deposit should already be on your page to secure your spot
+$2,495 is due March 1, 2014
+
+Booking your flights:
+
+Airport: Chiang Mai, Thailand - Airport Code:CNX
+Arrival: April 29, 2014
+Departure: May 11, 2014
+
+Forwarding your itinerary:
+
+
+Once you have booked your flights, please forward me the original flight itinerary that your airlines sent you.
+
+Travel Insurance:
+
+Please provide me with the following:
+Insurance Provider
+Policy #
+Phone number (toll free)
+Phone number (collect call)
+
+
+
+
+Thank you!
+
+
+
+Sincerely,
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

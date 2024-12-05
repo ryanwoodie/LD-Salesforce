@@ -1,0 +1,17 @@
+Hi {!Contact.FirstName},
+
+This is {!User.FirstName} from Live Different. I reached out a couple of weeks ago with some information about our school motivational program. Just wondering if you received the email, or if there is a more appropriate contact or email address that you could direct me towards?
+
+We offer one of the most respected and in-demand presentations available to Canadian schools, all on a not-for-profit basis. We are in the process of filling some remaining dates for next school year, and would love to discuss how we can assist {!Account.Name} with empowering your students toward a lifestyle that cares for people. Following is a link to the information that I sent previously, in case you didn't receive the email: http://livedifferent.com/promo.html
+
+Thanks for your help,
+
+{!User.FirstName} {!User.LastName} 
+(866) 432 4464 {!User.Extension} 
+{!User.Email} 
+
+Live Different 
+Suite B3, 15 Wellington St. North 
+Hamilton, ON L8R 1M7 
+1 (866) 432 4464 
+{!User.Email}

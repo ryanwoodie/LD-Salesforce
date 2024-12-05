@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>MX 2018 - Summer Public Initial Email</name>
+    <style>freeForm</style>
+    <subject>Live Different Builds: Mexico Summer Public 2018</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+
+
+My name is Jennifer and I am an Administrator for our trips. We&apos;re looking forward to meeting you in person and having you along on this trip as we work together to make a difference!
+
+
+
+I hope you were able to figure out what your next steps are from the last email we sent you. If you have questions about the forms, fundraising page, or flight information, don&apos;t hesitate to ask.
+
+
+
+Flight dates:
+
+Airport: San Diego - Airport Code: SAN
+Arrival: August 1, 2017
+Departure: August 10, 2017
+
+Some helpful information:
+
+Upon Arrival:
+- When you arrive at the San Diego Airport, our staff will be at the gate wearing a Live Different t-shirt and holding a Live Different sign.
+- We spend the first night at the Best Western hotel in Chula Vista, CA. As a group, the next day, we drive down to Vicente Guerrero, Mexico. It&apos;s approximately 4 hours south of San Diego, along the Baja coast of California, but with stops it will take around 5 hours to get there.
+
+Accommodations:
+We own our own comfortable and clean homes on a gated property in the community of Zapata, Mexico. We have full time staff that live down in Mexico all year round that help host all our trips. All of our volunteers will be staying on our property while we are in Mexico.
+
+
+
+Transportation:
+We own all of our own buses, vans, and vehicles that are used to transport our volunteers from San Diego to Mexico, and from our homes to the communities we will be working in. The drivers are staff that have experience driving in Mexico, as well as the legal documents to drive these registered vehicles.
+
+
+
+Communities We Work In:
+Since 2006, we have developed very strong relationships with the communities that we work in. The communities know Live Different very well and we feel very safe at all times while working on our building sites.
+
+
+
+Work Site Safety:
+We require all volunteers to bring closed toed shoes, a hat/bandana, waterbottle, sunglasses, sunscreen, and leather work gloves. This ensures that volunteers are as equipped for handling equipment on the job sites.
+
+
+
+Area We Live In:
+The area that we live and work in is a rural area that survives on farming. It is extremely safe and quiet, volunteers often feel safer in Mexico than they do in their own neighborhoods in Canada.
+
+
+
+Vaccinations and Medications:
+We do not require that any of our volunteers receive any vaccinations or medications to go to any of the countries that we work in. But, we do suggest that every volunteer visit their family doctor or local medical clinic and decide on your own about taking any medications or vaccinations prior to the trip.
+
+
+
+Map from US to MX:
+Here is a map of our drive from the Best Western in Chula Vista, CA to our home in Zapata (a few minutes away from Vicente Guerrero): https://maps.google.ca/maps?q=%4030.771699,-116.006355&amp;oe=utf-8&amp;aq=t&amp;client=firefox-a&amp;ie=UTF-8&amp;hl=en.
+
+
+
+Excursion Day (trip specific):
+There are a few options for the excursion day that our staff will decide on closer to the date of the trip (volcano hike, beach day, etc.). Whatever is decided on, please be aware that there are many factors on our staff deciding where to takes our groups (depending on whether, and multiple safety precautions).
+
+
+
+Contact during a trip between volunteers and Canada:
+There is wifi at the house that all volunteers to use 24/7 and are able to skype with their family members. We also have a facebook page that we update every day to keep family and friends informed. All of our staff have cell phones on them at all times and we also have a land line. We will be emailing everyone all of the emergency contact information before the trip starts.
+
+
+
+Resources:
+Here are some photos, videos, and documents from our past Live Different Builds if you would like to use them for your fundraising needs or simply to share with friends and family about what your journey looked like ahead: http://livedifferent.com/resources
+
+Media:
+There are photos, blogs and videos from our past trips as well as our most recent trips, it&apos;s a great resource to help you prepare for your trip: http://livedifferent.com/media
+
+
+
+
+Sincerley,
+
+
+
+Jennifer Quong
+Program Administrator</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

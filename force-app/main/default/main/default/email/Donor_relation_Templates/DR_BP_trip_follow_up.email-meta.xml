@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DR_BP-trip follow up</name>
+    <style>none</style>
+    <subject>Update from Live Different Build in Dominican Republic</subject>
+    <textOnly>Hello {!Contact.FirstName}
+ 
+
+On behalf of Absolute&apos;s Live Different Build participants from the Boston Pizza Foundation, I would like to extend a huge thank you for your donation to this program! Your financial partnership with us is appreciated, and not only did it make a significant impact on the experience of the participant you supported, but it is also a vital contribution to our much needed projects that run throughout the developing world.
+
+The people you supported have now returned home, and may have already shared some stories with you about their time with us. If not, we encourage you to find some time to spend with them to learn about their experience. Undoubtedly, they have done things that have impacted them deeply and met people that have changed the way they view life, and they will be excited to share all of that with you!
+
+If you&apos;d like the opportunity to learn more about the trip, you can read the blogs posted by the trip participants, and see some pictures of the trip on our website and facebook pages. http://heroholiday.absolute.org/2011/08/11/boston-pizza-foundation-dominican-republic-august-7th-16th-2011/
+
+Thanks again for helping to provide this opportunity for our Live Different Build participants, and again, I encourage you to get in touch with the person you supported to share first-hand in their life-changing experience!
+
+To find out more about Live Different Build, please check out www.heroholiday.com. To find out more about Absolute&apos;s other programs, please check out www.absolute.org. We&apos;d also like to keep in touch with you with updates on our programs, and opportunities for you to engage with us in the future. If you&apos;d prefer not to receive these updates, please click here to unsubscribe.
+mailto:cindy@absolute.org?subject=unsubscribe
+
+If you have any questions at all, please feel free to either call our office at 1-866-432-4464 or email me at cindy@absolute.org.
+
+Sincerely,
+
+Cindy Stover
+
+Community Engagement Coordinator
+
+
+www.absolute.org
+
+follow our Live Different Build Teams on Facebook 
+(no account required)
+facebook.com/absolute.org
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

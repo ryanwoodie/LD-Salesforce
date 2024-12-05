@@ -1,0 +1,17 @@
+<messaging:emailTemplate subject=" {!relatedTo.Contact_Name__c} Signed up for {!relatedTo.Event__r.Name}" recipientType="Contact" relatedToType="Registration__c">
+<messaging:plainTextEmailBody >
+{!relatedTo.Contact_Name__c} Signed up for {!relatedTo.Event__r.Name}: 
+http://na3.salesforce.com/{!relatedTo.ID}
+
+Fund Type: {!relatedTo.Fundraising_Type__c} 
+Extra Fundraising: {!relatedTo.ExtraFundraising__c} 
+Fund Title: {!relatedTo.Fundraising_Page_Title__c} 
+Fund Blurb: {!relatedTo.Fundraising_Text__c}
+
+Address:
+{!relatedTo.Contact__r.Name}
+{!relatedTo.Contact__r.MailingStreet}
+{!relatedTo.Contact__r.MailingCity}, {!relatedTo.Contact__r.MailingState}    {!relatedTo.Contact__r.MailingPostalCode} 
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

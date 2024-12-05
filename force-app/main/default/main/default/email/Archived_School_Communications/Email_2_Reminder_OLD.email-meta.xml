@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>OLD COPY Follow-up email 7 days later to remind them to answer email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SP Email 2: Reminder OLD COPY</name>
+    <style>none</style>
+    <subject>Did you receive last week&apos;s email re: Live Different?</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,54 @@
+<p><font color="#000000">Hello {!Opportunity.TReceipt_Contact_FirstN__c},</font></p>
+
+<p><font color="#000000">Thank you for sending in your Consent Package and meeting the initial {!Opportunity.hhdeposit__c} fundraising amount, you have now secured a spot for the  {!Opportunity.Class__c} trip&#33; Please let me know if you have any questions that I can help you answer.</font><font color="#000000">&nbsp;</font></p>
+
+<p><font color="#000000">There are a number of attachments and links to this email; please take the time to read them thoroughly as they will prepare you for your Live Different Build:</font></p>
+{!if(ispickval(Opportunity.Fundraising_Type__c,"CanadaHelps"),"", "<ul>
+	<li><font color="#000000"><p>Below is your <b>unique online donation form URL</b> for making, entering and requesting donations or payments related to your trip. You can share (email, Facebook, etc.) the following link with any potential donors so they can donate online to your Live Different Build project (to help meet your fundraising goal).</p>
+
+<p>For any donations (I.E. cheques) you receive from others offline, you must use a printed copy of the attached <b>Payment-Donation form</b> (before mailing in offline donations and paper forms, please record them at your following unique online donation URL):</p>
+
+<a href=</a></p>
+</li>
+</ul>")}
+
+<ul>
+	<li><font color="#000000"><b>Presentation Letter</b></font><font color="#000000">&nbsp;</font><font color="#000000">&#45; A great tool for fund raising. Present this letter to potential donors and business' when looking for donations to help with your fundraising goal. It gives an explanation of who Live Different is and what Live Different Build is all about. It is a good idea to include a personal letter from yourself too. One that explains why you want to join us on a Live Different Build and what you hope to accomplish.</font></li>
+</ul>
+
+
+<ul>
+	<li><font color="#000000"><b>Packing List&nbsp;</b></font><font color="#000000">&nbsp;</font><font color="#000000">&#45; No idea what to pack? Read this document and it will remind you of all the little things that will make your trip and travels more comfortable.</font></li>
+
+</ul>
+The following items are for anyone 18 years or older as of January 1, 2013:
+<ul>
+	<li><font color="#000000"><b>Criminal Record Check Request Letter</b></font><font color="#000000">&nbsp;</font><font color="#000000">&#45; This is a letter that you may be required to present as proof of participation in the Live Different Build program when obtaining a Criminal Record Check. All volunteers over 18 years old are required to complete a Criminal Record Check with a Vulnerable Sector Screening. Please mail the complete original letter to our office when you receive it. This must be mailed and in our office one month before the start date of your Live Different Build.</font></li>
+</ul>
+<ul>
+	<li><font color="#000000"><b>Child Protection Policy</b></font><font color="#000000">&nbsp;</font><font color="#000000">&#45; This is for any volunteer over the age of 18 as of January 1st to read for each trip they attend. It is Live Different's Child Protection Policy. It is our policy on what is appropriate behaviour when dealing with minors and the steps that we take to protect them. It is important that you take the time to read this beginning to end.</font></li>
+</ul>
+
+
+<ul>
+	<li><font color="#000000"><b>Child Protection Policy Agreement</b></font><font color="#000000">&nbsp;</font><font color="#000000">&#45; Once you have read the above Child Protection Policy, please sign the agreement and send it in with your next payment.</font></li>
+</ul>
+
+
+<p><font color="#000000">You will also be receiving updates via email leading up to the departure date with information that you will need to know.&nbsp;Please keep an eye on your inbox (and junk mail, just in case it goes there) for those updates. Adding</font> <a href="mailto:joy@livedifferent.com" rel="nofollow">joy@livedifferent.com</a><font color="#000000">&nbsp;</font><font color="#000000">to your safe contact list will help ensure these important mails will reach you.</font></p>
+
+<p><font color="#000000">Please refer to your trip's <a href="http://livedifferent.com/node/{!Opportunity.pageid__c}">detail page</a> on our website for your trip's fundraising deadlines.</font></p>
+
+
+<p><font color="#000000">I am always available to you at the contact information below. Please don't be shy to call or email us; if you have a question, just ask&#33; You can also visit our FAQ section of our website as it is a great resource.</font><font color="#000000">&nbsp;</font><a href="http://www.livedifferent.com/faqs" rel="nofollow">http://www.livedifferent.com/faqs</a></p>
+
+
+<p><font color="#000000">I look forward to helping you prepare for your Live Different Build&#33;</font></p>
+
+<p>Sincerely,</p>
+
+<br clear="all"></span>Joy Yu</font><br>Programs Administrative Assistant<br><br><div><img src="http://livedifferent.com/sites/default/files/images/general/esiglogo.jpg"><br>
+</div><div><div>Live Different<div><br>Suite B3 - 15 Wellington St. N.<br>Hamilton, ON  L8R 1M7<br>Canada<br><br><a value="+19057771662">905-777-1662</a> Office<br>
+<a value="+19057778117">905-777-8117</a> Fax<br>
+<a href="mailto:joylivedifferent.com" target="_blank">joy@livedifferent.com</a><br><br><a href="http://www.livedifferent.com/" target="_blank">www.livedifferent.com</a></div><div><span style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:17px;background-color:rgb(255, 255, 255)"><br>
+</span></div><div><span style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:17px;background-color:rgb(255, 255, 255)">Live Different is a movement challenging ourselves and others to a lifestyle of caring for people, not stuff. Live Different</b>

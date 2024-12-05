@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Unlock the Potential of Circles Peer Mentorship at Your School</title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>I hope your week is progressing well! Have you had an opportunity to watch our <a href="https://www.youtube.com/watch?v=rGaviLF3FO8&amp;list=PLz0RxTH437Ps54CtMZ9PQMXawnLp_xoSk" rel="noopener" target="_blank">Circles Peer Mentorship trailer</a>?</p>
+
+<h3>Why Choose Circles Peer Mentorship?</h3>
+
+<p>Each one-hour session tackles a key topic like authenticity, empathy, and resilience. These sessions blend video content and student-led discussions to create a transformative learning experience. Get a preview of the content <a href="https://vimeo.com/showcase/7626839" rel="noopener" style="color: #0000ff;" target="_blank">here</a>.</p>
+
+<p><strong>Password:</strong> ldcircles_free.preview</p>
+
+<p>Interested in implementing this program at your school? Let's discuss how it could be a perfect fit. <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32vbIRnIwpAPiclLfRo-n4JdrF1OKbx9GYDdMLoVllWAlFjrUDcDvxU8Zz_5eAQwajnE8B1UGB" rel="noopener" target="_blank">Click HERE to schedule a call</a>.</p>
+
+<p>Looking forward to connecting!</p>
+
+<p>Warm regards,</p>
+
+<p>{{{Recipient.OwnerName_F__c}}}</p>
+
+<p>PS: Here's what a student leader from BC had to say about their Circles experience:</p>
+
+<p><em style="color: #0b5394;">"It was an amazing opportunity for me to grow my leadership skills... the group absolutely loved their time participating in Circles, and I loved leading it! Thank you for your support throughout my first Circles experience!"</em></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+A phone follow up appt has been booked with {!Account.Name}, on {!Contact.CPFU_Day_Date_Time__c}.
+
+Here are the details...
+{!Account.Name}
+{!Contact.Name} - {!Contact.Title}
+{!Contact.Phone}
+{!Contact.Email}
+
+{!Account.BillingAddress}
+{!Account.BillingCity}
+{!Account.BillingCountry}
+
+
+link: {!Contact.Link}

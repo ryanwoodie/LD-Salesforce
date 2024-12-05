@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Donor Thank You Email - 1st donation</name>
+    <style>none</style>
+    <subject>Thank You, for your donation to Live Different!</subject>
+    <textOnly>Thank you {!Opportunity.TReceipt_Contact_FirstN__c},
+
+for your very thoughtful donation of {!Opportunity.Amount} to Live Different. Your financial partnership with us has helped to make a significant impact on young Canadian lives. We sincerely appreciate your support, in association with our efforts, to empower this generation of Canadians and to change our world. The growth of this organization reflects the depth of caring and commitment from you, our partners.
+
+If you have any questions regarding this or would like more information on any of our programs, please feel free to visit www.livedifferent.com, email me at {!Opportunity.OwnerEmail}, or call me toll-free at 1-866-432-4464.
+
+Once again, thank you for your generous support. We look forward to partnering with you again in the near future!
+
+
+Sincerely,
+
+
+{!Opportunity.OwnerFullName}
+{!Opportunity.OwnerTitle}
+Live Different</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

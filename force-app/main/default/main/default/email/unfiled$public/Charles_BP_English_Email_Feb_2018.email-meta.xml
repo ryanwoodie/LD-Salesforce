@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Charles BP English Email Feb 2018</name>
+    <style>none</style>
+    <subject>Thanks for supporting Live Different and the Boston Pizza Foundation Future Prospects</subject>
+    <textOnly>On behalf of Live Different - THANK YOU!
+
+I have crossed paths with many of you over the last nine years of our partnership and I look forward to meeting many more in the days ahead! From being in some of your restaurants to seeing you at conferences, various meetings and lunch-and-learns in your corporate offices, or maybe even down in Dominican Republic on a Builds trip, it has been an honour for all of us here at Live Different to get to know so many of you in the Boston Pizza family.
+
+We are proud ambassadors for Boston Pizza as a whole and for each of you in your local communities. As we travel to schools all across Canada with our motivational presentations, in part thanks to your support, we are thrilled to share the Boston Pizza brand and to promote the generous and supportive culture you emulate.
+
+Recently, we mailed out a Thank You card to each of you and wanted to follow up to ensure that you and your staff received it and to once again say a huge thank you for all that you have done and continue to do to support Live Different!
+
+Additionally, in case you’ve yet to see this newly released video, please check it out and share it with your family and friends. It highlights Boston Pizza’s Executive Team, partnering with us and pouring their heart and soul into helping a community in need in the Dominican Republic.
+
+Again, thank you. I look forward to seeing many of you again and to meeting more of you at the Boston Pizza Conference in Orlando.
+
+If you have any questions at all, I would love to hear from you, so please reach out to me personally anytime.
+
+Sincerely,
+
+
+Charles Roberts
+
+Office: (866) 432 4464
+Cell: (204)
+charles@livedifferent.com
+
+
+
+Live Different
+Suite B3 - 15 Wellington Street North, Hamilton, ON   L8R 1M7
+(866) 432 4464</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

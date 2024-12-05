@@ -1,0 +1,7 @@
+Hi {!Lead.FirstName},
+
+This is {!User.FirstName} from Absolute Leadership Development (you might remember me as "Statman" if we were at your high school). I am helping reply to our requests for Impact applications.  We are finishing our 2006/2007 application forms and will email it to you next week.   Where are you from?  How old are you?  Anyway, thanks so much for your interest in our Impact program, we would love for you to be a part of it.  If you have any questions just let us know!
+
+{!User.FirstName} {!User.LastName}
+Absolute Leadership Development
+{!User.Email}

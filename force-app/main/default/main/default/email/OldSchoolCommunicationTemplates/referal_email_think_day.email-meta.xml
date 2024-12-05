@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>referal email think day</name>
+    <style>none</style>
+    <subject>Would you like to host Think Day at your school?</subject>
+    <textOnly>Hey {!QPRO_Survey__c.contact_name__c},
+
+Please forward this email on to any contacts you think would possibly book a Think Day.
+
+Contact info
+Mandy</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

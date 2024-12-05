@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May 2015 Follow-up to Leads L3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>june 2015 Follow-up to Leads **Sent June 17**</name>
+    <style>none</style>
+    <subject>Get the date that best suits your school!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

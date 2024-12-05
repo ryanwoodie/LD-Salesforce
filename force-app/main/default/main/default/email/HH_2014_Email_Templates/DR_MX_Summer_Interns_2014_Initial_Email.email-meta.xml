@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR/MX 2014 - Summer Internship Initial Email</name>
+    <style>freeForm</style>
+    <subject>DR/MX Summer Interns 2014</subject>
+    <textOnly>Hey {!Contact.FirstName}!
+
+
+
+Thank you for registering to be a Summer Intern for 2014. Here are the next steps for you to complete your application:
+
+
+
+1) Send in your Consent Forms (scan and email it to me):
+
+http://livedifferent.com/sites/default/files/pdf/consentform-1.pdfhttp://livedifferent.com/content/internship
+
+
+
+2) Fill out our application survey:
+
+https://docs.google.com/a/absoluteontheweb.com/spreadsheet/viewform?formkey=dGtpYlVhb0hFRkF4VG9VUm1rcjFwcWc6MQ#gid=0
+
+
+
+3) Write a short essay about yourself and why you would be a great fit for our internship program using the following criteria:
+
+Maximum: 1 Page
+Single-spaced
+Font size: 12
+Font style: Times New Roman
+Include: First and Last Name at the top of the page
+Please send me an e-mail with a word document attached to it.
+
+** You must complete all 3 steps before your application will be processed. **
+
+Other important information:
+
+In November, I will set up individual phone/skype interviews with each applicant for December.
+$300 deposit will be due within a week of acceptance in January of 2014.
+Please remember, you can select which country you would like to do your Internship in (Dominican or Mexico), but at the end, we will be making the decision with our Live Different Build team to see where you will be placed.
+
+Photos and Videos:
+
+Here are some photos and videos from our past Live Different Build trips if you would like to use them for your fundraising needs: https://www.dropbox.com/sh/3wke2n7mm37rg7e/E0VsZOT3q8
+
+
+
+Please let me know if you have any questions while filling out the online registration, the application form, or when writing your short essay.
+
+
+
+Sincerely,
+
+
+
+Joy Yu</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

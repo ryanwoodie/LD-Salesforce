@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>past HHpar hamper of hope email</name>
+    <style>none</style>
+    <subject>Help a special family this Christmas!</subject>
+    <textOnly>You have been such an important part of what Live Different Build has accomplished - and this Christmas, you can be a part of bringing hope again to families we all love!
+
+Click here to help fill a hamper full of food and gifts for a family in need http://absolute.org/hampers
+
+Together we have worked to bring love, hope and change to both our nation and the global community. Each project we have completed is different and unique, but one thing never changes: the value of hope.
+
+We are returning to each of our Live Different Build projects and families and we are bringing them our Christmas Hamper of Hope. Each hamper will be filled with food, toys for the children and helpful household items.
+
+Give friends and family a meaningful gift this Christmas by filling a Hamper in their name!
+You can even fill a Hamper of Hope in the name of a family or friend! They will be sent an e-card, and both of you will receive the update on the gift delivery.
+
+We will be delivering our hampers throughout the holiday season in Dominican Republic, Mexico and Haiti. We need your help! Choose a family and give $25, $50 or $100 to help fill their hamper.
+
+But that&apos;s not all! A gift is great - but feeling the connection of the gift is even better. Remember those great Facebook photos we have all shared? We want to encourage you to upload a photo of yourself or your family for the family we will be delivering the gift to. For them, it will mean the world to put a face to something that has touched their life in such a tangible way. We will also be sending out video clips and/or photos to our donors of the gift delivery. You deserve to know how your gift is being used and how it is impacting lives.
+
+As with all of our projects, any excess money donated will continue to go towards similar projects in Absolute, both in Canada and internationally.
+
+Thank you for your support. Your donation is a vote of confidence in what we work hard every day to accomplish: bringing hope and change, one life at a time.
+
+
+Christal Earle
+
+Co-founder, Absolute.org
+
+
+
+
+
+
+Live Different Build is a program of
+Absolute Leadership Development
+Suite 400 44 Hughson St. North
+Hamilton, ON L8R 1G3
+
+(866) 432 4464
+www.absolute.org
+www.heroholiday.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,129 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},</p>
+
+<p>This is Mary Anne from LiveDifferent, I hope this email finds you well. Our long-time Manager of School Partnerships, Dave Hamilton, recently moved on to another job opportunity. I’ve taken over for him and have been updating our records and reconnecting with educators we’ve worked with in the past.</p>
+
+<p>We’ve worked with you in the past (way back when we were called “Absolute”) to do an assembly at {{{Recipient.Merge_temp_1__c}}} in {{{Recipient.Merge_temp_2__c}}} {{{Recipient.Merge_temp_3__c}}}.</p>
+
+<p>It has been a LONG time, but I appreciate any opportunity to reconnect—my passion is to work with educators to help empower and impact their students. <b>I would love to know what school you are at presently and what your current role is</b>—and if it’s okay if I reach out to you occasionally (eg. once or twice a year)?</p>
+
+<p>If you are no longer in education or if youth empowerment programs aren’t relevant to your current role, <b>are there any other educators that you recommend I reach out to</b>?</p>
+
+<p>Incase is helpful, <a href="https://www.tfaforms.com/forms/view/4947696?tfa_1={{{Recipient.Email}}}&amp;tfa_41={{{Recipient.Id}}}">here</a>&nbsp;is a link to update your contact information, or to remove your email address.</p>
+
+<p>If you have any questions or would like to chat, please feel free to email or <a href="https://calendly.com/livedifferent-circles/initial-conversation">schedule a short call</a>&nbsp;with me anytime! You might be interested in our new <a href="https://livedifferent.com/circles">Circles online assemblies or mentoring program</a> - they've been getting an incredible response from schools throughout the pandemic.</p>
+
+<p>Warm Regards,</p>
+
+<p>Mary Anne</p>
+&nbsp;
+
+<table border="0" cellpadding="0" cellspacing="0" id="zs-output-sig" style="">
+	
+		<tr>
+			<td style="border-collapse:collapse;line-height:0px;">
+			<table border="0" cellpadding="0" cellspacing="0">
+				
+					<tr>
+						<td style="vertical-align:top;border-collapse:collapse;line-height:0px;" width="50">
+						<table border="0" cellpadding="0" cellspacing="0">
+							
+								<tr>
+									<td style="border-collapse:collapse;line-height:0px;"><img alt="" border="0" height="50" src="https://livedifferent.com/wp-content/uploads/2019/06/Mary-Anne-Roy-Circle.png" width="50" /></td>
+								</tr>
+							
+						</table>
+						</td>
+						<td style="border-collapse:collapse;padding-right: 10px;width: 10px;" width="10">&nbsp;</td>
+						<td>
+						<table border="0" cellpadding="0" cellspacing="0">
+							
+								<tr>
+									<td style="border-collapse:collapse;line-height:0px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										
+											<tr>
+												<td style="border-collapse:collapse;line-height:0px;">
+												<table border="0" cellpadding="0" cellspacing="0">
+													
+														<tr>
+															<td style="border-collapse:collapse;padding-bottom:2px;height:3px;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td style="border-collapse:collapse;line-height:0px;"><span style="font-family: effra,'Montserrat', Helvetica, sans-serif; font-weight:700; font-style:normal; font-size:19.0px; letter-spacing:-0.01em; line-height:19px; color:#212121; display:inline;">Mary Anne Roy</span></td>
+														</tr>
+														<tr>
+															<td style="border-collapse:collapse;line-height:0px;"><span style="font-family: effra,'Montserrat', Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;">Manager of Youth Programs</span></td>
+														</tr>
+														<tr>
+														</tr>
+														<tr>
+															<td style="border-collapse:collapse;padding-bottom:3px;height:12px;">&nbsp;</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="border-collapse:collapse;line-height:0px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										
+											<tr>
+												<td style="border-collapse:collapse;line-height:0px;">
+												<table border="0" cellpadding="0" cellspacing="0">
+													
+														<tr>
+															<td style="font-family: effra,'Montserrat', Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;"><span style="font-weight:700;">P</span> <span>866 432 4464&nbsp;</span></td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="border-collapse:collapse;line-height:0px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										
+											<tr>
+												<td style="border-collapse:collapse;line-height:0px;">
+												<table border="0" cellpadding="0" cellspacing="0">
+													
+														<tr>
+															<td style="border-collapse:collapse;font-family: effra,'Montserrat', Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;"><span style="font-weight:700;">W</span> <span><a href="https://livedifferent.com/" rel="nofollow" style="text-decoration:none !important;color:#212121" target="_blank">LiveDifferent.com</a></span></td>
+														</tr>
+														<tr>
+															<td style="border-collapse:collapse;padding-bottom:12px;height:3px;">&nbsp;</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-collapse:collapse;padding-bottom:8px;height:8px;">&nbsp;</td>
+		</tr>
+	
+</table>
+
+</body></html>

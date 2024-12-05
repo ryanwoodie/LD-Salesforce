@@ -1,0 +1,25 @@
+<messaging:emailTemplate subject="A new Motivational survey has been completed" recipientType="User" relatedToType="QPRO_Survey__c">
+<messaging:plainTextEmailBody >
+A new survey has been completed!
+https://na3.salesforce.com/{!relatedTo}
+
+School: {!relatedTo.Account__r.name}
+Contact: {!relatedTo.Reference_ID__r.name}
+General Impression: {!relatedTo.Impression__c}
+
+General Comments: {!relatedTo.Gen_Com__c}
+
+Referals: {!relatedTo.Referals__c}
+
+Book Again: {!relatedTo.rebook__c}
+{!relatedTo.re_book_response__c}
+
+
+Alternate contact for next year: {!relatedTo.Future_Contact__c}
+
+
+Thanks!
+
+LD Robots
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

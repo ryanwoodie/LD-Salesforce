@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to leads after dropping out of registration process</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HH Dropped Reg Lead 14-day</name>
+    <style>none</style>
+    <subject>Your Live Different Build Registration</subject>
+    <textOnly>Hi {!Lead.FirstName}!
+
+Long time no see!
+
+A couple weeks ago, you started filling out a registration form to come on a Live Different Build, but for some reason you didn&apos;t finish filling it out. If you are still interested in volunteering to help vulnerable people in desperate need, and having a life changing experience at the same time, we would love to help you complete it!
+
+Do you have any questions, or is there anything we can help with? Please give us a call, or simply reply to this email.
+
+We look forward to hearing from you!&lt;?p&gt;
+
+Thanks,
+
+{!Lead.OwnerFullName}
+{!Lead.OwnerTitle}
+
+
+Live Different Build
+(866) 432-4464
+(905) 777-1662
+{!Lead.OwnerEmail}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

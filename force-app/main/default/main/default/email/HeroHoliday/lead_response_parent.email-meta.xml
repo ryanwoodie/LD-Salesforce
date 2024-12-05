@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>lead response parent</name>
+    <style>none</style>
+    <subject>Hi, {!Lead.Parents_First_Name__c}, your child is inerested in Live Different Build!</subject>
+    <textOnly>Hi {!Lead.Parents_First_Name__c}, 
+
+we recently received a request for more information on Live Different Build from {!Lead.FirstName} and they wanted us to let you know.
+
+Live Different Build is the humanitarian program of Absoute (www.absolute.org), and we exist to empower students to live their lives with purpose and to experience the power of making a difference in the world around them. We love youth, and we believe in the incredible potential of each student that we meet and have the privilege to work with. We also believe that an experience such as Live Different Build can be life-changing for them and inspire them to be world changers!
+
+If you have any questions about Live Different Build or what is necessary for your child to participate, please visit our website at www.heroholiday.com/parents, or call our office at 1 (866) 432 4464. We respect your privacy, and will not contact you for any other reason than to help each of you get the most of this experience should they choose to join us on a Live Different Build.
+
+Thanks for your time!
+
+
+Nettie Brown
+
+Live Different Build Administrator
+nettie@heroholiday.com
+(866) 432 4464
+www.heroholiday.com
+www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

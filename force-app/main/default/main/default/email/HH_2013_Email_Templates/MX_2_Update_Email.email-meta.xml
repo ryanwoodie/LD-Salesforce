@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>MX 2013 - Week 2 Update Email</name>
+    <style>freeForm</style>
+    <subject>MX #1 - Update Email</subject>
+    <textOnly>Hello Live Different Build Volunteers!
+
+Wow, can you believe that in a few shorts weeks, that you will all be heading down to Mexico? I hope you are all as excited as we are to meet all of the amazing people we will be working alongside!
+
+Some final information and reminders...(lots of important information below, please take the time to read it thoroughly!)
+
+1. FLIGHTS
+As of July 1st, if you are flying to San Diego everyone should have forwarded their flight itineraries to me. If you have not forwarded your flight itinerary, you need to do that as soon as possible. We want to make sure that a Live Different representative is waiting at the airport to meet you when you come out of the security area. Our representative will be holding a BIG sign that says, &quot;Live Different Build&quot;.
+
+2. PASSPORTS
+Please bring 2 photocopies of your passport with you. One will be handed in upon registration on your first day, and the other is for you to keep on yourself. This is a precaution just in case your passport goes missing while travelling. Double check before you leave your driveway that you have your passport with you. You must have a valid passport to travel with us to Mexico. If at the time of applying for your trip you did not have a passport and you have not emailed me your passport number, then please send that number to me immediately, along with your passport expiry date.
+
+3. CHECKED BAGGAGE
+Also, remember only ONE checked bag, one carry-on bag, and a purse or laptop/camera bag can fly with you. Your checked bag cannot weigh more then 50lbs. Please check to see if your airline requires you to pay an additional cost for this check bag that you will need to cover for your flight to San Diego. Traveling to Mexico on a bus only gives us limited space so we ask that you keep your checked luggage size to one medium bag. This will allow us to fit all volunteers, staff and luggage on our bus.
+
+4. EXCURSIONS
+On your day off, your group will be doing a fun activity together. Your team leaders will announce what it is when you arrive in San Diego.
+
+5. EMERGENCY CONTACTS
+The best way to get in touch with us during airport pick-ups in San Diego is through Heather and Andrew and their US numbers will be provided at the end of July.
+
+If your family needs to contact you in case of emergency while in Mexico, these are the numbers to call.
+Live Different Office (Canada) - 1-866-432-4464
+
+Emergency 24 hour number (Mexico):
+Heather (Emergency Contact) - 011 521-616-109-2493
+Andrew - 011 521-616-163-3877
+
+For general inquiries and non-urgent matters, please contact us via email joy@livedifferent. Emails are checked regularly throughout the day and someone will be scheduled in the office from 8am - 5pm EST. Someone will be available to answer the emergency phone number 24 hours/day.
+
+6. PHONE AND INTERNET ACCESS
+Calling cards do not often work in the Mexico as 1-800 are not collect and will cost you money to call. Some past volunteers have put international plans on their cell phones prior to leaving but you will need to contact your cell service provider to see if this is possible. There is WiFi available at the main house and you can use Skype to call family as well. Some people like to bring their laptops as well, but keep in mind that Live Different is not responsible for lost or stolen items. There is a safe available in the staff house for smaller valuable items, but they are not large enough to fit most laptops.
+
+7. ROOMIING
+The rooming in Mexico is similar to bunk-styled cabins that you will be used to at summer camp. Please keep in mind that you will most likely be sharing a room with 6-10 other people. The rooms are not co-ed but will consist of ages 14-50 years of age. Please contact me if you have any questions in regards to this.
+
+8. DONATIONS
+Instead of bringing down items to give to the families you have the option of bringing some extra money. On the final day of building we have our dedication and we have chance to pool money together to buy furniture and groceries for the families as an extra gift along with their new home. You can bring some small items (i.e. toys, school supplies) but keep in mind the weight allowances for traveling if you do this.
+
+9. SPENDING MONEY/CURRENCY
+It is best to bring USD cash with you because once in Mexico only USD cash will be accepted. You can bring debit and credit cards but they might only work in San Diego (or not at all). The only other things you will need to pay for with your spending money is:
+
+*Your meals while staying in San Diego and in transit to and from Mexico.
+*Any personal spending, souvenirs, or snacks purchased at the store.
+*$10-20 USD Cleaning staff tip ($30-40 for summer interns).
+
+10. FAMILY PROFILES
+Projects and families have been decided and photos and bios are currently up on the website. If you click the &quot;Project&quot; tab you will be able to access pictures and bios of the families.
+Trip One: http://livedifferent.com/hero-holiday/trips/public-trip-1-mx-2013
+Trip Two: http://livedifferent.com/hero-holiday/trips/public-trip-2-mx-2013
+
+11. PROJECT PAGE
+We have set up a project page which will be updated daily that can be accessed from the links above.
+On this trip page, under the &quot;Project&quot; tab, will be where your family and friends can see daily updates, links to the photos on our Live Different Facebook page, and the trip blogs, (look out, you may be asking you to help write a blog...volunteers needed!!) Once your trip has started, feel free to tell your friends and family to check this page out daily, (hint, if you email this link to them or post it on your Facebook, it&apos;s a lot easier for them to find!). We do our best to post a blog everyday but sometimes there are issues with the Mexico internet.
+
+12. STAFF AND INTERNS
+Heather and Andrew are our Live Different Mexico Trip Coordinators. There will also be Live Different Volunteer Staff that are coming down for the month of August to help with our public trips. You will meet them all during orientation in San Diego.
+On our trip there will also be interns that help out with planning and behind the scenes activities while in Mexico and San Diego. Their profiles are now up on the website so you can check those out via this link: http://livedifferent.com/content/internship
+
+12. PACKING LIST
+A packing list is attached for all who need it again. One great thing to pack that is not on the list is Gatorade mix for your water, which helps to replenish your electrolytes after working hard in the hot sun! Sanitized wipes are also pretty handy to have before you eat your packed lunches too. Don&apos;t forget SUNSCREEN!!! On the packing list it says to bring a sleeping bag; there are sheets and blankets in the bunks in Mexico however there are not enough for all the beds so it would be a good idea to bring a small sleeping bag or blanket.
+
+Please feel free to email me with any of your questions,
+
+Talk to you soon!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

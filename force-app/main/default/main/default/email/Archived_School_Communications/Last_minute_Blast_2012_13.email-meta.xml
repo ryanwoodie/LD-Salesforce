@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Last minute blast to accounts about SGG theme for 2012</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Last minute Blast - 2012/13</name>
+    <style>none</style>
+    <subject>Re: Something&apos;s Gotta Give: What does Equality Look Like at Your School?</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

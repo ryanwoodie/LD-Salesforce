@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charsetutf-8">
+<title>Christal</title>
+<meta name="viewport" content="width  762">
+<style type="text/css">
+.HH_link {text-decoration:none}
+.HH_link:hover {text-decoration:underline}
+</style>
+<style media="only screen and (max-device-width: 480px)" type="text/css
+">
+* {line-height: normal !important;}
+</style>
+</head>
+<body bgcolor="#d9d9d9" style="margin:0;padding:0;font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px">
+    <table  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td style="padding: 30px 20px 40px 20px; background-color:#d9d9d9;">
+                <!--TOP/MAIN-->
+                <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                        <td align="right" valign="top" style="padding:7px 19px;">
+                            <div style="font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif; color:#6b3e77;font-size:10px;line-height:15px;">
+                                <a href="http://livedifferent.com" class="HH_link" style="color:#6b3e77;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap">
+                                    www.livedifferent.com</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+                                    <a href="mailto:bookings@livedifferent.com" class="HH_link" style="color:#6b3e77;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap">
+                                        Email Us
+                                    </a> &nbsp; &nbsp; | &nbsp; &nbsp;
+                                    <a style="color:#6b3e77;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:10px;white-space:nowrap;text-decoration:none">1-866-432-4464
+                                    </a></div></td>
+                    </tr>
+                    <tr>
+                        <td width="700" style="-webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; background-color:#ffffff" bgcolor="#FFFFFF">
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td>
+                                        <!--Header Image-->
+                                        <a href="Link to landing page">
+                                            <img src="http://livedifferent.com/sites/default/files/campaigns/keynote-2013/christalkeynote.jpg" alt="Live Different - Christals Keynotes" width="700" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td style="font-family:Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;font-size:12px">
+                                        <div style="padding:0px 20px 20px 20px;font-size:13px;">
+                                            <br>
+                                            <br>
+                                            <p style='font-weight:bold'>Hi {!if(Contact.FirstName!="",Contact.FirstName,Lead.FirstName)},</p>
+                                            <p>Are you looking for a motivational presentation and/or workshops for your students in the 2013/2014 year? Do you want to bring them a message that will resonate with them, give them practical steps toward change, and will open their eyes and hearts to ways they can get involved in the world around them?</p>
+
+<p style='font-size:18px;font-weight:bold;text-align:center'>I would love to work with you to reach your students!</p>
+
+<p>My name is Christal Earle and I am a motivational speaker. Every time I stand up in front of my audiences, I am filled with awe at the potential of each life in front of me and it reminds me that this message is invaluable. I have spoken to hundreds of thousands of teenagers across Canada and internationally, presenting them with the message of hope and change, starting today. Your students deserve the chance to connect with a message that is both universal and individual to their situation. I can do that. </p>
+
+<p>To find out more about me, please check out <a href='http://livedifferent.com/keynote-speakers'>my bio page here</a>. As well, my keynote and workshop topics are also listed there. 
+I want to work with you! Together, we can bring a relevant and impacting experience to your students - one that will resonate long after the presentation. </p>
+
+<p>To find out more information, please feel free to contact me: christal@livedifferent.com</p><br><p style='font-size:15px;font-weight:bold;text-align:center'>To inquire about dates or to book me, contact Cindy at cindy@livedifferent.com or (866) 432 4464 ext. 207.</p><br>
+<br><h1>What others are saying</h1>
+<div style='padding:0px 35px;font-style:italic'><hr>
+<p><img src='http://livedifferent.com/sites/default/files/campaigns/keynote-2013/peel.jpg' height="75px" align='left' style='padding-right:8px' />We have had Christal Earle speak at a number of events over the past few years and every time she does, Iâ€™m always struck by her ability to connect with the audience. Whether speaking to students or staff, Christal finds the perfect anecdote to illustrate the point sheâ€™s making.
+Itâ€™s essential that a public speaker is able to not only inspire the audience, but provide practical suggestions and ideas the audience members can apply to their lives. Christal does this every time. I enthusiastically recommend Christal as a keynote speaker."<div style='text-align:right;font-style:italic;font-size:11px'>Allison Farbar, Peel District School Board</div></p><hr>
+<p><img src='http://livedifferent.com/sites/default/files/campaigns/keynote-2013/oslc.jpg' style='padding-right:8px' width='75px' align='left' />"Christal consistently receives rave reviews from those in her workshops and has the ability to connect with everyone in the room. Not only is she phenomenal at giving a workshop presentation she is also amazing to work with."<div style='text-align:right;font-style:italic;font-size:11px'>~ Angela Cacciavillani, Ontario Student Leadership Conference Coordinator</div>
+</p><hr>
+</div><br><br>
+
+
+
+<br><br>
+<p>{!User.Name}<br>
+{!User.Title}<br>
+{!User.Email}<br>
+(866) 432 4464<br></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td width="20" bgcolor="#FFFFFF">
+                                    </td>
+                                    <td width="660" bgcolor="#FFFFFF">
+                                    </td>
+                                    <td width="20" bgcolor="#FFFFFF">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <img src="http://livedifferent.com/sites/default/files/misc/greyfooter.jpg" alt="" width="700" height="20" border="0" style="display:block;margin:0">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--BEGIN FOOTER-->
+    <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td style="font-size:10px">
+                <div style="padding:50px 20px 20px 20px;color:#ffffff">
+                    <p>
+                        Live Different<br>
+                        15 Wellington St. North<br>
+                        Hamilton, ON    L8R 1M7<br>
+                        Canada<br>
+                        <br>
+                        (866) 432 4464<br>
+                        <a href="mailto:{!User.Email}" style="color:#db5024">{!User.Email}</a><br>
+                        <a href="http://livedifferent.com" style="color:#db5024">www.livedifferent.com</a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

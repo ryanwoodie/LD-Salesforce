@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Winter 2014 - Jan7th promo</name>
+    <style>none</style>
+    <subject>Live Different&apos;s motivational presentation -Kindness Changes Everything!</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+I hope your Holiday season has been restful and enjoyable!
+I&apos;m just following up with an email I sent earlier regarding the opportunity to have our motivational team visit your school this year. Our 2013/2014 presentations have been extremely well received across the country so far and with a limited number or dates available, we&apos;d love for your students to experience this presentation as well.
+
+As a reminder, our 2013/2014 presentation theme is &quot;Kindness Changes Everything&quot; and we&apos;re seeing it positively impact the culture in Canadian schools each and every day.
+
+Check out these videos
+
+This Video is used in our current show
+
+This is our presentation promo
+
+Dates have filled up fast this year, but I wanted to make sure I connected with you while there are still a few opportunities for you to consider. Currently, the remaining available dates in your area are:
+
+{!Account.Date_Merge__c}
+
+Please let me know if you are interested in any of the dates listed. I am happy to answer any and all questions you may have as you consider this opportunity. Also, more information can be found by clicking here.
+
+*** Also, if you are interested in having a motivational presentation or Keynote speaker this year, but the dates listed above do not work for you, please consider inviting Christal Earle, Co-founder of Live Different, to speak to your students or staff members. You can learn more about Christal by clicking here.
+
+Thank you for considering this opportunity and the meaningful investment it is in your students.
+
+I look forward to hearing from you soon!
+
+{!User.Name}
+
+Suite B3 15 Wellington St. North
+Hamilton, ON    L8R 1M7
+Email Me
+(866) 432 4464
+
+Life is about People, not stuff!</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

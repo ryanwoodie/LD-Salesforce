@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to registrants who haven&apos;t paid</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HH $300 reminder 14-day</name>
+    <style>none</style>
+    <subject>First payment to confirm your Live Different Build</subject>
+    <textOnly>Hi {!Opportunity.TReceipt_Contact_FirstN__c}
+Thanks for your interest in coming on a Live Different Build, we&apos;d love to have you join us this year!
+
+We noticed that you filled out the online registration for for one of our trips, but we have not yet received your initial $300, which is required to confirm your registration. Was that because you had some questions about the trip? We&apos;d love to help you out and answer any and all of your questions, (seriously...ask as many as you&apos;d like, we&apos;re used to it!), so please send us an email or give us a call!
+
+If you don&apos;t have any questions at this point, but you&apos;re still planning to attend the trip you registered for, please send your intial $300 in as soon as possible so that we can reserve your spot!
+
+Here is the online donation form you can use to make your payment:
+
+https://www.tfaforms.com/221219?tfa_id={!Opportunity.Id}&amp;tfa_NameofHeroHolida={!Opportunity.TReceipt_Contact_FirstN__c}%20{!Opportunity.TReceipt_Contact_LastN__c}
+
+
+
+Thanks,
+
+Nettie Brown
+Programs Administrator
+
+
+Live Different (Absolute Leadership Development Inc.)
+Suite 400 - 44 Hughson St. NORTH
+Hamilton, ON L8R 1G3
+Canada
+
+905-777-1662 Office
+
+905-777-8117 Fax
+
+nettie@livedifferent.com
+
+www.livedifferent.com
+
+Live
+Different is a youth movement challenging ourselves and others to
+consistent actions of love, hope and change - both large and small. We
+believe that a changed heart can truly change the world. Live Different</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

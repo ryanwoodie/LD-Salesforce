@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>email used when mass mailing churches re: HH</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CRA church list email</name>
+    <style>none</style>
+    <subject>short-term missions at {!Lead.Company}</subject>
+    <textOnly>Want more out of your missions experience? Talk to us about a Live Different Build!
+
+&quot;You will be very pleased with the organization and preparation that Live Different Build provides. The staff of Live Different Build were there to serve and make the trip a pleasure. Live Different is a great organization to partner with to provide an intercultural experience in a more comprehensive Discipleship strategy that a church may have.&quot;
+- Pastor Doug Meyers, Grace Baptist Church, Calgary AB
+
+Dear {!Lead.Other_Notes__c},
+
+Does your church run short-term missions trips? My name is LeeAnna, and I work with a charity called Live Different. I contacting you to see if your church might be interested in our Live Different Build program (I am contacting you via the public email address listed on the CRA website, please forward to the appropriate person if applicable).
+
+
+Live Different Build began with the conviction of the life-changing potential of international short-term missions and how we can help to shape the quality of the &apos;average&apos; church missions experience. We believe this has resulted in a life-altering connection for both our volunteers and the families in the communities we have sought to help. (Here is a great video one of our groups made of their experience:)
+
+Why work with Live Different to facilitate your next missions trip?
+
+Highly Trusted and Experienced.  Let us worry about the details of running a trip! Since 2005, we have had over 4000 volunteers join us on short-term humanitarian projects around the world. We have facilitated dozens of group trips for churches, schools, and corporate groups. Once a group experiences how organized, well-run and life-inspiring our trips are, they often return to work with us year after year.
+Real projects meeting real needs. We work via trusted relationships with local community leaders and organizations. Like you, we believe in the importance of making a sustainable and tangible impact during a missions trip. This is why our trips are focused on building safe, dry homes for families in need of basic shelter, making a huge difference in every other area of their lives. Working alongside of these families is very inspiring and eye-opening for trip participants.
+Life-changing Experience! Through our organized and safe trip logistics, knowledgeable staff, and meaningful daily discussions/debriefings, we take care of all of the details while ensuring that your group will have an international experience that will spark life-change. Live Different Build will leave your group inspired to make a difference at home in their church and community!
+
+We currently facilitate trips in:
+
+Dominican Republic
+Mexico
+Haiti
+Thailand
+
+Fundraising goals range from $1395 to $2595 per participant depending on location, and we would love to talk with you and provide more references or a quote for your next missions group!
+
+You can find out more information on our website, or check out this overview with videos and group information sheets.
+
+Please feel free to reply to this email or call me at 1-866-432-4464, I hope to hear from you!
+
+Send Me More Info! Â»
+
+LeeAnna Cummins
+
+Live Different
+Suite B3 - 15 Wellington St. North
+Hamilton, ON L8R 1M7
+Canada
+1-866-432-4464
+www.livedifferent.com
+leeanna@livedifferent.com
+
+&quot;We have, for the past eight years, been hosted by Live Different Build in Mexico. What keeps us coming back? Live Differentâ€™s conviction to really live in the context of where they are helping others. Their integrity from the top down to the field operations is bar none. They do real, personal, sacrificial things to give a home to as many in need as they can.&quot;
+- Matt Duffy, University of British Columbia Okanagan Campus Chaplain
+
+Live Different Build is loved by groups big and small:
+
+Churches &amp; Community Groups:
+
+Business Groups:
+
+School Groups:</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

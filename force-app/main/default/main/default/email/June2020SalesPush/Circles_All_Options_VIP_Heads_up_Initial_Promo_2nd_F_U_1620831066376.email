@@ -1,0 +1,28 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}}!<br /> <br /> Just checking in, did you happen to look&nbsp;at&nbsp;the awesome things&nbsp;Circles&nbsp;has in store for schools next year? I don't want yours to miss out and at this point we're mostly just touching base with our valued contacts to confirm a level of potential interest. If you need&nbsp;to reconnect in a few weeks because things are busy, no worries at all, just let me know.&nbsp;And as you consider what the fall might look like for your students, don't forget that Circles is accessible for <b>ANY</b> style of learning environment (in-person, virtual, a combination, etc) and your options range anywhere from online assemblies to weekly discussion-based programming and even professional development opportunities for faculty!&nbsp;</span></p>
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">Take a peak over </span><a href="https://www.youtube.com/watch?v=rGaviLF3FO8"><span style="font-family:Arial,Helvetica,sans-serif;"><b>HERE</b></span></a> <span style="font-family:Arial,Helvetica,sans-serif;">&nbsp;</span><br /> <br /> <img alt="Screen Shot 2021-04-19 at 1.28.16 PM" src="{[devName:Screen_Shot_20210419_at_12816_PM]}" style="max-width: 697.128px; width: 445.99px; height: 310.156px;" title="Screen Shot 2021-04-19 at 1.28.16 PM" /><br /> <br /> <span style="font-family:Arial,Helvetica,sans-serif;">When you have a moment, let me know what you're thinking with regards to next year and if you have any questions what so ever.&nbsp; I'll be happy to help make 2021/2022 a successful one!<br /> &nbsp;<br /> Thanks so much for all you do.&nbsp;I look forward to hearing from you soon.</span></p>
+  <p><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span><br /> ____________________<br /> <br /> Dave Hamilton<br /> Manager of School Partnerships<br /> <b>LiveDifferent</b><br /> <br /> 1-866-432-4464 Toll free<br /> 905-777-1662 Office<br /> 905-777-8117 Fax<br /> dave.h@livedifferent.com<br /> <br /> www.livedifferent.com<br /> "Life is about people"</p>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 238.242px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+  <div id="" style="left: 7.98828px; top: 181.992px;">
+   &nbsp;
+  </div>
+ </body>
+</html>

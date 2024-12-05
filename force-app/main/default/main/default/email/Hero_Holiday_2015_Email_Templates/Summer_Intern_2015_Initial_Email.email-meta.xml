@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Summer Intern 2015 - Initial Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR/MX 2015 - Intern Initial Email</name>
+    <style>freeForm</style>
+    <subject>Live Different Internship!</subject>
+    <textOnly>Hi {!Contact.FirstName}!
+
+Thank you for registering for the Live Different Summer Internship!
+Our interns play a big role in helping our summer Builds be a huge success. You will help staff with behind the scenes jobs, be a role model to first time volunteers, and make a difference in the communities we work in.
+
+Registering online is the first step to becoming a summer intern, but there are a few more tasks to check off your list before you are fully registered.
+
+Application Questions
+
+Click on the link below to complete the Application Questions.
+Due Date: 2 weeks from the date you received this email
+Keep in mind that there are no right or wrong answers. We just want to learn a little bit more about you!
+
+https://docs.google.com/a/absoluteontheweb.com/forms/d/1mth_ftsq3Qw0f3QAT_-Dl9Vbnj9PcQARs23kr8GC2EU/viewform
+
+Phone Interview
+
+Please contact me to set up an interview within the next 2 weeks (jenn@livedifferent.com)
+Interviews will take place Mon - Fri between 9:30 am and 4:15 pm and will be about 15-20 minutes long.
+In your email, please provide me with three options of dates/times that you are available. (Remember that our office is in Ontario, so take the time difference into consideration.)
+
+The phone interview will be very casual and you don&apos;t need to &quot;prepare&quot; for it. It will be very laid back -  just think of it as having a conversation with me!
+Some of the main points we will discuss are:
+
+Summer Schedule
+
+Internship Responsibilities
+
+Internship Assignments
+
+Review of Application Questions
+
+Scenario Based Questions
+
+
+Wait for Acceptance Email
+
+After you&apos;ve completed the above two tasks, and if you have been successful, you will receive an Acceptance Email.
+Please wait until you&apos;re officially accepted before paying your $300 deposit
+
+Again, thank you SO much for volunteering to be a leader on our Live Different Summer Builds. It&apos;s people like YOU who are going to make this world a better place.
+
+I look forward to hearing from you soon!
+Jenn</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

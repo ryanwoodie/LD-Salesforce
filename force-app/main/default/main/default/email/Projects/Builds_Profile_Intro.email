@@ -1,0 +1,11 @@
+<messaging:emailTemplate subject="Here are a few people we'd like you to meet!" recipientType="Contact" relatedToType="Registration__c">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is your new Visualforce Email Template.
+
+<apex:outputText value="{!relatedTo.Event__c}" rendered="false" />
+   <apex:iframe src="/apex/ProjectRender?id={!relatedTo.Event__c}" />
+   
+   
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

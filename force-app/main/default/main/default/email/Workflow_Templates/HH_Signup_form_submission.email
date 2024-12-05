@@ -1,0 +1,7 @@
+The following was received:
+
+Name: {!Lead.FirstName},  {!Lead.LastName}
+email:  {!Lead.Email}
+phone: {!Lead.Phone}
+trip:       {!Lead.Hero_Holiday_trip__c}
+{!Lead.Description}

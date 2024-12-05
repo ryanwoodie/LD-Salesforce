@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>June_2014_Follow_up_to_sneak_peak_theme_email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>June 2014 - Follow-up to &quot;sneak peak&quot; theme email</name>
+    <style>none</style>
+    <subject>Following up re: Live Different at {!Account.Name} in 2014/15</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

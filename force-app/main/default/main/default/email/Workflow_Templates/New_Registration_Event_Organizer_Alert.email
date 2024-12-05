@@ -1,0 +1,8 @@
+Hi {!Registration__c.Event_Organizer__c}!
+
+{!Registration__c.Contact_Name__c} has {!Registration__c.Apply_or_Accepted__c} for your Build!
+
+{!Registration__c.Name}
+{!Registration__c.Custom_Answer_1__c}
+{!Registration__c.Custom_Answer_2__c}
+{!Registration__c.Custom_Answer_3__c}

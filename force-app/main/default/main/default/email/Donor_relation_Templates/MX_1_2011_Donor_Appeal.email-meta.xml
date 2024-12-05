@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MX_1-2011 Donor Appeal</name>
+    <style>none</style>
+    <subject>Update from Live Different Build in Mexico</subject>
+    <textOnly>Hello {!Contact.FirstName}
+ 
+
+On behalf of Absolute&apos;s Live Different Build participants, I would like to extend a huge thank you for your donation to this program! Your financial partnership with us is appreciated, and not only will it make a significant impact on the experience of the participant you supported, but it is also a vital contribution to our much needed projects that run throughout the developing world.
+
+While you are reading this, our team is busy experiencing Live Different Build and realizing how each of them can play a part in making the world a better place! You can follow along by clicking on the links below to view the student blog posts on our website or to see our Facebook updates.
+
+
+(no account required)
+www.facebook.com/absolute.org
+
+One update I can give you from the trip right now is this short video of one of our student participants.   http://youtu.be/-ECsNqiQvMU
+
+
+
+While Mexico can seem like it&apos;s a world away, you can still be a part of continuing to support long-term change in this community, and help us to build more homes for deserving families! The best way to help is by becoming an Absolute monthly partner, where you commit to donating an amount that is manageable for you each month, such as $20, $50, or $100, which still adds up to a lot in the end, and helps us by having a consistent base of support for our projects throughout the year. If you&apos;re interested in becoming a monthly partner, please click here.
+www.absolute.org/donate
+
+
+Thanks again for helping to provide this opportunity for our Live Different Build participants, and I encourage you to get in touch with the person you supported when they return to share first-hand in their life-changing experience!
+
+To find out more about Live Different Build, where we work, and how our trips are structured, please check out www.heroholiday.com. To find out more about what Absolute&apos;s other programs, please check out www.absolute.org. If you have any questions at all, please feel free to either call our office at 1-866-432-4464 or email me at cindy@absolute.org.
+
+Sincerely,
+
+Cindy Stover
+
+Community Engagement Coordinator
+
+
+www.absolute.org
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

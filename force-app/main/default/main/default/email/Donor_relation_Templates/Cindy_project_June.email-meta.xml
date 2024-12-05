@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Cindy_project_June-2011</name>
+    <style>none</style>
+    <subject>Introducing the Nuevo Renacir Community</subject>
+    <textOnly>You are receiving this email because you have supported Absolute and Live Different Build in the past, and we wanted to update you on a project that we are completing this summer.
+ 
+ 
+ Introducing the Nuevo Renacir community
+ 
+ 
+ 
+This family lives on the edge of the community of Nuevo Renacir in Dominican Republic. There are three of them in the home: a father, mother, and their 15 year old son. They are so deeply impoverished that even the other families in this small, poor community feel great compassion for them, but do not have the resources to help them. This family&apos;s world is wrapped up in cardboard, driftwood, rusted tin, and re-used porous wood - all of it battered by the elements they are subjected to.
+
+Their house is in a flood path, and there is absolutely nothing they can do to change it. They lack all the basic supplies that shouldn&apos;t even be in question: no beds, dry blankets, or clothes. They have no safety, no privacy, and lack the ability to even try to properly cook anything. Their feet swell from being in the dirty water all the time, and are developing rashes because they are always wet.
+
+This family is more than in need and we are more than willing to do what we can to help them - and hope that you are willing to help us do that! This summer, Live Different Build teams will be working alongside them and others in their community to reshape the future of Nuevo Renacir, (which in Spanish means &apos;rebirth&apos;), and you can be a part of it! By donating to our Live Different Build fund to cover the costs of building a house for this family, and others just like them, you can witness the transformation of their community, and make a tangible difference in how they live every day. Click here to watch a video of this family. http://www.youtube.com/watch?v=3IoJbgZCZHE
+
+
+To donate, please click on the link below. There you will find options to either make a one time donation to this project, or to become a monthly partner, supporting this community now, as well as many more in the future.
+
+http://absolute.org/donate
+
+Thank you for your generous support, it truly is life changing!
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Absolute
+ Suite 400, 44 Hughson St. North
+ Hamilton, ON L8R 1G3
+ Canada
+ 
+ (866) 432 4464
+ info@absolute.org
+ www.absolute.org</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

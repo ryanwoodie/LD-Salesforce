@@ -1,0 +1,4 @@
+Link to Tax Receipt:
+livedifferent.my.salesforce.com/{!Tax_Receipt__c.Id}
+
+{!Tax_Receipt__c.Contact__c}

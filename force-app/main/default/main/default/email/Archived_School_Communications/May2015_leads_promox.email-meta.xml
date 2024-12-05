@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May 2015 Leads promotional email - responsive L1</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>May2015-leads promo</name>
+    <style>none</style>
+    <subject>The presentation that students, parents, and teachers will thank you for bringing to your school</subject>
+    <textOnly>Hi,
+
+My name is {!User.FirstName}, and I am a School Liaison with Live Different. We&apos;ve worked with thousands of schools across Canada, and we&apos;d love the opportunity to visit your school. I thought I would give you a little information about who we are and the exciting things we have to offer your school. Please feel free to contact me with any questions you may have. I&apos;d be glad to help!
+
+Click here to view this email in your browser http://livedifferent.com/sites/default/files/email/2015/browser.html
+
+
+--------------------------
+Hour-long School Presentation  Empowering Life Stories Inspiring Videos  Live Band   Grades 6 &amp; up
+
+This is the character development presentation that students, parents, and teachers will thank you for bringing to your school! You&apos;ll capture your students&apos; attention and transform them with a message that matters.
+
+Trusted by Canadian schools for over 16 years
+
+We&apos;ve presented to over 1.1 Million students in 2,300 schools over the last 15 years.
+
+After experiencing a Live Different presentation, 98% of educators rank it better than other presentations they have had in their school.
+
+--------------------------------
+What makes our presentations different?
+
+Most programs lecture on outward behaviors/symptoms (which research shows can be counter-productive). Our positive approach cuts through to root causes and mindsets, igniting change from within.
+
+The true impact of our presentation comes from the power of the personal story. Young people, sharing their stories of hope, connect with students like nothing else.
+
+Our upbeat, high energy concert-style presentation keeps students fully engaged and tuned-in to a message that will change their life.
+
+Our messaging will spark meaningful discussions across your student body, inspiring students that need help to reach out.
+
+
+-----------------------------
+What others are saying
+
+&quot;I&apos;m not sure how the presentation could be improved- it was absolutely amazing! I heard comments like &apos;That&apos;s the best presentation I have seen in my entire teaching career&apos; from a veteran teacher, and students were raving about it for days. It was very worthwhile and inspirational.&quot;
+Jo&apos;ann Obrien, St James Regional High School
+
+&quot;In my 17 years in education this is the best loved student assembly I have ever been to. Students were literally hugging me in thanks for bringing LIVE DIFFERENT in.&quot;
+Lorna Cameron, E.W. Pratt High School
+
+&quot;Finally a presentation that gets it right.  The perfect mix of a meaningful message presented in a fun and entertaining way.  I&apos;m looking forward to having them back next year!&quot;
+Gary Watson, Sir Winston Churchill Secondary School
+
+
+-------------------------------
+
+As a charity, we make our presentation accessible to every school with donation-based pricing. Your donation will not only help bring this life-changing program to your school, but to other students across the country.
+
+Our 2015/16 presentation will help your students shift from being passive spectators of their life stories to being the authors of them - creating a sense of identity, ownership, and hope for the future.
+More Info on our theme at http://livedifferent.com/motivational-presentations
+
+Call now to book your presentation!
+
+(866) 432 4464 ext. {!User.Extension}
+
+Book Now!
+http://www.tfaforms.com/375008
+
+
+
+---------------------------------------
+If you no longer wish to receive these emails, please reply with &apos;unsubscribe&apos; in the subject line.
+
+Suite B3, 15 Wellington St. North
+Hamilton, ON   L8R 1M7
+(905) 777 1662
+presentations@livedifferent.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

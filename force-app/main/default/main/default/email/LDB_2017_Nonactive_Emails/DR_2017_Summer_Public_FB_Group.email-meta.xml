@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2017 - Summer Public FB Group</name>
+    <style>freeForm</style>
+    <subject>Facebook Group</subject>
+    <textOnly>Hello everyone,
+
+IMPORTANT: FACEBOOK GROUP
+
+Currently only a few of you are in the group. It is important to add yourself to our facebook group. The purpose of the group is that it will be open for your friends and family to be added a few days before you start your journey. You will get to share and post photos on there as well as our staff will be updating the group. This is the best form of communication with your friends and family at home to know that you are safe and what your day looks like.
+
+Here is the link:
+https://www.facebook.com/groups/233520863786273/
+
+Have a great week!
+
+Joy Yu
+Program Administrator</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

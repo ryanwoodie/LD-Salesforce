@@ -1,0 +1,10 @@
+A new Live Different Build Opportunity was created.
+{!Opportunity.Link}
+
+
+
+A survey and communications will be sent to {!Opportunity.Contact_Survey__c} with trip date of {!Opportunity.Trip_Date__c}
+
+Parent email was entered as: {!Opportunity.Survey_Parent_Email__c}
+
+Record edited by: {!Opportunity.LastModifiedBy}

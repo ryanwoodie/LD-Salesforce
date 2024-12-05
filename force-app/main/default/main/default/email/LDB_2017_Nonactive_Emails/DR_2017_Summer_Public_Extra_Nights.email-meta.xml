@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Live_Different</letterhead>
+    <name>DR 2017 - Summer Public Extra Nights</name>
+    <style>freeForm</style>
+    <subject>Extra Nights - Reminder</subject>
+    <textOnly>Hi Everyone,
+
+
+
+For those of you who have sent me your flight itineraries already, thank you so much!
+
+
+
+From what I can gather from everyone&apos;s itineraries is that everyone is flying into Puerto Plata on the same flight from Toronto with Westjet. I am still waiting on three other flight itineraries, so I am just assuming that you guys are this flight. If not, that&apos;s okay! Please forward the itineraries soon so I can make the shuttle arrangements.
+
+
+Toronto Airport:
+
+When you arrive at the Toronto airport, please check in and meet at the gate. I will be waiting there with a Live Different tshirt on an hour and a half before departure. This is my cell number if you can not find me and want to send me a text: 905 746 0698
+
+Arrival in Puerto Plata:
+
+We will grab our checked luggage together and head out to the parking lot in a group where a shuttle bus will be waiting for us and some of our Dominican ground staff that live there full time. We will arrive at the resort and check into our rooms.
+
+Paying for your extra nights:
+
+Remember that it is $42 USD per night if you are sharing a room with someone. It is $60 USD per night if you have your own private room (no one has requested this). I have booked everyone at the resort for two extra nights (night of July 7th and 17th) with a roommate so the cost should be $84 USD. You can pay with American cash or use a credit card when you check in on your first day. You must pay for your first and last night at the same time. I will be able to help you with this at the front desk.
+
+July 7:
+
+This is a free day, since everyone is arriving one day early. There is not definite plans, but we might have a quick orientation night so you can learn the schedule for the week.
+
+July 17 and 18:
+
+July 17th would normally be the day that all the volunteers fly out, so instead, this is a free day to relax after many days of hard work. On the 18th, a staff member will be taking you guys to the airport and flying back to Toronto with you.
+
+If anyone has any questions, please email me as soon as possible!
+
+Have a great week.
+
+
+Joy Yu
+Program Administrator</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

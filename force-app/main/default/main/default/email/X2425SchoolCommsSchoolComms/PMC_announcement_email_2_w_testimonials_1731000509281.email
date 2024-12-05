@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       <tbody>
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           <tbody>
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               <tbody>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an4]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td style="font-family: Arial, Helvetica, sans-serif;padding-right: 20px;padding-left: 20px;"><p style="line-height:1.38; margin-top:16px; margin-bottom:16px">Hi&nbsp;{{{Recipient.FirstName}}},<br /><br /> We wanted to follow up about LiveDifferent's Peer Mentorship Curriculum, now available for FREE! Here's what educators and students are saying about the impact:<br /> &nbsp;</p>
+                      <blockquote style="margin-left: 20px; padding-left: 16px; border-left: 4px solid #ccc; color: #666;">
+                       "This program was an exceptional experience for our students. The students really had a chance to engage in conversation, with direct instruction on how to listen to each other, how to empathize, and how to reflect on themselves. The skills that they were learning were those that are often difficult to teach, and yet so important." <br /><em>- Danielle Chopik, Jesse Ketchum Junior and Senior Public School, Toronto</em>
+                      </blockquote><br /><strong>Key Benefits of the Program:</strong>
+                      <ul>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Build Authentic Community: Foster strong connections and a sense of belonging among students.</li>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Develop Leadership Skills: Empower students with the tools and confidence to lead.</li>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Encourage Personal Growth: Promote critical personal development areas such as empathy, resilience, and values.</li>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Compassion Project: Culminates in a student-led project that benefits their community or a community abroad, reinforcing the importance of altruism and social responsibility.</li>
+                      </ul><p style="line-height:1.38; margin-top:16px; margin-bottom:16px">Here's how one student described their experience:</p>
+                      <blockquote style="margin-left: 20px; padding-left: 16px; border-left: 4px solid #ccc; color: #666;">
+                       "Sharing experiences in the circles made me feel like I belonged... I learned a lot about helping people, not just friends but also in my neighborhood and community. Hearing people's experiences on how they help the community inspired me to do similar things. The Circles also changed my view on the world and my attitude towards certain situations." <br /><em>- Student, Streetsville Secondary School, Mississauga, ON</em>
+                      </blockquote><p style="line-height:1.38; margin-top:16px; margin-bottom:16px"><strong>Program Details:</strong></p>
+                      <ul>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Sessions: Six one-hour sessions covering authenticity, empathy, growth mindset, resilience, values, and altruism.</li>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Format: Flexible to fit your schedule and adaptable to various learning environments.</li>
+                       <li style="line-height: 1.38; margin-top: 16px; margin-bottom: 16px;">Materials: All training, videos, guides and follow-up resources are provided on our easy-to-navigate resource page</li>
+                      </ul><p style="line-height:1.38; margin-top:16px; margin-bottom:16px">Ready to transform your school community? Click <a href="https://livedifferent.com/programs/circles/peer-mentorship-curriculum/"><strong>HERE</strong></a> to get started.<br /><br /><a href="https://livedifferent.com/programs/circles/peer-mentorship-curriculum/" style="color: #666; text-decoration: underline;">Read more testimonials from educators and students →</a><br /><br /> If you have any questions or need further information, please don't hesitate to contact our Community Engagement Manager, Mary Anne Roy, at maryanne@livedifferent.com. She's ready to assist you and ensure a seamless experience.<br /><br /> Thank you for your dedication to your students' growth and development.<br /><br /> We look forward to supporting you with this exceptional program.<br /><br /> Warm regards,<br /> LiveDifferent Team</p></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an1]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                   <tbody>
+                    <tr>
+                     <td align="Center"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="{[devName:email_header_Free_access_to_PMC_an3]}" alt="" width="600" /></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   <tbody>
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;">
+                      <div style="text-align: center;">
+                       <a href="https://livediff.typeform.com/to/UIHqrJoF#email={{{Recipient.Email}}} ">Not relevant? Remove your email/unsubscribe here</a>
+                      </div></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>

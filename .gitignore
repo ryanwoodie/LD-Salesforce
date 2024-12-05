@@ -45,4 +45,4 @@ $RECYCLE.BIN/
 **/venv/
 
 **large files**
-force-app/main/default/main/default/email/*
+force-app/main/default/main/default/email/

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>CTA_SMS</name>
+        <label>CTA SMS</label>
+        <locationX>1634</locationX>
+        <locationY>408</locationY>
+        <actionName>TwilioSF__TwilioSendSMS</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>fromNumber</name>
+            <value>
+                <stringValue>12897994067</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>SMS_1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>TwilioSF__TwilioSendSMS</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>CTA_SMS_0</name>
+        <label>CTA SMS</label>
+        <locationX>50</locationX>
+        <locationY>408</locationY>
+        <actionName>TwilioSF__TwilioSendSMS</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>fromNumber</name>
+            <value>
+                <stringValue>12897994067</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>CTA_SMS_INTRO</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>TwilioSF__TwilioSendSMS</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>CTA_SMS_2</name>
+        <label>CTA SMS 2</label>
+        <locationX>1106</locationX>
+        <locationY>408</locationY>
+        <actionName>TwilioSF__TwilioSendSMS</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>fromNumber</name>
+            <value>
+                <stringValue>12897994067</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>SMS_2</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>TwilioSF__TwilioSendSMS</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>CTA_SMS_3</name>
+        <label>CTA_SMS_3</label>
+        <locationX>578</locationX>
+        <locationY>408</locationY>
+        <actionName>TwilioSF__TwilioSendSMS</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>fromNumber</name>
+            <value>
+                <stringValue>12897994067</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>SMS_3</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toNumber</name>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>TwilioSF__TwilioSendSMS</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>SEND_EMAIL_1</name>
+        <label>SEND_EMAIL_1</label>
+        <locationX>314</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EMAIL_1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>coach@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>SUBJECT_1</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>SEND_EMAIL_2</name>
+        <label>SEND_EMAIL_2</label>
+        <locationX>1370</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EMAIL_2</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>coach@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>SUBJECT_2</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>SEND_EMAIL_3</name>
+        <label>SEND_EMAIL_3</label>
+        <locationX>842</locationX>
+        <locationY>408</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EMAIL_3</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>coach@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>SUBJECT_3</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>SMS</name>
+        <label>SMS</label>
+        <locationX>182</locationX>
+        <locationY>288</locationY>
+        <defaultConnector>
+            <targetReference>SEND_EMAIL_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_v_SMS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Communication_Preference__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SMS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CTA_SMS_0</targetReference>
+            </connector>
+            <label>Email_v_SMS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SMS_0</name>
+        <label>SMS</label>
+        <locationX>710</locationX>
+        <locationY>288</locationY>
+        <defaultConnector>
+            <targetReference>SEND_EMAIL_3</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_v_SMS_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Communication_Preference__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SMS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CTA_SMS_3</targetReference>
+            </connector>
+            <label>Email_v_SMS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SMS_0_0</name>
+        <label>SMS</label>
+        <locationX>1238</locationX>
+        <locationY>288</locationY>
+        <defaultConnector>
+            <targetReference>SEND_EMAIL_2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_v_SMS_0_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Communication_Preference__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SMS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CTA_SMS_2</targetReference>
+            </connector>
+            <label>Email_v_SMS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SMS_0_0_0</name>
+        <label>SMS</label>
+        <locationX>1766</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_v_SMS_0_0_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Communication_Preference__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SMS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CTA_SMS</targetReference>
+            </connector>
+            <label>Email_v_SMS</label>
+        </rules>
+    </decisions>
+    <description>changed to proper timing</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>EMAIL_1</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_EMAIL_R1},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_EMAIL_E1},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_EMAIL_A1},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>EMAIL_2</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_EMAIL_R2},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_EMAIL_E2},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_EMAIL_A2},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>EMAIL_3</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_EMAIL_R3},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_EMAIL_E3},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_EMAIL_A3},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SMS_1</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_SMS_R1},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_SMS_E1},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_SMS_A1},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SMS_2</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_SMS_R2},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_SMS_E2},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_SMS_A2},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SMS_3</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),{!CTA_SMS_R3},
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),{!CTA_SMS_E3},
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),{!CTA_SMS_A3},&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SUBJECT_1</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),&quot;Challenge #1: Step out of your comfort zone&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),&quot;Challenge #1: High-five for empathy&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),&quot;Challenge #1: Give Thanks&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SUBJECT_2</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),&quot;Challenge #2: Own your story&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),&quot;Challenge #2: Strike up a conversation&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),&quot;Challenge #2: Expand your compassion&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>SUBJECT_3</name>
+        <dataType>String</dataType>
+        <expression>if(includes({!$Record.Circles_Topic__c},&quot;Resilience&quot;),&quot;Challenge #3: Connect through adversity&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Empathy&quot;),&quot;Challenge #3: Listen and reflect&quot;,
+if(includes({!$Record.Circles_Topic__c},&quot;Altruism&quot;),&quot;Challenge #3: Find your passion&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <interviewLabel>CTA SMS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CTA SMS_V11</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SMS</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Company</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>2022-23 School CTA</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Circles_Topic__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>HasOptedOutOfEmail</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Send_delay3</name>
+            <connector>
+                <targetReference>SMS_0</targetReference>
+            </connector>
+            <label>Send day 3</label>
+            <offsetNumber>48</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Send_day_2</name>
+            <connector>
+                <targetReference>SMS_0_0</targetReference>
+            </connector>
+            <label>Send day 2</label>
+            <offsetNumber>24</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Send_day_1</name>
+            <connector>
+                <targetReference>SMS_0_0_0</targetReference>
+            </connector>
+            <label>Send day 1</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>CTA_EMAIL_A1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName},
+
+Happy to e-meet you! My name is Devina; you might remember me from the LiveDifferent Circles video on altruism. I’m here to help you take action!
+
+Over the next few days I’m going to send you daily challenges that will help you see yourself as a part of something bigger. You’ll complete one challenge per day, and will uncover small steps that you can take to become a kinder, more compassionate person.   
+
+And what better place to start than in your own school?
+
+A person will spend around 14,000 hours of their life at school, and by working to make it a kinder, more compassionate place, we can make an impact that will last for generations. 
+
+YOUR MISSION: Start with one small word of kindness. Think of a person in your school who should be thanked for what they do - then find them, and thank them! You have until your next challenge is revealed to complete the task.
+
+Good luck!
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_A2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hey {!$Record.FirstName},
+
+Being altruistic means having a deep sense of connection to the people around us, and meditation is a powerful way to increase that feeling.
+
+Research shows that when people practice a loving-kindness meditation regularly, they will automatically start reacting more positively to others. And as a bonus, when we shift our focus from ourselves to others, we can actually decrease feelings of anxiety and depression.
+
+Your mission: Carve out some time to sit down and listen to this guided meditation: https://bit.ly/3AEvbrY. If you can’t get to it right away, set a reminder to complete this by the end of the day.
+
+Stay tuned for your final challenge tomorrow!
+
+Good luck,
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_A3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hey {!$Record.FirstName},
+
+There’s always a reason for your passions, because your passions help understand your purpose! And these callings have the power to transform both you and your community.
+
+Your mission: Search for a cause in your area that you think is important.  
+
+That’s it! All you have to do is research and explore. Take a look around and see whether there is a cause in your community that aligns with your passions. And who knows? Maybe you’ll want to get involved with that cause in the future. 
+
+You never know where it may lead!
+
+Best of luck,
+Devina
+LiveDifferent Leadership Coach
+
+P.S. Feel free to reply. I&apos;d love to hear how any of these challenges went!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_E1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName},
+
+Happy to e-meet you! My name is Devina; you might remember me from the LiveDifferent Circles video on empathy. I’m here to help you take action!
+
+Over the next few days, I’m going to send you daily challenges that will teach you how to connect with the people around you. You’ll complete one challenge per day, and will uncover small steps that you can take to become a kinder, more compassionate person.   
+
+And what better place to start than with a high five? 
+
+Research shows that teammates who high-five during a game are more likely to be successful. That’s how powerful high fives are! 
+
+Your mission: Find five people today and give them a high five! You have until your next challenge is revealed to complete the task.
+
+Good luck!
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_E2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName},
+
+Have you ever heard of the expression, “walk a mile in someone else’s shoes”? 
+
+That’s what empathy is - it’s understanding someone else’s experience so much that you can actually imagine having their experience yourself. 
+
+Your mission: Strike up a conversation with someone outside of your circle. It could be a volunteer, a new teammate or someone from a different grade. Simply take the opportunity to connect and try to see the world from their perspective. 
+
+Because it’s not enough to talk the talk - we need to walk the walk. Stay tuned for your final challenge tomorrow!
+
+Good luck,
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_E3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hey {!$Record.FirstName},
+
+What if you could change one small thing so that more people felt heard?
+
+Well, you’re in luck! 
+
+Active listening helps people feel valued. It’s more than just paying attention to the words people are saying; it’s being mindful and present, and listening with your ears, your eyes, your body and your heart. 
+
+Your mission: Practice active listening by reflecting back and summarizing what someone says to you. Bonus points if you ask them a follow-up question about what they just said!
+
+Good luck, 
+Devina
+LiveDifferent Leadership Coach
+
+P.S. Feel free to reply. I&apos;d love to hear how any of these challenges went!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_R1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName},
+
+Happy to e-meet you! My name is Devina; you might remember me from the LiveDifferent Circles video on resilience. I’m here to help you take action!
+
+Over the next few days, I’m going to send you daily challenges that will teach you how to face life’s adversities head-on. You’ll complete one challenge per day, and will uncover small steps that you can take to become a kinder, more compassionate person.   
+
+And what better place to start than by trying something new?
+
+While we tend to avoid discomfort or stress, the reality is that humans thrive on new challenges! They help keep us adaptable and growing. 
+
+Your mission: Think of a new skill or hobby you can learn and take one step to get started. You have until your next challenge is revealed to complete the task!
+
+Good luck,
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_R2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName},
+
+Did you know some of the most important stories that we create happen after we experience something difficult?
+
+But we can work through these stories if we use the right tools!
+
+Expressive writing is a personal and emotional method that can help bring clarity to the stories we tell ourselves. It doesn’t concern itself with correct spelling, punctuation or grammar, but instead helps us to own our story so we can change the narrative and become stronger. 
+
+Your mission: Take 15 minutes to write about a challenge you’ve faced, what you’ve learned and how you’ve grown. Don’t pause or second-guess yourself during this process - just write without stopping!
+
+Stay tuned for your final challenge tomorrow!
+
+Good luck,
+Devina
+LiveDifferent Leadership Coach</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_EMAIL_R3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hey {!$Record.FirstName},
+
+Have you ever heard of people being fragile? Like how when we go through something difficult, we become “broken” or “traumatized”?
+
+The reality is, people are anti-fragile. The difficulties we face can affect us, but just like our muscles and immune system, people have the ability to become better and stronger because of their adversities.
+
+Your mission: Identify someone in your life that you look up to. Ask them to tell you about a challenging experience they faced and what they learned from that experience.
+
+You can learn so much by listening to others!
+
+Best of luck,
+Devina
+LiveDifferent Leadership Coach 
+
+P.S. Feel free to reply. I&apos;d love to hear how any of these challenges went!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_A1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Your first challenge is a small (but impactful!) word of kindness. Send a thank-you text to a person you know who should be thanked for what they do. 🙏</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_A2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! Loving-kindness meditations can help people react more positively to others. Complete this meditation today: https://bit.ly/3AEvbrY 🧘</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_A3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! Do you have a cause you’re passionate about? Search for local organizations in your area that you can get involved with. 🤝</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_E1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>First challenge: Research shows that teammates who high-five during a game are more likely to be successful. Find 5 people today and give them a high five! ✋</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_E2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! Empathetic people are curious about those around them. Strike up a conversation with someone outside of your circle. 🗣️</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_E3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! You can practice active listening by reflecting back and summarizing what someone says to you👂Try this with three people today!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_INTRO</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi {!$Record.FirstName}! Thanks for signing up to learn more about {!$Record.Circles_Topic__c} with LiveDifferent. You&apos;ll receive 3 daily starting today! If you received this in error, or want to opt-out, you can reply with &quot;STOP&quot; at anytime.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_R1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>First challenge: Contrary to what we often hear, humans thrive on new challenges. Think of a skill or hobby you can try and take one step to start 🧗</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_R2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! Expressive writing can help give us clarity. Take 15 minutes and write about a challenge you faced, what you learned and how you&apos;ve grown.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CTA_SMS_R3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi from LiveDifferent! Adversity can make us stronger if we let it 💪. Ask someone who you look up to about a challenge they faced, and what they learned from it.</text>
+    </textTemplates>
+</Flow>

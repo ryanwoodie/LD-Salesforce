@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <description>Updates the Donation Opp Class to match the respective Registration Class - With Designation</description>
+    <interviewLabel>Update Class Donation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Class Donation</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Registration_Query</name>
+        <label>Registration Query</label>
+        <locationX>552</locationX>
+        <locationY>215</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Opp_Update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RegID</elementReference>
+            </value>
+        </filters>
+        <object>Registration__c</object>
+        <outputAssignments>
+            <assignToReference>VolName</assignToReference>
+            <field>Contact_Name__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Class</assignToReference>
+            <field>class__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Opp_Update</name>
+        <label>Opp Update</label>
+        <locationX>610</locationX>
+        <locationY>326</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OppID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Class__c</field>
+            <value>
+                <elementReference>Class</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Designation__c</field>
+            <value>
+                <stringValue>{!VolName}&apos;s Fundraiser</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <startElementReference>Registration_Query</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>Class</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>OppID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>RegID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>VolName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

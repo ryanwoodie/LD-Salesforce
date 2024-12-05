@@ -264,3 +264,8 @@ sf data query --query "SELECT Id, Name, DeveloperName FROM Folder" --target-org 
 SELECT Id, Name, DeveloperName FROM EmailTemplate WHERE FolderName = 'unfiled$public'
 
 SELECT Id, Name, DeveloperName FROM Folder WHERE DeveloperName = 'unfiled$public'
+
+
+SELECT Id, Subject, FromAddress, ToAddress, CreatedDate
+FROM EmailMessage
+WHERE CreatedDate = LAST_N_DAYS:30 AND FromAddress = 'tyler@livedifferent.com'

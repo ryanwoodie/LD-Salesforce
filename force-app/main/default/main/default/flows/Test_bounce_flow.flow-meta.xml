@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_2_of_Copy_2_of_Copy_2_of_Parent_Email</name>
+        <label>Copy 2 of Copy 2 of Copy 2 of Parent_Email</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Parent_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>{!$Record.Contact.Owner.Email}{!$Record.Lead.Owner:User.Email}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue> re: bounce test Builds draw approval for {!$Record.FirstName}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>test bounce {!email_bounce_check}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Copy_2_of_Parent_Email</name>
+        <label>Copy 2 of Copy 2 of Parent_Email</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Parent_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>{!$Record.Contact.Owner.Email}{!$Record.Lead.Owner:User.Email}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue> re: 2min bounce test Builds draw approval for {!$Record.FirstName}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>test bounce {!email_bounce_check}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <stringValue>{!$Record.Lead.Id}{!$Record.Contact.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <elementReference>is_bounce</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>draw_date_text</name>
+        <dataType>String</dataType>
+        <expression>CASE(MONTH({!$Record.Draw_date_time__c}),
+1, &quot;January&quot;,
+2, &quot;February&quot;,
+3, &quot;March&quot;,
+4, &quot;April&quot;,
+5, &quot;May&quot;,
+6, &quot;June&quot;,
+7, &quot;July&quot;,
+8, &quot;August&quot;,
+9, &quot;September&quot;,
+10, &quot;October&quot;,
+11, &quot;November&quot;,
+12, &quot;December&quot;, &quot;Unknown&quot;) 
+&amp; &quot; &quot; &amp; 
+TEXT(DAY({!$Record.Draw_date_time__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>dripsentplus1</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Drips_Sent__c}+1</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>email_bounce_check</name>
+        <dataType>String</dataType>
+        <expression>if(
+OR( 
+    ISNULL({!$Record.Lead.EmailBouncedDate}),
+    ISNULL({!$Record.Contact.EmailBouncedDate})
+),
+&quot;&quot;,
+{!$Record.Email}
+    )</expression>
+    </formulas>
+    <formulas>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <expression>if(ISBLANK({!$Record.Lead.Id}),{!$Record.Contact.Owner.Id},{!$Record.Lead.Owner:User.Id})</expression>
+    </formulas>
+    <formulas>
+        <name>is_bounce</name>
+        <dataType>Boolean</dataType>
+        <expression>if(isblank({!$Record.Lead.EmailBouncedDate}),TRUE,FALSE)</expression>
+    </formulas>
+    <formulas>
+        <name>LastModified_plus_2mins</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.LastModifiedDate}+(2/1440)</expression>
+    </formulas>
+    <interviewLabel>Test bounce flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Test bounce flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Copy_2_of_Copy_2_of_Parent_Email</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FirstName</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>Test</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Drip stopped</stringValue>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X10_mins</name>
+            <label>1 hour</label>
+            <offsetNumber>60</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>X12_hours_before</name>
+            <connector>
+                <targetReference>Copy_2_of_Copy_2_of_Copy_2_of_Parent_Email</targetReference>
+            </connector>
+            <label>12 hours before draw</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>X12_hours_after_draw</name>
+            <label>12 hours after draw</label>
+            <offsetNumber>993</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>Draw_date_time__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>Build_email_1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;I hope you enjoyed the LiveDifferent assembly you just had at {!$Record.CompanyOrAccount}!&lt;/p&gt;
+
+&lt;p&gt;Thank you for your interest in the Builds draw for $500 toward a Builds trip&amp;mdash;a &lt;span style=&quot;color: #222222;&quot;&gt;9-day journey to &lt;/span&gt;&lt;a href=&quot;https://livedifferent.com/programs/builds/where-we-build/mexico/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mexico&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;color: #222222;&quot;&gt; or the &lt;/span&gt;&lt;a href=&quot;https://livedifferent.com/programs/builds/where-we-build/dominican-republic/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Dominican Republic&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;color: #222222;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color: #222222;&quot;&gt;that&amp;#39;s all about pursuing your passions, making a difference in the lives of others, and creating memories that last a lifetime.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;To finalize your entry to the draw please click &lt;a href=&quot;https://www.tfaforms.com/forms/view/5105294?tfa_2={!$Record.Email}&amp;tfa_13= {!$Record.Email}&amp;tfa_14={!$Record.CompanyOrAccount}&quot;&gt;&lt;strong&gt;HERE!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We will be making the draw on {!draw_date_text}.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #222222;&quot;&gt;Stay curious,&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #222222;&quot;&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName}🚀&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>builds_email_2_reminder</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi!&lt;/p&gt;
+
+&lt;p&gt;I wanted to remind you that the Builds draw for a $500 bursary for a student at {!$Record.CompanyOrAccount} will be happening on {!draw_date_text}&lt;/p&gt;
+&lt;p&gt;To finalize your entry to the draw please click &lt;a href=&quot;https://www.tfaforms.com/forms/view/5105294?tfa_2={!$Record.Email}&amp;tfa_13= {!$Record.Email}&amp;tfa_14={!$Record.CompanyOrAccount}&quot;&gt;&lt;strong&gt;HERE!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks,&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName}🚀&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Parent_Email_1_no_draw</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello {!$Record.Parent_First_Name__c},&lt;/p&gt;&lt;p&gt;This is {!88231c31-14fb-47f8-8736-46989afc00a6.FirstName} from LiveDifferent - a Canadian youth charity. {!$Record.FirstName} has entered a draw for a $500 bursary to a LiveDifferent Build.&lt;/p&gt;&lt;p&gt;Builds are life-changing ~9-day trips for students to the Dominican Republic or Mexico where they join in building a house with a family in need. While volunteering on a Build, students experience personal growth, create meaningful connections with each other and the local community members, and learn about new cultures, all in a welcoming, safe environment.&lt;/p&gt;&lt;p&gt;Learn more about Builds &lt;a href=&quot;https://livedifferent.com/programs/builds/parents&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;To ensure that the bursary is more likely to go to a student who will be able to use it, we are requesting parent/guardian approval.&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;&lt;a href=&quot;
+https://www.tfaforms.com/forms/view/5105297?tfa_1={!$Record.FirstName}&amp;tfa_7={!$Record.LastName}&amp;tfa_3={!$Record.Parent_First_Name__c}&amp;tfa_10={!$Record.Parent_Email__c}&amp;tfa_11={!$Record.Id}&quot;&gt;HERE&lt;/a&gt; to approve {!$Record.FirstName} to enter the draw.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Please feel free to reach out if you have any questions!&lt;/p&gt;&lt;p&gt;{!88231c31-14fb-47f8-8736-46989afc00a6.FirstName} {!88231c31-14fb-47f8-8736-46989afc00a6.LastName}&lt;br&gt;LiveDifferent&lt;br&gt;1-866-432-4464&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Parent_Email_2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Parent_First_Name__c},&lt;/p&gt;&lt;p&gt;I thought I&apos;d send a quick reminder about the Builds draw happening tomorrow.&lt;/p&gt;&lt;p&gt;If you aren&apos;t interested, no problem! But just incase you forgot,&lt;strong&gt;&lt;a href=&quot;
+https://www.tfaforms.com/forms/view/5105297?tfa_1={!$Record.FirstName}&amp;tfa_7={!$Record.LastName}&amp;tfa_3={!$Record.Parent_First_Name__c}&amp;tfa_10={!$Record.Parent_Email__c}&amp;tfa_11={!$Record.Id}&quot;&gt;HERE&lt;/a&gt; is the link again to approve {!$Record.FirstName} to enter the draw&lt;/strong&gt; for the five hundred dollar bursary for a Builds trip.&lt;/p&gt;&lt;p&gt;Let me know if you have any questions!&lt;/p&gt;&lt;p&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName} {!$Record.Lead.Owner:User.LastName}{!$Record.Contact.Owner.LastName}&lt;br&gt;LiveDifferent&lt;br&gt;1-866-432-4464&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Parent_Email_3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Parent_First_Name__c} and {!$Record.FirstName},&lt;/p&gt;&lt;p&gt;This is Jenn Quong here, I’m the Director of International Programming for LiveDifferent, and I have an update about the Builds bursary that {!$Record.FirstName} applied for:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Unfortunately, we didn’t draw {!$Record.FirstName} specifically for the {!$Record.CompanyOrAccount} bursary.&lt;/li&gt;&lt;li&gt;Fortunately, we&lt;strong&gt; presently have a few unclaimed $500 bursaries,&lt;/strong&gt; available&lt;strong&gt; &lt;/strong&gt;on a first-come, first-served basis for public trips.&lt;/li&gt;&lt;li&gt;Even better: Recognizing the impact of shared experiences, &lt;strong&gt;we&apos;re also offering these first-come first-served bursaries&lt;/strong&gt;for a friend, parent, or family member to join the Build as well.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;I’m a parent of two teenagers myself, so I understand that, if you have never done a trip like this before, it could seem a bit intimidating!&lt;/p&gt;&lt;p&gt;As a former school principal, however, I know just how life-changing and enriching these Build trips are for youth. I’d love to be able to provide any support or reassurance that you might need to make it a reality. Feel free to grab a time in my &lt;a target=&quot;_blank&quot; href=&quot;https://calendar.app.google/1b8CD8PCTrH5EPoX7&quot;&gt;&lt;span style=&quot;color:rgb(17, 85, 204);&quot;&gt;calendar&lt;/span&gt;&lt;/a&gt;, or here is my cell phone number: 905-802-7880. I’m happy to answer any questions that either of you might have.&lt;/p&gt;&lt;p&gt;And, when you are ready, here&apos;s how to proceed:&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Choose an upcoming public Build &lt;a target=&quot;_blank&quot; href=&quot;https://livedifferent.com/programs/builds/all-builds/&quot;&gt;&lt;span style=&quot;color:rgb(17, 85, 204);&quot;&gt;here&lt;/span&gt;&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;Register, and then let me know via email or txt. I&apos;ll ensure your bursary is applied.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best Regards,&lt;/p&gt;&lt;p&gt;Jenn Quong&lt;/p&gt;
+&lt;br&gt;
+       &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; 
+           style=&quot;&quot; id=&quot;zs-output-sig&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+              
+            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td width=&quot;50&quot; style=&quot;vertical-align:top;border-collapse:collapse;line-height:0px;&quot;&gt;
+
+                    
+                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                      &lt;tbody&gt;
+                        &lt;tr&gt;
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                            &lt;img height=&quot;50&quot; width=&quot;50&quot; alt=&quot;&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2020/01/JennQ-Circle-2.png&quot;&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;10&quot; style=&quot;border-collapse:collapse;padding-right: 10px;width: 10px;&quot;&gt;
+                  &lt;/td&gt;
+                  
+                  &lt;td&gt;
+                    
+                    &lt;!--Removed Code--&gt;
+                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                      &lt;tbody&gt;
+                        &lt;tr&gt;
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                            
+                            &lt;!--Removed Code--&gt;
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                              &lt;tbody&gt;
+                                &lt;tr&gt;
+                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                    
+                                    &lt;!--Removed Code--&gt;
+                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                                      &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-bottom:2px;height:3px;&quot;&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        
+                                        &lt;tr&gt;
+                                          
+                                          &lt;!--Removed Code--&gt;
+                                                                                    
+                                          
+                                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                            &lt;span style=&quot;font-family: effra,&apos;Montserrat&apos;, Helvetica, sans-serif; font-weight:700; font-style:normal; font-size:19.0px; letter-spacing:-0.01em; line-height:19px; color:#212121; display:inline;&quot;&gt;Jennifer Quong&lt;/span&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                          
+                                          &lt;!--Removed Code--&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                            &lt;span style=&quot;font-family: effra,&apos;Montserrat&apos;, Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;&quot;&gt;Director of International Programming&lt;/span&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-bottom:3px;height:12px;&quot;&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                      &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt;
+                            &lt;/table&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+
+                        
+                        &lt;tr&gt;
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                            
+                            
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                              &lt;tbody&gt;
+                                &lt;tr&gt;
+                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                    
+                                    
+                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                                      &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                          &lt;td style=&quot;font-family: effra,&apos;Montserrat&apos;, Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;&quot;&gt;
+                                             
+                                            &lt;span style=&quot;font-weight:700;&quot;&gt;P&lt;/span&gt; 
+                                            &lt;span&gt;866 432 4464&amp;nbsp;&lt;/span&gt;
+                                            &lt;span style=&quot;font-weight:700;&quot;&gt;M&lt;/span&gt; 
+                                            &lt;span&gt;905 802 7880&amp;nbsp;&lt;/span&gt;
+                                            
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        
+                                      &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt;
+                            &lt;/table&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;                        
+                        &lt;tr&gt;
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                            
+        
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+                              &lt;tbody&gt;
+                                &lt;tr&gt;
+                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                    
+                                 
+                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                                      &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;font-family: effra,&apos;Montserrat&apos;, Helvetica, sans-serif; font-weight:400; font-style:normal; font-size:13px; letter-spacing:0.02em; line-height:16px; color:#212121; display:inline;&quot;&gt;
+                                             
+                                            &lt;span style=&quot;font-weight:700;&quot;&gt;W&lt;/span&gt; 
+                                            &lt;span&gt;&lt;a href=&quot;https://livedifferent.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;text-decoration:none !important;color:#212121&quot;&gt;LiveDifferent.com&lt;/a&gt;&lt;/span&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-bottom:12px;height:3px;&quot;&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                       
+                                        
+                                      &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt;
+                            &lt;/table&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                        
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+                
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;border-collapse:collapse;padding-bottom:8px;height:8px;&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+       
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+  
+  
+  &lt;body&gt;
+
+    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; 
+           style=&quot;&quot; id=&quot;zs-output-sig&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+              
+            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;&quot;&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td width=&quot;50&quot; style=&quot;vertical-align:top;&quot;&gt;
+
+               
+                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                      &lt;tbody&gt;
+                        &lt;tr&gt;
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                            &lt;img height=&quot;50&quot; width=&quot;50&quot; alt=&quot;&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2020/01/LD-Logo-2020-SML-b.png&quot;&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;10&quot; style=&quot;border-collapse:collapse;padding-right: 10px;width: 10px;&quot;&gt;
+                  &lt;/td&gt;
+                  
+                  &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                    
+                 
+                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+                      &lt;tbody&gt;
+                        
+                        &lt;tr&gt; 
+                          &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                              &lt;tbody&gt; 
+                                &lt;tr&gt; 
+                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                      &lt;tbody&gt; 
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;collapse;&quot;&gt; 
+                                            &lt;span style=&quot;font-family: effra,&apos;Montserrat&apos;, Helvetica, sans-serif; font-weight:700; font-style:normal; font-size:15.5px; letter-spacing:-0.01em; line-height:16px; color:#212121; display:inline;&quot;&gt;LiveDifferent&lt;/span&gt; 
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                              &lt;tbody&gt; 
+                                                &lt;tr&gt; 
+                                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                                      &lt;tbody&gt; 
+                                                        &lt;tr&gt; 
+                                                          &lt;td style=&quot;font-family:effra,&apos;Montserrat&apos;,Helvetica,sans-serif;font-weight:400;font-style:normal;font-size:13px;letter-spacing:0.02em;line-height:16px;color:#212121;display:inline&quot;&gt; 
+                                                            &lt;span&gt;Keep up with the latest&lt;/span&gt; 
+                                                          &lt;/td&gt;
+                                                            
+                                                          &lt;/tr&gt;
+                                                            
+                                                          &lt;/tbody&gt; 
+                                                    &lt;/table&gt; 
+                                                  &lt;/td&gt;
+                                                    
+                                                  &lt;/tr&gt;
+                                                    
+                                                  &lt;/tbody&gt; 
+                                            &lt;/table&gt; 
+                                          &lt;/td&gt;
+                                            
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                              &lt;tbody&gt; 
+                                                &lt;tr&gt; 
+                                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                                      &lt;tbody&gt; 
+                                                        &lt;tr&gt; 
+                                                          &lt;td style=&quot;font-family:effra,&apos;Montserrat&apos;,Helvetica,sans-serif;font-weight:400;font-style:normal;font-size:13px;letter-spacing:0.02em;line-height:16px;color:#212121;display:inline&quot;&gt; 
+                                                            &lt;span&gt;&lt;a href=&quot;https://mc.livedifferent.com/news-signup?_ga=2.65494318.1815262546.1604961458-944464604.1579100700&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;color:#212121&quot;&gt;Sign up for our newsletter&lt;/a&gt;&lt;/span&gt; 
+                                                          &lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                      &lt;/tbody&gt; 
+                                                    &lt;/table&gt; 
+                                                  &lt;/td&gt;
+                                                &lt;/tr&gt;
+                                              &lt;/tbody&gt; 
+                                            &lt;/table&gt; 
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;padding-bottom:12px;height:3px&quot;&gt; 
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                              &lt;tbody&gt; 
+                                                &lt;tr&gt; 
+                                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px&quot;&gt; 
+                                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt; 
+                                                      &lt;tbody&gt; 
+                                                        &lt;tr&gt; 
+                                                          &lt;td style=&quot;font-family:effra,&apos;Montserrat&apos;,Helvetica,sans-serif;font-weight:400;font-style:normal;font-size:13px;letter-spacing:0.02em;line-height:16px;color:#212121;display:inline&quot;&gt; 
+                                                            &lt;span&gt;Life is about people.&lt;/span&gt; 
+                                                          &lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                      &lt;/tbody&gt; 
+                                                    &lt;/table&gt; 
+                                                  &lt;/td&gt;
+                                                &lt;/tr&gt;
+                                              &lt;/tbody&gt; 
+                                            &lt;/table&gt; 
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt; 
+                                          &lt;td style=&quot;border-collapse:collapse;padding-bottom:12px;height:3px&quot;&gt; 
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                      &lt;/tbody&gt; 
+                                    &lt;/table&gt; 
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt; 
+                            &lt;/table&gt; 
+                          &lt;/td&gt;
+                        &lt;/tr&gt;                        
+                        &lt;tr&gt;
+                          &lt;td&gt;
+                      
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+                              &lt;tbody&gt;
+                                &lt;tr&gt;
+                                  &lt;td style=&quot;border-collapse:collapse;line-height:0px;&quot;&gt;
+                                    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+                                      &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                          &lt;td&gt;
+                                            &lt;a style=&quot;font-size: 0px; line-height: 0px;&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;https://www.instagram.com/livediff/&quot;&gt;
+                                            &lt;img height=&quot;17&quot; width=&quot;17&quot; alt=&quot;instagram&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2019/06/LD-Social-Icons-v3_1_instagram-03.png&quot;&gt;
+                                            &lt;/a&gt;
+                                          &lt;/td&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-right:4px;width:4px;&quot;&gt;
+                                          &lt;/td&gt;
+                                          &lt;td&gt;
+                                            &lt;a style=&quot;font-size: 0px; line-height: 0px;&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;https://www.facebook.com/livediff&quot;&gt;
+                                            &lt;img height=&quot;17&quot; width=&quot;17&quot; alt=&quot;facebook&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2019/06/ld-sig-social-icons-v1_1-_facebook.png&quot;&gt;
+                                            &lt;/a&gt;
+                                          &lt;/td&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-right:4px;width:4px;&quot;&gt;
+                                          &lt;/td&gt;
+                                          &lt;td&gt;
+                                            &lt;a style=&quot;font-size: 0px; line-height: 0px;&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;https://twitter.com/livediff&quot;&gt;
+                                            &lt;img height=&quot;17&quot; width=&quot;17&quot; alt=&quot;twitter&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2019/06/ld-sig-social-icons-v1_1-_twitter.png&quot;&gt;
+                                            &lt;/a&gt;
+                                          &lt;/td&gt;
+                                          &lt;td style=&quot;border-collapse:collapse;padding-right:4px;width:4px;&quot;&gt;
+                                            
+                                          &lt;/td&gt;
+                                          &lt;td&gt;
+                                            &lt;a style=&quot;font-size:0px; line-height:0px;&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;https://www.youtube.com/user/Livedifferent&quot;&gt;
+                                            &lt;img height=&quot;17&quot; width=&quot;17&quot; alt=&quot;youtube&quot; border=&quot;0&quot; src=&quot;https://livedifferent.com/wp-content/uploads/2019/06/ld-sig-social-icons-v1_1-_youtube.png&quot;&gt;
+                                            &lt;/a&gt;
+                                          &lt;/td&gt;
+                                          &lt;td&gt;
+                                          &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                      &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                  &lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt;
+                            &lt;/table&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;border-collapse:collapse;padding-bottom:8px;height:8px;&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+       
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+       
+      &lt;/tbody&gt;
+    &lt;/table&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ParentEmail</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello {!$Record.Parent_First_Name__c},&lt;/p&gt;&lt;p&gt;This is {!88231c31-14fb-47f8-8736-46989afc00a6.FirstName} from LiveDifferent - a Canadian youth charity (we just visited {!$Record.CompanyOrAccount}). {!$Record.FirstName} has entered a draw for a $500 bursary to a LiveDifferent Build.&lt;/p&gt;&lt;p&gt;Builds are life-changing ~9-day trips for students to the Dominican Republic or Mexico where they join in building a house with a family in need. While volunteering on a Build, students experience personal growth, create meaningful connections with each other and the local community members, and learn about new cultures, all in a welcoming, safe environment.&lt;/p&gt;&lt;p&gt;Learn more about Builds &lt;a href=&quot;https://livedifferent.com/programs/builds/parents&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;To ensure that the bursary is more likely to go to a student who will be able to use it, we are requesting parent/guardian approval.&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;&lt;a href=&quot;
+https://www.tfaforms.com/forms/view/5105297?tfa_1={!$Record.FirstName}&amp;tfa_7={!$Record.LastName}&amp;tfa_3={!$Record.Parent_First_Name__c}&amp;tfa_10={!$Record.Parent_Email__c}&amp;tfa_11={!$Record.Id}&quot;&gt;HERE&lt;/a&gt; to approve {!$Record.FirstName} to enter the draw.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The draw will take place on {!draw_date_text}, and we will be in contact if {!$Record.FirstName} is selected.&lt;/p&gt;&lt;p&gt;Please feel free to reach out if you have any questions!&lt;/p&gt;&lt;p&gt;{!88231c31-14fb-47f8-8736-46989afc00a6.FirstName} {!88231c31-14fb-47f8-8736-46989afc00a6.LastName}&lt;br&gt;LiveDifferent&lt;br&gt;1-866-432-4464&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

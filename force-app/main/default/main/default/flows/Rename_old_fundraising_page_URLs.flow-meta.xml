@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>update_page_title</name>
+        <label>update page title</label>
+        <locationX>264</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>rename_old_Fundraising_Pages.Fundraising_Page_Title__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!rename_old_Fundraising_Pages.Fundraising_Page_Title__c}: {!rename_old_Fundraising_Pages.Event__r.Name}</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>rename_old_Fundraising_Pages</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Rename old fundraising page URLs {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Rename old fundraising page URLs on Registrations</label>
+    <loops>
+        <name>rename_old_Fundraising_Pages</name>
+        <label>rename old Fundraising Pages</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <collectionReference>get_other_registrations</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>update_page_title</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_other_registrations</name>
+        <label>get other registrations</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>rename_old_Fundraising_Pages</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>C_Url__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.C_Url__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Registration__c</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>get_other_registrations</targetReference>
+        </connector>
+        <filterFormula>OR(
+   ISNEW(), 
+   ISCHANGED({!$Record.Fundraising_Page_Title__c}) 
+)</filterFormula>
+        <object>Registration__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

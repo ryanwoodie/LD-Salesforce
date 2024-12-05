@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_1_of_opp_to_makw</name>
+        <label>Copy 1 of opp to makw</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Opp_to_Make_com</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Opportunity.Opp_to_Make_com</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_post_pres_survey_link</name>
+        <label>Copy 1 of post pres survey link</label>
+        <locationX>1370</locationX>
+        <locationY>900</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>builds_draw</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>team2@livedifferent.com,brittany@livedifferent.com,devina@livedifferent.com,ryan@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>johnny@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Post-presentation report for {!$Record.Account.Name}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>postpressurvey</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_opp_id</name>
+        <label>Copy 2 of opp_id</label>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Opp_Info_to_Make_com</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Opportunity.Opp_Info_to_Make_com</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_post_pres_survey_link</name>
+        <label>Copy 2 of post pres survey link</label>
+        <locationX>1634</locationX>
+        <locationY>900</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>builds_draw</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>johnny@livedifferent.com,ryan@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>johnny@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Keynote post-presentation report for {!$Record.Account.Name}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>postpressurvey</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>opp_id</name>
+        <label>opp_id</label>
+        <locationX>1370</locationX>
+        <locationY>1200</locationY>
+        <actionName>Opportunity.Opp_Info_to_Make_com</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Opportunity.Opp_Info_to_Make_com</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>opp_to_makw</name>
+        <label>opp to makw</label>
+        <locationX>2338</locationX>
+        <locationY>384</locationY>
+        <actionName>Opportunity.Opp_to_Make_com</actionName>
+        <actionType>outboundMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Opportunity.Opp_to_Make_com</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>post_pres_survey_link</name>
+        <label>post pres survey link</label>
+        <locationX>1106</locationX>
+        <locationY>900</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>builds_draw</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>team1@livedifferent.com,rhiannon@livedifferent.com,devina@livedifferent.com,ryan@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>johnny@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Post-presentation report for {!$Record.Account.Name}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>postpressurvey</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Assignment_1</name>
+        <label>Assignment 1</label>
+        <locationX>1590</locationX>
+        <locationY>600</locationY>
+        <assignmentItems>
+            <assignToReference>listofPMCs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&lt;tr&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!Loop.Start_Date__c}&lt;/td&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;&lt;a href=&quot;https://livedifferent.lightning.force.com/{!Loop.Id}&quot;&gt;{!Loop.Name}&lt;/a&gt;&lt;/td&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!Loop.Program_Activity_Type__c}&lt;/td&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!Loop.Program_Details__c}&lt;/td&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!Loop.Attendance__c}&lt;/td&gt;     &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;         &lt;a href=&quot;https://www.tfaforms.com/forms/view/5115081?tfa_21={!$Record.Name}&amp;tfa_4={!Loop.Name}&amp;tfa_10={!Loop.Program_Activity_Type__c}&amp;tfa_20={!Loop.Program_Details__c}&amp;tfa_1={!Loop.Attendance__c}&amp;tfa_22={!Loop.Id}&amp;tfa_3={!Loop.Opportunity__c}&amp;tfa_2={!Loop.Time_spent_delivering_program__c}&quot; target=&quot;_blank&quot;&gt;Update&lt;/a&gt;     &lt;/td&gt; &lt;/tr&gt;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>builds_draw</name>
+        <label>builds draw</label>
+        <locationX>1502</locationX>
+        <locationY>1092</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>has_builds</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Builds_Draw__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Declinedasdfa</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>opp_id</targetReference>
+            </connector>
+            <label>has builds draw (turned off Oct 31 2024)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>STOPPED make.com scenario also stopped</description>
+        <name>Copy_1_of_today</name>
+        <label>Copy 1 of today (TURNED OFF AUG 30 2024)</label>
+        <locationX>2470</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_today_opp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Builds_Draw__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Applicable</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Builds_Draw__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Declined</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>lastmodifiedplus2mins</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDateTime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Api.Enterprise_Server_URL_100</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>dud condition to stop flow</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>opp_to_makw</targetReference>
+            </connector>
+            <label>Copy 1 of today_opp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>today</name>
+        <label>today</label>
+        <locationX>1788</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>today_opp</name>
+            <conditionLogic>(1 AND 2 AND 3) or 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoice_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.AVSFQB__Generate_Object__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Webhook</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>lastmodifiedplus2mins</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDateTime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Name</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Test</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Program_Activities</targetReference>
+            </connector>
+            <label>today_opp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>webhook</name>
+        <label>webhook</label>
+        <locationX>446</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>trigger_draw</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Description</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>trigger_draw</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_opp_to_makw</targetReference>
+            </connector>
+            <label>trigger draw</label>
+        </rules>
+        <rules>
+            <name>triggered_with_webhook</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Description</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>trigger_menti</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_opp_id</targetReference>
+            </connector>
+            <label>triggered with webhook</label>
+        </rules>
+        <rules>
+            <name>test</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Name</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Test</stringValue>
+                </rightValue>
+            </conditions>
+            <label>test</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>which_team</name>
+        <label>which team</label>
+        <locationX>1502</locationX>
+        <locationY>792</locationY>
+        <defaultConnector>
+            <targetReference>builds_draw</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>team_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>-Team 1</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>post_pres_survey_link</targetReference>
+            </connector>
+            <label>team 1</label>
+        </rules>
+        <rules>
+            <name>team_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>-Team 2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_post_pres_survey_link</targetReference>
+            </connector>
+            <label>team 2</label>
+        </rules>
+        <rules>
+            <name>keynote</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Keynote - Johnny</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_post_pres_survey_link</targetReference>
+            </connector>
+            <label>keynote</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>lastmodifiedplus2mins</name>
+        <dataType>DateTime</dataType>
+        <expression>({!$Record.LastModifiedDate}+2/1440)</expression>
+    </formulas>
+    <formulas>
+        <name>PostShowForm</name>
+        <dataType>String</dataType>
+        <expression>&quot;http://www.tfaforms.com/306088?tfa_12=&quot; + URLENCODE({!$Record.Account.Name}) + 
+&quot;&amp;tfa_13=&quot; + URLENCODE({!$Record.Name}) + 
+&quot;&amp;tfa_14=&quot; + URLENCODE(TEXT({!$Record.Account.Electrical_Power_at_Venue__c})) + 
+&quot;&amp;tfa_3=&quot; + URLENCODE({!$Record.Account.Venue_Electrical_Description__c}) + 
+&quot;&amp;tfa_4=&quot; + URLENCODE({!$Record.Account.Driving_Tips__c}) + 
+&quot;&amp;tfa_10=&quot; + URLENCODE({!$Record.Id}) + 
+&quot;&amp;tfa_11=&quot; + URLENCODE({!$Record.Account.Id}) + 
+&quot;&amp;tfa_30=&quot; + URLENCODE(TEXT({!$Record.Amount_Due__c})) + 
+&quot;&amp;tfa_29=&quot; + URLENCODE(TEXT({!$Record.School_Donation_Timeline__c})) + 
+&quot;&amp;tfa_23=&quot; + URLENCODE({!$Record.Account.Venue_Load_In_Description__c}) + 
+&quot;&amp;tfa_37=&quot; + URLENCODE(TEXT({!$Record.Think_Fast_of_participants__c})) +  
+&quot;&amp;tfa_38=&quot; + URLENCODE(TEXT({!$Record.Class__c}))</expression>
+    </formulas>
+    <interviewLabel>Opp ID to Make.com {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Circles Assembly and Keynote: 4pm day of presentation post report</label>
+    <loops>
+        <name>Loop</name>
+        <label>Loop</label>
+        <locationX>1502</locationX>
+        <locationY>492</locationY>
+        <collectionReference>get_Program_Activities</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assignment_1</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>which_team</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Program_Activities</name>
+        <label>get Program Activities</label>
+        <locationX>1502</locationX>
+        <locationY>384</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Program_Activity__c</object>
+        <sortField>Start_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>1332</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>webhook</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>(((1 OR 5) AND 2) or 3) and 4</filterLogic>
+        <filters>
+            <field>Presentation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>In-Person Assembly</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Probability</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>90.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AVSFQB__Generate_Object__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Webhook</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AVSFQB__Generate_Object__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>None</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Presentation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Keynote</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X4pm_day_of_pres</name>
+            <connector>
+                <targetReference>today</targetReference>
+            </connector>
+            <label>4pm day of pres</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Send_Date_TimeZone__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>X7_days_after</name>
+            <connector>
+                <targetReference>Copy_1_of_today</targetReference>
+            </connector>
+            <label>7 days after</label>
+            <offsetNumber>170</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Send_Date_TimeZone__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>postpressurvey</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;a href=&quot;{!PostShowForm}&quot;&gt;Here&lt;/a&gt; is the post-presentation report.&lt;/p&gt;
+&lt;p&gt;Below is the list of program activities (assemblies, workshops, etc) presently recorded. Please add any missing assemblies or workshops when you complete the above report. If you need to change the details on one of the activities below, use the update links below (do not re-add them on the post-presentation report). This is very important for tracking and reporting the impact that LiveDifferent makes!&lt;/p&gt;
+ &lt;table style=&quot;border-collapse: collapse; width: 100%;&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Start Date&lt;/th&gt; 
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Program Activity Name&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Program Type&lt;/th&gt; 
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Program Details/Grades&lt;/th&gt; 
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Attendance&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Update Link&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+{!listofPMCs}
+    &lt;/tbody&gt;
+&lt;/table&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>listofPMCs</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

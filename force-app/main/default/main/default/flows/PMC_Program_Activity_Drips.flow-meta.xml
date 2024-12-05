@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_1_of_Copy_1_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 1 of Copy 1 of Copy 1 of Email_1_run1</label>
+        <locationX>3834</locationX>
+        <locationY>1008</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Are you running Circles again?</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_with_PMC_list</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 1 of Copy 1 of Email_1_run1</label>
+        <locationX>1106</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Checking in on your Peer Mentorship Curriculum{!run_number_suffix}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_2</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Copy_2_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 1 of Copy 2 of Copy 1 of Email_1_run1</label>
+        <locationX>2162</locationX>
+        <locationY>1008</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Quick reminder about your Peer Mentorship Curriculum{!run_number_suffix} report</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_4_reminder_1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Email_1_run1</name>
+        <label>Copy 1 of Email_1_run1</label>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Peer Mentorship Curriculum{!run_number_suffix}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Email_1_next_run</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Copy_1_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 2 of Copy 1 of Copy 1 of Email_1_run1</label>
+        <locationX>4362</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Start of your Peer Mentorship Curriculum{!run_number_suffix}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_1b_before_start</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 2 of Copy 1 of Email_1_run1</label>
+        <locationX>1634</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Wrapping up your Peer Mentorship Curriculum{!run_number_suffix} at {!$Record.Opportunity__r.Account.Account_Name_Formula__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_3</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Copy_2_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 2 of Copy 2 of Copy 1 of Email_1_run1</label>
+        <locationX>2954</locationX>
+        <locationY>492</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Don&apos;t forget your Leadership Certificates!{!run_number_suffix}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email_5_reminder_2</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_3_of_Copy_1_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 3 of Copy 1 of Copy 1 of Email_1_run1</label>
+        <locationX>4890</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Compassion Project examples</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Email_2a_Compassion_Project_Doc</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_3_of_Copy_1_of_Email_1_run1</name>
+        <label>Copy 3 of Copy 1 of Email_1_run1</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$Record.Owner__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Access your Circles Peer Mentorship Curriculum</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Email_1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>task_alert</name>
+        <label>task alert</label>
+        <locationX>2360</locationX>
+        <locationY>600</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Copy_1_of_Copy_1_of_not_past</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Opportunity__r.Owner.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Post-PMC check in call task assigned</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>https://livedifferent.lightning.force.com/{!task} </stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>add_loop</name>
+        <label>add loop</label>
+        <locationX>3922</locationX>
+        <locationY>816</locationY>
+        <assignmentItems>
+            <assignToReference>loop_count</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>add_rows</name>
+        <label>add rows</label>
+        <locationX>3922</locationX>
+        <locationY>708</locationY>
+        <assignmentItems>
+            <assignToReference>listofPMCs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue> &lt;tr&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop_count}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop.Start_Date__c}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop.End_date__c}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop.Circles_Adult_Leaders__c}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop.Circles_Youth_Leaders__c}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;{!loop.Circles_Youth_Participants__c}&lt;/td&gt;             &lt;td style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;&lt;a href=&quot;{!loop_FA_URL}&quot;&gt;Update&lt;/a&gt;&lt;/td&gt;         &lt;/tr&gt;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>add_loop</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <name>from_name</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Devina</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>check_if_more_PMCs</name>
+        <label>check if more PMCs</label>
+        <locationX>3966</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>more</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity__r.Multiple_PMCs__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_PA</targetReference>
+            </connector>
+            <label>more</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_check_if_more_PMCs</name>
+        <label>Copy 1 of check if more PMCs</label>
+        <locationX>2492</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Copy_1_of_not_past</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_more</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity__r.Multiple_PMCs__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Copy_2_of_PA.Name</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>task</targetReference>
+            </connector>
+            <label>Copy 1 of more</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Copy_1_of_Copy_1_of_not_past</name>
+        <label>Copy 1 of Copy 1 of Copy 1 of not_past</label>
+        <locationX>3284</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Copy_1_of_Copy_1_of_not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_no_report</targetReference>
+            </connector>
+            <label>Copy 1 of Copy 1 of Copy 1 of not_in_past</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Copy_1_of_not_past</name>
+        <label>Copy 1 of Copy 1 of not_past</label>
+        <locationX>2492</locationX>
+        <locationY>792</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Copy_1_of_not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>no_report</targetReference>
+            </connector>
+            <label>Copy 1 of Copy 1 of not_in_past</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_no_report</name>
+        <label>Copy 1 of no_report</label>
+        <locationX>3086</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_no_report_1</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Post_program_report__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Post_program_report__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Copy_2_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>Copy 1 of no_report_1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_not_past</name>
+        <label>Copy 1 of not_past</label>
+        <locationX>1766</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>Copy 1 of not_in_past</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_3_of_not_past</name>
+        <label>Copy 3 of not_past</label>
+        <locationX>4494</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_3_of_not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>CreatedDate_plus_2_weeks</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Copy_1_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>Copy 3 of not_in_past</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_4_of_not_past</name>
+        <label>Copy 4 of not_past</label>
+        <locationX>5022</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_4_of_not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_3_of_Copy_1_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>Copy 4 of not_in_past</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Next_PMCs</name>
+        <label>Next PMCs</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Next</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>multiple_PMCs</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>Next</label>
+        </rules>
+        <rules>
+            <name>not_in_past1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_3_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>not in past1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>no_report</name>
+        <label>no_report</label>
+        <locationX>2294</locationX>
+        <locationY>900</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>no_report_1</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Post_program_report__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Post_program_report__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_2_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>no_report_1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>not_past</name>
+        <label>not_past</label>
+        <locationX>1238</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>not_in_past</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>last_modified_date_plus_2</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_1_of_Email_1_run1</targetReference>
+            </connector>
+            <label>not_in_past</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>CreatedDate_plus_2_weeks</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.CreatedDate}+14</expression>
+    </formulas>
+    <formulas>
+        <name>FA_Workflow_URL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.tfaforms.com/workflows/start/6738?tfa_14=&quot; &amp; 
+{!$Record.Opportunity__r.Id} &amp; 
+&quot;&amp;tfa_16=&quot; &amp; {!$Record.Id} &amp; 
+&quot;&amp;tfa_1=&quot; &amp; URLENCODE({!$Record.Opportunity__r.Account.Name}) &amp; 
+&quot;&amp;tfa_3=&quot; &amp; TEXT({!$Record.Start_Date__c}) &amp; 
+&quot;&amp;tfa_5=&quot; &amp; TEXT({!$Record.End_Date__c}) &amp; 
+&quot;&amp;tfa_6=&quot; &amp; TEXT({!$Record.Circles_Adult_Leaders__c}) &amp; 
+&quot;&amp;tfa_8=&quot; &amp; TEXT({!$Record.Circles_Youth_Leaders__c}) &amp; 
+&quot;&amp;tfa_10=&quot; &amp; TEXT({!$Record.Circles_Youth_Participants__c}) &amp; 
+&quot;&amp;tfa_11=&quot; &amp;  URLENCODE({!$Record.Program_Details__c}) &amp; 
+&quot;&amp;tfa_13=&quot; &amp;  URLENCODE({!$Record.Compassion_Project_Description__c})</expression>
+    </formulas>
+    <formulas>
+        <name>FormAssemblyURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.tfaforms.com/forms/view/5105548?tfa_14=&quot; &amp; 
+{!$Record.Opportunity__r.Id} &amp; 
+&quot;&amp;tfa_16=&quot; &amp; {!$Record.Id} &amp; 
+&quot;&amp;tfa_1=&quot; &amp; URLENCODE({!$Record.Opportunity__r.Account.Name}) &amp; 
+&quot;&amp;tfa_3=&quot; &amp; TEXT({!$Record.Start_Date__c}) &amp; 
+&quot;&amp;tfa_5=&quot; &amp; TEXT({!$Record.End_Date__c}) &amp; 
+&quot;&amp;tfa_6=&quot; &amp; TEXT({!$Record.Circles_Adult_Leaders__c}) &amp; 
+&quot;&amp;tfa_8=&quot; &amp; TEXT({!$Record.Circles_Youth_Leaders__c}) &amp; 
+&quot;&amp;tfa_10=&quot; &amp; TEXT({!$Record.Circles_Youth_Participants__c}) &amp; 
+&quot;&amp;tfa_11=&quot; &amp;  URLENCODE({!$Record.Program_Details__c}) &amp; 
+&quot;&amp;tfa_13=&quot; &amp;  URLENCODE({!$Record.Compassion_Project_Description__c})</expression>
+    </formulas>
+    <formulas>
+        <name>FormAssemblyURL_new_PA</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.tfaforms.com/forms/view/5105548?tfa_14=&quot;&amp; {!$Record.Opportunity__r.Id}&amp;&quot;&amp;tfa_1=&quot;&amp;  {!$Record.Opportunity__r.Account.Name}</expression>
+    </formulas>
+    <formulas>
+        <name>last_modified_date_plus_2</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.LastModifiedDate} + (2/1440)</expression>
+    </formulas>
+    <formulas>
+        <name>loop_FA_URL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.tfaforms.com/forms/view/5105548?tfa_14=&quot; &amp; 
+{!loop.Opportunity__r.Id} &amp; 
+&quot;&amp;tfa_16=&quot; &amp; {!loop.Id} &amp; 
+&quot;&amp;tfa_1=&quot; &amp; URLENCODE({!loop.Opportunity__r.Account.Name}) &amp; 
+&quot;&amp;tfa_3=&quot; &amp; TEXT({!loop.Start_Date__c}) &amp; 
+&quot;&amp;tfa_5=&quot; &amp; TEXT({!loop.End_date__c}) &amp; 
+&quot;&amp;tfa_6=&quot; &amp; TEXT({!loop.Circles_Adult_Leaders__c}) &amp; 
+&quot;&amp;tfa_8=&quot; &amp; TEXT({!loop.Circles_Youth_Leaders__c}) &amp; 
+&quot;&amp;tfa_10=&quot; &amp; TEXT({!loop.Circles_Youth_Participants__c}) &amp; 
+&quot;&amp;tfa_11=&quot; &amp;  URLENCODE({!loop.Program_Details__c}) &amp; 
+&quot;&amp;tfa_13=&quot; &amp;  URLENCODE({!loop.Compassion_Project_Description__c})</expression>
+    </formulas>
+    <formulas>
+        <name>More_runs_not_logged</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+{!$Record.Opportunity__r.Multiple_PMCs__c},
+VALUE(RIGHT({!$Record.Name}, 1)) == VALUE(RIGHT({!PA.Name}, 1))
+)</expression>
+    </formulas>
+    <formulas>
+        <name>multiple_PMCs</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+    ISNUMBER(RIGHT({!$Record.Name}, 1)),
+    VALUE(RIGHT({!$Record.Name}, 1)) &gt;= 2
+)</expression>
+    </formulas>
+    <formulas>
+        <name>post_program_report_complete</name>
+        <dataType>Boolean</dataType>
+        <expression>not(isnull({!$Record.Post_program_report__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>run_number</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+    ISNUMBER(RIGHT({!$Record.Name}, 1)),
+    VALUE(RIGHT({!$Record.Name}, 1)), NULL)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>run_number_suffix</name>
+        <dataType>String</dataType>
+        <expression>if({!multiple_PMCs},&quot; - run #&quot;&amp;text({!run_number}),&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>student_survey_url</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.tfaforms.com/forms/view/5107354?tfa_20=&quot;&amp;{!$Record.Opportunity__r.Id}&amp;&quot;&amp;tfa_22=&quot;&amp;{!$Record.Opportunity__r.Account.Name}&amp;&quot;&amp;tfa_24=&quot;&amp;{!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>PMC Program Activity Drips {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC Program Activity Drips</label>
+    <loops>
+        <name>loop</name>
+        <label>loop</label>
+        <locationX>3834</locationX>
+        <locationY>600</locationY>
+        <collectionReference>Copy_1_of_PA</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>add_rows</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Copy_1_of_Copy_1_of_Copy_1_of_Email_1_run1</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>task</name>
+        <label>task</label>
+        <locationX>2360</locationX>
+        <locationY>492</locationY>
+        <connector>
+            <targetReference>task_alert</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>post-program report complete:{!post_program_report_complete}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Owner__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Post-PMC Check in call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.Opportunity__r.Contact_Survey__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Copy_1_of_PA</name>
+        <label>Copy 1 of PA</label>
+        <locationX>3834</locationX>
+        <locationY>492</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>loop</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Program_Activity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Peer Mentorship Curriculum</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Program_Activity__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Copy_2_of_PA</name>
+        <label>Copy 2 of PA</label>
+        <locationX>2492</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_check_if_more_PMCs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Program_Activity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Peer Mentorship Curriculum</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Program_Activity__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>PA</name>
+        <label>PA</label>
+        <locationX>3966</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>check_if_more_PMCs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Program_Activity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Peer Mentorship Curriculum</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Program_Activity__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_Opp_status</name>
+        <label>update Opp status</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Contract Signed</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>PMC Registered</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunity__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>2410</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>update_Opp_status</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>PMC_Automation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Program_Activity__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>After_creation</name>
+            <connector>
+                <targetReference>Next_PMCs</targetReference>
+            </connector>
+            <label>After creation</label>
+            <offsetNumber>10</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Mid_Point</name>
+            <connector>
+                <targetReference>not_past</targetReference>
+            </connector>
+            <label>Mid Point</label>
+            <offsetNumber>12</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Mid_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Just_before_end</name>
+            <connector>
+                <targetReference>Copy_1_of_not_past</targetReference>
+            </connector>
+            <label>Just before end</label>
+            <offsetNumber>-12</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>End_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>reminder_1</name>
+            <connector>
+                <targetReference>Copy_2_of_PA</targetReference>
+            </connector>
+            <label>reminder 1</label>
+            <offsetNumber>180</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>End_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Reminder_2</name>
+            <connector>
+                <targetReference>Copy_1_of_Copy_1_of_Copy_1_of_not_past</targetReference>
+            </connector>
+            <label>Reminder 2</label>
+            <offsetNumber>348</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>End_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>just_after_end</name>
+            <connector>
+                <targetReference>PA</targetReference>
+            </connector>
+            <label>just after end</label>
+            <offsetNumber>60</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>End_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>before_start</name>
+            <connector>
+                <targetReference>Copy_3_of_not_past</targetReference>
+            </connector>
+            <label>before start</label>
+            <offsetNumber>-36</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Start_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>X1_week_after_start</name>
+            <connector>
+                <targetReference>Copy_4_of_not_past</targetReference>
+            </connector>
+            <label>1 week after start</label>
+            <offsetNumber>180</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Start_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Email_1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+&lt;p&gt;I&apos;m happy to hear that you are running the Peer Mentorship Curriculum at {!$Record.Opportunity__r.Account.Account_Name_Formula__c}!&lt;/p&gt;
+&lt;p&gt;Here is the link to the Circles Resource Page: &lt;a href=&quot;https://livedifferent.com/circles-resources&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://livedifferent.com/circles-resources&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;All the videos (including training videos), session guides, follow-up resources, and everything you may need is on there!&lt;/p&gt;
+&lt;h3&gt;Important - save this password&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Password: LDlicense3304Circles&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This password is used to access the &lt;a href=&quot;https://vimeo.com/showcase/circles&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;videos&lt;/a&gt; for each Circles episode, hosted on Vimeo.&lt;/p&gt;
+&lt;p&gt;In exchange for a pro-bono license for this program, what we ask of you is to share some updates so that we can track the impact the program is making (which is crucial for both funding and program improvement). We will send you &lt;a href=&quot;{!FormAssemblyURL}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;the form&lt;/a&gt; that you just filled out to update periodically. Additionally, at the end of each run of the Circles program, we send a short survey and ask for stories and photos/videos of your Compassion Project.&lt;/p&gt;
+&lt;p&gt;Warm Regards,&lt;/p&gt;
+&lt;p&gt;{!$Record.Owner__r.FirstName} {!$Record.Owner__r.LastName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Email_1_next_run</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+
+&lt;p&gt;Thanks for recording another run of the Peer Mentorship Curriculum! It&apos;s wonderful to see the program being utilized. If you have any questions or need support, please feel free to email or call me any time at {!$Record.Owner__r.Phone}.&lt;/p&gt;
+
+&lt;p&gt;Here is the link again to the Circles Resource Page: &lt;a href=&quot;https://livedifferent.com/circles-resources&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://livedifferent.com/circles-resources&lt;/a&gt; and the password: &lt;strong&gt;LDlicense3304Circles&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can use this to access the &lt;a href=&quot;https://vimeo.com/showcase/circles&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;videos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In exchange for a pro-bono license for this program, we ask that you share some updates so that we can track the program’s impact (which is crucial for both funding and program improvement). We will send you &lt;a href=&quot;{!FormAssemblyURL}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;the form&lt;/a&gt; that you just filled out to update periodically. Additionally, at the end of each run of the Circles program, we send a short survey and ask for stories and photos/videos of your Compassion Project.&lt;/p&gt;
+
+&lt;p&gt;Warm regards,&lt;/p&gt;
+&lt;p&gt;{!$Record.Owner__r.FirstName} {!$Record.Owner__r.LastName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_1b_before_start</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hey {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+
+&lt;p&gt;Hope you are looking forward to starting your Circles peer mentorship curriculum in a couple days! Just thought I&apos;d check in and see if you have any questions before you start on {!$Record.Start_Date__c}?&lt;/p&gt;
+
+&lt;p&gt;If your start dates has changed, would you mind reviewing the information that we have &lt;a href=&quot;{!FormAssemblyURL}&quot;&gt;here&lt;/a&gt; and updating us when you plan on starting?&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;/p&gt;
+
+&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;
+
+&lt;p&gt;P.S. Here is the link and password again incase it&apos;s helpful:&lt;/p&gt;
+
+&lt;p&gt;Circles Resource Page and videos: &lt;a href=&quot;https://livedifferent.com/circles-resources&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://livedifferent.com/circles-resources&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Password for videos: LDlicense3304Circles&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hey {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+&lt;p&gt;I believe you are halfway through the Peer Mentorship Curriculum based on the dates we received from you. I wanted to check in and see if you are on track to end on {!$Record.End_date__c}?&lt;/p&gt;
+&lt;p&gt;If you had to adjust your dates, no biggie! Would you mind reviewing the information that we have &lt;a href=&quot;{!FormAssemblyURL}&quot;&gt;here&lt;/a&gt; and updating anything that has changed?&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Email_2a_Compassion_Project_Doc</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;&lt;p&gt;I know it may seem early to think about the final project of your Circles run, but the Compassion Project is actually the most important part of the entire Peer Mentorship experience. Think of it as an exit ticket! I would encourage students at the next session to start discussing what they want to do for their project. &lt;a target=&quot;_blank&quot; href=&quot;https://drive.google.com/file/d/1s3EduPYtCAPFGql2pbl0Nqwlw_rZ5FyJsoG7Numu2rs&quot;&gt;&lt;span style=&quot;color:rgb(17, 85, 204);&quot;&gt;Here&lt;/span&gt;&lt;/a&gt; is a doc of Compassion Project examples if your students are stuck and need help to get the ball rolling!&lt;/p&gt;&lt;p&gt;Cheers,&lt;/p&gt;&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_3</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+&lt;p&gt;Congratulations on completing the Peer Mentorship Curriculum with your students!&lt;/p&gt;&lt;p&gt;Before I send over the leadership certificates, I am sending two things:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Please fill out the main contact &lt;a href=&quot;{!FormAssemblyURL}&amp;tfa_31=1&quot;&gt;&lt;span style=&quot;color:rgb(17, 85, 204);&quot;&gt;post-program report&lt;/span&gt;&lt;/a&gt; (you&apos;ll also be asked to share some photos of your Compassion Project); and&lt;/li&gt;&lt;li&gt;send the &lt;a href=&quot;{!student_survey_url}&quot;&gt;&lt;span style=&quot;color:rgb(17, 85, 204);&quot;&gt;post-program survey&lt;/span&gt;&lt;/a&gt; to your students&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Thank you!&lt;/p&gt;&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_4_reminder_1</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;I am sending a friendly reminder about the &lt;a href=&quot;{!FormAssemblyURL}&amp;amp;tfa_31=1&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;report&lt;/a&gt; (takes 5 to 10mins) and &lt;a href=&quot;{!student_survey_url}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;student survey&lt;/a&gt; in my last email, thank you!&lt;/p&gt;&lt;p&gt;Talk soon,&lt;/p&gt;&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_5_reminder_2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+&lt;p&gt;I hope you&apos;re doing well! I wanted to follow up again about the post-program report. As per the agreement/contract you filled out, providing these reports is a required part of the program to ensure we can track its impact and effectiveness.&lt;/p&gt;
+&lt;p&gt;Completing this form is also the final step before the leadership certificates are triggered to send. &lt;a href=&quot;{!FormAssemblyURL}&amp;tfa_31=1&quot;&gt;HERE&lt;/a&gt; is the link again for quick access. It only takes about 5 to 10 minutes to complete.&lt;/p&gt;
+&lt;p&gt;If you have any questions or need assistance, please feel free to reach out!&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>email_with_PMC_list</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Opportunity__r.Contact_Survey__r.FirstName},&lt;/p&gt;
+&lt;p&gt;I just wanted to connect about your next runs of Circles.&lt;/p&gt;&lt;p&gt; Are you planning on delivering Circles again? Here is a list of what we have recorded so far:&lt;/p&gt;
+&lt;table style=&quot;border-collapse: collapse; width: 100%;&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Circle run #:&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;Start Date&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;End Date&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;# of Adults&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;# of Student Leaders&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;# of Participants&lt;/th&gt;
+            &lt;th style=&quot;border: 1px solid #dddddd; text-align: left; padding: 8px;&quot;&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+{!listofPMCs}
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If you have more runs of Circles planned that aren&apos;t listed yet, please click here: &lt;a href=&quot;{!FormAssemblyURL_new_PA}&amp;tfa_31=2&quot;&gt;Add New Circles Run&lt;/a&gt; to record your next one. Even if you only have a rough details, it will be helpful for us to be aware&lt;/p&gt;&lt;p&gt;Thank you!&lt;/p&gt;&lt;p&gt;{!$Record.Owner__r.FirstName}&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>FA_URL</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;a href=&quot;{!FormAssemblyURL}&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{!FA_Workflow_URL}&quot;&gt;long form here&lt;/a&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>listofPMCs</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>loop_count</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>1.0</numberValue>
+        </value>
+    </variables>
+</Flow>

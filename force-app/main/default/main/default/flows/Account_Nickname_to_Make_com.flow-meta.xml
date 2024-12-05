@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>sends Id, Name, Account Nickname to make.com to update using regex, etc.</description>
+        <name>Account_nickname_to_Make_com</name>
+        <label>Account nickname to Make.com</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>Account.Account_Nickname</actionName>
+        <actionType>outboundMessage</actionType>
+        <connector>
+            <targetReference>test_email</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Account.Account_Nickname</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>test_email</name>
+        <label>test email</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>ryan@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>nickname changed to {!$Record.Account_nickname__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>{!$Record.Name} nickname changed to {!$Record.Account_nickname__c}</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>Sends account nickname &quot;code&quot; to make.com to update account nickname field</description>
+    <environments>Default</environments>
+    <interviewLabel>Account Nickname to Make.com {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Nickname to Make.com</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_nickname_to_Make_com</targetReference>
+        </connector>
+        <filterFormula>AND({!$Record.Account_nickname__c}!=&quot;&quot;,or({!$Record.Account_nickname__c}=&quot;0&quot;,{!$Record.Account_nickname__c}=&quot;1&quot;,{!$Record.Account_nickname__c}=&quot;2&quot;,{!$Record.Account_nickname__c}=&quot;3&quot;),{!$Record__Prior.Account_nickname__c}!={!$Record.Account_nickname__c})</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>send</name>
+        <label>send</label>
+        <locationX>176</locationX>
+        <locationY>660</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>derek@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Stuck tax receipts</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <assignments>
+        <name>list_of_receipts</name>
+        <label>list of receipts</label>
+        <locationX>264</locationX>
+        <locationY>468</locationY>
+        <assignmentItems>
+            <assignToReference>delayed_receipt_list</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&lt;tr style=&quot;border-bottom: 1px solid #ddd;&quot;&gt; &lt;td style=&quot;padding: 8px;&quot;&gt;   &lt;a href=&quot;https://livedifferent.my.salesforce.com/{!loop_delayed.Id}&quot; style=&quot;color: #0070d2; text-decoration: none;&quot;&gt;     {!loop_delayed.Name}   &lt;/a&gt; &lt;/td&gt; &lt;td style=&quot;padding: 8px; text-align: right;&quot;&gt;${!loop_delayed.Amount__c}&lt;/td&gt; &lt;td style=&quot;padding: 8px;&quot;&gt;{!loop_delayed.Status__c}&lt;/td&gt; &lt;td style=&quot;padding: 8px;&quot;&gt;{!loop_delayed.Original_Opportunity__r.Payment_Method__c}&lt;/td&gt; &lt;td style=&quot;padding: 8px;&quot;&gt;   &lt;a href=&quot;https://livedifferent.my.salesforce.com/{!loop_delayed.Contact__r.Id}&quot; style=&quot;color: #0070d2; text-decoration: none;&quot;&gt;     {!loop_delayed.Contact__r.Full_Name__c}   &lt;/a&gt; &lt;/td&gt; &lt;td style=&quot;padding: 8px; text-align: right;&quot;&gt;{!loop_delayed.Donation_Received_On__c}&lt;/td&gt; &lt;/tr&gt;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop_delayed</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>current_date_minus_21</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate} - 21</expression>
+    </formulas>
+    <interviewLabel>stuck tax receipts alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>stuck tax receipts alert email</label>
+    <loops>
+        <name>loop_delayed</name>
+        <label>loop delayed</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <collectionReference>delayed_receipts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>list_of_receipts</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>send</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>delayed_receipts</name>
+        <label>delayed receipts</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>loop_delayed</targetReference>
+        </connector>
+        <filterLogic>(1 AND 2) OR (3 AND 4)</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Delayed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>current_date_minus_21</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queued</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Verified__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Tax_Receipt__c</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>delayed_receipts</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Weekly</frequency>
+            <startDate>2024-11-25</startDate>
+            <startTime>09:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>email</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;strong&gt;The follow receipts are Delayed and over 21 days old, or Queued and non-verified&lt;/strong&gt;&lt;/p&gt;
+&lt;table style=&quot;border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;background-color: #f2f2f2; text-align: left; border-bottom: 2px solid #ddd;&quot;&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Receipt&lt;/th&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Amount&lt;/th&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Status&lt;/th&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Payment Method&lt;/th&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Contact&lt;/th&gt;
+      &lt;th style=&quot;padding: 8px;&quot;&gt;Donation Received On&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  {!delayed_receipt_list}
+  &lt;/tbody&gt;
+&lt;/table&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>delayed_receipt_list</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

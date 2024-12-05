@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_1_of_Copy_1_of_Parent_Email</name>
+        <label>Copy 1 of Copy 1 of Parent_Email</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Records_1</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>{!$Record.Contact.Owner.Email}{!$Record.Lead.Owner:User.Email}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>re: Finalize your entry for WestJet flights for Builds draw</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>builds_email_2_reminder</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <stringValue>{!$Record.Lead.Id}{!$Record.Contact.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Parent_Email</name>
+        <label>Copy 1 of Parent_Email</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>drip_sent_plus_1</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>{!$Record.Contact.Owner.Email}{!$Record.Lead.Owner:User.Email}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Finalize your entry for WestJet flights for Builds draw</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>Build_email_1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <stringValue>{!$Record.Lead.Id}{!$Record.Contact.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Copy_2_of_entered</name>
+        <label>Copy 2 of entered</label>
+        <locationX>710</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_entered</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Drip Started</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Flow.CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>LastModified_plus_2mins</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_1_of_Parent_Email</targetReference>
+            </connector>
+            <label>Copy 1 of entered</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>entered</name>
+        <label>entered</label>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>entered1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Drip Started</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Drips_Sent__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Owner</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>entered</label>
+        </rules>
+    </decisions>
+    <description>Update to WJ flight draw for 24-25</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>draw_date_text</name>
+        <dataType>String</dataType>
+        <expression>CASE(MONTH({!$Record.Draw_date_time__c}),
+1, &quot;January&quot;,
+2, &quot;February&quot;,
+3, &quot;March&quot;,
+4, &quot;April&quot;,
+5, &quot;May&quot;,
+6, &quot;June&quot;,
+7, &quot;July&quot;,
+8, &quot;August&quot;,
+9, &quot;September&quot;,
+10, &quot;October&quot;,
+11, &quot;November&quot;,
+12, &quot;December&quot;, &quot;Unknown&quot;) 
+&amp; &quot; &quot; &amp; 
+TEXT(DAY({!$Record.Draw_date_time__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>drip_sent_plus_one</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Drips_Sent__c}+1</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <expression>if(ISBLANK({!$Record.Lead.Id}),{!$Record.Contact.Owner.Id},{!$Record.Lead.Owner:User.Id})</expression>
+    </formulas>
+    <formulas>
+        <name>LastModified_plus_2mins</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.LastModifiedDate}+(2/1440)</expression>
+    </formulas>
+    <interviewLabel>Builds DRAW with parent approval {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Builds DRAW needs parent approval</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Copy_1_of_Owner</name>
+        <label>Copy 1 of Owner</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Parent_Email</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Lead.Owner:User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Contact.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Copy_1_of_drip_sent_plus_1</name>
+        <label>Copy 1 of drip sent plus 1</label>
+        <locationX>578</locationX>
+        <locationY>600</locationY>
+        <inputAssignments>
+            <field>Drips_Sent__c</field>
+            <value>
+                <elementReference>drip_sent_plus_one</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>drip_sent_plus_1</name>
+        <label>drip sent plus 1</label>
+        <locationX>50</locationX>
+        <locationY>600</locationY>
+        <inputAssignments>
+            <field>Drips_Sent__c</field>
+            <value>
+                <elementReference>drip_sent_plus_one</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Records_1</name>
+        <label>Update Records 1</label>
+        <locationX>578</locationX>
+        <locationY>492</locationY>
+        <connector>
+            <targetReference>Copy_1_of_drip_sent_plus_1</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Drip completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>entered</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Drip Started</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <dateTimeValue>2024-01-30T05:00:00.000Z</dateTimeValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CampaignId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>701ON00000HhIsjYAF</stringValue>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X96_hours_before</name>
+            <connector>
+                <targetReference>Copy_2_of_entered</targetReference>
+            </connector>
+            <label>96 hours after</label>
+            <offsetNumber>96</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Build_email_1</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;I hope you enjoyed the LiveDifferent assembly you just had at {!$Record.CompanyOrAccount}!&lt;/p&gt;
+
+&lt;p&gt;Thank you for your interest in the draw for WestJet round-trip flights for a Builds trip&amp;mdash;a &lt;span style=&quot;color: #222222;&quot;&gt;9-day journey to &lt;/span&gt;&lt;a href=&quot;https://livedifferent.com/programs/builds/where-we-build/mexico/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Mexico&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;color: #222222;&quot;&gt; or the &lt;/span&gt;&lt;a href=&quot;https://livedifferent.com/programs/builds/where-we-build/dominican-republic/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Dominican Republic&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;color: #222222;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;color: #222222;&quot;&gt;that&amp;#39;s all about pursuing your passions, making a difference in the lives of others, and creating memories that last a lifetime.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;To finalize your entry to the draw please click &lt;a href=&quot;https://www.tfaforms.com/forms/view/5105294?tfa_2={!$Record.Email}&amp;tfa_13={!$Record.Email}&amp;tfa_14={!$Record.CompanyOrAccount}&quot;&gt;&lt;strong&gt;HERE!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We will be making the draw on {!draw_date_text}.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #222222;&quot;&gt;Stay curious,&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #222222;&quot;&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName}🚀&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>builds_email_2_reminder</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi!&lt;/p&gt;
+
+&lt;p&gt;I wanted to remind you that the draw for WestJet flights for a Builds trip to Dominican Republic or Mexico will be happening at the end of the month!&lt;/p&gt;
+&lt;p&gt;To finalize your entry to the draw please click &lt;a href=&quot;https://www.tfaforms.com/forms/view/5105294?tfa_2={!$Record.Email}&amp;tfa_13={!$Record.Email}&amp;tfa_14={!$Record.CompanyOrAccount}&quot;&gt;&lt;strong&gt;HERE!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks,&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName}🚀&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Parent_Email_2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.Parent_First_Name__c},&lt;/p&gt;&lt;p&gt;I thought I&apos;d send a quick reminder about the Builds draw happening tomorrow.&lt;/p&gt;&lt;p&gt;If you aren&apos;t interested, no problem! But just incase you forgot,&lt;strong&gt;&lt;a href=&quot;
+https://www.tfaforms.com/forms/view/5105297?tfa_1={!$Record.FirstName}&amp;tfa_7={!$Record.LastName}&amp;tfa_3={!$Record.Parent_First_Name__c}&amp;tfa_10={!$Record.Parent_Email__c}&amp;tfa_11={!$Record.Id}&quot;&gt;HERE&lt;/a&gt; is the link again to approve {!$Record.FirstName} to enter the draw for the five hundred dollar bursary for a Builds trip.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Let me know if you have any questions!&lt;/p&gt;&lt;p&gt;{!$Record.Lead.Owner:User.FirstName}{!$Record.Contact.Owner.FirstName} {!$Record.Lead.Owner:User.LastName}{!$Record.Contact.Owner.LastName}&lt;br&gt;LiveDifferent&lt;br&gt;1-866-432-4464&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ParentEmail</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello {!$Record.Parent_First_Name__c},&lt;/p&gt;&lt;p&gt;This is {!e2a70176-d2a7-4287-b831-c65f59bf1dba.FirstName} from LiveDifferent - a Canadian youth charity (we just visited {!$Record.CompanyOrAccount}). {!$Record.FirstName} has entered a draw for a $500 bursary to a LiveDifferent Build.&lt;/p&gt;&lt;p&gt;Builds are life-changing ~9-day trips for students to the Dominican Republic or Mexico where they join in building a house with a family in need. While volunteering on a Build, students experience personal growth, create meaningful connections with each other and the local community members, and learn about new cultures, all in a welcoming, safe environment.&lt;/p&gt;&lt;p&gt;Learn more about Builds &lt;a href=&quot;https://livedifferent.com/programs/builds/parents&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;To ensure that the bursary is more likely to go to a student who will be able to use it, we are requesting parent/guardian approval.&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;&lt;a href=&quot;
+https://www.tfaforms.com/forms/view/5105297?tfa_1={!$Record.FirstName}&amp;tfa_7={!$Record.LastName}&amp;tfa_3={!$Record.Parent_First_Name__c}&amp;tfa_10={!$Record.Parent_Email__c}&amp;tfa_11={!$Record.Id}&quot;&gt;HERE&lt;/a&gt; to approve {!$Record.FirstName} to enter the draw.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The draw will take place on {!draw_date_text}, and we will be in contact if {!$Record.FirstName} is selected.&lt;/p&gt;&lt;p&gt;Please feel free to reach out if you have any questions!&lt;/p&gt;&lt;p&gt;{!e2a70176-d2a7-4287-b831-c65f59bf1dba.FirstName} {!e2a70176-d2a7-4287-b831-c65f59bf1dba.LastName}&lt;br&gt;LiveDifferent&lt;br&gt;1-866-432-4464&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

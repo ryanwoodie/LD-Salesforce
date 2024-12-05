@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Private Room Confirm {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Private Room Confirm</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Private_Room_Confirm</name>
+        <label>Private Room Confirm</label>
+        <locationX>489</locationX>
+        <locationY>259</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RegistrationID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Private_Room__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Registration__c</object>
+    </recordUpdates>
+    <startElementReference>Private_Room_Confirm</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>RegistrationID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

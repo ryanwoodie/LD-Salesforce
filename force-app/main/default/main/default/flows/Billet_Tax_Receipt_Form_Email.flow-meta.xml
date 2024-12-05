@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>billet_form_email</name>
+        <label>billet-form-email</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>derek@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Tax Receipt for Billeting LiveDifferent</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>receipt_email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Contact.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>survey_email_1</name>
+        <label>survey-email-1</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>devina@livedifferent.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Tell us about your experience with the LiveDifferent Team</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>survey_email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Contact.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>team</name>
+        <dataType>String</dataType>
+        <expression>if(CONTAINS({!$Record.Campaign.Name},&quot;T1&quot;),&quot;-Team 1&quot;,if(CONTAINS({!$Record.Campaign.Name},&quot;T2&quot;),&quot;-Team 2&quot;,if(CONTAINS({!$Record.Campaign.Name},&quot;T3&quot;),&quot;-Team 3&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <interviewLabel>Billet Tax Receipt Form Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Billet Tax Receipt Form Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>survey_email_1</targetReference>
+        </connector>
+        <filterFormula>CONTAINS(UPPER({!$Record.Campaign.Name}), &quot;BILLET&quot;) &amp;&amp; 
+( CONTAINS(UPPER({!$Record.Campaign.Name}), &quot; T1&quot;) || 
+  CONTAINS(UPPER({!$Record.Campaign.Name}), &quot; T2&quot;) || 
+  CONTAINS(UPPER({!$Record.Campaign.Name}), &quot; T3&quot;) )</filterFormula>
+        <object>CampaignMember</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>X35_min_delay</name>
+            <connector>
+                <targetReference>billet_form_email</targetReference>
+            </connector>
+            <label>35 min delay</label>
+            <offsetNumber>35</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>receipt_email</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.FirstName},&lt;/p&gt;
+
+&lt;p&gt;We truly appreciate your support in hosting LiveDifferent&apos;s road team. Your generosity plays an integral role in the success of our programs.&lt;/p&gt;
+
+&lt;p&gt;If you&apos;d like to receive a charitable tax receipt for billeting the team, simply &lt;a href=&quot;{!$Record.Contact.Billet_Gift_In_Kind_URL__c}{!team}&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fill out this form&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Should you have any questions or need assistance, please don&apos;t hesitate to reach out. I&apos;m here to help.&lt;/p&gt;
+
+&lt;p&gt;Warm regards,&lt;/p&gt;
+
+&lt;p&gt;Derek Boyce&lt;br&gt;
+CFO&lt;br&gt;
+LiveDifferent&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>survey_email</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!$Record.FirstName},&lt;/p&gt;
+
+&lt;p&gt;We can&apos;t thank you enough for opening your home to one of our road teams this semester. Your support is vital to LiveDifferent&apos;s mission, and we deeply value partners like you.&lt;/p&gt;
+
+&lt;p&gt;As we continuously strive for excellence, understanding the impressions our teams leave behind is crucial. Could you spare a few minutes to share your experience with us? Your insights will help shape our future engagements.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&apos;http://www.tfaforms.com/forms/view/259312?tfa_19={!$Record.Contact.Id}&amp;tfa_33={!$Record.Contact.Account.Id}&amp;tfa_51={!team}&apos;&gt;Take the short survey here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Additionally, our CFO, Derek, will soon reach out regarding a tax receipt for your generous billeting support.&lt;/p&gt;
+
+&lt;p&gt;Thank you once more for standing with us in our journey.&lt;/p&gt;
+
+&lt;p&gt;Warm regards,&lt;/p&gt;
+
+&lt;p&gt;Devina Lookman&lt;br&gt;
+Manager of School and Community Programs&lt;br&gt;
+LiveDifferent&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

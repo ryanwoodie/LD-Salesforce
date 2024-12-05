@@ -147,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class='content'>
             <apex:outputText escape="false" value="{!Event__c.Description__c}" styleClass="slds-custom_rt" /> 
             <div class="mt-5 mr-5 ml-5">
-                <img src="https://livedifferent.com/sites/files/austin.png" class="rounded float-left mr-4" alt="Headshot" />
+                <img src="https://livedifferent.com/sites/files/tyler.png" class="rounded float-left mr-4" alt="Headshot" />
                 <p><strong><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</em></strong></p>
                 <p><strong>Georgia Brown</strong> 2019 Volunteer</p>
             </div>

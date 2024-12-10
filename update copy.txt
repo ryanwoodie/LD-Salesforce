@@ -151,7 +151,7 @@ if (!membersToUpdate.isEmpty()) {
 /// 2024-12-03 6:33 UTC
 
 // Replace with the specific Campaign ID
-Id campaignId = '701ON00000LZTxWYAX';
+Id campaignId = '701ON00000LJ39WYAT';
 
 // Query CampaignMember records for the given Campaign ID where the contact has opted out
 List<CampaignMember> membersToUpdate = [
@@ -269,3 +269,44 @@ SELECT Id, Name, DeveloperName FROM Folder WHERE DeveloperName = 'unfiled$public
 SELECT Id, Subject, FromAddress, ToAddress, CreatedDate
 FROM EmailMessage
 WHERE CreatedDate = LAST_N_DAYS:30 AND FromAddress = 'tyler@livedifferent.com'
+
+
+// 2024-12-06 3:04pm CT
+// Get the Campaign ID for the specified Campaign Name
+Id campaignId = [
+    SELECT Id 
+    FROM Campaign 
+    WHERE Name = 'ZEROBOUNCE AUTOMATION' 
+    LIMIT 1
+].Id;
+
+// Query CampaignMember records for the given criteria
+List<CampaignMember> membersToUpdate = [
+    SELECT Id, Status, Contact.Email_Bounce_Sub_Status__c, Contact.LastModifiedDate
+    FROM CampaignMember
+    WHERE CampaignId = :campaignId
+      AND Status = 'Bounce Check'
+      AND Contact.Email_Bounce_Sub_Status__c != null
+      AND Contact.LastModifiedDate = LAST_N_DAYS:3
+];
+
+// Process each CampaignMember and update Status based on Contact.Email_Bounce_Sub_Status__c
+for (CampaignMember member : membersToUpdate) {
+    String bounceStatus = member.Contact.Email_Bounce_Sub_Status__c;
+
+    if (bounceStatus.startsWithIgnoreCase('invalid')) {
+        member.Status = 'Checked - Bounced';
+    } else if (bounceStatus.startsWithIgnoreCase('valid')) {
+        member.Status = 'Checked - Valid';
+    } else {
+        member.Status = 'Checked - Other';
+    }
+}
+
+// Perform the update if there are any records to update
+if (!membersToUpdate.isEmpty()) {
+    update membersToUpdate;
+    System.debug('Updated ' + membersToUpdate.size() + ' CampaignMember records.');
+} else {
+    System.debug('No CampaignMember records found.');
+}

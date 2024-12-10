@@ -186,8 +186,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div style="max-width: 50%; margin-left:auto !important; margin-right:auto !important; padding-left:12px; padding-right:12px;">
             <img src="https://livedifferent.com/wp-content/uploads/2023/10/WithLove_Logo_Black.png" style="
     padding-bottom: 20px;"></img>
- <div class="slds-text-body--small"><p style="color:black;">Join us at the WestJet Campus on April 15, 2025 at 6pm for our With Love Gala in Calgary.</p></div>
-</div>       
+    <div class="slds-text-body--small"><p style="color:black;"><strong>Date:</strong> <span style="font-weight: 300;">April 15, 2025.</span></p>
+      <p style="color:black;"><strong>Location:</strong> <span style="font-weight: 300;">WestJet, Fred Ring Building, 22 Aerial Pl NE, Calgary</span></p></div>
+    </div>   
   
                 </div>        
           </div> 
